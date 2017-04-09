@@ -1,0 +1,8 @@
+.fa {
+    color: $iconColor;
+    @include smooth_animation;
+    
+    &:hover {
+        color: $iconColorActive;
+    }
+}

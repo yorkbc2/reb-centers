@@ -1,0 +1,90 @@
+@mixin form-style {
+    border: 1px solid #d2d1d1;
+    padding: 4px;
+    border-radius: $borderRadius;
+}
+
+form {
+    width: 100%;
+    
+    fieldset {
+        background-color: $brandColorOne;
+        @include form-style;
+        
+        label {
+            font-weight: 800;
+        }
+        
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-style;
+        }
+        
+        input[type="submit"] {
+            background-color: $brandColorTwo;
+        }
+        
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-style;
+        }
+    }
+}
+
+//Search form style
+form.form-inline {
+    margin: 14px auto;
+    max-width: 300px;
+    
+    input {
+        width: calc(100% - 39px);
+        @include form-style;
+        
+        &:focus {
+            border: 1px solid $brandColorTwo;
+        }
+    }
+}
+//Search form style end
+
+//Comment form
+#respond {
+    form#commentform {
+        .form-group {
+            label {
+                text-align: left;
+            }
+            
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+                @include form-style;
+            }
+            
+            textarea {
+                width: 100%;
+                margin-bottom: 10px;
+                @include form-style;
+            }
+        }
+    }
+}
+//Comment form  end
+
+
+//xs 544
+@media #{$mobile} {}
+
+//sm 545 - 768
+@media #{$tablet} {}
+
+//md 769 - 1024
+@media #{$under-wrap} {}
+
+//lg 1025 - 1366
+@media #{$desktop} {}
+
+//xl 1367 - 
+@media #{$screen} {}

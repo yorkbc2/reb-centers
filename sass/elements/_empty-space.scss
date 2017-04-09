@@ -1,0 +1,35 @@
+div.big-space {
+	height: 15vh;
+}
+
+div.medium-space {
+	height: 12vh;
+}
+
+div.small-space {
+	height: 5vh;
+}
+
+div.tiny-space {
+	height: 2vh;
+}
+
+
+
+@media #{$mobile} {
+    div.big-space {
+    	height: 13vh;
+    }
+
+    div.medium-space {
+    	height: 10vh;
+    }
+
+    div.small-space {
+    	height: 4vh;
+    }
+
+    div.tiny-space {
+    	height: 1vh;
+    }
+}

@@ -1,0 +1,51 @@
+//BRAND
+$brandColorOne: #3575D3;
+$brandColorTwo: #8AD331;
+$brandColorThree: #d33131;
+$brandColorActive: #4d4d4d;
+
+//BODY
+$bodyBgColor: white;
+$bodyFontColor: #000000;
+
+//HEADER
+$headerBgColor: $brandColorOne;
+$headerFontColor: black;
+
+//MENU
+$menuBgColor: $brandColorOne;
+$menuBgColorActive: $brandColorActive;
+$menuFontColor: #ffffff;
+$menuFontColorActive: #ffffff;
+
+//FOOTER
+$footerBgColor: $brandColorOne;
+$footerFontColor: white;
+$footerLinkColorActive: $brandColorTwo;
+
+//WRAPPER
+$wrapperBgColor: #ffffff;
+
+//TITLES
+$titleFontColor: $brandColorOne;
+$titleFontColorActive: lighten($titleFontColor, 10%);
+
+//LINKS
+$linkFontColor: #000000;
+$linkFontColorActive: lighten($linkFontColor, 20%);
+
+//BUTTONS
+$buttonFontColor: #ffffff;
+$buttonFontColorActive: #ffffff;
+$buttonBgColor: $brandColorTwo;
+$buttonBgColorActive: lighten($brandColorTwo, 10%);
+
+//ICONS
+$iconColor: $brandColorOne;
+$iconColorActive: $brandColorOne;
+
+//TABLE
+$tableBgColor: #d6d6d6;
+
+//TEXT
+$textMutedColor: gray;

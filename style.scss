@@ -1,0 +1,152 @@
+/*
+Theme Name: brainworks-v3.2
+Theme URI:
+Text Domain: brainworks
+Author: Yegor Mamay
+Author URI: http://brainworks.com.ua
+Description:
+License:
+License URI:
+Version: 3.2
+Tags: one-column, two-columns, full-width-template, e-commerce
+*/
+
+/* CORE */
+@import "sass/core/reset";
+@import "sass/core/mediaqueries";
+@import "sass/core/variables";
+//@import "sass/core/mixins";
+@import "sass/core/colors";
+@import "sass/core/fonts";
+@import "sass/core/wp-core";
+@import "sass/core/help-style";
+//@import "sass/core/theme-style";
+
+/* PLUG-INs */
+//@import "sass/plugins/animate-plugin";
+@import "sass/plugins/font-awesome";
+//@import "sass/plugins/plug-ins";
+@import "sass/plugins/animations";
+
+/* BOOTSTRAP */
+//@import "sass/bootstrap/bootstrap-tables";
+@import "sass/bootstrap/bootstrap-grid";
+
+/* PAGES */
+@import "sass/pages/single-post";
+@import "sass/pages/blog-page";
+//@import "sass/pages/woo";
+
+/* ELEMENTS */
+@import "sass/elements/typography";
+@import "sass/elements/responsive-titles";
+@import "sass/elements/forms";
+@import "sass/elements/buttons";
+//@import "sass/elements/images";
+@import "sass/elements/links";
+@import "sass/elements/icons";
+@import "sass/elements/pagination";
+@import "sass/elements/tables";
+@import "sass/elements/lists";
+@import "sass/elements/empty-space";
+@import "sass/elements/dividers";
+//@import "sass/elements/other";
+
+/* BLOCKS */
+@import "sass/blocks/header";
+@import "sass/blocks/footer";
+@import "sass/blocks/menu";
+@import "sass/blocks/sidebar";
+@import "sass/blocks/menu-second";
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    min-width: 320px;
+    background-color: $bodyBgColor;
+    color: $bodyFontColor;
+    font-family: $fontFamilyTwo;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    width: 70%;
+    max-width: 1350px;
+    margin: 0 auto;
+    //padding-bottom: $footerHeight + 15px;
+}
+
+.inner-wrapper {
+	width: 70%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+//xs 544
+@media #{$mobile} {
+	.page-wrapper {
+	    width: 98%;
+	}
+
+	.inner-wrapper {
+		width: 100%;
+	}
+}
+
+//sm 545 - 768
+@media #{$tablet} {
+	.page-wrapper {
+	    width: 96%;
+	}
+
+	.inner-wrapper {
+		width: 96%;
+	}
+}
+
+//md 769 - 1024
+@media #{$under-wrap} {
+    .page-wrapper {
+	    width: 94%;
+	}
+
+	.inner-wrapper {
+		width: 94%;
+	}
+}
+
+//lg 1025 - 1366
+@media #{$desktop} {
+    .page-wrapper {
+	    width: 80%;
+	}
+
+	.inner-wrapper {
+		width: 80%;
+	}
+}
+
+//xl 1367 - 
+@media #{$screen} {
+    .page-wrapper {
+	    width: 60%;
+	}
+
+	.inner-wrapper {
+		width: 60%;
+	}
+}

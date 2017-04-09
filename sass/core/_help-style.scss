@@ -1,0 +1,45 @@
+strong {
+    font-weight: 800;
+}
+
+.block-center {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-muted {
+    color: $textMutedColor;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-just {
+    text-align: justify;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.hide-on-mobile {
+    display: block;
+}
+
+.hide-on-desktop {
+    display: none;
+}
+
+//xs 544
+@media #{$mobile} {
+    .hide-on-mobile {
+        display: none;
+    }
+    
+    .hide-on-desktop {
+        display: block;
+    }
+}
+

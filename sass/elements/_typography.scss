@@ -1,0 +1,118 @@
+$fonts_mobile: 0.7;
+$fonts_tablet: 0.8;
+$fonts_under-wrap: 0.85;
+$fonts_desktop: 0.9;
+$fonts_screen: 1.1; //Имеет смысл увеличивать значение, если контент страници на всю ширену экрана 
+
+$menu_tablet: 0.7;
+$menu_under-wrap: 0.8;
+$menu_desktop: 1;
+
+$p_mobile: 0.8;
+
+        $p_size: 18px;
+       $ul_size: 18px;
+$menu_size: 16px;
+
+
+        $p_line-height: 22px;
+       $ul_line-height: 22px;
+$menu_line-height: 22px;
+
+h1.hero-title {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+i.button-style {
+    padding: 3px 8px;
+}
+
+
+@media #{$mobile} {
+    p {
+        font-size: $p_mobile * $p_size;
+        line-height: $p_mobile * $p_line-height;
+    }
+    
+    ul li, ol li {
+        font-size: $fonts_mobile * $menu_size;
+        line-height: $fonts_mobile * $menu_line-height;
+    }
+    
+    li a {
+        font-size: $fonts_mobile * $menu_size;
+        line-height: $fonts_mobile * $menu_line-height;
+    }
+}
+
+@media #{$tablet} {
+    p {
+        font-size: $fonts_tablet * $p_size;
+        line-height: $fonts_tablet * $p_line-height;
+    }
+    
+    ul li, ol li {
+        font-size: $fonts_tablet * $ul_size;
+        line-height: $fonts_tablet * $ul_line-height;
+    }
+    
+    li a {
+        font-size: $menu_tablet * $menu_size;
+        line-height: $menu_tablet * $menu_line-height;
+    }
+}
+
+@media #{$under-wrap} {
+    p {
+        font-size: $fonts_under-wrap * $p_size;
+        line-height: $fonts_under-wrap * $p_line-height;
+    }
+    
+    ul li, ol li {
+        font-size: $fonts_under-wrap * $ul_size;
+        line-height: $fonts_under-wrap * $ul_line-height;
+    }
+    
+    li a {
+        font-size: $menu_under-wrap * $menu_size;
+        line-height: $menu_under-wrap * $menu_line-height;
+    }
+}
+
+@media #{$desktop} {
+    p {
+        font-size: $fonts_desktop * $p_size;
+        line-height: $fonts_desktop * $p_line-height;
+    }
+    
+    ul li, ol li {
+        font-size: $fonts_desktop * $ul_size;
+        line-height: $fonts_desktop * $ul_line-height;
+    }
+    
+    li a {
+        font-size: $menu_desktop * $menu_size;
+        line-height: $menu_desktop * $menu_line-height;
+    }
+}
+
+@media #{$screen} {
+    p {
+        font-size: $fonts_screen * $p_size;
+        line-height: $fonts_screen * $p_line-height;
+    }
+    
+    ul li, ol li {
+        font-size: $fonts_screen * $ul_size;
+        line-height: $fonts_screen * $ul_line-height;
+    }
+    
+    li a {
+        font-size: $fonts_screen * $menu_size;
+        line-height: $fonts_screen * $menu_line-height;
+    }
+}

@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+    color: $linkFontColor;
+    @include smooth_animation;
+    
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: $linkFontColorActive;
+    }
+}
