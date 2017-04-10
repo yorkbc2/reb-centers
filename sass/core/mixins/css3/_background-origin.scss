@@ -1,0 +1,3 @@
+@mixin background-origin($value: padding-box) {
+  @include prefixer(background-origin, $value, webkit moz spec);
+}

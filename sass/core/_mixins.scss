@@ -1,3 +1,19 @@
-@mixin gradient {
-    
-}
+// MIXINS
+@import "mixins/prefixer";
+@import "mixins/clearfix";
+@import "mixins/css3";
+@import "mixins/ellipsis";
+@import "mixins/font-smoothing";
+@import "mixins/grid-column";
+@import "mixins/letter-spacing";
+@import "mixins/line-height";
+@import "mixins/position";
+@import "mixins/responsive-font-size";
+@import "mixins/responsive-headers";
+@import "mixins/size-block";
+@import "mixins/sprite";
+@import "mixins/text-size-adjust";
+@import "mixins/touch-action";
+@import "mixins/triangle";
+@import "mixins/viewport";
+@import "mixins/word-wrap";

@@ -1,0 +1,196 @@
+//flex container
+@mixin flexbox($flexbox: flex) {
+  $flexbox: unquote($flexbox);
+  @if ($flexbox == flex) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-#{$flexbox};
+  } @else if ($flexbox == inline-flex) {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-#{$flexbox};
+  }
+  display: $flexbox;
+}
+
+@mixin flex-direction($direction: row) {
+  $direction: unquote($direction);
+  @if ($direction == row) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+  } @else if ($direction == row-reverse) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+  } @else if ($direction == column) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+  } @else if ($direction == column-reverse) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+  }
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap: nowrap) {
+  $wrap: unquote($wrap);
+  @if ($wrap == nowrap) {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $wrap;
+  }
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-flow($direction-wrap: (row nowrap)) {
+  -ms-flex-flow: $direction-wrap;
+  -webkit-flex-flow: $direction-wrap;
+  flex-flow: $direction-wrap;
+  @warn "Do not use this short record. Use flex-direction and flex-wrap";
+}
+
+@mixin justify-content($justify-content: flex-start) {
+  $justify-content: unquote($justify-content);
+  @if ($justify-content == flex-start) {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if ($justify-content == flex-end) {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if ($justify-content == space-between) {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if ($justify-content == space-around) {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $justify-content;
+    -moz-box-pack: $justify-content;
+    -ms-flex-pack: $justify-content;
+  }
+  -webkit-justify-content: $justify-content;
+  justify-content: $justify-content;
+}
+
+@mixin align-items($align-items: flex-start) {
+  $align-items: unquote($align-items);
+  @if ($align-items == flex-start) {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if ($align-items == flex-end) {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $align-items;
+    -moz-box-align: $align-items;
+    -ms-flex-align: $align-items;
+  }
+  -webkit-align-items: $align-items;
+  align-items: $align-items;
+}
+
+@mixin align-content($align-content: flex-start) {
+  $align-content: unquote($align-content);
+  @if ($align-content == flex-start) {
+    -ms-flex-line-pack: start;
+  } @else if ($align-content == flex-end) {
+    -ms-flex-line-pack: end;
+  } @else if ($align-content == space-between) {
+    -ms-flex-line-pack: justify;
+  } @else if ($align-content == space-around) {
+    -ms-flex-line-pack: distribute;
+  } @else {
+    -ms-flex-line-pack: $align-content;
+  }
+  -webkit-align-content: $align-content;
+  align-content: $align-content;
+}
+
+//flex item
+@mixin order($integer: 0) {
+  -webkit-box-ordinal-group: $integer + 1;
+  -moz-box-ordinal-group: $integer + 1;
+  -ms-flex-order: $integer;
+  -webkit-order: $integer;
+  order: $integer;
+}
+
+@mixin flex-grow($number: 0) {
+  -webkit-box-flex: $number;
+  -moz-box-flex: $number;
+  -ms-flex-positive: $number;
+  -webkit-flex-grow: $number;
+  flex-grow: $number;
+  @warn "If you are using a flex-grow, flex-shrink, flex-basis using a short record flex";
+}
+
+@mixin flex-shrink($number: 1) {
+  -ms-flex-negative: $number;
+  -webkit-flex-shrink: $number;
+  flex-shrink: $number;
+  @warn "If you are using a flex-grow, flex-shrink, flex-basis using a short record flex";
+}
+
+@mixin flex-basis($length: auto) {
+  $length: unquote($length);
+  -ms-flex-preferred-size: $length;
+  -webkit-flex-basis: $length;
+  flex-basis: $length;
+  @warn "If you are using a flex-grow, flex-shrink, flex-basis using a short record flex";
+}
+
+@mixin flex($flex-grow: 0, $flex-shrink: null, $flex-basis: null) {
+  -webkit-box-flex: $flex-grow;
+  -moz-box-flex: $flex-grow;
+  -ms-flex: $flex-grow $flex-shrink $flex-basis;
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+  flex: $flex-grow $flex-shrink $flex-basis;
+}
+
+@mixin align-self($align-items: auto) {
+  $align-items: unquote($align-items);
+  @if ($align-items == flex-start) {
+    -ms-flex-item-align: start;
+  } @else if ($align-items == flex-end) {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $align-items;
+  }
+  -webkit-align-self: $align-items;
+  align-self: $align-items;
+}
+
+// Example flexbox mixin
+//.flex-container {
+//  @include flexbox(flex);
+//  @include flex-direction(row);
+//  @include flex-wrap(nowrap);
+//  //@include flex-flow(row nowrap); // don"t use
+//  @include justify-content(flex-start);
+//  @include align-items(flex-start);
+//  @include align-content(flex-start);
+//  .flex-item {
+//    @include order(0);
+//    //@include flex-grow(0); // don"t use
+//    //@include flex-shrink(1); // don"t use
+//    //@include flex-basis(auto); // don"t use
+//    @include flex(0, 1, auto); // use short notation
+//    @include align-self(auto);
+//  }
+//}

@@ -1,0 +1,41 @@
+$border-radius-prefixes: webkit moz spec;
+
+@mixin border-radius($radius: $base-border-radius) {
+  @include prefixer(border-radius, $radius, $border-radius-prefixes);
+}
+
+@mixin border-top-left-radius($radius: $base-border-radius) {
+  @include prefixer(border-top-left-radius, $radius, $border-radius-prefixes);
+}
+
+@mixin border-top-right-radius($radius: $base-border-radius) {
+  @include prefixer(border-top-right-radius, $radius, $border-radius-prefixes);
+}
+
+@mixin border-bottom-right-radius($radius: $base-border-radius) {
+  @include prefixer(border-bottom-right-radius, $radius, $border-radius-prefixes);
+}
+
+@mixin border-bottom-left-radius($radius: $base-border-radius) {
+  @include prefixer(border-bottom-left-radius, $radius, $border-radius-prefixes);
+}
+
+@mixin border-top-radius($radius: $base-border-radius) {
+  @include border-top-left-radius($radius);
+  @include border-top-right-radius($radius);
+}
+
+@mixin border-right-radius($radius: $base-border-radius) {
+  @include border-top-right-radius($radius);
+  @include border-bottom-right-radius($radius);
+}
+
+@mixin border-bottom-radius($radius: $base-border-radius) {
+  @include border-bottom-left-radius($radius);
+  @include border-bottom-right-radius($radius);
+}
+
+@mixin border-left-radius($radius: $base-border-radius) {
+  @include border-top-left-radius($radius);
+  @include border-bottom-left-radius($radius);
+}

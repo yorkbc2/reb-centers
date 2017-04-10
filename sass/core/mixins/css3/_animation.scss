@@ -1,0 +1,57 @@
+$animation-prefixes: webkit moz spec;
+
+@mixin animation($value...) {
+  @include prefixer(animation, $value, $animation-prefixes);
+}
+
+@mixin animation-name($name...) {
+  @include prefixer(animation-name, $name, $animation-prefixes);
+}
+
+@mixin animation-duration($duration...) {
+  @include prefixer(animation-duration, $duration, $animation-prefixes);
+}
+
+@mixin animation-timing-function($timing-function...) {
+  // ease | linear | ease-in | ease-out | ease-in-out
+  @include prefixer(animation-timing-function, $timing-function, $animation-prefixes);
+}
+
+@mixin animation-delay($delay...) {
+  @include prefixer(animation-delay, $delay, $animation-prefixes);
+}
+
+@mixin animation-iteration-count($iteration-count...) {
+  // infinite | <number>
+  @include prefixer(animation-iteration-count, $iteration-count, $animation-prefixes);
+}
+
+@mixin animation-direction($direction...) {
+  // normal | alternate
+  @include prefixer(animation-direction, $direction, $animation-prefixes);
+}
+
+@mixin animation-fill-mode($fill-mode...) {
+  // none | forwards | backwards | both
+  @include prefixer(animation-fill-mode, $fill-mode, $animation-prefixes);
+}
+
+@mixin animation-play-state($play-state...) {
+  // running | paused
+  @include prefixer(animation-play-state, $play-state, $animation-prefixes);
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}

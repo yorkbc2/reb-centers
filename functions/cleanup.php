@@ -12,6 +12,18 @@ remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
+// Remove Emoji
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+add_filter('emoji_svg_url', '__return_false');
+
+function deregister_scripts() {
+  // disable embed.js
+  wp_dequeue_script('wp-embed');
+}
+
+add_action('wp_footer', 'deregister_scripts');
+
 /*
 Show less info to users on failed login for security.
 (Will not let a valid username be known.)

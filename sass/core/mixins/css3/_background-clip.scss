@@ -1,0 +1,3 @@
+@mixin background-clip($value: border-box) {
+  @include prefixer(background-clip, $value, webkit moz spec);
+}

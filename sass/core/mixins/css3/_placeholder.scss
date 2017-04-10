@@ -1,0 +1,25 @@
+//@mixin input-placeholder($current-input-placeholder: false) {
+//  $input-placeholder: "-moz" ":-moz" "-ms-input" /*":-ms-input"*/ ":-webkit-input";
+//  @if not $current-input-placeholder {
+//    @each $placeholder in $input-placeholder {
+//      &:#{$placeholder}-placeholder {
+//        @content;
+//      }
+//    }
+//  } @else {
+//    @each $placeholder in $input-placeholder {
+//      :#{$placeholder}-placeholder {
+//        @content;
+//      }
+//    }
+//  }
+//}
+
+@mixin input-placeholder() {
+  $input-placeholder: "-moz" ":-moz" "-ms-input" /*":-ms-input"*/ ":-webkit-input";
+  @each $placeholder in $input-placeholder {
+    :#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}

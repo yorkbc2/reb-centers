@@ -1,0 +1,28 @@
+@mixin columns($value...) {
+  @include prefixer(columns, $value, webkit moz spec);
+}
+
+@mixin column-count($value: auto) {
+  @include prefixer(column-count, $value, webkit moz spec);
+}
+
+@mixin column-width($value: auto) {
+  @include prefixer(column-width, $value, webkit moz spec);
+}
+
+@mixin column-gap($value: normal) {
+  @include prefixer(column-gap, $value, webkit moz spec);
+}
+
+@mixin column-rule($value...) {
+  @include prefixer(column-rule, $value, webkit moz spec);
+}
+
+@mixin column-span($value: none) {
+  @include prefixer(column-span, $value, webkit spec);
+}
+
+@mixin column-fill($value: balance) {
+  @include prefixer(column-fill, $value, moz spec);
+}
+

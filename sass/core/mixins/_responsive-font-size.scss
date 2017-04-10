@@ -1,0 +1,16 @@
+@mixin responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $fallback: false) {
+  font-size: $font-size-min;
+
+  @media (min-width: $viewport-width-min) and (max-width: $viewport-width-max - 1) {
+
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+
+    font-size: calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max);
+  }
+
+  @media (min-width: $viewport-width-max) {
+    font-size: $font-size-max;
+  }
+}

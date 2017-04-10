@@ -1,0 +1,44 @@
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default;
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  //@debug $property;
+  //@debug $value;
+  //@debug $prefixes;
+  @each $prefix in $prefixes {
+    @if $prefix == "webkit" {
+      @if $prefix-for-webkit {
+       -#{$prefix}-#{$property}: $value;
+      }
+    } @else if $prefix == "moz" {
+      @if $prefix-for-mozilla {
+        -#{$prefix}-#{$property}: $value;
+      }
+    } @else if $prefix == "ms" {
+      @if $prefix-for-microsoft {
+        -#{$prefix}-#{$property}: $value;
+      }
+    } @else if $prefix == "o" {
+      @if $prefix-for-opera {
+        -#{$prefix}-#{$property}: $value;
+      }
+    } @else if $prefix == "spec" {
+      @if $prefix-for-spec {
+        #{$property}: $value;
+      }
+    } @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin disable-prefix-for-all() {
+  $prefix-for-webkit: false !global;
+  $prefix-for-mozilla: false !global;
+  $prefix-for-microsoft: false !global;
+  $prefix-for-opera: false !global;
+  $prefix-for-spec: false !global;
+}

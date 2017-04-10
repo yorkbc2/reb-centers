@@ -1,0 +1,23 @@
+@mixin transform-origin($origin-x: 50%, $origin-y: 50%, $origin-z: null) {
+  $origin: unquote("");
+
+  @if $origin-x or $origin-y or $origin-z {
+    @if $origin-x {
+      $origin: $origin-x;
+    } @else {
+      $origin: 50%;
+    }
+    @if $origin-y {
+      $origin: $origin $origin-y;
+    } @else {
+      @if $origin-z {
+        $origin: $origin 50%;
+      }
+    }
+    @if $origin-z {
+      $origin: $origin $origin-z;
+    }
+  }
+
+  @include prefixer(transform-origin, ($origin-x $origin-y $origin-z), webkit moz ms o spec);
+}

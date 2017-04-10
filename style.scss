@@ -1,5 +1,5 @@
 /*
-Theme Name: brainworks-v3.2
+Theme Name: brainworks
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -15,7 +15,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "sass/core/reset";
 @import "sass/core/mediaqueries";
 @import "sass/core/variables";
-//@import "sass/core/mixins";
+@import "sass/core/mixins";
 @import "sass/core/colors";
 @import "sass/core/fonts";
 @import "sass/core/wp-core";

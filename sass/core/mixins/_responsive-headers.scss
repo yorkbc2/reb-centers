@@ -1,0 +1,36 @@
+@mixin responsive-headers() {
+
+  @each $name, $value in $headers-map {
+    #{$name} {
+      font-size: round(map-get($value, fons-size-min));
+    }
+  }
+
+  $viewport-min: map-get($viewport-map, viewport-min);
+  $viewport-max: map-get($viewport-map, viewport-max);
+
+  @media (min-width: $viewport-min) and (max-width: $viewport-max - 1) {
+
+    @each $name, $value in $headers-map {
+      #{$name} {
+
+        $fallback: map-get($value, font-size-fallback);
+
+        @if($fallback != null and $fallback != "") {
+          font-size: $fallback;
+        }
+
+        font-size: calc-responsive-font-size(map-get($value, fons-size-min), map-get($value, font-size-max), $viewport-min, $viewport-max);
+      }
+    }
+
+  }
+
+  @media (min-width: $viewport-max) {
+    @each $name, $value in $headers-map {
+      #{$name} {
+        font-size: round(map-get($value, font-size-max));
+      }
+    }
+  }
+}

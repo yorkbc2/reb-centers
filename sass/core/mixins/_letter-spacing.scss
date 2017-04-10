@@ -1,0 +1,7 @@
+@mixin letter-spacing($letter-spacing, $font-size, $unit: px) {
+  @if ($unit == px) {
+    letter-spacing: #{($letter-spacing * $font-size / 1000) * 1px};
+  } @else if ($unit == em) {
+    letter-spacing: #{($letter-spacing / 1000) * 1em};
+  }
+}

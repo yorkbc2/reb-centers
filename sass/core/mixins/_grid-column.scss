@@ -1,0 +1,59 @@
+@mixin grid-column($parent-class, $child-class, $container-width-px, $number-columns, $margin-right-px, $margin-bottom-px: $margin-right-px, $unit: "percent") {
+  #{$parent-class} {
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+
+  #{$child-class} {
+    float: left;
+    @if ($unit == "percent" or $unit == "" or $unit != "px") {
+      $margin-right-percent: margin-right-px-to-percent($container-width-px, $margin-right-px);
+      $margin-bottom-percent: margin-right-px-to-percent($container-width-px, $margin-bottom-px);
+      margin-bottom: $margin-bottom-percent;
+      margin-right: $margin-right-percent;
+      width: (100% - (($number-columns - 1) * $margin-right-percent)) / $number-columns;
+    }
+    @if ($unit == "px") {
+      margin-bottom: $margin-bottom-px * 1px;
+      margin-right: $margin-right-px * 1px;
+      width: round(($container-width-px - (($number-columns - 1) * $margin-right-px)) / $number-columns) * 1px;
+    }
+    @content;
+
+    &:nth-child(#{$number-columns}n),
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(#{$number-columns}n+1) {
+      clear: both;
+    }
+  }
+}
+
+@mixin grid-column-inline($container-width-px, $number-columns, $margin-right-px, $margin-bottom-px: $margin-right-px, $unit: "percent") {
+  float: left;
+  @if ($unit == "percent" or $unit == "" or $unit != "px") {
+    $margin-right-percent: margin-right-px-to-percent($container-width-px, $margin-right-px);
+    $margin-bottom-percent: margin-right-px-to-percent($container-width-px, $margin-bottom-px);
+    margin-bottom: $margin-bottom-percent;
+    margin-right: $margin-right-percent;
+    width: (100% - (($number-columns - 1) * $margin-right-percent)) / $number-columns;
+  }
+  @if ($unit == "px") {
+    margin-bottom: $margin-bottom-px * 1px;
+    margin-right: $margin-right-px * 1px;
+    width: round(($container-width-px - (($number-columns - 1) * $margin-right-px)) / $number-columns) * 1px;
+  }
+
+  &:nth-child(#{$number-columns}n), &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(#{$number-columns}n+1) {
+    clear: both;
+  }
+}

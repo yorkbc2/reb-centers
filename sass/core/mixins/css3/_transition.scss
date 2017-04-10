@@ -1,0 +1,21 @@
+$prefixes: (moz o webkit spec);
+
+@mixin transition($transition...) {
+  @include prefixer(transition, $transition, $prefixes);
+}
+
+@mixin transition-property($property...) {
+  @include prefixer(transition-property, $property, $prefixes);
+}
+
+@mixin transition-duration($duration...) {
+  @include prefixer(transition-duration, $duration, $prefixes);
+}
+
+@mixin transition-timing-function($timing-function...) {
+  @include prefixer(transition-timing-function, $timing-function, $prefixes);
+}
+
+@mixin transition-delay($delay...) {
+  @include prefixer(transition-delay, $delay, $prefixes);
+}

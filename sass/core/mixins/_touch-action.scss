@@ -1,0 +1,4 @@
+@mixin touch-action($value) {
+  -ms-touch-action: $value;
+  touch-action: $value;
+}

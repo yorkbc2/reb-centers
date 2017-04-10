@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +10,11 @@
 	<title><?php wp_title(' | ', true, 'right'); bloginfo('name'); ?></title>
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicon.ico" type="image/x-icon" />
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> oncopy ="return false;">
-<?php include_once("analyticstracking.php") ?>
-<!--<div id="pre-header">
+<body <?php body_class(); ?>>
+<?php /*
+<div id="pre-header">
 	<div class="inner-wrapper">
 		<div class="container-fluid">
 		    <div class="row">
@@ -48,7 +43,8 @@
 		    </div>
 		</div>
 	</div>
-</div>-->
+</div>
+*/ ?>
 <header id="page-header">
    <div class="inner-wrapper">
 		<div class="container-fluid">
@@ -70,7 +66,7 @@
     </nav>
 		        </div>
 		        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-			    	<?php get_template_part('navbar-search'); ?>
+            <?php get_search_form(); ?>
 		        </div>
 		    </div>
 		</div>

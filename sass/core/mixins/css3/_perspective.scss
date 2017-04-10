@@ -1,0 +1,9 @@
+$perspective-prefixes: webkit moz spec;
+
+@mixin perspective($value: none) {
+  @include prefixer(perspective, $value, $perspective-prefixes);
+}
+
+@mixin perspective-origin($value: 50% 50%) {
+  @include prefixer(perspective-origin, $value, $perspective-prefixes);
+}
