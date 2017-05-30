@@ -19,10 +19,10 @@ function brainworks_enqueues() {
   wp_enqueue_script('modernizr');
 
   wp_deregister_script('jquery');
-  wp_register_script('jquery', get_template_directory_uri() . '/scripts/jquery-1.12.4.min.js', array(), null, true);
+  wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', array(), null, true);
   wp_enqueue_script('jquery');
 
-  wp_register_script('brainworks-js', get_template_directory_uri() . '/scripts/brainworks.js', array('jquery'), null, true);
+  wp_register_script('brainworks-js', get_template_directory_uri() . '/js/brainworks.js', array('jquery'), null, true);
   wp_enqueue_script('brainworks-js');
 
 

@@ -8,12 +8,11 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 3.2
+Version: 3.3
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Lobster&subset=cyrillic");
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 html,
 body,
 div,
@@ -100,9 +99,9 @@ video {
   font: inherit;
   vertical-align: baseline;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 90, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 article,
 aside,
 details,
@@ -114,119 +113,119 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
-/* line 104, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
-/* line 108, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
-/* line 113, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: none; }
+  content: none;
+}
 
-/* line 120, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_reset.scss */
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 @font-face {
   font-family: Docker;
-  src: url(../../fonts/Docker-One.ttf); }
-
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
+  src: url(../../fonts/Docker-One.ttf);
+}
 .alignnone {
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 5px auto 5px auto; }
+  margin: 5px auto 5px auto;
+}
 
-/* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .alignright {
   float: right;
-  margin: 5px 0 20px 20px; }
+  margin: 5px 0 20px 20px;
+}
 
-/* line 16, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .alignleft {
   float: left;
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 21, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 a img.alignright {
   float: right;
-  margin: 5px 0 20px 20px; }
+  margin: 5px 0 20px 20px;
+}
 
-/* line 26, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 a img.alignnone {
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 30, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 a img.alignleft {
   float: left;
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 35, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
-/* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
   max-width: 96%;
   /* Image does not overflow the content area */
   padding: 5px 3px 10px;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 49, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption.alignnone {
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 53, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption.alignleft {
-  margin: 5px 20px 20px 0; }
+  margin: 5px 20px 20px 0;
+}
 
-/* line 57, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption.alignright {
-  margin: 5px 0 20px 20px; }
+  margin: 5px 0 20px 20px;
+}
 
-/* line 61, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
   margin: 0;
   max-width: 98.5%;
   padding: 0;
-  width: auto; }
+  width: auto;
+}
 
-/* line 70, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
   margin: 0;
-  padding: 0 4px 5px; }
+  padding: 0 4px 5px;
+}
 
 /* Text meant only for screen readers. */
-/* line 78, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
-/* line 86, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -245,62 +244,64 @@ a img.aligncenter {
   top: 5px;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar. */ }
+  /* Above WP toolbar. */
+}
 
-/* line 106, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .sticky {
-  color: red; }
+  color: red;
+}
 
-/* line 108, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .bypostauthor {
-  border-top: 10px solid #3575D3; }
+  border-top: 10px solid #3575D3;
+}
 
-/* line 110, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_wp-core.scss */
 .gallery-caption {
-  background-color: lightblue; }
+  background-color: lightblue;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 strong {
-  font-weight: 800; }
+  font-weight: 800;
+}
 
-/* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .block-center {
   text-align: center;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-/* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .text-muted {
-  color: gray; }
+  color: gray;
+}
 
-/* line 15, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 19, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .text-just {
-  text-align: justify; }
+  text-align: justify;
+}
 
-/* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .text-underline {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
-/* line 27, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .hide-on-mobile {
-  display: block; }
+  display: block;
+}
 
-/* line 31, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
 .hide-on-desktop {
-  display: none; }
+  display: none;
+}
 
 @media (max-width: 544px) {
-  /* line 37, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
   .hide-on-mobile {
-    display: none; }
-  /* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/core/_help-style.scss */
-  .hide-on-desktop {
-    display: block; } }
+    display: none;
+  }
 
+  .hide-on-desktop {
+    display: block;
+  }
+}
 /* PLUG-INs */
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -311,2835 +312,2838 @@ strong {
   src: url("fonts/fontawesome-webfont.eot?v=4.6.3");
   src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
-  font-style: normal; }
-
-/* line 14, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
+  font-style: normal;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
-/* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lg {
   font-size: 1.33333333em;
   line-height: .75em;
-  vertical-align: -15%; }
+  vertical-align: -15%;
+}
 
-/* line 29, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-2x {
-  font-size: 2em; }
+  font-size: 2em;
+}
 
-/* line 33, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-3x {
-  font-size: 3em; }
+  font-size: 3em;
+}
 
-/* line 37, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-4x {
-  font-size: 4em; }
+  font-size: 4em;
+}
 
-/* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-5x {
-  font-size: 5em; }
+  font-size: 5em;
+}
 
-/* line 45, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fw {
   width: 1.28571429em;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 50, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ul {
   padding-left: 0;
   margin-left: 2.14285714em;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
-/* line 56, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ul > li {
-  position: relative; }
+  position: relative;
+}
 
-/* line 60, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-li {
   position: absolute;
   left: -2.14285714em;
   width: 2.14285714em;
   top: .14285714em;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 68, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-li.fa-lg {
-  left: -1.85714286em; }
+  left: -1.85714em;
+}
 
-/* line 72, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-border {
   padding: .2em .25em .15em;
   border: solid .08em #eee;
-  border-radius: .1em; }
+  border-radius: 0.1em;
+}
 
-/* line 78, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pull-left {
-  float: left; }
+  float: left;
+}
 
-/* line 82, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pull-right {
-  float: right; }
+  float: right;
+}
 
-/* line 86, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa.fa-pull-left {
-  margin-right: .3em; }
+  margin-right: 0.3em;
+}
 
-/* line 90, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa.fa-pull-right {
-  margin-left: .3em; }
+  margin-left: 0.3em;
+}
 
-/* line 94, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .pull-right {
-  float: right; }
+  float: right;
+}
 
-/* line 98, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .pull-left {
-  float: left; }
+  float: left;
+}
 
-/* line 102, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa.pull-left {
-  margin-right: .3em; }
+  margin-right: 0.3em;
+}
 
-/* line 106, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa.pull-right {
-  margin-left: .3em; }
+  margin-left: 0.3em;
+}
 
-/* line 110, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear; }
+  animation: fa-spin 2s infinite linear;
+}
 
-/* line 115, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pulse {
   -webkit-animation: fa-spin 1s infinite steps(8);
-  animation: fa-spin 1s infinite steps(8); }
+  animation: fa-spin 1s infinite steps(8);
+}
 
 @-webkit-keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
+    transform: rotate(359deg);
+  }
+}
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-/* line 142, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
+    transform: rotate(359deg);
+  }
+}
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+  transform: rotate(90deg);
+}
 
-/* line 149, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+}
 
-/* line 156, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  transform: rotate(270deg); }
+  transform: rotate(270deg);
+}
 
-/* line 163, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1); }
+  transform: scale(-1, 1);
+}
 
-/* line 170, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
-  transform: scale(1, -1); }
+  transform: scale(1, -1);
+}
 
-/* line 177, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 :root .fa-rotate-90,
 :root .fa-rotate-180,
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+  filter: none;
+}
 
-/* line 185, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack {
   position: relative;
   display: inline-block;
   width: 2em;
   height: 2em;
   line-height: 2em;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 194, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack-1x,
 .fa-stack-2x {
   position: absolute;
   left: 0;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 202, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack-1x {
-  line-height: inherit; }
+  line-height: inherit;
+}
 
-/* line 206, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack-2x {
-  font-size: 2em; }
+  font-size: 2em;
+}
 
-/* line 210, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-inverse {
-  color: #fff; }
+  color: #fff;
+}
 
-/* line 214, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-glass:before {
-  content: "\f000"; }
+  content: "";
+}
 
-/* line 218, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-music:before {
-  content: "\f001"; }
+  content: "";
+}
 
-/* line 222, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-search:before {
-  content: "\f002"; }
+  content: "";
+}
 
-/* line 226, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-envelope-o:before {
-  content: "\f003"; }
+  content: "";
+}
 
-/* line 230, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-heart:before {
-  content: "\f004"; }
+  content: "";
+}
 
-/* line 234, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-star:before {
-  content: "\f005"; }
+  content: "";
+}
 
-/* line 238, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-star-o:before {
-  content: "\f006"; }
+  content: "";
+}
 
-/* line 242, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-user:before {
-  content: "\f007"; }
+  content: "";
+}
 
-/* line 246, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-film:before {
-  content: "\f008"; }
+  content: "";
+}
 
-/* line 250, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-th-large:before {
-  content: "\f009"; }
+  content: "";
+}
 
-/* line 254, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-th:before {
-  content: "\f00a"; }
+  content: "";
+}
 
-/* line 258, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-th-list:before {
-  content: "\f00b"; }
+  content: "";
+}
 
-/* line 262, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-check:before {
-  content: "\f00c"; }
+  content: "";
+}
 
-/* line 266, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-remove:before,
 .fa-close:before,
 .fa-times:before {
-  content: "\f00d"; }
+  content: "";
+}
 
-/* line 272, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-search-plus:before {
-  content: "\f00e"; }
+  content: "";
+}
 
-/* line 276, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-search-minus:before {
-  content: "\f010"; }
+  content: "";
+}
 
-/* line 280, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-power-off:before {
-  content: "\f011"; }
+  content: "";
+}
 
-/* line 284, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-signal:before {
-  content: "\f012"; }
+  content: "";
+}
 
-/* line 288, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gear:before,
 .fa-cog:before {
-  content: "\f013"; }
+  content: "";
+}
 
-/* line 293, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-trash-o:before {
-  content: "\f014"; }
+  content: "";
+}
 
-/* line 297, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-home:before {
-  content: "\f015"; }
+  content: "";
+}
 
-/* line 301, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-o:before {
-  content: "\f016"; }
+  content: "";
+}
 
-/* line 305, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-clock-o:before {
-  content: "\f017"; }
+  content: "";
+}
 
-/* line 309, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-road:before {
-  content: "\f018"; }
+  content: "";
+}
 
-/* line 313, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-download:before {
-  content: "\f019"; }
+  content: "";
+}
 
-/* line 317, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-o-down:before {
-  content: "\f01a"; }
+  content: "";
+}
 
-/* line 321, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-o-up:before {
-  content: "\f01b"; }
+  content: "";
+}
 
-/* line 325, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-inbox:before {
-  content: "\f01c"; }
+  content: "";
+}
 
-/* line 329, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-play-circle-o:before {
-  content: "\f01d"; }
+  content: "";
+}
 
-/* line 333, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rotate-right:before,
 .fa-repeat:before {
-  content: "\f01e"; }
+  content: "";
+}
 
-/* line 338, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-refresh:before {
-  content: "\f021"; }
+  content: "";
+}
 
-/* line 342, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-list-alt:before {
-  content: "\f022"; }
+  content: "";
+}
 
-/* line 346, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lock:before {
-  content: "\f023"; }
+  content: "";
+}
 
-/* line 350, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flag:before {
-  content: "\f024"; }
+  content: "";
+}
 
-/* line 354, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-headphones:before {
-  content: "\f025"; }
+  content: "";
+}
 
-/* line 358, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-volume-off:before {
-  content: "\f026"; }
+  content: "";
+}
 
-/* line 362, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-volume-down:before {
-  content: "\f027"; }
+  content: "";
+}
 
-/* line 366, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-volume-up:before {
-  content: "\f028"; }
+  content: "";
+}
 
-/* line 370, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-qrcode:before {
-  content: "\f029"; }
+  content: "";
+}
 
-/* line 374, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-barcode:before {
-  content: "\f02a"; }
+  content: "";
+}
 
-/* line 378, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tag:before {
-  content: "\f02b"; }
+  content: "";
+}
 
-/* line 382, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tags:before {
-  content: "\f02c"; }
+  content: "";
+}
 
-/* line 386, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-book:before {
-  content: "\f02d"; }
+  content: "";
+}
 
-/* line 390, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bookmark:before {
-  content: "\f02e"; }
+  content: "";
+}
 
-/* line 394, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-print:before {
-  content: "\f02f"; }
+  content: "";
+}
 
-/* line 398, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-camera:before {
-  content: "\f030"; }
+  content: "";
+}
 
-/* line 402, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-font:before {
-  content: "\f031"; }
+  content: "";
+}
 
-/* line 406, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bold:before {
-  content: "\f032"; }
+  content: "";
+}
 
-/* line 410, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-italic:before {
-  content: "\f033"; }
+  content: "";
+}
 
-/* line 414, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-text-height:before {
-  content: "\f034"; }
+  content: "";
+}
 
-/* line 418, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-text-width:before {
-  content: "\f035"; }
+  content: "";
+}
 
-/* line 422, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-align-left:before {
-  content: "\f036"; }
+  content: "";
+}
 
-/* line 426, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-align-center:before {
-  content: "\f037"; }
+  content: "";
+}
 
-/* line 430, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-align-right:before {
-  content: "\f038"; }
+  content: "";
+}
 
-/* line 434, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-align-justify:before {
-  content: "\f039"; }
+  content: "";
+}
 
-/* line 438, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-list:before {
-  content: "\f03a"; }
+  content: "";
+}
 
-/* line 442, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dedent:before,
 .fa-outdent:before {
-  content: "\f03b"; }
+  content: "";
+}
 
-/* line 447, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-indent:before {
-  content: "\f03c"; }
+  content: "";
+}
 
-/* line 451, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-video-camera:before {
-  content: "\f03d"; }
+  content: "";
+}
 
-/* line 455, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-photo:before,
 .fa-image:before,
 .fa-picture-o:before {
-  content: "\f03e"; }
+  content: "";
+}
 
-/* line 461, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pencil:before {
-  content: "\f040"; }
+  content: "";
+}
 
-/* line 465, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-map-marker:before {
-  content: "\f041"; }
+  content: "";
+}
 
-/* line 469, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-adjust:before {
-  content: "\f042"; }
+  content: "";
+}
 
-/* line 473, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tint:before {
-  content: "\f043"; }
+  content: "";
+}
 
-/* line 477, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-edit:before,
 .fa-pencil-square-o:before {
-  content: "\f044"; }
+  content: "";
+}
 
-/* line 482, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-share-square-o:before {
-  content: "\f045"; }
+  content: "";
+}
 
-/* line 486, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-check-square-o:before {
-  content: "\f046"; }
+  content: "";
+}
 
-/* line 490, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrows:before {
-  content: "\f047"; }
+  content: "";
+}
 
-/* line 494, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-step-backward:before {
-  content: "\f048"; }
+  content: "";
+}
 
-/* line 498, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fast-backward:before {
-  content: "\f049"; }
+  content: "";
+}
 
-/* line 502, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-backward:before {
-  content: "\f04a"; }
+  content: "";
+}
 
-/* line 506, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-play:before {
-  content: "\f04b"; }
+  content: "";
+}
 
-/* line 510, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pause:before {
-  content: "\f04c"; }
+  content: "";
+}
 
-/* line 514, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stop:before {
-  content: "\f04d"; }
+  content: "";
+}
 
-/* line 518, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-forward:before {
-  content: "\f04e"; }
+  content: "";
+}
 
-/* line 522, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fast-forward:before {
-  content: "\f050"; }
+  content: "";
+}
 
-/* line 526, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-step-forward:before {
-  content: "\f051"; }
+  content: "";
+}
 
-/* line 530, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-eject:before {
-  content: "\f052"; }
+  content: "";
+}
 
-/* line 534, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-left:before {
-  content: "\f053"; }
+  content: "";
+}
 
-/* line 538, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-right:before {
-  content: "\f054"; }
+  content: "";
+}
 
-/* line 542, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plus-circle:before {
-  content: "\f055"; }
+  content: "";
+}
 
-/* line 546, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-minus-circle:before {
-  content: "\f056"; }
+  content: "";
+}
 
-/* line 550, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-times-circle:before {
-  content: "\f057"; }
+  content: "";
+}
 
-/* line 554, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-check-circle:before {
-  content: "\f058"; }
+  content: "";
+}
 
-/* line 558, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-question-circle:before {
-  content: "\f059"; }
+  content: "";
+}
 
-/* line 562, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-info-circle:before {
-  content: "\f05a"; }
+  content: "";
+}
 
-/* line 566, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-crosshairs:before {
-  content: "\f05b"; }
+  content: "";
+}
 
-/* line 570, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-times-circle-o:before {
-  content: "\f05c"; }
+  content: "";
+}
 
-/* line 574, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-check-circle-o:before {
-  content: "\f05d"; }
+  content: "";
+}
 
-/* line 578, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ban:before {
-  content: "\f05e"; }
+  content: "";
+}
 
-/* line 582, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-left:before {
-  content: "\f060"; }
+  content: "";
+}
 
-/* line 586, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-right:before {
-  content: "\f061"; }
+  content: "";
+}
 
-/* line 590, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-up:before {
-  content: "\f062"; }
+  content: "";
+}
 
-/* line 594, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-down:before {
-  content: "\f063"; }
+  content: "";
+}
 
-/* line 598, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mail-forward:before,
 .fa-share:before {
-  content: "\f064"; }
+  content: "";
+}
 
-/* line 603, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-expand:before {
-  content: "\f065"; }
+  content: "";
+}
 
-/* line 607, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-compress:before {
-  content: "\f066"; }
+  content: "";
+}
 
-/* line 611, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plus:before {
-  content: "\f067"; }
+  content: "";
+}
 
-/* line 615, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-minus:before {
-  content: "\f068"; }
+  content: "";
+}
 
-/* line 619, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-asterisk:before {
-  content: "\f069"; }
+  content: "";
+}
 
-/* line 623, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-exclamation-circle:before {
-  content: "\f06a"; }
+  content: "";
+}
 
-/* line 627, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gift:before {
-  content: "\f06b"; }
+  content: "";
+}
 
-/* line 631, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-leaf:before {
-  content: "\f06c"; }
+  content: "";
+}
 
-/* line 635, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fire:before {
-  content: "\f06d"; }
+  content: "";
+}
 
-/* line 639, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-eye:before {
-  content: "\f06e"; }
+  content: "";
+}
 
-/* line 643, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-eye-slash:before {
-  content: "\f070"; }
+  content: "";
+}
 
-/* line 647, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-warning:before,
 .fa-exclamation-triangle:before {
-  content: "\f071"; }
+  content: "";
+}
 
-/* line 652, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plane:before {
-  content: "\f072"; }
+  content: "";
+}
 
-/* line 656, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar:before {
-  content: "\f073"; }
+  content: "";
+}
 
-/* line 660, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-random:before {
-  content: "\f074"; }
+  content: "";
+}
 
-/* line 664, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-comment:before {
-  content: "\f075"; }
+  content: "";
+}
 
-/* line 668, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-magnet:before {
-  content: "\f076"; }
+  content: "";
+}
 
-/* line 672, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-up:before {
-  content: "\f077"; }
+  content: "";
+}
 
-/* line 676, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-down:before {
-  content: "\f078"; }
+  content: "";
+}
 
-/* line 680, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-retweet:before {
-  content: "\f079"; }
+  content: "";
+}
 
-/* line 684, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shopping-cart:before {
-  content: "\f07a"; }
+  content: "";
+}
 
-/* line 688, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-folder:before {
-  content: "\f07b"; }
+  content: "";
+}
 
-/* line 692, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-folder-open:before {
-  content: "\f07c"; }
+  content: "";
+}
 
-/* line 696, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrows-v:before {
-  content: "\f07d"; }
+  content: "";
+}
 
-/* line 700, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrows-h:before {
-  content: "\f07e"; }
+  content: "";
+}
 
-/* line 704, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bar-chart-o:before,
 .fa-bar-chart:before {
-  content: "\f080"; }
+  content: "";
+}
 
-/* line 709, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-twitter-square:before {
-  content: "\f081"; }
+  content: "";
+}
 
-/* line 713, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-facebook-square:before {
-  content: "\f082"; }
+  content: "";
+}
 
-/* line 717, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-camera-retro:before {
-  content: "\f083"; }
+  content: "";
+}
 
-/* line 721, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-key:before {
-  content: "\f084"; }
+  content: "";
+}
 
-/* line 725, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gears:before,
 .fa-cogs:before {
-  content: "\f085"; }
+  content: "";
+}
 
-/* line 730, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-comments:before {
-  content: "\f086"; }
+  content: "";
+}
 
-/* line 734, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-thumbs-o-up:before {
-  content: "\f087"; }
+  content: "";
+}
 
-/* line 738, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-thumbs-o-down:before {
-  content: "\f088"; }
+  content: "";
+}
 
-/* line 742, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-star-half:before {
-  content: "\f089"; }
+  content: "";
+}
 
-/* line 746, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-heart-o:before {
-  content: "\f08a"; }
+  content: "";
+}
 
-/* line 750, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sign-out:before {
-  content: "\f08b"; }
+  content: "";
+}
 
-/* line 754, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-linkedin-square:before {
-  content: "\f08c"; }
+  content: "";
+}
 
-/* line 758, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-thumb-tack:before {
-  content: "\f08d"; }
+  content: "";
+}
 
-/* line 762, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-external-link:before {
-  content: "\f08e"; }
+  content: "";
+}
 
-/* line 766, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sign-in:before {
-  content: "\f090"; }
+  content: "";
+}
 
-/* line 770, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-trophy:before {
-  content: "\f091"; }
+  content: "";
+}
 
-/* line 774, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-github-square:before {
-  content: "\f092"; }
+  content: "";
+}
 
-/* line 778, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-upload:before {
-  content: "\f093"; }
+  content: "";
+}
 
-/* line 782, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lemon-o:before {
-  content: "\f094"; }
+  content: "";
+}
 
-/* line 786, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-phone:before {
-  content: "\f095"; }
+  content: "";
+}
 
-/* line 790, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-square-o:before {
-  content: "\f096"; }
+  content: "";
+}
 
-/* line 794, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bookmark-o:before {
-  content: "\f097"; }
+  content: "";
+}
 
-/* line 798, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-phone-square:before {
-  content: "\f098"; }
+  content: "";
+}
 
-/* line 802, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-twitter:before {
-  content: "\f099"; }
+  content: "";
+}
 
-/* line 806, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-facebook-f:before,
 .fa-facebook:before {
-  content: "\f09a"; }
+  content: "";
+}
 
-/* line 811, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-github:before {
-  content: "\f09b"; }
+  content: "";
+}
 
-/* line 815, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-unlock:before {
-  content: "\f09c"; }
+  content: "";
+}
 
-/* line 819, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-credit-card:before {
-  content: "\f09d"; }
+  content: "";
+}
 
-/* line 823, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-feed:before,
 .fa-rss:before {
-  content: "\f09e"; }
+  content: "";
+}
 
-/* line 828, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hdd-o:before {
-  content: "\f0a0"; }
+  content: "";
+}
 
-/* line 832, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bullhorn:before {
-  content: "\f0a1"; }
+  content: "";
+}
 
-/* line 836, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bell:before {
-  content: "\f0f3"; }
+  content: "";
+}
 
-/* line 840, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-certificate:before {
-  content: "\f0a3"; }
+  content: "";
+}
 
-/* line 844, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-o-right:before {
-  content: "\f0a4"; }
+  content: "";
+}
 
-/* line 848, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-o-left:before {
-  content: "\f0a5"; }
+  content: "";
+}
 
-/* line 852, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-o-up:before {
-  content: "\f0a6"; }
+  content: "";
+}
 
-/* line 856, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-o-down:before {
-  content: "\f0a7"; }
+  content: "";
+}
 
-/* line 860, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-left:before {
-  content: "\f0a8"; }
+  content: "";
+}
 
-/* line 864, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-right:before {
-  content: "\f0a9"; }
+  content: "";
+}
 
-/* line 868, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-up:before {
-  content: "\f0aa"; }
+  content: "";
+}
 
-/* line 872, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-down:before {
-  content: "\f0ab"; }
+  content: "";
+}
 
-/* line 876, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-globe:before {
-  content: "\f0ac"; }
+  content: "";
+}
 
-/* line 880, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wrench:before {
-  content: "\f0ad"; }
+  content: "";
+}
 
-/* line 884, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tasks:before {
-  content: "\f0ae"; }
+  content: "";
+}
 
-/* line 888, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-filter:before {
-  content: "\f0b0"; }
+  content: "";
+}
 
-/* line 892, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-briefcase:before {
-  content: "\f0b1"; }
+  content: "";
+}
 
-/* line 896, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrows-alt:before {
-  content: "\f0b2"; }
+  content: "";
+}
 
-/* line 900, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-group:before,
 .fa-users:before {
-  content: "\f0c0"; }
+  content: "";
+}
 
-/* line 905, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chain:before,
 .fa-link:before {
-  content: "\f0c1"; }
+  content: "";
+}
 
-/* line 910, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cloud:before {
-  content: "\f0c2"; }
+  content: "";
+}
 
-/* line 914, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flask:before {
-  content: "\f0c3"; }
+  content: "";
+}
 
-/* line 918, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cut:before,
 .fa-scissors:before {
-  content: "\f0c4"; }
+  content: "";
+}
 
-/* line 923, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-copy:before,
 .fa-files-o:before {
-  content: "\f0c5"; }
+  content: "";
+}
 
-/* line 928, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paperclip:before {
-  content: "\f0c6"; }
+  content: "";
+}
 
-/* line 932, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-save:before,
 .fa-floppy-o:before {
-  content: "\f0c7"; }
+  content: "";
+}
 
-/* line 937, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-square:before {
-  content: "\f0c8"; }
+  content: "";
+}
 
-/* line 941, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
-  content: "\f0c9"; }
+  content: "";
+}
 
-/* line 947, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-list-ul:before {
-  content: "\f0ca"; }
+  content: "";
+}
 
-/* line 951, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-list-ol:before {
-  content: "\f0cb"; }
+  content: "";
+}
 
-/* line 955, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-strikethrough:before {
-  content: "\f0cc"; }
+  content: "";
+}
 
-/* line 959, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-underline:before {
-  content: "\f0cd"; }
+  content: "";
+}
 
-/* line 963, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-table:before {
-  content: "\f0ce"; }
+  content: "";
+}
 
-/* line 967, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-magic:before {
-  content: "\f0d0"; }
+  content: "";
+}
 
-/* line 971, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-truck:before {
-  content: "\f0d1"; }
+  content: "";
+}
 
-/* line 975, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pinterest:before {
-  content: "\f0d2"; }
+  content: "";
+}
 
-/* line 979, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pinterest-square:before {
-  content: "\f0d3"; }
+  content: "";
+}
 
-/* line 983, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-google-plus-square:before {
-  content: "\f0d4"; }
+  content: "";
+}
 
-/* line 987, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-google-plus:before {
-  content: "\f0d5"; }
+  content: "";
+}
 
-/* line 991, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-money:before {
-  content: "\f0d6"; }
+  content: "";
+}
 
-/* line 995, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-caret-down:before {
-  content: "\f0d7"; }
+  content: "";
+}
 
-/* line 999, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-caret-up:before {
-  content: "\f0d8"; }
+  content: "";
+}
 
-/* line 1003, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-caret-left:before {
-  content: "\f0d9"; }
+  content: "";
+}
 
-/* line 1007, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-caret-right:before {
-  content: "\f0da"; }
+  content: "";
+}
 
-/* line 1011, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-columns:before {
-  content: "\f0db"; }
+  content: "";
+}
 
-/* line 1015, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-unsorted:before,
 .fa-sort:before {
-  content: "\f0dc"; }
+  content: "";
+}
 
-/* line 1020, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-down:before,
 .fa-sort-desc:before {
-  content: "\f0dd"; }
+  content: "";
+}
 
-/* line 1025, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-up:before,
 .fa-sort-asc:before {
-  content: "\f0de"; }
+  content: "";
+}
 
-/* line 1030, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-envelope:before {
-  content: "\f0e0"; }
+  content: "";
+}
 
-/* line 1034, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-linkedin:before {
-  content: "\f0e1"; }
+  content: "";
+}
 
-/* line 1038, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rotate-left:before,
 .fa-undo:before {
-  content: "\f0e2"; }
+  content: "";
+}
 
-/* line 1043, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-legal:before,
 .fa-gavel:before {
-  content: "\f0e3"; }
+  content: "";
+}
 
-/* line 1048, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dashboard:before,
 .fa-tachometer:before {
-  content: "\f0e4"; }
+  content: "";
+}
 
-/* line 1053, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-comment-o:before {
-  content: "\f0e5"; }
+  content: "";
+}
 
-/* line 1057, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-comments-o:before {
-  content: "\f0e6"; }
+  content: "";
+}
 
-/* line 1061, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flash:before,
 .fa-bolt:before {
-  content: "\f0e7"; }
+  content: "";
+}
 
-/* line 1066, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sitemap:before {
-  content: "\f0e8"; }
+  content: "";
+}
 
-/* line 1070, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-umbrella:before {
-  content: "\f0e9"; }
+  content: "";
+}
 
-/* line 1074, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paste:before,
 .fa-clipboard:before {
-  content: "\f0ea"; }
+  content: "";
+}
 
-/* line 1079, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lightbulb-o:before {
-  content: "\f0eb"; }
+  content: "";
+}
 
-/* line 1083, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-exchange:before {
-  content: "\f0ec"; }
+  content: "";
+}
 
-/* line 1087, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cloud-download:before {
-  content: "\f0ed"; }
+  content: "";
+}
 
-/* line 1091, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cloud-upload:before {
-  content: "\f0ee"; }
+  content: "";
+}
 
-/* line 1095, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-user-md:before {
-  content: "\f0f0"; }
+  content: "";
+}
 
-/* line 1099, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stethoscope:before {
-  content: "\f0f1"; }
+  content: "";
+}
 
-/* line 1103, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-suitcase:before {
-  content: "\f0f2"; }
+  content: "";
+}
 
-/* line 1107, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bell-o:before {
-  content: "\f0a2"; }
+  content: "";
+}
 
-/* line 1111, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-coffee:before {
-  content: "\f0f4"; }
+  content: "";
+}
 
-/* line 1115, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cutlery:before {
-  content: "\f0f5"; }
+  content: "";
+}
 
-/* line 1119, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-text-o:before {
-  content: "\f0f6"; }
+  content: "";
+}
 
-/* line 1123, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-building-o:before {
-  content: "\f0f7"; }
+  content: "";
+}
 
-/* line 1127, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hospital-o:before {
-  content: "\f0f8"; }
+  content: "";
+}
 
-/* line 1131, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ambulance:before {
-  content: "\f0f9"; }
+  content: "";
+}
 
-/* line 1135, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-medkit:before {
-  content: "\f0fa"; }
+  content: "";
+}
 
-/* line 1139, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fighter-jet:before {
-  content: "\f0fb"; }
+  content: "";
+}
 
-/* line 1143, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-beer:before {
-  content: "\f0fc"; }
+  content: "";
+}
 
-/* line 1147, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-h-square:before {
-  content: "\f0fd"; }
+  content: "";
+}
 
-/* line 1151, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plus-square:before {
-  content: "\f0fe"; }
+  content: "";
+}
 
-/* line 1155, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-double-left:before {
-  content: "\f100"; }
+  content: "";
+}
 
-/* line 1159, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-double-right:before {
-  content: "\f101"; }
+  content: "";
+}
 
-/* line 1163, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-double-up:before {
-  content: "\f102"; }
+  content: "";
+}
 
-/* line 1167, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-double-down:before {
-  content: "\f103"; }
+  content: "";
+}
 
-/* line 1171, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-left:before {
-  content: "\f104"; }
+  content: "";
+}
 
-/* line 1175, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-right:before {
-  content: "\f105"; }
+  content: "";
+}
 
-/* line 1179, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-up:before {
-  content: "\f106"; }
+  content: "";
+}
 
-/* line 1183, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angle-down:before {
-  content: "\f107"; }
+  content: "";
+}
 
-/* line 1187, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-desktop:before {
-  content: "\f108"; }
+  content: "";
+}
 
-/* line 1191, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-laptop:before {
-  content: "\f109"; }
+  content: "";
+}
 
-/* line 1195, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tablet:before {
-  content: "\f10a"; }
+  content: "";
+}
 
-/* line 1199, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mobile-phone:before,
 .fa-mobile:before {
-  content: "\f10b"; }
+  content: "";
+}
 
-/* line 1204, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-circle-o:before {
-  content: "\f10c"; }
+  content: "";
+}
 
-/* line 1208, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-quote-left:before {
-  content: "\f10d"; }
+  content: "";
+}
 
-/* line 1212, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-quote-right:before {
-  content: "\f10e"; }
+  content: "";
+}
 
-/* line 1216, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-spinner:before {
-  content: "\f110"; }
+  content: "";
+}
 
-/* line 1220, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-circle:before {
-  content: "\f111"; }
+  content: "";
+}
 
-/* line 1224, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mail-reply:before,
 .fa-reply:before {
-  content: "\f112"; }
+  content: "";
+}
 
-/* line 1229, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-github-alt:before {
-  content: "\f113"; }
+  content: "";
+}
 
-/* line 1233, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-folder-o:before {
-  content: "\f114"; }
+  content: "";
+}
 
-/* line 1237, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-folder-open-o:before {
-  content: "\f115"; }
+  content: "";
+}
 
-/* line 1241, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-smile-o:before {
-  content: "\f118"; }
+  content: "";
+}
 
-/* line 1245, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-frown-o:before {
-  content: "\f119"; }
+  content: "";
+}
 
-/* line 1249, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-meh-o:before {
-  content: "\f11a"; }
+  content: "";
+}
 
-/* line 1253, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gamepad:before {
-  content: "\f11b"; }
+  content: "";
+}
 
-/* line 1257, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-keyboard-o:before {
-  content: "\f11c"; }
+  content: "";
+}
 
-/* line 1261, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flag-o:before {
-  content: "\f11d"; }
+  content: "";
+}
 
-/* line 1265, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flag-checkered:before {
-  content: "\f11e"; }
+  content: "";
+}
 
-/* line 1269, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-terminal:before {
-  content: "\f120"; }
+  content: "";
+}
 
-/* line 1273, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-code:before {
-  content: "\f121"; }
+  content: "";
+}
 
-/* line 1277, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mail-reply-all:before,
 .fa-reply-all:before {
-  content: "\f122"; }
+  content: "";
+}
 
-/* line 1282, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-star-half-empty:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
-  content: "\f123"; }
+  content: "";
+}
 
-/* line 1288, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-location-arrow:before {
-  content: "\f124"; }
+  content: "";
+}
 
-/* line 1292, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-crop:before {
-  content: "\f125"; }
+  content: "";
+}
 
-/* line 1296, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-code-fork:before {
-  content: "\f126"; }
+  content: "";
+}
 
-/* line 1300, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-unlink:before,
 .fa-chain-broken:before {
-  content: "\f127"; }
+  content: "";
+}
 
-/* line 1305, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-question:before {
-  content: "\f128"; }
+  content: "";
+}
 
-/* line 1309, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-info:before {
-  content: "\f129"; }
+  content: "";
+}
 
-/* line 1313, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-exclamation:before {
-  content: "\f12a"; }
+  content: "";
+}
 
-/* line 1317, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-superscript:before {
-  content: "\f12b"; }
+  content: "";
+}
 
-/* line 1321, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-subscript:before {
-  content: "\f12c"; }
+  content: "";
+}
 
-/* line 1325, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-eraser:before {
-  content: "\f12d"; }
+  content: "";
+}
 
-/* line 1329, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-puzzle-piece:before {
-  content: "\f12e"; }
+  content: "";
+}
 
-/* line 1333, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-microphone:before {
-  content: "\f130"; }
+  content: "";
+}
 
-/* line 1337, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-microphone-slash:before {
-  content: "\f131"; }
+  content: "";
+}
 
-/* line 1341, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shield:before {
-  content: "\f132"; }
+  content: "";
+}
 
-/* line 1345, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar-o:before {
-  content: "\f133"; }
+  content: "";
+}
 
-/* line 1349, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fire-extinguisher:before {
-  content: "\f134"; }
+  content: "";
+}
 
-/* line 1353, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rocket:before {
-  content: "\f135"; }
+  content: "";
+}
 
-/* line 1357, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-maxcdn:before {
-  content: "\f136"; }
+  content: "";
+}
 
-/* line 1361, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-circle-left:before {
-  content: "\f137"; }
+  content: "";
+}
 
-/* line 1365, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-circle-right:before {
-  content: "\f138"; }
+  content: "";
+}
 
-/* line 1369, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-circle-up:before {
-  content: "\f139"; }
+  content: "";
+}
 
-/* line 1373, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chevron-circle-down:before {
-  content: "\f13a"; }
+  content: "";
+}
 
-/* line 1377, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-html5:before {
-  content: "\f13b"; }
+  content: "";
+}
 
-/* line 1381, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-css3:before {
-  content: "\f13c"; }
+  content: "";
+}
 
-/* line 1385, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-anchor:before {
-  content: "\f13d"; }
+  content: "";
+}
 
-/* line 1389, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-unlock-alt:before {
-  content: "\f13e"; }
+  content: "";
+}
 
-/* line 1393, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bullseye:before {
-  content: "\f140"; }
+  content: "";
+}
 
-/* line 1397, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ellipsis-h:before {
-  content: "\f141"; }
+  content: "";
+}
 
-/* line 1401, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ellipsis-v:before {
-  content: "\f142"; }
+  content: "";
+}
 
-/* line 1405, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rss-square:before {
-  content: "\f143"; }
+  content: "";
+}
 
-/* line 1409, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-play-circle:before {
-  content: "\f144"; }
+  content: "";
+}
 
-/* line 1413, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ticket:before {
-  content: "\f145"; }
+  content: "";
+}
 
-/* line 1417, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-minus-square:before {
-  content: "\f146"; }
+  content: "";
+}
 
-/* line 1421, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-minus-square-o:before {
-  content: "\f147"; }
+  content: "";
+}
 
-/* line 1425, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-level-up:before {
-  content: "\f148"; }
+  content: "";
+}
 
-/* line 1429, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-level-down:before {
-  content: "\f149"; }
+  content: "";
+}
 
-/* line 1433, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-check-square:before {
-  content: "\f14a"; }
+  content: "";
+}
 
-/* line 1437, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pencil-square:before {
-  content: "\f14b"; }
+  content: "";
+}
 
-/* line 1441, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-external-link-square:before {
-  content: "\f14c"; }
+  content: "";
+}
 
-/* line 1445, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-share-square:before {
-  content: "\f14d"; }
+  content: "";
+}
 
-/* line 1449, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-compass:before {
-  content: "\f14e"; }
+  content: "";
+}
 
-/* line 1453, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-down:before,
 .fa-caret-square-o-down:before {
-  content: "\f150"; }
+  content: "";
+}
 
-/* line 1458, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-up:before,
 .fa-caret-square-o-up:before {
-  content: "\f151"; }
+  content: "";
+}
 
-/* line 1463, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-right:before,
 .fa-caret-square-o-right:before {
-  content: "\f152"; }
+  content: "";
+}
 
-/* line 1468, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-euro:before,
 .fa-eur:before {
-  content: "\f153"; }
+  content: "";
+}
 
-/* line 1473, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gbp:before {
-  content: "\f154"; }
+  content: "";
+}
 
-/* line 1477, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dollar:before,
 .fa-usd:before {
-  content: "\f155"; }
+  content: "";
+}
 
-/* line 1482, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-rupee:before,
 .fa-inr:before {
-  content: "\f156"; }
+  content: "";
+}
 
-/* line 1487, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cny:before,
 .fa-rmb:before,
 .fa-yen:before,
 .fa-jpy:before {
-  content: "\f157"; }
+  content: "";
+}
 
-/* line 1494, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
-  content: "\f158"; }
+  content: "";
+}
 
-/* line 1500, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-won:before,
 .fa-krw:before {
-  content: "\f159"; }
+  content: "";
+}
 
-/* line 1505, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bitcoin:before,
 .fa-btc:before {
-  content: "\f15a"; }
+  content: "";
+}
 
-/* line 1510, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file:before {
-  content: "\f15b"; }
+  content: "";
+}
 
-/* line 1514, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-text:before {
-  content: "\f15c"; }
+  content: "";
+}
 
-/* line 1518, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-alpha-asc:before {
-  content: "\f15d"; }
+  content: "";
+}
 
-/* line 1522, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-alpha-desc:before {
-  content: "\f15e"; }
+  content: "";
+}
 
-/* line 1526, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-amount-asc:before {
-  content: "\f160"; }
+  content: "";
+}
 
-/* line 1530, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-amount-desc:before {
-  content: "\f161"; }
+  content: "";
+}
 
-/* line 1534, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-numeric-asc:before {
-  content: "\f162"; }
+  content: "";
+}
 
-/* line 1538, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sort-numeric-desc:before {
-  content: "\f163"; }
+  content: "";
+}
 
-/* line 1542, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-thumbs-up:before {
-  content: "\f164"; }
+  content: "";
+}
 
-/* line 1546, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-thumbs-down:before {
-  content: "\f165"; }
+  content: "";
+}
 
-/* line 1550, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-youtube-square:before {
-  content: "\f166"; }
+  content: "";
+}
 
-/* line 1554, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-youtube:before {
-  content: "\f167"; }
+  content: "";
+}
 
-/* line 1558, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-xing:before {
-  content: "\f168"; }
+  content: "";
+}
 
-/* line 1562, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-xing-square:before {
-  content: "\f169"; }
+  content: "";
+}
 
-/* line 1566, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-youtube-play:before {
-  content: "\f16a"; }
+  content: "";
+}
 
-/* line 1570, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dropbox:before {
-  content: "\f16b"; }
+  content: "";
+}
 
-/* line 1574, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack-overflow:before {
-  content: "\f16c"; }
+  content: "";
+}
 
-/* line 1578, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-instagram:before {
-  content: "\f16d"; }
+  content: "";
+}
 
-/* line 1582, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-flickr:before {
-  content: "\f16e"; }
+  content: "";
+}
 
-/* line 1586, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-adn:before {
-  content: "\f170"; }
+  content: "";
+}
 
-/* line 1590, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bitbucket:before {
-  content: "\f171"; }
+  content: "";
+}
 
-/* line 1594, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bitbucket-square:before {
-  content: "\f172"; }
+  content: "";
+}
 
-/* line 1598, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tumblr:before {
-  content: "\f173"; }
+  content: "";
+}
 
-/* line 1602, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tumblr-square:before {
-  content: "\f174"; }
+  content: "";
+}
 
-/* line 1606, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-long-arrow-down:before {
-  content: "\f175"; }
+  content: "";
+}
 
-/* line 1610, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-long-arrow-up:before {
-  content: "\f176"; }
+  content: "";
+}
 
-/* line 1614, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-long-arrow-left:before {
-  content: "\f177"; }
+  content: "";
+}
 
-/* line 1618, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-long-arrow-right:before {
-  content: "\f178"; }
+  content: "";
+}
 
-/* line 1622, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-apple:before {
-  content: "\f179"; }
+  content: "";
+}
 
-/* line 1626, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-windows:before {
-  content: "\f17a"; }
+  content: "";
+}
 
-/* line 1630, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-android:before {
-  content: "\f17b"; }
+  content: "";
+}
 
-/* line 1634, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-linux:before {
-  content: "\f17c"; }
+  content: "";
+}
 
-/* line 1638, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dribbble:before {
-  content: "\f17d"; }
+  content: "";
+}
 
-/* line 1642, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-skype:before {
-  content: "\f17e"; }
+  content: "";
+}
 
-/* line 1646, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-foursquare:before {
-  content: "\f180"; }
+  content: "";
+}
 
-/* line 1650, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-trello:before {
-  content: "\f181"; }
+  content: "";
+}
 
-/* line 1654, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-female:before {
-  content: "\f182"; }
+  content: "";
+}
 
-/* line 1658, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-male:before {
-  content: "\f183"; }
+  content: "";
+}
 
-/* line 1662, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gittip:before,
 .fa-gratipay:before {
-  content: "\f184"; }
+  content: "";
+}
 
-/* line 1667, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sun-o:before {
-  content: "\f185"; }
+  content: "";
+}
 
-/* line 1671, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-moon-o:before {
-  content: "\f186"; }
+  content: "";
+}
 
-/* line 1675, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-archive:before {
-  content: "\f187"; }
+  content: "";
+}
 
-/* line 1679, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bug:before {
-  content: "\f188"; }
+  content: "";
+}
 
-/* line 1683, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-vk:before {
-  content: "\f189"; }
+  content: "";
+}
 
-/* line 1687, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-weibo:before {
-  content: "\f18a"; }
+  content: "";
+}
 
-/* line 1691, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-renren:before {
-  content: "\f18b"; }
+  content: "";
+}
 
-/* line 1695, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pagelines:before {
-  content: "\f18c"; }
+  content: "";
+}
 
-/* line 1699, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stack-exchange:before {
-  content: "\f18d"; }
+  content: "";
+}
 
-/* line 1703, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-o-right:before {
-  content: "\f18e"; }
+  content: "";
+}
 
-/* line 1707, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-arrow-circle-o-left:before {
-  content: "\f190"; }
+  content: "";
+}
 
-/* line 1711, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-left:before,
 .fa-caret-square-o-left:before {
-  content: "\f191"; }
+  content: "";
+}
 
-/* line 1716, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dot-circle-o:before {
-  content: "\f192"; }
+  content: "";
+}
 
-/* line 1720, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wheelchair:before {
-  content: "\f193"; }
+  content: "";
+}
 
-/* line 1724, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-vimeo-square:before {
-  content: "\f194"; }
+  content: "";
+}
 
-/* line 1728, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-turkish-lira:before,
 .fa-try:before {
-  content: "\f195"; }
+  content: "";
+}
 
-/* line 1733, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plus-square-o:before {
-  content: "\f196"; }
+  content: "";
+}
 
-/* line 1737, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-space-shuttle:before {
-  content: "\f197"; }
+  content: "";
+}
 
-/* line 1741, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-slack:before {
-  content: "\f198"; }
+  content: "";
+}
 
-/* line 1745, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-envelope-square:before {
-  content: "\f199"; }
+  content: "";
+}
 
-/* line 1749, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wordpress:before {
-  content: "\f19a"; }
+  content: "";
+}
 
-/* line 1753, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-openid:before {
-  content: "\f19b"; }
+  content: "";
+}
 
-/* line 1757, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-institution:before,
 .fa-bank:before,
 .fa-university:before {
-  content: "\f19c"; }
+  content: "";
+}
 
-/* line 1763, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mortar-board:before,
 .fa-graduation-cap:before {
-  content: "\f19d"; }
+  content: "";
+}
 
-/* line 1768, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-yahoo:before {
-  content: "\f19e"; }
+  content: "";
+}
 
-/* line 1772, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-google:before {
-  content: "\f1a0"; }
+  content: "";
+}
 
-/* line 1776, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-reddit:before {
-  content: "\f1a1"; }
+  content: "";
+}
 
-/* line 1780, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-reddit-square:before {
-  content: "\f1a2"; }
+  content: "";
+}
 
-/* line 1784, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stumbleupon-circle:before {
-  content: "\f1a3"; }
+  content: "";
+}
 
-/* line 1788, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stumbleupon:before {
-  content: "\f1a4"; }
+  content: "";
+}
 
-/* line 1792, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-delicious:before {
-  content: "\f1a5"; }
+  content: "";
+}
 
-/* line 1796, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-digg:before {
-  content: "\f1a6"; }
+  content: "";
+}
 
-/* line 1800, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pied-piper-pp:before {
-  content: "\f1a7"; }
+  content: "";
+}
 
-/* line 1804, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pied-piper-alt:before {
-  content: "\f1a8"; }
+  content: "";
+}
 
-/* line 1808, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-drupal:before {
-  content: "\f1a9"; }
+  content: "";
+}
 
-/* line 1812, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-joomla:before {
-  content: "\f1aa"; }
+  content: "";
+}
 
-/* line 1816, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-language:before {
-  content: "\f1ab"; }
+  content: "";
+}
 
-/* line 1820, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fax:before {
-  content: "\f1ac"; }
+  content: "";
+}
 
-/* line 1824, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-building:before {
-  content: "\f1ad"; }
+  content: "";
+}
 
-/* line 1828, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-child:before {
-  content: "\f1ae"; }
+  content: "";
+}
 
-/* line 1832, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paw:before {
-  content: "\f1b0"; }
+  content: "";
+}
 
-/* line 1836, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-spoon:before {
-  content: "\f1b1"; }
+  content: "";
+}
 
-/* line 1840, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cube:before {
-  content: "\f1b2"; }
+  content: "";
+}
 
-/* line 1844, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cubes:before {
-  content: "\f1b3"; }
+  content: "";
+}
 
-/* line 1848, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-behance:before {
-  content: "\f1b4"; }
+  content: "";
+}
 
-/* line 1852, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-behance-square:before {
-  content: "\f1b5"; }
+  content: "";
+}
 
-/* line 1856, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-steam:before {
-  content: "\f1b6"; }
+  content: "";
+}
 
-/* line 1860, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-steam-square:before {
-  content: "\f1b7"; }
+  content: "";
+}
 
-/* line 1864, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-recycle:before {
-  content: "\f1b8"; }
+  content: "";
+}
 
-/* line 1868, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-automobile:before,
 .fa-car:before {
-  content: "\f1b9"; }
+  content: "";
+}
 
-/* line 1873, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cab:before,
 .fa-taxi:before {
-  content: "\f1ba"; }
+  content: "";
+}
 
-/* line 1878, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tree:before {
-  content: "\f1bb"; }
+  content: "";
+}
 
-/* line 1882, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-spotify:before {
-  content: "\f1bc"; }
+  content: "";
+}
 
-/* line 1886, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-deviantart:before {
-  content: "\f1bd"; }
+  content: "";
+}
 
-/* line 1890, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-soundcloud:before {
-  content: "\f1be"; }
+  content: "";
+}
 
-/* line 1894, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-database:before {
-  content: "\f1c0"; }
+  content: "";
+}
 
-/* line 1898, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-pdf-o:before {
-  content: "\f1c1"; }
+  content: "";
+}
 
-/* line 1902, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-word-o:before {
-  content: "\f1c2"; }
+  content: "";
+}
 
-/* line 1906, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-excel-o:before {
-  content: "\f1c3"; }
+  content: "";
+}
 
-/* line 1910, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-powerpoint-o:before {
-  content: "\f1c4"; }
+  content: "";
+}
 
-/* line 1914, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-photo-o:before,
 .fa-file-picture-o:before,
 .fa-file-image-o:before {
-  content: "\f1c5"; }
+  content: "";
+}
 
-/* line 1920, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-zip-o:before,
 .fa-file-archive-o:before {
-  content: "\f1c6"; }
+  content: "";
+}
 
-/* line 1925, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-sound-o:before,
 .fa-file-audio-o:before {
-  content: "\f1c7"; }
+  content: "";
+}
 
-/* line 1930, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-movie-o:before,
 .fa-file-video-o:before {
-  content: "\f1c8"; }
+  content: "";
+}
 
-/* line 1935, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-file-code-o:before {
-  content: "\f1c9"; }
+  content: "";
+}
 
-/* line 1939, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-vine:before {
-  content: "\f1ca"; }
+  content: "";
+}
 
-/* line 1943, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-codepen:before {
-  content: "\f1cb"; }
+  content: "";
+}
 
-/* line 1947, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-jsfiddle:before {
-  content: "\f1cc"; }
+  content: "";
+}
 
-/* line 1951, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-life-bouy:before,
 .fa-life-buoy:before,
 .fa-life-saver:before,
 .fa-support:before,
 .fa-life-ring:before {
-  content: "\f1cd"; }
+  content: "";
+}
 
-/* line 1959, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-circle-o-notch:before {
-  content: "\f1ce"; }
+  content: "";
+}
 
-/* line 1963, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ra:before,
 .fa-resistance:before,
 .fa-rebel:before {
-  content: "\f1d0"; }
+  content: "";
+}
 
-/* line 1969, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ge:before,
 .fa-empire:before {
-  content: "\f1d1"; }
+  content: "";
+}
 
-/* line 1974, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-git-square:before {
-  content: "\f1d2"; }
+  content: "";
+}
 
-/* line 1978, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-git:before {
-  content: "\f1d3"; }
+  content: "";
+}
 
-/* line 1982, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-y-combinator-square:before,
 .fa-yc-square:before,
 .fa-hacker-news:before {
-  content: "\f1d4"; }
+  content: "";
+}
 
-/* line 1988, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tencent-weibo:before {
-  content: "\f1d5"; }
+  content: "";
+}
 
-/* line 1992, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-qq:before {
-  content: "\f1d6"; }
+  content: "";
+}
 
-/* line 1996, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wechat:before,
 .fa-weixin:before {
-  content: "\f1d7"; }
+  content: "";
+}
 
-/* line 2001, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-send:before,
 .fa-paper-plane:before {
-  content: "\f1d8"; }
+  content: "";
+}
 
-/* line 2006, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-send-o:before,
 .fa-paper-plane-o:before {
-  content: "\f1d9"; }
+  content: "";
+}
 
-/* line 2011, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-history:before {
-  content: "\f1da"; }
+  content: "";
+}
 
-/* line 2015, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-circle-thin:before {
-  content: "\f1db"; }
+  content: "";
+}
 
-/* line 2019, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-header:before {
-  content: "\f1dc"; }
+  content: "";
+}
 
-/* line 2023, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paragraph:before {
-  content: "\f1dd"; }
+  content: "";
+}
 
-/* line 2027, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sliders:before {
-  content: "\f1de"; }
+  content: "";
+}
 
-/* line 2031, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-share-alt:before {
-  content: "\f1e0"; }
+  content: "";
+}
 
-/* line 2035, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-share-alt-square:before {
-  content: "\f1e1"; }
+  content: "";
+}
 
-/* line 2039, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bomb:before {
-  content: "\f1e2"; }
+  content: "";
+}
 
-/* line 2043, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-soccer-ball-o:before,
 .fa-futbol-o:before {
-  content: "\f1e3"; }
+  content: "";
+}
 
-/* line 2048, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tty:before {
-  content: "\f1e4"; }
+  content: "";
+}
 
-/* line 2052, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-binoculars:before {
-  content: "\f1e5"; }
+  content: "";
+}
 
-/* line 2056, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-plug:before {
-  content: "\f1e6"; }
+  content: "";
+}
 
-/* line 2060, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-slideshare:before {
-  content: "\f1e7"; }
+  content: "";
+}
 
-/* line 2064, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-twitch:before {
-  content: "\f1e8"; }
+  content: "";
+}
 
-/* line 2068, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-yelp:before {
-  content: "\f1e9"; }
+  content: "";
+}
 
-/* line 2072, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-newspaper-o:before {
-  content: "\f1ea"; }
+  content: "";
+}
 
-/* line 2076, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wifi:before {
-  content: "\f1eb"; }
+  content: "";
+}
 
-/* line 2080, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calculator:before {
-  content: "\f1ec"; }
+  content: "";
+}
 
-/* line 2084, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paypal:before {
-  content: "\f1ed"; }
+  content: "";
+}
 
-/* line 2088, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-google-wallet:before {
-  content: "\f1ee"; }
+  content: "";
+}
 
-/* line 2092, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-visa:before {
-  content: "\f1f0"; }
+  content: "";
+}
 
-/* line 2096, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-mastercard:before {
-  content: "\f1f1"; }
+  content: "";
+}
 
-/* line 2100, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-discover:before {
-  content: "\f1f2"; }
+  content: "";
+}
 
-/* line 2104, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-amex:before {
-  content: "\f1f3"; }
+  content: "";
+}
 
-/* line 2108, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-paypal:before {
-  content: "\f1f4"; }
+  content: "";
+}
 
-/* line 2112, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-stripe:before {
-  content: "\f1f5"; }
+  content: "";
+}
 
-/* line 2116, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bell-slash:before {
-  content: "\f1f6"; }
+  content: "";
+}
 
-/* line 2120, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bell-slash-o:before {
-  content: "\f1f7"; }
+  content: "";
+}
 
-/* line 2124, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-trash:before {
-  content: "\f1f8"; }
+  content: "";
+}
 
-/* line 2128, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-copyright:before {
-  content: "\f1f9"; }
+  content: "";
+}
 
-/* line 2132, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-at:before {
-  content: "\f1fa"; }
+  content: "";
+}
 
-/* line 2136, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-eyedropper:before {
-  content: "\f1fb"; }
+  content: "";
+}
 
-/* line 2140, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-paint-brush:before {
-  content: "\f1fc"; }
+  content: "";
+}
 
-/* line 2144, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-birthday-cake:before {
-  content: "\f1fd"; }
+  content: "";
+}
 
-/* line 2148, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-area-chart:before {
-  content: "\f1fe"; }
+  content: "";
+}
 
-/* line 2152, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pie-chart:before {
-  content: "\f200"; }
+  content: "";
+}
 
-/* line 2156, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-line-chart:before {
-  content: "\f201"; }
+  content: "";
+}
 
-/* line 2160, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lastfm:before {
-  content: "\f202"; }
+  content: "";
+}
 
-/* line 2164, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-lastfm-square:before {
-  content: "\f203"; }
+  content: "";
+}
 
-/* line 2168, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-off:before {
-  content: "\f204"; }
+  content: "";
+}
 
-/* line 2172, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-toggle-on:before {
-  content: "\f205"; }
+  content: "";
+}
 
-/* line 2176, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bicycle:before {
-  content: "\f206"; }
+  content: "";
+}
 
-/* line 2180, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bus:before {
-  content: "\f207"; }
+  content: "";
+}
 
-/* line 2184, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ioxhost:before {
-  content: "\f208"; }
+  content: "";
+}
 
-/* line 2188, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-angellist:before {
-  content: "\f209"; }
+  content: "";
+}
 
-/* line 2192, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc:before {
-  content: "\f20a"; }
+  content: "";
+}
 
-/* line 2196, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shekel:before,
 .fa-sheqel:before,
 .fa-ils:before {
-  content: "\f20b"; }
+  content: "";
+}
 
-/* line 2202, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-meanpath:before {
-  content: "\f20c"; }
+  content: "";
+}
 
-/* line 2206, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-buysellads:before {
-  content: "\f20d"; }
+  content: "";
+}
 
-/* line 2210, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-connectdevelop:before {
-  content: "\f20e"; }
+  content: "";
+}
 
-/* line 2214, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-dashcube:before {
-  content: "\f210"; }
+  content: "";
+}
 
-/* line 2218, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-forumbee:before {
-  content: "\f211"; }
+  content: "";
+}
 
-/* line 2222, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-leanpub:before {
-  content: "\f212"; }
+  content: "";
+}
 
-/* line 2226, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sellsy:before {
-  content: "\f213"; }
+  content: "";
+}
 
-/* line 2230, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shirtsinbulk:before {
-  content: "\f214"; }
+  content: "";
+}
 
-/* line 2234, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-simplybuilt:before {
-  content: "\f215"; }
+  content: "";
+}
 
-/* line 2238, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-skyatlas:before {
-  content: "\f216"; }
+  content: "";
+}
 
-/* line 2242, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cart-plus:before {
-  content: "\f217"; }
+  content: "";
+}
 
-/* line 2246, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cart-arrow-down:before {
-  content: "\f218"; }
+  content: "";
+}
 
-/* line 2250, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-diamond:before {
-  content: "\f219"; }
+  content: "";
+}
 
-/* line 2254, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-ship:before {
-  content: "\f21a"; }
+  content: "";
+}
 
-/* line 2258, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-user-secret:before {
-  content: "\f21b"; }
+  content: "";
+}
 
-/* line 2262, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-motorcycle:before {
-  content: "\f21c"; }
+  content: "";
+}
 
-/* line 2266, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-street-view:before {
-  content: "\f21d"; }
+  content: "";
+}
 
-/* line 2270, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-heartbeat:before {
-  content: "\f21e"; }
+  content: "";
+}
 
-/* line 2274, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-venus:before {
-  content: "\f221"; }
+  content: "";
+}
 
-/* line 2278, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mars:before {
-  content: "\f222"; }
+  content: "";
+}
 
-/* line 2282, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mercury:before {
-  content: "\f223"; }
+  content: "";
+}
 
-/* line 2286, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-intersex:before,
 .fa-transgender:before {
-  content: "\f224"; }
+  content: "";
+}
 
-/* line 2291, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-transgender-alt:before {
-  content: "\f225"; }
+  content: "";
+}
 
-/* line 2295, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-venus-double:before {
-  content: "\f226"; }
+  content: "";
+}
 
-/* line 2299, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mars-double:before {
-  content: "\f227"; }
+  content: "";
+}
 
-/* line 2303, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-venus-mars:before {
-  content: "\f228"; }
+  content: "";
+}
 
-/* line 2307, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mars-stroke:before {
-  content: "\f229"; }
+  content: "";
+}
 
-/* line 2311, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mars-stroke-v:before {
-  content: "\f22a"; }
+  content: "";
+}
 
-/* line 2315, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mars-stroke-h:before {
-  content: "\f22b"; }
+  content: "";
+}
 
-/* line 2319, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-neuter:before {
-  content: "\f22c"; }
+  content: "";
+}
 
-/* line 2323, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-genderless:before {
-  content: "\f22d"; }
+  content: "";
+}
 
-/* line 2327, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-facebook-official:before {
-  content: "\f230"; }
+  content: "";
+}
 
-/* line 2331, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pinterest-p:before {
-  content: "\f231"; }
+  content: "";
+}
 
-/* line 2335, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-whatsapp:before {
-  content: "\f232"; }
+  content: "";
+}
 
-/* line 2339, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-server:before {
-  content: "\f233"; }
+  content: "";
+}
 
-/* line 2343, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-user-plus:before {
-  content: "\f234"; }
+  content: "";
+}
 
-/* line 2347, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-user-times:before {
-  content: "\f235"; }
+  content: "";
+}
 
-/* line 2351, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hotel:before,
 .fa-bed:before {
-  content: "\f236"; }
+  content: "";
+}
 
-/* line 2356, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-viacoin:before {
-  content: "\f237"; }
+  content: "";
+}
 
-/* line 2360, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-train:before {
-  content: "\f238"; }
+  content: "";
+}
 
-/* line 2364, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-subway:before {
-  content: "\f239"; }
+  content: "";
+}
 
-/* line 2368, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-medium:before {
-  content: "\f23a"; }
+  content: "";
+}
 
-/* line 2372, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-yc:before,
 .fa-y-combinator:before {
-  content: "\f23b"; }
+  content: "";
+}
 
-/* line 2377, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-optin-monster:before {
-  content: "\f23c"; }
+  content: "";
+}
 
-/* line 2381, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-opencart:before {
-  content: "\f23d"; }
+  content: "";
+}
 
-/* line 2385, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-expeditedssl:before {
-  content: "\f23e"; }
+  content: "";
+}
 
-/* line 2389, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-battery-4:before,
 .fa-battery-full:before {
-  content: "\f240"; }
+  content: "";
+}
 
-/* line 2394, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-battery-3:before,
 .fa-battery-three-quarters:before {
-  content: "\f241"; }
+  content: "";
+}
 
-/* line 2399, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-battery-2:before,
 .fa-battery-half:before {
-  content: "\f242"; }
+  content: "";
+}
 
-/* line 2404, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-battery-1:before,
 .fa-battery-quarter:before {
-  content: "\f243"; }
+  content: "";
+}
 
-/* line 2409, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-battery-0:before,
 .fa-battery-empty:before {
-  content: "\f244"; }
+  content: "";
+}
 
-/* line 2414, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mouse-pointer:before {
-  content: "\f245"; }
+  content: "";
+}
 
-/* line 2418, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-i-cursor:before {
-  content: "\f246"; }
+  content: "";
+}
 
-/* line 2422, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-object-group:before {
-  content: "\f247"; }
+  content: "";
+}
 
-/* line 2426, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-object-ungroup:before {
-  content: "\f248"; }
+  content: "";
+}
 
-/* line 2430, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sticky-note:before {
-  content: "\f249"; }
+  content: "";
+}
 
-/* line 2434, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-sticky-note-o:before {
-  content: "\f24a"; }
+  content: "";
+}
 
-/* line 2438, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-jcb:before {
-  content: "\f24b"; }
+  content: "";
+}
 
-/* line 2442, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-cc-diners-club:before {
-  content: "\f24c"; }
+  content: "";
+}
 
-/* line 2446, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-clone:before {
-  content: "\f24d"; }
+  content: "";
+}
 
-/* line 2450, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-balance-scale:before {
-  content: "\f24e"; }
+  content: "";
+}
 
-/* line 2454, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hourglass-o:before {
-  content: "\f250"; }
+  content: "";
+}
 
-/* line 2458, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hourglass-1:before,
 .fa-hourglass-start:before {
-  content: "\f251"; }
+  content: "";
+}
 
-/* line 2463, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hourglass-2:before,
 .fa-hourglass-half:before {
-  content: "\f252"; }
+  content: "";
+}
 
-/* line 2468, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hourglass-3:before,
 .fa-hourglass-end:before {
-  content: "\f253"; }
+  content: "";
+}
 
-/* line 2473, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hourglass:before {
-  content: "\f254"; }
+  content: "";
+}
 
-/* line 2477, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-grab-o:before,
 .fa-hand-rock-o:before {
-  content: "\f255"; }
+  content: "";
+}
 
-/* line 2482, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-stop-o:before,
 .fa-hand-paper-o:before {
-  content: "\f256"; }
+  content: "";
+}
 
-/* line 2487, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-scissors-o:before {
-  content: "\f257"; }
+  content: "";
+}
 
-/* line 2491, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-lizard-o:before {
-  content: "\f258"; }
+  content: "";
+}
 
-/* line 2495, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-spock-o:before {
-  content: "\f259"; }
+  content: "";
+}
 
-/* line 2499, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-pointer-o:before {
-  content: "\f25a"; }
+  content: "";
+}
 
-/* line 2503, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hand-peace-o:before {
-  content: "\f25b"; }
+  content: "";
+}
 
-/* line 2507, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-trademark:before {
-  content: "\f25c"; }
+  content: "";
+}
 
-/* line 2511, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-registered:before {
-  content: "\f25d"; }
+  content: "";
+}
 
-/* line 2515, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-creative-commons:before {
-  content: "\f25e"; }
+  content: "";
+}
 
-/* line 2519, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gg:before {
-  content: "\f260"; }
+  content: "";
+}
 
-/* line 2523, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gg-circle:before {
-  content: "\f261"; }
+  content: "";
+}
 
-/* line 2527, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tripadvisor:before {
-  content: "\f262"; }
+  content: "";
+}
 
-/* line 2531, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-odnoklassniki:before {
-  content: "\f263"; }
+  content: "";
+}
 
-/* line 2535, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-odnoklassniki-square:before {
-  content: "\f264"; }
+  content: "";
+}
 
-/* line 2539, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-get-pocket:before {
-  content: "\f265"; }
+  content: "";
+}
 
-/* line 2543, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wikipedia-w:before {
-  content: "\f266"; }
+  content: "";
+}
 
-/* line 2547, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-safari:before {
-  content: "\f267"; }
+  content: "";
+}
 
-/* line 2551, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-chrome:before {
-  content: "\f268"; }
+  content: "";
+}
 
-/* line 2555, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-firefox:before {
-  content: "\f269"; }
+  content: "";
+}
 
-/* line 2559, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-opera:before {
-  content: "\f26a"; }
+  content: "";
+}
 
-/* line 2563, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-internet-explorer:before {
-  content: "\f26b"; }
+  content: "";
+}
 
-/* line 2567, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-tv:before,
 .fa-television:before {
-  content: "\f26c"; }
+  content: "";
+}
 
-/* line 2572, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-contao:before {
-  content: "\f26d"; }
+  content: "";
+}
 
-/* line 2576, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-500px:before {
-  content: "\f26e"; }
+  content: "";
+}
 
-/* line 2580, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-amazon:before {
-  content: "\f270"; }
+  content: "";
+}
 
-/* line 2584, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar-plus-o:before {
-  content: "\f271"; }
+  content: "";
+}
 
-/* line 2588, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar-minus-o:before {
-  content: "\f272"; }
+  content: "";
+}
 
-/* line 2592, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar-times-o:before {
-  content: "\f273"; }
+  content: "";
+}
 
-/* line 2596, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-calendar-check-o:before {
-  content: "\f274"; }
+  content: "";
+}
 
-/* line 2600, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-industry:before {
-  content: "\f275"; }
+  content: "";
+}
 
-/* line 2604, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-map-pin:before {
-  content: "\f276"; }
+  content: "";
+}
 
-/* line 2608, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-map-signs:before {
-  content: "\f277"; }
+  content: "";
+}
 
-/* line 2612, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-map-o:before {
-  content: "\f278"; }
+  content: "";
+}
 
-/* line 2616, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-map:before {
-  content: "\f279"; }
+  content: "";
+}
 
-/* line 2620, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-commenting:before {
-  content: "\f27a"; }
+  content: "";
+}
 
-/* line 2624, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-commenting-o:before {
-  content: "\f27b"; }
+  content: "";
+}
 
-/* line 2628, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-houzz:before {
-  content: "\f27c"; }
+  content: "";
+}
 
-/* line 2632, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-vimeo:before {
-  content: "\f27d"; }
+  content: "";
+}
 
-/* line 2636, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-black-tie:before {
-  content: "\f27e"; }
+  content: "";
+}
 
-/* line 2640, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fonticons:before {
-  content: "\f280"; }
+  content: "";
+}
 
-/* line 2644, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-reddit-alien:before {
-  content: "\f281"; }
+  content: "";
+}
 
-/* line 2648, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-edge:before {
-  content: "\f282"; }
+  content: "";
+}
 
-/* line 2652, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-credit-card-alt:before {
-  content: "\f283"; }
+  content: "";
+}
 
-/* line 2656, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-codiepie:before {
-  content: "\f284"; }
+  content: "";
+}
 
-/* line 2660, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-modx:before {
-  content: "\f285"; }
+  content: "";
+}
 
-/* line 2664, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fort-awesome:before {
-  content: "\f286"; }
+  content: "";
+}
 
-/* line 2668, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-usb:before {
-  content: "\f287"; }
+  content: "";
+}
 
-/* line 2672, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-product-hunt:before {
-  content: "\f288"; }
+  content: "";
+}
 
-/* line 2676, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-mixcloud:before {
-  content: "\f289"; }
+  content: "";
+}
 
-/* line 2680, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-scribd:before {
-  content: "\f28a"; }
+  content: "";
+}
 
-/* line 2684, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pause-circle:before {
-  content: "\f28b"; }
+  content: "";
+}
 
-/* line 2688, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pause-circle-o:before {
-  content: "\f28c"; }
+  content: "";
+}
 
-/* line 2692, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stop-circle:before {
-  content: "\f28d"; }
+  content: "";
+}
 
-/* line 2696, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-stop-circle-o:before {
-  content: "\f28e"; }
+  content: "";
+}
 
-/* line 2700, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shopping-bag:before {
-  content: "\f290"; }
+  content: "";
+}
 
-/* line 2704, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-shopping-basket:before {
-  content: "\f291"; }
+  content: "";
+}
 
-/* line 2708, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-hashtag:before {
-  content: "\f292"; }
+  content: "";
+}
 
-/* line 2712, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bluetooth:before {
-  content: "\f293"; }
+  content: "";
+}
 
-/* line 2716, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-bluetooth-b:before {
-  content: "\f294"; }
+  content: "";
+}
 
-/* line 2720, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-percent:before {
-  content: "\f295"; }
+  content: "";
+}
 
-/* line 2724, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-gitlab:before {
-  content: "\f296"; }
+  content: "";
+}
 
-/* line 2728, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wpbeginner:before {
-  content: "\f297"; }
+  content: "";
+}
 
-/* line 2732, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wpforms:before {
-  content: "\f298"; }
+  content: "";
+}
 
-/* line 2736, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-envira:before {
-  content: "\f299"; }
+  content: "";
+}
 
-/* line 2740, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-universal-access:before {
-  content: "\f29a"; }
+  content: "";
+}
 
-/* line 2744, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-wheelchair-alt:before {
-  content: "\f29b"; }
+  content: "";
+}
 
-/* line 2748, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-question-circle-o:before {
-  content: "\f29c"; }
+  content: "";
+}
 
-/* line 2752, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-blind:before {
-  content: "\f29d"; }
+  content: "";
+}
 
-/* line 2756, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-audio-description:before {
-  content: "\f29e"; }
+  content: "";
+}
 
-/* line 2760, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-volume-control-phone:before {
-  content: "\f2a0"; }
+  content: "";
+}
 
-/* line 2764, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-braille:before {
-  content: "\f2a1"; }
+  content: "";
+}
 
-/* line 2768, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-assistive-listening-systems:before {
-  content: "\f2a2"; }
+  content: "";
+}
 
-/* line 2772, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-asl-interpreting:before,
 .fa-american-sign-language-interpreting:before {
-  content: "\f2a3"; }
+  content: "";
+}
 
-/* line 2777, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-deafness:before,
 .fa-hard-of-hearing:before,
 .fa-deaf:before {
-  content: "\f2a4"; }
+  content: "";
+}
 
-/* line 2783, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-glide:before {
-  content: "\f2a5"; }
+  content: "";
+}
 
-/* line 2787, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-glide-g:before {
-  content: "\f2a6"; }
+  content: "";
+}
 
-/* line 2791, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-signing:before,
 .fa-sign-language:before {
-  content: "\f2a7"; }
+  content: "";
+}
 
-/* line 2796, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-low-vision:before {
-  content: "\f2a8"; }
+  content: "";
+}
 
-/* line 2800, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-viadeo:before {
-  content: "\f2a9"; }
+  content: "";
+}
 
-/* line 2804, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-viadeo-square:before {
-  content: "\f2aa"; }
+  content: "";
+}
 
-/* line 2808, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-snapchat:before {
-  content: "\f2ab"; }
+  content: "";
+}
 
-/* line 2812, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-snapchat-ghost:before {
-  content: "\f2ac"; }
+  content: "";
+}
 
-/* line 2816, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-snapchat-square:before {
-  content: "\f2ad"; }
+  content: "";
+}
 
-/* line 2820, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-pied-piper:before {
-  content: "\f2ae"; }
+  content: "";
+}
 
-/* line 2824, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-first-order:before {
-  content: "\f2b0"; }
+  content: "";
+}
 
-/* line 2828, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-yoast:before {
-  content: "\f2b1"; }
+  content: "";
+}
 
-/* line 2832, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-themeisle:before {
-  content: "\f2b2"; }
+  content: "";
+}
 
-/* line 2836, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-google-plus-circle:before,
 .fa-google-plus-official:before {
-  content: "\f2b3"; }
+  content: "";
+}
 
-/* line 2841, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .fa-fa:before,
 .fa-font-awesome:before {
-  content: "\f2b4"; }
+  content: "";
+}
 
-/* line 2846, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -3148,9 +3152,9 @@ strong {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0; }
+  border: 0;
+}
 
-/* line 2857, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/plugins/_font-awesome.scss */
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;
@@ -3158,34 +3162,34 @@ strong {
   height: auto;
   margin: 0;
   overflow: visible;
-  clip: auto; }
+  clip: auto;
+}
 
 /* BOOTSTRAP */
-/* line 3, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+}
 
-/* line 10, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .container-fluid::after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
-/* line 16, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .row {
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+}
 
-/* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .row::after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
-/* line 29, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-lg-1,
 .col-lg-10,
 .col-lg-11,
@@ -3249,534 +3253,598 @@ strong {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 15px;
+}
 
-/* line 95, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-1 {
   float: left;
-  width: 8.333333%; }
+  width: 8.33333%;
+}
 
-/* line 100, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-2 {
   float: left;
-  width: 16.666667%; }
+  width: 16.66667%;
+}
 
-/* line 105, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-3 {
   float: left;
-  width: 25%; }
+  width: 25%;
+}
 
-/* line 110, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-4 {
   float: left;
-  width: 33.333333%; }
+  width: 33.33333%;
+}
 
-/* line 115, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-5 {
   float: left;
-  width: 41.666667%; }
+  width: 41.66667%;
+}
 
-/* line 120, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-6 {
   float: left;
-  width: 50%; }
+  width: 50%;
+}
 
-/* line 125, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-7 {
   float: left;
-  width: 58.333333%; }
+  width: 58.33333%;
+}
 
-/* line 130, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-8 {
   float: left;
-  width: 66.666667%; }
+  width: 66.66667%;
+}
 
-/* line 135, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-9 {
   float: left;
-  width: 75%; }
+  width: 75%;
+}
 
-/* line 140, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-10 {
   float: left;
-  width: 83.333333%; }
+  width: 83.33333%;
+}
 
-/* line 145, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-11 {
   float: left;
-  width: 91.666667%; }
+  width: 91.66667%;
+}
 
-/* line 150, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
 .col-xs-12 {
   float: left;
-  width: 100%; }
+  width: 100%;
+}
 
 @media (min-width: 545px) {
-  /* line 157, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
   .col-sm-1 {
     float: left;
-    width: 8.333333%; }
-  /* line 161, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 8.33333%;
+  }
+
   .col-sm-2 {
     float: left;
-    width: 16.666667%; }
-  /* line 165, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 16.66667%;
+  }
+
   .col-sm-3 {
     float: left;
-    width: 25%; }
-  /* line 169, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 25%;
+  }
+
   .col-sm-4 {
     float: left;
-    width: 33.333333%; }
-  /* line 173, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 33.33333%;
+  }
+
   .col-sm-5 {
     float: left;
-    width: 41.666667%; }
-  /* line 177, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 41.66667%;
+  }
+
   .col-sm-6 {
     float: left;
-    width: 50%; }
-  /* line 181, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 50%;
+  }
+
   .col-sm-7 {
     float: left;
-    width: 58.333333%; }
-  /* line 185, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 58.33333%;
+  }
+
   .col-sm-8 {
     float: left;
-    width: 66.666667%; }
-  /* line 189, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 66.66667%;
+  }
+
   .col-sm-9 {
     float: left;
-    width: 75%; }
-  /* line 193, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 75%;
+  }
+
   .col-sm-10 {
     float: left;
-    width: 83.333333%; }
-  /* line 197, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 83.33333%;
+  }
+
   .col-sm-11 {
     float: left;
-    width: 91.666667%; }
-  /* line 201, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 91.66667%;
+  }
+
   .col-sm-12 {
     float: left;
-    width: 100%; } }
-
+    width: 100%;
+  }
+}
 @media (min-width: 769px) {
-  /* line 208, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
   .col-md-1 {
     float: left;
-    width: 8.333333%; }
-  /* line 212, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 8.33333%;
+  }
+
   .col-md-2 {
     float: left;
-    width: 16.666667%; }
-  /* line 216, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 16.66667%;
+  }
+
   .col-md-3 {
     float: left;
-    width: 25%; }
-  /* line 220, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 25%;
+  }
+
   .col-md-4 {
     float: left;
-    width: 33.333333%; }
-  /* line 224, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 33.33333%;
+  }
+
   .col-md-5 {
     float: left;
-    width: 41.666667%; }
-  /* line 228, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 41.66667%;
+  }
+
   .col-md-6 {
     float: left;
-    width: 50%; }
-  /* line 232, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 50%;
+  }
+
   .col-md-7 {
     float: left;
-    width: 58.333333%; }
-  /* line 236, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 58.33333%;
+  }
+
   .col-md-8 {
     float: left;
-    width: 66.666667%; }
-  /* line 240, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 66.66667%;
+  }
+
   .col-md-9 {
     float: left;
-    width: 75%; }
-  /* line 244, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 75%;
+  }
+
   .col-md-10 {
     float: left;
-    width: 83.333333%; }
-  /* line 248, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 83.33333%;
+  }
+
   .col-md-11 {
     float: left;
-    width: 91.666667%; }
-  /* line 252, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 91.66667%;
+  }
+
   .col-md-12 {
     float: left;
-    width: 100%; } }
-
+    width: 100%;
+  }
+}
 @media (min-width: 1025px) {
-  /* line 259, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
   .col-lg-1 {
     float: left;
-    width: 8.333333%; }
-  /* line 263, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 8.33333%;
+  }
+
   .col-lg-2 {
     float: left;
-    width: 16.666667%; }
-  /* line 267, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 16.66667%;
+  }
+
   .col-lg-3 {
     float: left;
-    width: 25%; }
-  /* line 271, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 25%;
+  }
+
   .col-lg-4 {
     float: left;
-    width: 33.333333%; }
-  /* line 275, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 33.33333%;
+  }
+
   .col-lg-5 {
     float: left;
-    width: 41.666667%; }
-  /* line 279, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 41.66667%;
+  }
+
   .col-lg-6 {
     float: left;
-    width: 50%; }
-  /* line 283, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 50%;
+  }
+
   .col-lg-7 {
     float: left;
-    width: 58.333333%; }
-  /* line 287, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 58.33333%;
+  }
+
   .col-lg-8 {
     float: left;
-    width: 66.666667%; }
-  /* line 291, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 66.66667%;
+  }
+
   .col-lg-9 {
     float: left;
-    width: 75%; }
-  /* line 295, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 75%;
+  }
+
   .col-lg-10 {
     float: left;
-    width: 83.333333%; }
-  /* line 299, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 83.33333%;
+  }
+
   .col-lg-11 {
     float: left;
-    width: 91.666667%; }
-  /* line 303, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 91.66667%;
+  }
+
   .col-lg-12 {
     float: left;
-    width: 100%; } }
-
+    width: 100%;
+  }
+}
 @media (min-width: 1367px) {
-  /* line 310, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
   .col-xl-1 {
     float: left;
-    width: 8.333333%; }
-  /* line 314, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 8.33333%;
+  }
+
   .col-xl-2 {
     float: left;
-    width: 16.666667%; }
-  /* line 318, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 16.66667%;
+  }
+
   .col-xl-3 {
     float: left;
-    width: 25%; }
-  /* line 322, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 25%;
+  }
+
   .col-xl-4 {
     float: left;
-    width: 33.333333%; }
-  /* line 326, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 33.33333%;
+  }
+
   .col-xl-5 {
     float: left;
-    width: 41.666667%; }
-  /* line 330, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 41.66667%;
+  }
+
   .col-xl-6 {
     float: left;
-    width: 50%; }
-  /* line 334, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 50%;
+  }
+
   .col-xl-7 {
     float: left;
-    width: 58.333333%; }
-  /* line 338, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 58.33333%;
+  }
+
   .col-xl-8 {
     float: left;
-    width: 66.666667%; }
-  /* line 342, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 66.66667%;
+  }
+
   .col-xl-9 {
     float: left;
-    width: 75%; }
-  /* line 346, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 75%;
+  }
+
   .col-xl-10 {
     float: left;
-    width: 83.333333%; }
-  /* line 350, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 83.33333%;
+  }
+
   .col-xl-11 {
     float: left;
-    width: 91.666667%; }
-  /* line 354, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/bootstrap/_bootstrap-grid.scss */
+    width: 91.66667%;
+  }
+
   .col-xl-12 {
     float: left;
-    width: 100%; } }
-
-/* PAGES */
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/pages/_single-post.scss */
-section {
-  text-align: justify; }
-  /* line 4, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/pages/_single-post.scss */
-  section img {
-    margin-bottom: 20px;
     width: 100%;
-    height: auto; }
-
-/* line 13, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/pages/_single-post.scss */
-ol.commentlist .comment-body {
-  margin-bottom: 25px; }
-
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/pages/_blog-page.scss */
-article[role="article"] {
-  text-align: justify; }
-
-/* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/pages/_blog-page.scss */
+  }
+}
+/* PAGES */
 section {
-  margin-bottom: 20px; }
+  text-align: justify;
+}
+section img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+ol.commentlist .comment-body {
+  margin-bottom: 25px;
+}
+
+article[role="article"] {
+  text-align: justify;
+}
+
+section {
+  margin-bottom: 20px;
+}
 
 /* ELEMENTS */
-/* line 22, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
 h1.hero-title {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
-/* line 26, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
 .bold {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
-/* line 30, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
 i.button-style {
-  padding: 3px 8px; }
+  padding: 3px 8px;
+}
 
 @media (max-width: 544px) {
-  /* line 36, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
   p {
     font-size: 14.4px;
-    line-height: 17.6px; }
-  /* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 17.6px;
+  }
+
   ul li, ol li {
     font-size: 11.2px;
-    line-height: 15.4px; }
-  /* line 46, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 15.4px;
+  }
+
   li a {
     font-size: 11.2px;
-    line-height: 15.4px; } }
-
+    line-height: 15.4px;
+  }
+}
 @media (min-width: 545px) and (max-width: 768px) {
-  /* line 53, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
   p {
     font-size: 14.4px;
-    line-height: 17.6px; }
-  /* line 58, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 17.6px;
+  }
+
   ul li, ol li {
     font-size: 14.4px;
-    line-height: 17.6px; }
-  /* line 63, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 17.6px;
+  }
+
   li a {
     font-size: 11.2px;
-    line-height: 15.4px; } }
-
+    line-height: 15.4px;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* line 70, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
   p {
     font-size: 15.3px;
-    line-height: 18.7px; }
-  /* line 75, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 18.7px;
+  }
+
   ul li, ol li {
     font-size: 15.3px;
-    line-height: 18.7px; }
-  /* line 80, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 18.7px;
+  }
+
   li a {
     font-size: 12.8px;
-    line-height: 17.6px; } }
-
+    line-height: 17.6px;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1366px) {
-  /* line 87, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
   p {
     font-size: 16.2px;
-    line-height: 19.8px; }
-  /* line 92, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 19.8px;
+  }
+
   ul li, ol li {
     font-size: 16.2px;
-    line-height: 19.8px; }
-  /* line 97, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 19.8px;
+  }
+
   li a {
     font-size: 16px;
-    line-height: 22px; } }
-
+    line-height: 22px;
+  }
+}
 @media (min-width: 1367px) {
-  /* line 104, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
   p {
     font-size: 19.8px;
-    line-height: 24.2px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 24.2px;
+  }
+
   ul li, ol li {
     font-size: 19.8px;
-    line-height: 24.2px; }
-  /* line 114, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_typography.scss */
+    line-height: 24.2px;
+  }
+
   li a {
     font-size: 17.6px;
-    line-height: 24.2px; } }
-
-/* line 117, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    line-height: 24.2px;
+  }
+}
 h1, h2, h3, h4, h5, h6, h1.hero-title {
   color: #3575D3;
-  font-family: "Lobster", cursive; }
-  /* line 121, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1.hero-title a {
-    color: #3575D3; }
-    /* line 124, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
-    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1.hero-title a:hover {
-      color: #5f92dc; }
+  font-family: "Lobster", cursive;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1.hero-title a {
+  color: #3575D3;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1.hero-title a:hover {
+  color: #5f92dc;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h1.hero-title {
-  font-size: 32px; }
+  font-size: 32px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h1 {
-  font-size: 30px; }
+  font-size: 30px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h2 {
-  font-size: 27px; }
+  font-size: 27px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h3 {
-  font-size: 23px; }
+  font-size: 23px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h4 {
-  font-size: 21px; }
+  font-size: 21px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h5 {
-  font-size: 18px; }
+  font-size: 18px;
+}
 
-/* line 91, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
 h6 {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 @media (min-width: 480px) and (max-width: 1279px) {
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
   h1.hero-title {
     font-size: 43px;
-    font-size: calc(0.03 * 100vw + 17.6px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.03 * 100vw + 17.6px);
+  }
+
   h1 {
     font-size: 38px;
-    font-size: calc(0.0225 * 100vw + 19.2px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.0225 * 100vw + 19.2px);
+  }
+
   h2 {
     font-size: 36px;
-    font-size: calc(0.01425 * 100vw + 20.16px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.01425 * 100vw + 20.16px);
+  }
+
   h3 {
     font-size: 34px;
-    font-size: calc(0.01125 * 100vw + 17.6px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.01125 * 100vw + 17.6px);
+  }
+
   h4 {
     font-size: 32px;
-    font-size: calc(0.00975 * 100vw + 16.32px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.00975 * 100vw + 16.32px);
+  }
+
   h5 {
     font-size: 30px;
-    font-size: calc(0.0095 * 100vw + 13.44px); }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: calc(0.0095 * 100vw + 13.44px);
+  }
+
   h6 {
     font-size: 28px;
-    font-size: calc(0.008 * 100vw + 12.16px); } }
-
+    font-size: calc(0.008 * 100vw + 12.16px);
+  }
+}
 @media (min-width: 1280px) {
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
   h1.hero-title {
-    font-size: 56px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 56px;
+  }
+
   h1 {
-    font-size: 48px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 48px;
+  }
+
   h2 {
-    font-size: 38px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 38px;
+  }
+
   h3 {
-    font-size: 32px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 32px;
+  }
+
   h4 {
-    font-size: 29px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 29px;
+  }
+
   h5 {
-    font-size: 26px; }
-  /* line 109, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_responsive-titles.scss */
+    font-size: 26px;
+  }
+
   h6 {
-    font-size: 22px; } }
-
-/* line 7, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
+    font-size: 22px;
+  }
+}
 form {
-  width: 100%; }
-  /* line 10, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-  form fieldset {
-    background-color: #3575D3;
-    border: 1px solid #d2d1d1;
-    padding: 4px;
-    border-radius: 4px; }
-    /* line 14, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-    form fieldset label {
-      font-weight: 800; }
-    /* line 18, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-    form fieldset input {
-      width: 100%;
-      margin-bottom: 10px;
-      border: 1px solid #d2d1d1;
-      padding: 4px;
-      border-radius: 4px; }
-    /* line 24, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-    form fieldset input[type="submit"] {
-      background-color: #8AD331; }
-    /* line 28, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-    form fieldset textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      border: 1px solid #d2d1d1;
-      padding: 4px;
-      border-radius: 4px; }
+  width: 100%;
+}
+form fieldset {
+  background-color: #3575D3;
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px;
+}
+form fieldset label {
+  font-weight: 800;
+}
+form fieldset input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px;
+}
+form fieldset input[type="submit"] {
+  background-color: #8AD331;
+}
+form fieldset textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px;
+}
 
-/* line 37, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
 form.form-inline {
   margin: 14px auto;
-  max-width: 300px; }
-  /* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-  form.form-inline input {
-    width: calc(100% - 39px);
-    border: 1px solid #d2d1d1;
-    padding: 4px;
-    border-radius: 4px; }
-    /* line 45, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
-    form.form-inline input:focus {
-      border: 1px solid #8AD331; }
+  max-width: 300px;
+}
+form.form-inline input {
+  width: calc(100% - 39px);
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px;
+}
+form.form-inline input:focus {
+  border: 1px solid #8AD331;
+}
 
-/* line 56, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
 #respond form#commentform .form-group label {
-  text-align: left; }
-
-/* line 60, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
+  text-align: left;
+}
 #respond form#commentform .form-group input {
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid #d2d1d1;
   padding: 4px;
-  border-radius: 4px; }
-
-/* line 66, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_forms.scss */
+  border-radius: 4px;
+}
 #respond form#commentform .form-group textarea {
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid #d2d1d1;
   padding: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+}
 
-/* line 28, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 button {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
-/* line 32, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 .button-style {
   border: none;
   border-radius: 4px;
@@ -3785,22 +3853,22 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
-  font-weight: 700; }
-  /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-style:hover {
-    transition: all .3s;
-    background-color: #a2dc5b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-  /* line 17, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-style:active {
-    transition: all .3s;
-    background-color: #8AD331;
-    box-shadow: none; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-style:focus {
-    outline: 0; }
+  font-weight: 700;
+}
+.button-style:hover {
+  transition: all .3s;
+  background-color: #a2dc5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.button-style:active {
+  transition: all .3s;
+  background-color: #8AD331;
+  box-shadow: none;
+}
+.button-style:focus {
+  outline: 0;
+}
 
-/* line 36, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 .button-large {
   border: none;
   border-radius: 4px;
@@ -3811,22 +3879,22 @@ button {
   text-align: center;
   font-weight: 700;
   padding: 16px 60px;
-  font-size: 20px; }
-  /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-large:hover {
-    transition: all .3s;
-    background-color: #a2dc5b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-  /* line 17, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-large:active {
-    transition: all .3s;
-    background-color: #8AD331;
-    box-shadow: none; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-large:focus {
-    outline: 0; }
+  font-size: 20px;
+}
+.button-large:hover {
+  transition: all .3s;
+  background-color: #a2dc5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.button-large:active {
+  transition: all .3s;
+  background-color: #8AD331;
+  box-shadow: none;
+}
+.button-large:focus {
+  outline: 0;
+}
 
-/* line 42, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 .button-medium {
   border: none;
   border-radius: 4px;
@@ -3837,22 +3905,22 @@ button {
   text-align: center;
   font-weight: 700;
   padding: 14px 25px;
-  font-size: 16px; }
-  /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-medium:hover {
-    transition: all .3s;
-    background-color: #a2dc5b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-  /* line 17, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-medium:active {
-    transition: all .3s;
-    background-color: #8AD331;
-    box-shadow: none; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-medium:focus {
-    outline: 0; }
+  font-size: 16px;
+}
+.button-medium:hover {
+  transition: all .3s;
+  background-color: #a2dc5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.button-medium:active {
+  transition: all .3s;
+  background-color: #8AD331;
+  box-shadow: none;
+}
+.button-medium:focus {
+  outline: 0;
+}
 
-/* line 48, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 .button-small {
   border: none;
   border-radius: 4px;
@@ -3863,22 +3931,22 @@ button {
   text-align: center;
   font-weight: 700;
   padding: 10px 15px;
-  font-size: 14px; }
-  /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-small:hover {
-    transition: all .3s;
-    background-color: #a2dc5b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-  /* line 17, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-small:active {
-    transition: all .3s;
-    background-color: #8AD331;
-    box-shadow: none; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  .button-small:focus {
-    outline: 0; }
+  font-size: 14px;
+}
+.button-small:hover {
+  transition: all .3s;
+  background-color: #a2dc5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.button-small:active {
+  transition: all .3s;
+  background-color: #8AD331;
+  box-shadow: none;
+}
+.button-small:focus {
+  outline: 0;
+}
 
-/* line 54, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
 button[type="submit"] {
   border: none;
   border-radius: 4px;
@@ -3888,119 +3956,130 @@ button[type="submit"] {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  padding: 5px 10px; }
-  /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  button[type="submit"]:hover {
-    transition: all .3s;
-    background-color: #a2dc5b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-  /* line 17, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  button[type="submit"]:active {
-    transition: all .3s;
-    background-color: #8AD331;
-    box-shadow: none; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
-  button[type="submit"]:focus {
-    outline: 0; }
+  padding: 5px 10px;
+}
+button[type="submit"]:hover {
+  transition: all .3s;
+  background-color: #a2dc5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+button[type="submit"]:active {
+  transition: all .3s;
+  background-color: #8AD331;
+  box-shadow: none;
+}
+button[type="submit"]:focus {
+  outline: 0;
+}
 
 @media (max-width: 544px) {
-  /* line 60, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
   .button-large {
     padding: 11px 45px;
-    font-size: 12px; }
-  /* line 65, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 12px;
+  }
+
   .button-medium {
     padding: 9px 22px;
-    font-size: 10px; }
-  /* line 70, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 10px;
+  }
+
   .button-small {
     padding: 6px 12px;
-    font-size: 8px; } }
-
+    font-size: 8px;
+  }
+}
 @media (min-width: 545px) and (max-width: 768px) {
-  /* line 77, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
   .button-large {
     padding: 12px 50px;
-    font-size: 13px; }
-  /* line 82, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 13px;
+  }
+
   .button-medium {
     padding: 10px 25px;
-    font-size: 11px; }
-  /* line 87, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 11px;
+  }
+
   .button-small {
     padding: 7px 14px;
-    font-size: 9px; } }
-
+    font-size: 9px;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* line 94, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
   .button-large {
     padding: 13px 55px;
-    font-size: 14px; }
-  /* line 99, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 14px;
+  }
+
   .button-medium {
     padding: 11px 28px;
-    font-size: 12px; }
-  /* line 104, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 12px;
+  }
+
   .button-small {
     padding: 8px 16px;
-    font-size: 10px; } }
-
+    font-size: 10px;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1366px) {
-  /* line 111, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
   .button-large {
     padding: 14px 60px;
-    font-size: 16px; }
-  /* line 116, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 16px;
+  }
+
   .button-medium {
     padding: 12px 32px;
-    font-size: 14px; }
-  /* line 121, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 14px;
+  }
+
   .button-small {
     padding: 9px 18px;
-    font-size: 12px; } }
-
+    font-size: 12px;
+  }
+}
 @media (min-width: 1367px) {
-  /* line 128, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
   .button-large {
     padding: 15px 65px;
-    font-size: 18px; }
-  /* line 133, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 18px;
+  }
+
   .button-medium {
     padding: 13px 35px;
-    font-size: 15px; }
-  /* line 138, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_buttons.scss */
+    font-size: 15px;
+  }
+
   .button-small {
     padding: 10px 20px;
-    font-size: 13px; } }
-
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_links.scss */
+    font-size: 13px;
+  }
+}
 a {
   text-decoration: none;
   color: #000000;
-  transition: all .3s; }
-  /* line 6, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_links.scss */
-  a:hover, a:active, a:focus {
-    text-decoration: none;
-    color: #333333; }
+  transition: all .3s;
+}
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #333333;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_icons.scss */
 .fa {
   color: #3575D3;
-  transition: all .3s; }
-  /* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_icons.scss */
-  .fa:hover {
-    color: #3575D3; }
+  transition: all .3s;
+}
+.fa:hover {
+  color: #3575D3;
+}
 
-/* line 2, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_pagination.scss */
 ul.pagination li {
-  display: inline-block; }
+  display: inline-block;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_tables.scss */
 table {
   border-spacing: 2px;
   width: 100%;
   background-color: #d6d6d6;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
 tr>th:first-child, tr>td:first-child {
@@ -4008,112 +4087,114 @@ tr>th:first-child, tr>td:first-child {
     text-align: left;
 }
 */
-/* line 16, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_tables.scss */
 table, thead, tfoot, tbody, tr, th, td {
   border: 1px solid black;
-  padding: 5px; }
+  padding: 5px;
+}
 
-/* line 22, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_tables.scss */
 table#wp-calendar {
-  text-align: center; }
-  /* line 25, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_tables.scss */
-  table#wp-calendar caption {
-    color: #8AD331; }
-  /* line 51, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_tables.scss */
-  table#wp-calendar tbody tr td#today {
-    background-color: #8AD331;
-    color: #3575D3; }
+  text-align: center;
+}
+table#wp-calendar caption {
+  color: #8AD331;
+}
+table#wp-calendar tbody tr td#today {
+  background-color: #8AD331;
+  color: #3575D3;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_lists.scss */
 ol {
-  padding-left: 20px; }
+  padding-left: 20px;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
 div.big-space {
-  height: 15vh; }
+  height: 15vh;
+}
 
-/* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
 div.medium-space {
-  height: 12vh; }
+  height: 12vh;
+}
 
-/* line 9, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
 div.small-space {
-  height: 5vh; }
+  height: 5vh;
+}
 
-/* line 13, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
 div.tiny-space {
-  height: 2vh; }
+  height: 2vh;
+}
 
 @media (max-width: 544px) {
-  /* line 20, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
   div.big-space {
-    height: 13vh; }
-  /* line 24, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
-  div.medium-space {
-    height: 10vh; }
-  /* line 28, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
-  div.small-space {
-    height: 4vh; }
-  /* line 32, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_empty-space.scss */
-  div.tiny-space {
-    height: 1vh; } }
+    height: 13vh;
+  }
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_dividers.scss */
+  div.medium-space {
+    height: 10vh;
+  }
+
+  div.small-space {
+    height: 4vh;
+  }
+
+  div.tiny-space {
+    height: 1vh;
+  }
+}
 hr.style-one {
   border: 0;
   height: 1px;
   background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc); }
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
 
-/* line 8, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_dividers.scss */
 hr.style-two {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent);
+}
 
-/* line 14, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_dividers.scss */
 hr.style-three {
   padding: 0;
   border: none;
   border-top: medium double #333;
   color: #333;
-  text-align: center; }
-  /* line 21, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_dividers.scss */
-  hr.style-three:after {
-    content: "§";
-    display: inline-block;
-    position: relative;
-    top: -0.7em;
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white; }
+  text-align: center;
+}
+hr.style-three:after {
+  content: "┬з";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
 
-/* line 32, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/elements/_dividers.scss */
 hr.style-four {
   height: 12px;
   border: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
 
 /* BLOCKS */
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_header.scss */
 #pre-header {
-  padding: 5px 0; }
+  padding: 5px 0;
+}
 
-/* line 5, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_header.scss */
 header#page-header {
   background-color: #3575D3;
-  color: black; }
+  color: black;
+}
 
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
 #prefooter {
   background-color: #5f92dc;
   position: absolute;
   right: 0;
   bottom: 50px;
   width: 100%;
-  padding: 5px 0 15px 0; }
+  padding: 5px 0 15px 0;
+}
 
-/* line 10, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
 footer#page-footer {
   position: absolute;
   right: 0;
@@ -4124,120 +4205,124 @@ footer#page-footer {
   background-color: #3575D3;
   color: white;
   text-align: center;
-  padding-top: 15px; }
-  /* line 22, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
-  footer#page-footer p {
-    text-align: center; }
-  /* line 26, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
-  footer#page-footer a {
-    color: white;
-    text-decoration: underline; }
-    /* line 30, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
-    footer#page-footer a:hover {
-      color: #8AD331; }
+  padding-top: 15px;
+}
+footer#page-footer p {
+  text-align: center;
+}
+footer#page-footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer#page-footer a:hover {
+  color: #8AD331;
+}
 
 @media (max-width: 544px) {
-  /* line 39, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_footer.scss */
   footer#page-footer {
-    padding-top: 10px; } }
-
-/* line 2, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
+    padding-top: 10px;
+  }
+}
 nav.main-nav ul.menu-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  list-style: none; }
-  /* line 8, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-  nav.main-nav ul.menu-container .current-menu-item {
-    position: relative; }
-    /* line 11, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-    nav.main-nav ul.menu-container .current-menu-item:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 5px;
-      background-color: #8AD331;
-      transition: all .3s; }
-  /* line 23, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-  nav.main-nav ul.menu-container .menu-item {
-    text-align: center;
-    border-right: 1px solid black; }
-    /* line 28, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-    nav.main-nav ul.menu-container .menu-item:last-child {
-      border-right: none; }
-    /* line 32, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-    nav.main-nav ul.menu-container .menu-item a {
-      display: block;
-      width: 100%;
-      padding: 15px 20px;
-      background-color: #3575D3;
-      transition: all .3s;
-      color: #ffffff; }
-      /* line 41, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-      nav.main-nav ul.menu-container .menu-item a:hover {
-        background-color: #4d4d4d;
-        color: #ffffff; }
-      /* line 46, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-      nav.main-nav ul.menu-container .menu-item a:active {
-        -moz-box-shadow: inset 0 0 10px #3b3b3b;
-        -webkit-box-shadow: inset 0 0 10px #3b3b3b;
-        box-shadow: inset 0 0 10px #3b3b3b; }
-  /* line 54, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-  nav.main-nav ul.menu-container li.menu-item-has-children {
-    position: relative; }
-    /* line 57, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-    nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-      background-color: #3575D3;
-      list-style: none;
-      position: absolute;
-      top: 54px;
-      left: 0;
-      z-index: 2;
-      display: none; }
-      /* line 66, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-      nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu .menu-item a {
-        padding: 15px 10px;
-        width: 100%;
-        min-width: 200px;
-        text-align: left;
-        transition: all .3s; }
-    /* line 75, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
-    nav.main-nav ul.menu-container li.menu-item-has-children:hover ul.sub-menu {
-      display: block; }
+  list-style: none;
+}
+nav.main-nav ul.menu-container .current-menu-item {
+  position: relative;
+}
+nav.main-nav ul.menu-container .current-menu-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #8AD331;
+  transition: all .3s;
+}
+nav.main-nav ul.menu-container .menu-item {
+  text-align: center;
+  border-right: 1px solid black;
+}
+nav.main-nav ul.menu-container .menu-item:last-child {
+  border-right: none;
+}
+nav.main-nav ul.menu-container .menu-item a {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #3575D3;
+  transition: all .3s;
+  color: #ffffff;
+}
+nav.main-nav ul.menu-container .menu-item a:hover {
+  background-color: #4d4d4d;
+  color: #ffffff;
+}
+nav.main-nav ul.menu-container .menu-item a:active {
+  -moz-box-shadow: inset 0 0 10px #3b3b3b;
+  -webkit-box-shadow: inset 0 0 10px #3b3b3b;
+  box-shadow: inset 0 0 10px #3b3b3b;
+}
+nav.main-nav ul.menu-container li.menu-item-has-children {
+  position: relative;
+}
+nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
+  background-color: #3575D3;
+  list-style: none;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu .menu-item a {
+  padding: 15px 10px;
+  width: 100%;
+  min-width: 200px;
+  text-align: left;
+  transition: all .3s;
+}
+nav.main-nav ul.menu-container li.menu-item-has-children:hover ul.sub-menu {
+  display: block;
+}
 
 @media (max-width: 544px) {
-  /* line 86, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
   nav.main-nav ul.menu-container {
-    display: block; } }
-
+    display: block;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* line 100, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
   nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-    top: 47px; } }
-
+    top: 47px;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1366px) {
-  /* line 113, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_menu.scss */
   nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-    top: 49px; } }
-
-/* line 1, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/sass/blocks/_sidebar.scss */
+    top: 49px;
+  }
+}
 aside.sidebar {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
-/* line 63, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
 html {
   height: 100%;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* line 68, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
-/* line 74, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
 body {
   position: relative;
   margin: 0;
@@ -4247,58 +4332,69 @@ body {
   color: #000000;
   font-family: "Comfortaa", cursive;
   font-weight: 300;
-  overflow-x: hidden; }
+}
 
-/* line 86, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
+strong,
+b {
+  font-weight: bold;
+}
+
 .page-wrapper {
   width: 70%;
   max-width: 1350px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-/* line 93, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
 .inner-wrapper {
   width: 70%;
   max-width: 1350px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 @media (max-width: 544px) {
-  /* line 101, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
   .page-wrapper {
-    width: 98%; }
-  /* line 105, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
-  .inner-wrapper {
-    width: 100%; } }
+    width: 98%;
+  }
 
+  .inner-wrapper {
+    width: 100%;
+  }
+}
 @media (min-width: 545px) and (max-width: 768px) {
-  /* line 112, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
   .page-wrapper {
-    width: 96%; }
-  /* line 116, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
-  .inner-wrapper {
-    width: 96%; } }
+    width: 96%;
+  }
 
+  .inner-wrapper {
+    width: 96%;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* line 123, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
   .page-wrapper {
-    width: 94%; }
-  /* line 127, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
-  .inner-wrapper {
-    width: 94%; } }
+    width: 94%;
+  }
 
+  .inner-wrapper {
+    width: 94%;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1366px) {
-  /* line 134, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
   .page-wrapper {
-    width: 80%; }
-  /* line 138, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
-  .inner-wrapper {
-    width: 80%; } }
+    width: 80%;
+  }
 
-@media (min-width: 1367px) {
-  /* line 145, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
-  .page-wrapper {
-    width: 60%; }
-  /* line 149, M:/home/localhost/www/demo/wp-content/themes/brainworks-v3.2/style.scss */
   .inner-wrapper {
-    width: 60%; } }
+    width: 80%;
+  }
+}
+@media (min-width: 1367px) {
+  .page-wrapper {
+    width: 60%;
+  }
+
+  .inner-wrapper {
+    width: 60%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

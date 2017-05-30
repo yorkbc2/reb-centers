@@ -7,68 +7,68 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 3.2
+Version: 3.3
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
 /* CORE */
-@import "sass/core/reset";
-@import "sass/core/mediaqueries";
-@import "sass/core/variables";
-@import "sass/core/mixins";
-@import "sass/core/colors";
-@import "sass/core/fonts";
-@import "sass/core/wp-core";
-@import "sass/core/help-style";
-//@import "sass/core/theme-style";
+@import "core/reset"; 
+@import "core/mediaqueries";
+@import "core/variables";
+@import "core/mixins";
+@import "core/colors";
+@import "core/fonts";
+@import "core/wp-core";
+@import "core/help-style";
+//@import "core/theme-style";
 
 /* PLUG-INs */
-//@import "sass/plugins/animate-plugin";
-@import "sass/plugins/font-awesome";
-//@import "sass/plugins/plug-ins";
-@import "sass/plugins/animations";
+//@import "plugins/animate-plugin";
+@import "plugins/font-awesome";
+//@import "plugins/plug-ins";
+@import "plugins/animations";
 
 /* BOOTSTRAP */
-//@import "sass/bootstrap/bootstrap-tables";
-@import "sass/bootstrap/bootstrap-grid";
+//@import "bootstrap/bootstrap-tables";
+@import "bootstrap/bootstrap-grid";
 
 /* PAGES */
-@import "sass/pages/single-post";
-@import "sass/pages/blog-page";
-//@import "sass/pages/woo";
+@import "pages/single-post";
+@import "pages/blog-page";
+//@import "pages/woo";
 
 /* ELEMENTS */
-@import "sass/elements/typography";
-@import "sass/elements/responsive-titles";
-@import "sass/elements/forms";
-@import "sass/elements/buttons";
-//@import "sass/elements/images";
-@import "sass/elements/links";
-@import "sass/elements/icons";
-@import "sass/elements/pagination";
-@import "sass/elements/tables";
-@import "sass/elements/lists";
-@import "sass/elements/empty-space";
-@import "sass/elements/dividers";
-//@import "sass/elements/other";
+@import "elements/typography";
+@import "elements/responsive-titles";
+@import "elements/forms";
+@import "elements/buttons";
+//@import "elements/images";
+@import "elements/links";
+@import "elements/icons";
+@import "elements/pagination";
+@import "elements/tables";
+@import "elements/lists";
+@import "elements/empty-space";
+@import "elements/dividers";
+//@import "elements/other";
 
 /* BLOCKS */
-@import "sass/blocks/header";
-@import "sass/blocks/footer";
-@import "sass/blocks/menu";
-@import "sass/blocks/sidebar";
-@import "sass/blocks/menu-second";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/menu";
+@import "blocks/sidebar";
+@import "blocks/menu-second";
 
 
 html {
   height: 100%;
-  box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	@include box-sizing(inherit);
 }
 
 body {
@@ -80,7 +80,11 @@ body {
     color: $bodyFontColor;
     font-family: $fontFamilyTwo;
     font-weight: 300;
-    overflow-x: hidden;
+}
+
+strong,
+b {
+	font-weight: bold;
 }
 
 .page-wrapper {
