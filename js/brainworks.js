@@ -7,16 +7,13 @@
 
         $('html').removeClass('no-js').addClass('js');
 
-        //prefooter height
-        var prefooterHeight = $("#prefooter").height();
-        var footerHeight = $("#page-footer").height();
+        // prefooter height
+        var prefooterHeight = $("#prefooter").outerHeight();
+        var footerHeight = $("#page-footer").outerHeight();
         var footerAndPreFooterSum = prefooterHeight + footerHeight + 50;
         $(".page-wrapper").css({
             "padding-bottom": footerAndPreFooterSum + "px"
         });
-        //prefooter height end
-	});
-}(jQuery));
-
-
-
+        // prefooter height end
+  });
+})(jQuery);
