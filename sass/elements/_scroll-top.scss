@@ -1,0 +1,53 @@
+$scroll-size: 55px;
+$scroll-offset: 20px;
+$scroll-zindex: 100;
+$scroll-color: $brandColorOne;
+
+.scroll-top {
+  display: none;
+  cursor: pointer;
+  width: $scroll-size;
+  height: $scroll-size;
+  position: fixed;
+  right: $scroll-offset;
+  bottom: $scroll-offset;
+  z-index: $scroll-zindex;
+  background-color: $scroll-color;
+  visibility: hidden;
+  @include opacity(0);
+  @include transition(none);
+  @include border-radius(50%);
+  @include box-shadow(0 5px 10px rgba(#000, .3));
+
+  &:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 6px solid transparent;
+    border-top: 0;
+    border-bottom: 10px solid #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($scroll-color, 5%);
+  }
+
+  &.is-visible,
+  .no-js & {
+    visibility: visible;
+    @include opacity(1);
+  }
+
+  .js &,
+  .no-js & {
+    display: block;
+    @include transition(.3s ease-out);
+  }
+}

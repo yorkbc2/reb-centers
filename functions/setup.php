@@ -20,5 +20,11 @@ function brainworks_excerpt_readmore() {
 }
 add_filter('excerpt_more', 'brainworks_excerpt_readmore');
 
+function page_excerpt() {
+  add_post_type_support('page', array('excerpt'));
+}
+
+add_action('init', 'page_excerpt');
+
 // Add post formats support. See http://codex.wordpress.org/Post_Formats
 add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));

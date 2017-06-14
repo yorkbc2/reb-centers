@@ -40,6 +40,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 /* ELEMENTS */
 @import "elements/typography";
 @import "elements/responsive-titles";
+@import "elements/scroll-top";
 @import "elements/forms";
 @import "elements/buttons";
 //@import "elements/images";
@@ -152,5 +153,24 @@ b {
 
 	.inner-wrapper {
 		width: 60%;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	@extend %clearfix;
+
+	@media only screen and (min-width: 1200px) {
+		width: 1200px;
 	}
 }

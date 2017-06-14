@@ -3731,6 +3731,66 @@ h6 {
   }
 }
 
+.scroll-top {
+  display: none;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  background-color: #3575D3;
+  visibility: hidden;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border: 6px solid transparent;
+  border-top: 0;
+  border-bottom: 10px solid #fff;
+}
+
+.scroll-top:hover, .scroll-top:focus {
+  background-color: #2b69c4;
+}
+
+.scroll-top.is-visible,
+.no-js .scroll-top {
+  visibility: visible;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.js .scroll-top,
+.no-js .scroll-top {
+  display: block;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
 form {
   width: 100%;
 }
