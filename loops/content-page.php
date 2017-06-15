@@ -4,7 +4,7 @@ The Page Loop
 =============
 */
 ?>
-<?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+<?php if (!is_front_page() && function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 <?php the_content()?>
