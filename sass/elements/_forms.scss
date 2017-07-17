@@ -8,7 +8,7 @@ form {
     width: 100%;
     
     fieldset {
-        background-color: $brandColorOne;
+        background-color: $themeColorOne;
         @include form-style;
         
         label {
@@ -22,7 +22,7 @@ form {
         }
         
         input[type="submit"] {
-            background-color: $brandColorTwo;
+            background-color: $themeColorTwo;
         }
         
         textarea {
@@ -43,7 +43,7 @@ form.form-inline {
         @include form-style;
         
         &:focus {
-            border: 1px solid $brandColorTwo;
+            border: 1px solid $themeColorTwo;
         }
     }
 }

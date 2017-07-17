@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 3.3
+Version: 3.4
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -136,6 +136,12 @@ ul {
   list-style: none;
 }
 
+.container:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
 @font-face {
   font-family: Docker;
   src: url(../../fonts/Docker-One.ttf);
@@ -253,7 +259,7 @@ a img.aligncenter {
 }
 
 .bypostauthor {
-  border-top: 10px solid #3575D3;
+  border-top: 10px solid #969696;
 }
 
 .gallery-caption {
@@ -271,7 +277,7 @@ strong {
 }
 
 .text-muted {
-  color: gray;
+  color: #aaa;
 }
 
 .text-center {
@@ -3636,16 +3642,16 @@ i.button-style {
 }
 
 h1, h2, h3, h4, h5, h6, h1.hero-title {
-  color: #3575D3;
+  color: #969696;
   font-family: "Lobster", cursive;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1.hero-title a {
-  color: #3575D3;
+  color: #969696;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1.hero-title a:hover {
-  color: #5f92dc;
+  color: #b0b0b0;
 }
 
 h1.hero-title {
@@ -3734,13 +3740,13 @@ h6 {
 .scroll-top {
   display: none;
   cursor: pointer;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 100;
-  background-color: #3575D3;
+  background-color: #969696;
   visibility: hidden;
   filter: alpha(opacity=0);
   opacity: 0;
@@ -3772,7 +3778,7 @@ h6 {
 }
 
 .scroll-top:hover, .scroll-top:focus {
-  background-color: #2b69c4;
+  background-color: #898989;
 }
 
 .scroll-top.is-visible,
@@ -3796,7 +3802,7 @@ form {
 }
 
 form fieldset {
-  background-color: #3575D3;
+  background-color: #969696;
   border: 1px solid #d2d1d1;
   padding: 4px;
   border-radius: 4px;
@@ -4094,34 +4100,25 @@ a:hover, a:active, a:focus {
   color: #333333;
 }
 
-.fa {
-  color: #3575D3;
-  transition: all .3s;
-}
-
-.fa:hover {
-  color: #3575D3;
-}
-
 ul.pagination li {
   display: inline-block;
 }
 
 table {
+  border-collapse: collapse;
   border-spacing: 2px;
   width: 100%;
   background-color: #d6d6d6;
   text-align: center;
 }
 
-/*
-tr>th:first-child, tr>td:first-child {
-    font-weight: 600;
-    text-align: left;
+tr > th:first-child, tr > td:first-child {
+  font-weight: 600;
+  text-align: left;
 }
-*/
+
 table, thead, tfoot, tbody, tr, th, td {
-  border: 1px solid black;
+  border: 1px solid #656565;
   padding: 5px;
 }
 
@@ -4135,7 +4132,7 @@ table#wp-calendar caption {
 
 table#wp-calendar tbody tr td#today {
   background-color: #8AD331;
-  color: #3575D3;
+  color: #969696;
 }
 
 ol {
@@ -4216,12 +4213,12 @@ hr.style-four {
 }
 
 header#page-header {
-  background-color: #3575D3;
-  color: black;
+  background-color: #969696;
+  color: #000;
 }
 
 #prefooter {
-  background-color: #5f92dc;
+  background-color: #b0b0b0;
   position: absolute;
   right: 0;
   bottom: 50px;
@@ -4236,7 +4233,7 @@ footer#page-footer {
   left: 0;
   height: 50px;
   width: 100%;
-  background-color: #3575D3;
+  background-color: #969696;
   color: white;
   text-align: center;
   padding-top: 15px;
@@ -4296,14 +4293,14 @@ nav.main-nav ul.menu-container .menu-item a {
   display: block;
   width: 100%;
   padding: 15px 20px;
-  background-color: #3575D3;
+  background-color: #969696;
   transition: all .3s;
-  color: #ffffff;
+  color: #fff;
 }
 
 nav.main-nav ul.menu-container .menu-item a:hover {
-  background-color: #4d4d4d;
-  color: #ffffff;
+  background-color: #656565;
+  color: #fff;
 }
 
 nav.main-nav ul.menu-container .menu-item a:active {
@@ -4317,13 +4314,17 @@ nav.main-nav ul.menu-container li.menu-item-has-children {
 }
 
 nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-  background-color: #3575D3;
+  background-color: #969696;
   list-style: none;
   position: absolute;
-  top: 54px;
+  top: 100%;
   left: 0;
-  z-index: 2;
+  z-index: 33;
   display: none;
+}
+
+nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu .menu-item {
+  border-right: none;
 }
 
 nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu .menu-item a {
@@ -4341,18 +4342,6 @@ nav.main-nav ul.menu-container li.menu-item-has-children:hover ul.sub-menu {
 @media (max-width: 544px) {
   nav.main-nav ul.menu-container {
     display: block;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-    top: 47px;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1366px) {
-  nav.main-nav ul.menu-container li.menu-item-has-children ul.sub-menu {
-    top: 49px;
   }
 }
 
@@ -4380,8 +4369,8 @@ body {
   margin: 0;
   min-height: 100%;
   min-width: 320px;
-  background-color: white;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   font-family: "Comfortaa", cursive;
   font-weight: 300;
 }
@@ -4445,5 +4434,25 @@ b {
   }
   .inner-wrapper {
     width: 60%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }

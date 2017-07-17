@@ -15,7 +15,7 @@ nav.main-nav {
                 bottom: 0;
                 width: 100%;
                 height: 5px;
-                background-color: $brandColorTwo;
+                background-color: $themeColorTwo;
                 @include smooth_animation;
             }
         }
@@ -58,17 +58,21 @@ nav.main-nav {
                 background-color: $menuBgColor;
                 list-style: none;
                 position: absolute;
-                top: 54px;
+                top: 100%;
                 left: 0;
-                z-index: 2;
+                z-index: 33;
                 display: none;
                 
-                .menu-item a{
-                    padding: 15px 10px;
-                    width: 100%;
-                    min-width: 200px;
-                    text-align: left;
-                    @include smooth_animation;
+                .menu-item {
+                    border-right: none;
+                    
+                    a{
+                        padding: 15px 10px;
+                        width: 100%;
+                        min-width: 200px;
+                        text-align: left;
+                        @include smooth_animation;
+                    }
                 }
             }
             
@@ -88,35 +92,3 @@ nav.main-nav {
         }
     }
 }
-
-//sm 545 - 768
-@media #{$tablet} {}
-
-//md 769 - 1024
-@media #{$under-wrap} {
-    nav.main-nav {    
-        ul.menu-container {
-            li.menu-item-has-children {
-                ul.sub-menu {
-                    top: 47px;
-                }
-            }
-        }
-    }
-}
-
-//lg 1025 - 1366
-@media #{$desktop} {
-    nav.main-nav {    
-        ul.menu-container {
-            li.menu-item-has-children {
-                ul.sub-menu {
-                    top: 49px;
-                }
-            }
-        }
-    }
-}
-
-//xl 1367 - 
-@media #{$screen} {}

@@ -1,20 +1,20 @@
 table {
-    //border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 2px;
     width: 100%;
     background-color: $tableBgColor;
     text-align: center;
 }
 
-/*
+
 tr>th:first-child, tr>td:first-child {
     font-weight: 600;
     text-align: left;
 }
-*/
+
 
 table, thead, tfoot, tbody, tr, th, td {
-    border: 1px solid black;
+    border: 1px solid $tableBorderColor;
     padding: 5px;
 }
 
@@ -23,7 +23,7 @@ table#wp-calendar {
     text-align: center;
     
     caption {
-        color: $brandColorTwo;
+        color: $themeColorTwo;
     }
     
     thead {
@@ -49,8 +49,8 @@ table#wp-calendar {
             }
             
             td#today {
-                background-color: $brandColorTwo;
-                color: $brandColorOne;
+                background-color: $themeColorTwo;
+                color: $themeColorOne;
             }
         }
     }
