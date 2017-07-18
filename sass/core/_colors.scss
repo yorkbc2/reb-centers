@@ -1,6 +1,6 @@
 //BRAND
 $themeColorOne: #969696; // header, menu, footer, title, 
-$themeColorTwo: #8AD331; // menu active item, button, footer link hover, 
+$themeColorTwo: #8ad331; // menu active item, button, footer link hover,
 $themeColorThree: #d33131;
 $themeColorFour: #656565; //menu hover item, table border,
 
@@ -31,15 +31,14 @@ $titleFontColor: $themeColorOne;
 $titleFontColorActive: lighten($titleFontColor, 10%);
 
 //LINKS
-$linkFontColor: #000000;
+$linkFontColor: #000;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
 //BUTTONS
-$buttonFontColor: #ffffff;
-$buttonFontColorActive: #ffffff;
+$buttonFontColor: #fff;
+$buttonFontColorActive: #fff;
 $buttonBgColor: $themeColorTwo;
 $buttonBgColorActive: lighten($themeColorTwo, 10%);
-
 
 //TABLE
 $tableBgColor: #d6d6d6;

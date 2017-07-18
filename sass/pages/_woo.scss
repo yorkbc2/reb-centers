@@ -1,0 +1,25 @@
+.woocommerce {
+  #respond {
+    input#submit {
+      @extend %button-style;
+
+      &.alt {
+        @extend %button-style;
+        @extend %button-style-pseudo;
+      }
+    }
+  }
+
+  a,
+  button,
+  input {
+    &.button {
+      @extend %button-style;
+
+      &.alt {
+        @extend %button-style;
+        @extend %button-style-pseudo;
+      }
+    }
+  }
+}

@@ -1,7 +1,12 @@
-$scroll-size: 45px;
-$scroll-offset: 20px;
-$scroll-zindex: 100;
-$scroll-color: $themeColorOne;
+$scroll-size: 45px !default; // Width and height of the element
+$scroll-offset: 20px !default; // Item position at the bottom right of the browser window
+$scroll-zindex: 100 !default; // z-index
+$scroll-shape: 'circle' !default; // Kind of scroll shape (circle, rounding, square)
+$scroll-color: $themeColorOne !default; // The background color of the scroll
+$scroll-rounding-size: 4px !default; // Rounding size in px for $scroll-shape: rounding
+$scroll-triangle-color: #fff !default; // Color of the triangle
+$scroll-triangle-width: 12px !default; // The width of the triangle
+$scroll-triangle-height: 10px !default; // The height of the triangle
 
 .scroll-top {
   display: none;
@@ -16,7 +21,11 @@ $scroll-color: $themeColorOne;
   visibility: hidden;
   @include opacity(0);
   @include transition(none);
-  @include border-radius(50%);
+  @if ($scroll-shape == 'circle') {
+    @include border-radius(50%);
+  } @else if ($scroll-shape == 'rounding') {
+    @include border-radius($scroll-rounding-size);
+  }
   @include box-shadow(0 5px 10px rgba(#000, .3));
 
   &:after {
@@ -29,9 +38,9 @@ $scroll-color: $themeColorOne;
     bottom: 0;
     left: 0;
     margin: auto;
-    border: 6px solid transparent;
+    border: ($scroll-triangle-width / 2) solid transparent;
     border-top: 0;
-    border-bottom: 10px solid #fff;
+    border-bottom: $scroll-triangle-height solid $scroll-triangle-color;
   }
 
   &:hover,
