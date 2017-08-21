@@ -114,17 +114,4 @@ $headers-map: (
 }
 
 
-h1, h2, h3, h4, h5, h6, h1.hero-title {
-    color: $titleFontColor;
-    font-family: $fontFamilyOne;
-    
-    a {
-        color: $titleFontColor;
-        
-        &:hover {
-            color: $titleFontColorActive;
-        }
-    }
-}
-
 @include responsive-headers();

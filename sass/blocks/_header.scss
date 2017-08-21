@@ -1,8 +1,10 @@
-#pre-header {
+.pre-header {
 	padding: 5px 0;
+    background-color: $preHeaderBgColor;
+    color: $preHeaderColor;
 }
 
-header#page-header {
+.page-header {
     background-color: $headerBgColor;
     color: $headerFontColor;
 }

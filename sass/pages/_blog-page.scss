@@ -1,5 +1,13 @@
 article[role="article"] {
-    text-align: justify;
+    header {
+        h2 {
+            
+        } 
+        
+        p {
+            text-align: justify;
+        }
+    }
 }
 
 section {

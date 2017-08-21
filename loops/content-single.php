@@ -30,4 +30,3 @@ The Single Posts Loop
 <?php else : ?>
 	<?php get_template_part( 'loops/content', 'none' ); ?>
 <?php endif; ?>
-

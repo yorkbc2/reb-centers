@@ -32,7 +32,7 @@ if (have_comments()) : ?>
 	  if (comments_open()) :
   echo "<p class='alert alert-info'>" . __('Be the first to write a comment.', 'brainworks') . "</p>";
 		else :
-			echo "<p class='alert alert-warning'>" . __('Comments are closed for this post.', 'brainworks') . "</p>";
+			echo "<p class='alert alert-warning'>" . __('', 'brainworks') . "</p>"; //Comments are closed for this post
 		endif;
 	endif;
 ?>

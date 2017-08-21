@@ -1,5 +1,5 @@
 //BRAND
-$themeColorOne: #969696; // header, menu, footer, title, 
+$themeColorOne: #4b4b4b; // header, menu, footer, title, 
 $themeColorTwo: #8ad331; // menu active item, button, footer link hover,
 $themeColorThree: #d33131;
 $themeColorFour: #656565; //menu hover item, table border,
@@ -7,6 +7,10 @@ $themeColorFour: #656565; //menu hover item, table border,
 //BODY
 $bodyBgColor: #fff; //white
 $bodyFontColor: #000; // black
+
+//PreHeader
+$preHeaderBgColor: $themeColorOne;
+$preHeaderColor: $themeColorThree;
 
 //HEADER
 $headerBgColor: $themeColorOne;

@@ -1,4 +1,4 @@
-#prefooter {
+.prefooter {
     background-color: lighten( $footerBgColor, 10% );
     position: absolute;
     right: 0;
@@ -7,7 +7,7 @@
     padding: 5px 0 15px 0;
 }
 
-footer#page-footer {
+.page-footer {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -17,11 +17,9 @@ footer#page-footer {
     background-color: $footerBgColor;
     color: white;
     text-align: center;
-    padding-top: 15px;
-    
-    p {
-        text-align: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     a {
         color: white;
@@ -32,23 +30,3 @@ footer#page-footer {
         }
     }
 }
-
-
-//xs 544
-@media #{$mobile} {
-    footer#page-footer {
-        padding-top: 10px;
-    }
-}
-
-//sm 545 - 768
-@media #{$tablet} {}
-
-//md 769 - 1024
-@media #{$under-wrap} {}
-
-//lg 1025 - 1366
-@media #{$desktop} {}
-
-//xl 1367 - 
-@media #{$screen} {}

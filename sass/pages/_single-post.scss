@@ -1,6 +1,8 @@
 section {
-    text-align: justify;
-
+    p {
+        text-align: justify;
+    }
+    
     img {
         margin-bottom: 20px;
         width: 100%;
@@ -12,5 +14,11 @@ section {
 ol.commentlist {
     .comment-body {
         margin-bottom: 25px;
+    }
+}
+
+section#respond {
+    p {
+        text-align: left;
     }
 }

@@ -1,4 +1,5 @@
 @mixin button-style {
+  display: inline-block;
   border: none;
   border-radius: $borderRadius;
   background-color: $buttonBgColor;
@@ -7,12 +8,13 @@
   cursor: pointer;
   text-align: center;
   font-weight: 700;
+    @include box-shadow(0 0 10px rgba(#000, .3));
   @include smooth_animation;
 
   &:hover {
     color: $buttonFontColor;
     background-color: $buttonBgColorActive;
-    @include box-shadow(0 0 10px rgba(#000, .3));
+    @include box-shadow(none);
   }
 
   &:active {

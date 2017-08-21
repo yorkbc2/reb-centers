@@ -13,8 +13,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="top">
+<div class="wrapper">
 <?php /*
-<div id="pre-header">
+<div class="pre-header">
 	<div class="inner-wrapper">
 		<div class="container-fluid">
 		    <div class="row">
@@ -45,12 +46,21 @@
 	</div>
 </div>
 */ ?>
-<header id="page-header">
+<header class="page-header">
    <div class="inner-wrapper">
 		<div class="container-fluid">
 		    <div class="row">
 		        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-    <nav class="main-nav">
+    
+		        </div>
+		        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <?php get_search_form(); ?>
+		        </div>
+		    </div>
+		</div>
+</div>
+</header>
+    <nav class="main-nav container">
     <?php
         wp_nav_menu( array(
             'theme_location'  => 'main-nav',
@@ -64,14 +74,6 @@
         ) );
     ?>
     </nav>
-		        </div>
-		        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-            <?php get_search_form(); ?>
-		        </div>
-		    </div>
-		</div>
-</div>
-</header>
 
 <div class="page-wrapper">
 
