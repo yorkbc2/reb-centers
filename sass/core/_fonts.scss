@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Lobster&subset=cyrillic');
 
-//font-family: 'Lobster', cursive;
-//font-family: 'Comfortaa', cursive;
+//font-family: 'Roboto', sans-serif;
+$font-family-sans-serif: "Arial", "Helvetica", sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", "Times", serif;
+$font-family-monospace: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
 
-$fontFamilyOne: 'Lobster', cursive; //titles
-$fontFamilyTwo: 'Comfortaa', cursive; //body
+$fontFamilyOne: $font-family-sans-serif; //titles
+$fontFamilyTwo: $font-family-sans-serif; //body
+

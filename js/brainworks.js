@@ -10,8 +10,8 @@
     scrollTop('.js-scroll-top');
 
     // prefooter height
-    var prefooterHeight = $("#prefooter").outerHeight();
-    var footerHeight = $("#page-footer").outerHeight();
+    var prefooterHeight = $(".prefooter").outerHeight();
+    var footerHeight = $(".page-footer").outerHeight();
     var footerAndPreFooterSum = prefooterHeight + footerHeight + 50;
     $(".page-wrapper").css({
       "padding-bottom": footerAndPreFooterSum + "px"

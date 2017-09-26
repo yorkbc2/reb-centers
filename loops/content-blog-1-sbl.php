@@ -16,7 +16,7 @@
         </header>
         <section>
             <?php the_post_thumbnail('full'); ?>
-            <?php the_excerpt(); ?>
+            <p><?php the_excerpt(); ?></p>
         </section>
         <hr>
         <footer>

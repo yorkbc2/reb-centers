@@ -1,11 +1,11 @@
 $fonts_mobile: 0.7;
 $fonts_tablet: 0.8;
-$fonts_under-wrap: 0.85;
+$fonts_laptop: 0.85;
 $fonts_desktop: 1;
 $fonts_screen: 1; //Имеет смысл увеличивать значение, если контент страници на всю ширену экрана 
 
 $menu_tablet: 0.7;
-$menu_under-wrap: 0.8;
+$menu_laptop: 0.8;
 $menu_desktop: 1;
 
 $p_mobile: 0.8;
@@ -81,20 +81,20 @@ i.button-style {
     }
 }
 
-@media #{$under-wrap} {
+@media #{$laptop} {
     p {
-        font-size: $fonts_under-wrap * $p_size;
-        line-height: $fonts_under-wrap * $p_line-height;
+        font-size: $fonts_laptop * $p_size;
+        line-height: $fonts_laptop * $p_line-height;
     }
     
     ul li, ol li {
-        font-size: $fonts_under-wrap * $ul_size;
-        line-height: $fonts_under-wrap * $ul_line-height;
+        font-size: $fonts_laptop * $ul_size;
+        line-height: $fonts_laptop * $ul_line-height;
     }
     
     li a {
-        font-size: $menu_under-wrap * $menu_size;
-        line-height: $menu_under-wrap * $menu_line-height;
+        font-size: $menu_laptop * $menu_size;
+        line-height: $menu_laptop * $menu_line-height;
     }
 }
 

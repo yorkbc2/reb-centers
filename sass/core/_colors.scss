@@ -1,16 +1,16 @@
 //BRAND
 $themeColorOne: #4b4b4b; // header, menu, footer, title, 
-$themeColorTwo: #8ad331; // menu active item, button, footer link hover,
-$themeColorThree: #d33131;
-$themeColorFour: #656565; //menu hover item, table border,
+$themeColorTwo: #0027ff; // menu active item, button, footer link hover,
+$themeColorThree: #00ff0a; //preHeader bg,
+$themeColorFour: #ff0000; //menu hover item, table border, preHeader font
 
 //BODY
 $bodyBgColor: #fff; //white
 $bodyFontColor: #000; // black
 
 //PreHeader
-$preHeaderBgColor: $themeColorOne;
-$preHeaderColor: $themeColorThree;
+$preHeaderBgColor: $themeColorThree;
+$preHeaderColor: $themeColorFour;
 
 //HEADER
 $headerBgColor: $themeColorOne;
@@ -38,15 +38,24 @@ $titleFontColorActive: lighten($titleFontColor, 10%);
 $linkFontColor: #000;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
+
 //BUTTONS
 $buttonFontColor: #fff;
-$buttonFontColorActive: #fff;
+$buttonFontColorActive: #ffffff;
 $buttonBgColor: $themeColorTwo;
 $buttonBgColorActive: lighten($themeColorTwo, 10%);
+$buttonBorderColor: #000000;
 
 //TABLE
-$tableBgColor: #d6d6d6;
-$tableBorderColor: $themeColorFour;
+$tableBgColor: $themeColorTwo;
+$tableBgColorActive: lighten($themeColorTwo, 10%);
+$tableBorderColor: #fff;
+$tableBorderColorActive: #989898;
 
 //TEXT
 $textMutedColor: #aaa;
+
+//Icons
+$iconColor: $themeColorOne;
+$iconColorActive: $themeColorTwo;
+$iconcolorReversed: $themeColorThree;

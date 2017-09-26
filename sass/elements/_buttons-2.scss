@@ -1,30 +1,56 @@
 @mixin button-style {
-  display: inline-block;
+  top: 0px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
   border: none;
+  display: inline-block;
   border-radius: $borderRadius;
   background-color: $buttonBgColor;
   color: $buttonFontColor;
-  text-transform: uppercase;
+  font-family: $fontFamilyTwo;
+  height: 40px;
   cursor: pointer;
-  text-align: center;
-  font-weight: 700;
-    @include box-shadow(0 0 10px rgba(#000, .3));
+  font-size: 16px;
+  border-bottom: 1px solid $buttonBorderColor;
+  @include box-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.25));
   @include smooth_animation;
 
-  &:hover {
+  a {
     color: $buttonFontColor;
+    display: inline-block;
+  }
+
+  span {
+    color: $buttonFontColor;
+    display: inline-block;
+  }
+
+  &:focus{
+    outline:0;
+  }
+  
+  &:hover{
+    background-color:$buttonBgColorActive;
+    color: $buttonFontColorActive;
+    top: -2px;
+    height: 40px;
+    border-bottom: 4px solid $buttonBorderColor;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+    &.static{
+      top:0px;
+      height:40px;
+    }
+  }
+  
+  &:active{
+    top:0px;
+    height: 40px;
     background-color: $buttonBgColorActive;
-    @include box-shadow(none);
+    color: $buttonFontColorActive;
+    box-shadow: inset 0px 0px 4px rgba(0,0,0,0.15);
   }
 
-  &:active {
-    background-color: $buttonBgColor;
-    @include box-shadow(none);
-  }
-
-  &:focus {
-    outline: 0;
-  }
 }
 
 %button-style {
@@ -48,17 +74,13 @@
   }
 }
 
-button {
-  cursor: pointer;
-}
-
 .button-style {
   @include button-style;
 }
 
 .button-large {
   @include button-style;
-  padding: 16px 60px;
+  padding: 10px 60px;
   font-size: 20px;
 }
 
@@ -81,7 +103,7 @@ button[type="submit"] {
 
 @media #{$mobile} {
   .button-large {
-    padding: 11px 45px;
+    padding: 10px 45px;
     font-size: 12px;
   }
 
@@ -98,7 +120,7 @@ button[type="submit"] {
 
 @media #{$tablet} {
   .button-large {
-    padding: 12px 50px;
+    padding: 10px 50px;
     font-size: 13px;
   }
 
@@ -115,7 +137,7 @@ button[type="submit"] {
 
 @media #{$laptop} {
   .button-large {
-    padding: 13px 55px;
+    padding: 10px 55px;
     font-size: 14px;
   }
 
@@ -132,7 +154,7 @@ button[type="submit"] {
 
 @media #{$desktop} {
   .button-large {
-    padding: 14px 60px;
+    padding: 10px 60px;
     font-size: 16px;
   }
 
@@ -149,7 +171,7 @@ button[type="submit"] {
 
 @media #{$screen} {
   .button-large {
-    padding: 15px 65px;
+    padding: 10px 65px;
     font-size: 18px;
   }
 

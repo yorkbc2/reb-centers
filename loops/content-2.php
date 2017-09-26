@@ -10,7 +10,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <header>
            <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
-            <?php the_excerpt(); ?>
+            <p><?php the_excerpt(); ?></p>
             <h5>
               <em>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>

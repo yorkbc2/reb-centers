@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    border-spacing: 2px;
+    //border-spacing: 2px;
     width: 100%;
     background-color: $tableBgColor;
     text-align: center;
@@ -10,6 +10,10 @@ table {
 tr>th:first-child, tr>td:first-child {
     font-weight: 600;
     text-align: left;
+}
+
+tbody>tr:first-child th {
+    font-weight: 600;
 }
 
 

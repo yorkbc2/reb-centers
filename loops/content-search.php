@@ -10,7 +10,7 @@ The Search Loop
         <header>
             <h4><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h4>
         </header>
-      <?php the_excerpt(); ?>
+      <p><?php the_excerpt(); ?></p>
     </article>
 <?php endwhile; else: ?>
     <div class="alert alert-warning">

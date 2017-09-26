@@ -1,6 +1,6 @@
 $mobile: "(max-width: 544px)"; //xs
 $tablet: "(min-width: 545px) and (max-width: 768px)"; //sm
-$under-wrap: "(min-width: 769px) and (max-width: 1024px)"; //md
+$laptop: "(min-width: 769px) and (max-width: 1024px)"; //md
 $desktop: "(min-width: 1025px) and (max-width: 1366px)"; //lg
 $screen: "(min-width: 1367px)"; //xl
 
@@ -11,7 +11,7 @@ $screen: "(min-width: 1367px)"; //xl
 @media #{$tablet} {}
 
 //md 769 - 1024
-@media #{$under-wrap} {}
+@media #{$laptop} {}
 
 //lg 1025 - 1366
 @media #{$desktop} {}

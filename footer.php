@@ -13,7 +13,7 @@
     </div><!--wrapper end-->
 <footer class="page-footer">
     <p>
-        <?php _e('Developed by', 'brainworks') ?> <a href="http://brainworks.com.ua/" target="_blank" class="text-underline">BRAIN WORKS</a> &copy; <?php echo date('Y'); ?>
+        <?php _e('Developed by', 'brainworks') ?> <a href="https://brainworks.com.ua/" target="_blank" class="text-underline">BRAIN WORKS</a> &copy; <?php echo date('Y'); ?>
     </p>
 </footer>
 </div>

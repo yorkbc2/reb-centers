@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
     
-	<title><?php wp_title(' | ', true, 'right'); bloginfo('name'); ?></title>
+	<title><?php wp_title(); ?></title>
 	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/favicon.ico" type="image/x-icon" />
 
 	<?php wp_head(); ?>
@@ -70,13 +70,15 @@
 	        'echo'            => true,
 	        'fallback_cb'     => 'wp_page_menu',
 	        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-	        'depth'           => 2
+	        'depth'           => 3
         ) );
     ?>
     </nav>
 
 <div class="page-wrapper">
 
+
+<?php /*
 <?php if(has_custom_logo()) {
   the_custom_logo();
 } else { ?>
@@ -88,4 +90,6 @@
 <h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
 <h3><?php bloginfo( 'description' ); ?></h3>
 <h3><?php bloginfo('admin_email'); ?></h3>
+
+*/ ?>
 

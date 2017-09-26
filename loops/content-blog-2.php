@@ -12,7 +12,7 @@
         </header>
         <section>
             <?php the_post_thumbnail('large'); ?>
-            <?php the_excerpt(); ?>
+            <p><?php the_excerpt(); ?></p>
         </section>
         <hr>
         <footer>

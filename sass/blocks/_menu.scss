@@ -73,6 +73,18 @@ nav.main-nav {
                         text-align: left;
                         @include smooth_animation;
                     }
+                    
+                    ul.sub-menu {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        z-index: 33;
+                        display: none;
+                    }
+                    
+                    &:hover ul.sub-menu{
+                        display: block;
+                    }
                 }
             }
             
