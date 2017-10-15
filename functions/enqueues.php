@@ -1,6 +1,6 @@
 <?php
 function brainworks_enqueues() {
-  $suffix = SCRIPT_DEBUG ? '' : '.min';
+  $suffix = SCRIPT_DEBUG ? '' : '';
 
   /* Styles */
   wp_register_style('style-css', get_template_directory_uri() . '/style' . $suffix . '.css', false, null);
