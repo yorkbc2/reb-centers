@@ -9,7 +9,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <header>
-           <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
+           <h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
             <p><?php the_excerpt(); ?></p>
             <h5>
               <em>
@@ -19,19 +19,20 @@
             </h5>
         </header>
         <footer>
-            <p class="text-muted" style="margin-bottom: 20px;">
+            <p class="text-muted">
                 <i class="fa fa-folder-open-o"></i>&nbsp; <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?><br/>
                 <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
             </p>
         </footer>
+           <div class="tiny-space"></div>
             <a class="button-small" href="<?php echo get_permalink(); ?>"><?php _e( 'Continue reading', 'brainworks' ) ?> <i class="glyphicon glyphicon-arrow-right"></i></a>
+            <div class="tiny-space"></div>
       </div>
     </article>
   </div>
 </div>
-   <br>
     <hr>
-    <br>
+    <div class="tiny-space"></div>
 <?php endwhile; ?>
 
 <?php if ( function_exists('brainworks_pagination') ) { brainworks_pagination(); } else if ( is_paged() ) { ?>

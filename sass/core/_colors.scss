@@ -59,3 +59,7 @@ $textMutedColor: #aaa;
 $iconColor: $themeColorOne;
 $iconColorActive: $themeColorTwo;
 $iconcolorReversed: $themeColorThree;
+
+//FORM
+$formBorderColor: lighten($themeColorOne, 30%);
+$formBgColor: lighten($themeColorOne, 60%);

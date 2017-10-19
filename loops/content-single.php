@@ -8,7 +8,7 @@ The Single Posts Loop
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
     <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
         <header>
-            <h2><?php the_title()?></h2>
+            <h1><?php the_title()?></h1>
             <h5>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?></span>
                 <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php get_option( 'date_format' ) ?></time>
@@ -24,6 +24,9 @@ The Single Posts Loop
             <?php wp_link_pages(); ?>
         </section>
     </article>
+    <div class="tiny-space"></div>
+    <hr>
+    <div class="tiny-space"></div>
 <?php comments_template('/loops/comments.php'); ?>
 <?php endwhile; ?>
 

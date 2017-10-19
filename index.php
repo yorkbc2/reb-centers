@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<div class="tiny-space"></div>
+<h1 class="page-name"><?php single_post_title(); ?></h1>   
+<div class="tiny-space"></div>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
