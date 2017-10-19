@@ -1,6 +1,12 @@
 @mixin form-style {
-    border: 1px solid #d2d1d1;
-    padding: 4px;
+    background-color: $formBgColor;
+    padding: 25px;
+    @include box-shadow($shadow);
+}
+
+@mixin form-field-style {
+    border: 1px solid $formBorderColor;
+    padding: 8px;
     border-radius: $borderRadius;
 }
 
@@ -8,7 +14,6 @@ form {
     width: 100%;
     
     fieldset {
-        background-color: $themeColorOne;
         @include form-style;
         
         label {
@@ -17,18 +22,19 @@ form {
         
         input {
             width: 100%;
-            margin-bottom: 10px;
-            @include form-style;
+            margin-bottom: 20px;
+            @include form-field-style;
         }
         
         input[type="submit"] {
-            background-color: $themeColorTwo;
+            @include button-style;
+            margin-bottom: 0;
         }
         
         textarea {
             width: 100%;
-            margin-bottom: 10px;
-            @include form-style;
+            margin-bottom: 30px;
+            @include form-field-style;
         }
     }
 }
@@ -40,7 +46,7 @@ form.form-inline {
     
     input {
         width: calc(100% - 40px);
-        @include form-style;
+        @include form-field-style;
         
         &:focus {
             border: 1px solid $themeColorTwo;
@@ -49,25 +55,25 @@ form.form-inline {
 }
 //Search form style end
 
-//Comment form
-#respond {
-    form#commentform {
-        .form-group {
-            label {
-                text-align: left;
-            }
-            
-            input {
-                width: 100%;
-                margin-bottom: 10px;
-                @include form-style;
-            }
-            
-            textarea {
-                width: 100%;
-                margin-bottom: 10px;
-                @include form-style;
-            }
+//Comment form on single post page
+form#commentform {
+    @include form-style;
+    
+    .form-group {
+        label {
+            text-align: left;
+        }
+        
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-field-style;
+        }
+        
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-field-style;
         }
     }
 }

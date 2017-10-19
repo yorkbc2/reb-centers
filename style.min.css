@@ -240,7 +240,7 @@ strong {
 
 .block-center {
   text-align: center;
-  display: block !important;
+  display: block;
   margin: 0 auto; }
 
 .text-muted {
@@ -2797,6 +2797,9 @@ section#respond p {
 article[role="article"] header p {
   text-align: justify; }
 
+section {
+  margin-bottom: 20px; }
+
 /* ELEMENTS */
 h1, h2, h3, h4, h5, h6, h1.hero-title {
   color: #4b4b4b;
@@ -2997,55 +3000,25 @@ h6 {
 form {
   width: 100%; }
   form fieldset {
-    background-color: #e4e4e4;
-    padding: 25px;
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+    background-color: #4b4b4b;
+    border: 1px solid #d2d1d1;
+    padding: 4px;
+    border-radius: 4px; }
     form fieldset label {
       font-weight: 800; }
     form fieldset input {
       width: 100%;
-      margin-bottom: 20px;
-      border: 1px solid #989898;
-      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #d2d1d1;
+      padding: 4px;
       border-radius: 4px; }
     form fieldset input[type="submit"] {
-      display: inline-block;
-      border: none;
-      border-radius: 4px;
-      background-color: #0027ff;
-      color: #fff;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-align: center;
-      font-weight: 700;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-      -moz-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-      margin-bottom: 0; }
-      form fieldset input[type="submit"]:hover {
-        color: #fff;
-        background-color: #3352ff;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none; }
-      form fieldset input[type="submit"]:active {
-        background-color: #0027ff;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none; }
-      form fieldset input[type="submit"]:focus {
-        outline: 0; }
+      background-color: #0027ff; }
     form fieldset textarea {
       width: 100%;
-      margin-bottom: 30px;
-      border: 1px solid #989898;
-      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #d2d1d1;
+      padding: 4px;
       border-radius: 4px; }
 
 form.form-inline {
@@ -3053,32 +3026,26 @@ form.form-inline {
   max-width: 300px; }
   form.form-inline input {
     width: calc(100% - 40px);
-    border: 1px solid #989898;
-    padding: 8px;
+    border: 1px solid #d2d1d1;
+    padding: 4px;
     border-radius: 4px; }
     form.form-inline input:focus {
       border: 1px solid #0027ff; }
 
-form#commentform {
-  background-color: #e4e4e4;
-  padding: 25px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
-  form#commentform .form-group label {
-    text-align: left; }
-  form#commentform .form-group input {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #989898;
-    padding: 8px;
-    border-radius: 4px; }
-  form#commentform .form-group textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #989898;
-    padding: 8px;
-    border-radius: 4px; }
+#respond form#commentform .form-group label {
+  text-align: left; }
+#respond form#commentform .form-group input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px; }
+#respond form#commentform .form-group textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #d2d1d1;
+  padding: 4px;
+  border-radius: 4px; }
 
 button {
   cursor: pointer; }
@@ -3093,9 +3060,9 @@ button {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -3124,9 +3091,9 @@ button {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -3157,9 +3124,9 @@ button {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -3190,9 +3157,9 @@ button {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -3223,9 +3190,9 @@ button[type="submit"] {
   cursor: pointer;
   text-align: center;
   font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -3602,8 +3569,5 @@ img {
   @media only screen and (min-width: 1200px) {
     .container {
       width: 1200px; } }
-
-.page-name {
-  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

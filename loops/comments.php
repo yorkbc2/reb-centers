@@ -39,7 +39,6 @@ if (have_comments()) : ?>
 
 <?php if (comments_open()) : ?>
 <section id="respond">
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
  
@@ -74,7 +73,9 @@ if (have_comments()) : ?>
       <label for="comment"><?php _e('Your comment', 'brainworks'); ?></label><br>
       <textarea name="comment" id="comment" placeholder="<?php _e('Your comment', 'brainworks'); ?>" rows="4" aria-required="true"></textarea>
     </div>
-    <p><input name="submit" class="button-small" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>"></p>
+    
+     <div class="tiny-space"></div>
+    <p><input name="submit" class="button-small block-center" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>"></p>
            
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
