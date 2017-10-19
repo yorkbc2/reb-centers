@@ -13,7 +13,7 @@ gulp.task('sass', () => {
     .pipe(plumber())
     //.pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'expanded', // nested, expanded, compact, compressed
+      outputStyle: 'nested', // nested, expanded, compact, compressed
       precision: 5,
       sourceComments: false
     }).on('error', sass.logError))

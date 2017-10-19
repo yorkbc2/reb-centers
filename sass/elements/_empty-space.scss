@@ -1,35 +1,83 @@
-div.big-space {
+.big-space {
 	height: 15vh;
 }
 
-div.medium-space {
+.medium-space {
 	height: 12vh;
 }
 
-div.small-space {
+.small-space {
 	height: 5vh;
 }
 
-div.tiny-space {
+.tiny-space {
 	height: 2vh;
 }
 
 
 
 @media #{$mobile} {
-    div.big-space {
+    .big-space {
     	height: 13vh;
     }
 
-    div.medium-space {
+    .medium-space {
     	height: 10vh;
     }
 
-    div.small-space {
+    .small-space {
     	height: 4vh;
     }
 
-    div.tiny-space {
+    .tiny-space {
     	height: 1vh;
     }
+}
+
+$space-qty: 10;
+$space-multiplier: 1;
+
+$space-map: (
+  extra-small: xs,
+  small: sm,
+  medium: md,
+  large: lg,
+  extra-large: xl
+);
+
+$space-media-map: (
+  small: 576,
+  medium: 768,
+  large: 992,
+  extra-large: 1200
+);
+
+@each $name, $value in $space-map {
+
+  @if $name == extra-small {
+
+    @for $i from 1 through $space-qty {
+
+      .sp-#{$value}-#{$i} {
+        height: #{$i * $space-multiplier}vh;
+      }
+
+    }
+
+  } @else {
+
+    @media only screen and (min-width: #{map-get($space-media-map, $name)}px) {
+
+      @for $i from 1 through $space-qty {
+
+        .sp-#{$value}-#{$i} {
+          height: #{$i * $space-multiplier}vh;
+        }
+
+      }
+
+    }
+
+  }
+
 }
