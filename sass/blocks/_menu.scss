@@ -99,6 +99,7 @@ nav.main-nav {
 //xs 544
 @media #{$mobile} {
     nav.main-nav {
+        display: none;
         ul.menu-container {
             display: block;
         }

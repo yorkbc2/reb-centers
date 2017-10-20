@@ -1,35 +1,55 @@
-div.big-space {
+.big-space {
 	height: 15vh;
 }
 
-div.medium-space {
+.medium-space {
 	height: 12vh;
 }
 
-div.small-space {
+.small-space {
 	height: 5vh;
 }
 
-div.tiny-space {
+.tiny-space {
 	height: 2vh;
 }
 
+$space-qty: 10;
+$space-multiplier: 1;
 
+$space-map: (
+  extra-small: xs,
+  small: sm,
+  medium: md,
+  large: lg,
+  extra-large: xl
+);
 
-@media #{$mobile} {
-    div.big-space {
-    	height: 13vh;
+$space-media-map: (
+  small: 544,
+  medium: 768,
+  large: 1024,
+  extra-large: 1366
+);
+
+@each $name, $value in $space-map {
+  @if $name == extra-small {
+    @for $i from 1 through $space-qty {
+      .sp-#{$value}-#{$i} {
+        height: #{$i * $space-multiplier}vh;
+      }
     }
 
-    div.medium-space {
-    	height: 10vh;
-    }
+  } @else {
 
-    div.small-space {
-    	height: 4vh;
-    }
+    @media only screen and (min-width: #{map-get($space-media-map, $name)}px) {
 
-    div.tiny-space {
-    	height: 1vh;
+      @for $i from 1 through $space-qty {
+
+        .sp-#{$value}-#{$i} {
+          height: #{$i * $space-multiplier}vh;
+        }
+      }
     }
+  }
 }
