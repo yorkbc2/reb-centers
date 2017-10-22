@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.4
+Theme Name: brainworks-v4.5
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.4
+Version: 4.5
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -238,7 +238,7 @@ a img.aligncenter {
 strong {
   font-weight: 800; }
 
-.block-center {
+.center-block {
   text-align: center;
   display: block !important;
   margin: 0 auto; }
@@ -2996,7 +2996,7 @@ form {
       border-radius: 4px; }
 
 form.form-inline {
-  margin: 14px auto;
+  margin: 0 auto;
   max-width: 300px; }
   form.form-inline input {
     width: calc(100% - 40px);
@@ -3177,7 +3177,7 @@ button[type="submit"] {
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  padding: 5px 10px; }
+  padding: 8px 10px; }
   button[type="submit"]:hover {
     color: #fff;
     background-color: #3352ff;
@@ -3331,6 +3331,7 @@ ol {
 .tiny-space {
   height: 2vh; }
 
+<<<<<<< HEAD
 @media (max-width: 544px) {
   .big-space {
     height: 13vh; }
@@ -3341,6 +3342,8 @@ ol {
   .tiny-space {
     height: 1vh; } }
 
+=======
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac
 .sp-xs-1 {
   height: 1vh; }
 
@@ -3349,6 +3352,7 @@ ol {
 
 .sp-xs-3 {
   height: 3vh; }
+<<<<<<< HEAD
 
 .sp-xs-4 {
   height: 4vh; }
@@ -3444,6 +3448,130 @@ ol {
     height: 2vh; }
   .sp-xl-3 {
     height: 3vh; }
+=======
+
+.sp-xs-4 {
+  height: 4vh; }
+
+.sp-xs-5 {
+  height: 5vh; }
+
+.sp-xs-6 {
+  height: 6vh; }
+
+.sp-xs-7 {
+  height: 7vh; }
+
+.sp-xs-8 {
+  height: 8vh; }
+
+.sp-xs-9 {
+  height: 9vh; }
+
+.sp-xs-10 {
+  height: 10vh; }
+
+@media only screen and (min-width: 544px) {
+  .sp-sm-1 {
+    height: 1vh; }
+
+  .sp-sm-2 {
+    height: 2vh; }
+
+  .sp-sm-3 {
+    height: 3vh; }
+
+  .sp-sm-4 {
+    height: 4vh; }
+
+  .sp-sm-5 {
+    height: 5vh; }
+
+  .sp-sm-6 {
+    height: 6vh; }
+
+  .sp-sm-7 {
+    height: 7vh; }
+
+  .sp-sm-8 {
+    height: 8vh; }
+
+  .sp-sm-9 {
+    height: 9vh; }
+
+  .sp-sm-10 {
+    height: 10vh; } }
+@media only screen and (min-width: 768px) {
+  .sp-md-1 {
+    height: 1vh; }
+
+  .sp-md-2 {
+    height: 2vh; }
+
+  .sp-md-3 {
+    height: 3vh; }
+
+  .sp-md-4 {
+    height: 4vh; }
+
+  .sp-md-5 {
+    height: 5vh; }
+
+  .sp-md-6 {
+    height: 6vh; }
+
+  .sp-md-7 {
+    height: 7vh; }
+
+  .sp-md-8 {
+    height: 8vh; }
+
+  .sp-md-9 {
+    height: 9vh; }
+
+  .sp-md-10 {
+    height: 10vh; } }
+@media only screen and (min-width: 1024px) {
+  .sp-lg-1 {
+    height: 1vh; }
+
+  .sp-lg-2 {
+    height: 2vh; }
+
+  .sp-lg-3 {
+    height: 3vh; }
+
+  .sp-lg-4 {
+    height: 4vh; }
+
+  .sp-lg-5 {
+    height: 5vh; }
+
+  .sp-lg-6 {
+    height: 6vh; }
+
+  .sp-lg-7 {
+    height: 7vh; }
+
+  .sp-lg-8 {
+    height: 8vh; }
+
+  .sp-lg-9 {
+    height: 9vh; }
+
+  .sp-lg-10 {
+    height: 10vh; } }
+@media only screen and (min-width: 1366px) {
+  .sp-xl-1 {
+    height: 1vh; }
+
+  .sp-xl-2 {
+    height: 2vh; }
+
+  .sp-xl-3 {
+    height: 3vh; }
+
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac
   .sp-xl-4 {
     height: 4vh; }
   .sp-xl-5 {
@@ -3459,6 +3587,26 @@ ol {
   .sp-xl-10 {
     height: 10vh; } }
 
+<<<<<<< HEAD
+=======
+  .sp-xl-5 {
+    height: 5vh; }
+
+  .sp-xl-6 {
+    height: 6vh; }
+
+  .sp-xl-7 {
+    height: 7vh; }
+
+  .sp-xl-8 {
+    height: 8vh; }
+
+  .sp-xl-9 {
+    height: 9vh; }
+
+  .sp-xl-10 {
+    height: 10vh; } }
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac
 hr.style-one {
   border: 0;
   height: 1px;
@@ -3497,6 +3645,7 @@ hr.style-four {
   color: #ff0000; }
 
 .page-header {
+  padding: 10px 0;
   background-color: #4b4b4b;
   color: #000; }
 
@@ -3602,9 +3751,16 @@ nav.main-nav ul.menu-container {
       display: block; }
 
 @media (max-width: 544px) {
+<<<<<<< HEAD
   nav.main-nav ul.menu-container {
     display: block; } }
 
+=======
+  nav.main-nav {
+    display: none; }
+    nav.main-nav ul.menu-container {
+      display: block; } }
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac
 aside.sidebar {
   margin-top: 20px; }
 
@@ -3664,3 +3820,18 @@ img {
 
 .page-name {
   text-align: center; }
+<<<<<<< HEAD
+=======
+
+.page-404 {
+  height: 70vh;
+  background: url(img/404.jpg) no-repeat center bottom; }
+  @media (max-width: 544px) {
+    .page-404 {
+      background: none; } }
+  @media (min-width: 545px) and (max-width: 768px) {
+    .page-404 {
+      background: none; } }
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac

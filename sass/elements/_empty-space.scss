@@ -14,6 +14,7 @@
 	height: 2vh;
 }
 
+<<<<<<< HEAD
 
 
 @media #{$mobile} {
@@ -80,4 +81,44 @@ $space-media-map: (
 
   }
 
+=======
+$space-qty: 10;
+$space-multiplier: 1;
+
+$space-map: (
+  extra-small: xs,
+  small: sm,
+  medium: md,
+  large: lg,
+  extra-large: xl
+);
+
+$space-media-map: (
+  small: 544,
+  medium: 768,
+  large: 1024,
+  extra-large: 1366
+);
+
+@each $name, $value in $space-map {
+  @if $name == extra-small {
+    @for $i from 1 through $space-qty {
+      .sp-#{$value}-#{$i} {
+        height: #{$i * $space-multiplier}vh;
+      }
+    }
+
+  } @else {
+
+    @media only screen and (min-width: #{map-get($space-media-map, $name)}px) {
+
+      @for $i from 1 through $space-qty {
+
+        .sp-#{$value}-#{$i} {
+          height: #{$i * $space-multiplier}vh;
+        }
+      }
+    }
+  }
+>>>>>>> 6ffaaadeb746b3247b1f60939d9df1892fad4dac
 }
