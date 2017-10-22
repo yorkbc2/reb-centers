@@ -75,7 +75,7 @@ if (have_comments()) : ?>
     </div>
     
      <div class="tiny-space"></div>
-    <p><input name="submit" class="button-small block-center" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>"></p>
+    <p><input name="submit" class="button-small center-block" type="submit" id="submit" value="<?php _e('Submit comment', 'brainworks'); ?>"></p>
            
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
