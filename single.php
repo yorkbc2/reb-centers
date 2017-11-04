@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="tiny-space"></div>
+<div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
 
 <div class="container-fluid">
   <div class="row">
@@ -11,7 +11,6 @@
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
        <?php get_sidebar(); ?>
     </div>
-    
   </div><!-- /.row -->
 </div><!-- /.container -->
 

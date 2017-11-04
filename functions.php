@@ -26,4 +26,22 @@ add_theme_support( 'woocommerce' );
 //Translate Theme
 load_theme_textdomain( 'brainworks', get_template_directory().'/languages' ); 
     
+    
+function brainworks_breadcrumbs_localization($l10n) {
+  return array(
+    'home'       => __('Front page', 'brainworks'),
+    'paged'      => __('Page %d', 'brainworks'),
+    '_404'       => __('Error 404', 'brainworks'),
+    'search'     => __('Search results by query - <b>%s</b>', 'brainworks'),
+    'author'     => __('Author archve: <b>%s</b>', 'brainworks'),
+    'year'       => __('Archive by <b>%d</b> year', 'brainworks'),
+    'month'      => __('Archive by: <b>%s</b>', 'brainworks'),
+    'day'        => '',
+    'attachment' => __('Media: %s', 'brainworks'),
+    'tag'        => __('Posts by tag: <b>%s</b>', 'brainworks'),
+    'tax_tag'    => __('%1$s from "%2$s" by tag: <b>%3$s</b>', 'brainworks'),  );
+}
+
+add_filter('kama_breadcrumbs_default_loc', 'brainworks_breadcrumbs_localization', 10, 1);
+    
 }

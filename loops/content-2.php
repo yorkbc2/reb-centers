@@ -24,15 +24,15 @@
                 <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
             </p>
         </footer>
-           <div class="tiny-space"></div>
+           <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
             <a class="button-small" href="<?php echo get_permalink(); ?>"><?php _e( 'Continue reading', 'brainworks' ) ?> <i class="glyphicon glyphicon-arrow-right"></i></a>
-            <div class="tiny-space"></div>
+            <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
       </div>
     </article>
   </div>
 </div>
     <hr>
-    <div class="tiny-space"></div>
+    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
 <?php endwhile; ?>
 
 <?php if ( function_exists('brainworks_pagination') ) { brainworks_pagination(); } else if ( is_paged() ) { ?>

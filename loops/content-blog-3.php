@@ -1,4 +1,4 @@
-<div class="tiny-space"></div>
+<div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
  <div class="container-fluid">
   <div class="row">
    <?php if(have_posts()): while(have_posts()): the_post();?>

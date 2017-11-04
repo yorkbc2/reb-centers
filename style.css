@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.5
+Theme Name: brainworks-v4.6
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.5
+Version: 4.6
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -2860,7 +2860,7 @@ h6 {
     font-size: calc(0.0225 * 100vw + 19.2px); }
   h2 {
     font-size: 36px;
-    font-size: calc(0.01425 * 100vw + 20.16px); }
+    font-size: calc(0.01825 * 100vw + 18.24px); }
   h3 {
     font-size: 34px;
     font-size: calc(0.01125 * 100vw + 17.6px); }
@@ -2880,7 +2880,7 @@ h6 {
   h1 {
     font-size: 48px; }
   h2 {
-    font-size: 38px; }
+    font-size: 42px; }
   h3 {
     font-size: 32px; }
   h4 {
@@ -3278,68 +3278,8 @@ table, thead, tfoot, tbody, tr, th, td {
   border: 1px solid #fff;
   padding: 5px; }
 
-/* Widget Calendar
-table#wp-calendar {
-    text-align: center;
-    
-    caption {
-        color: $themeColorTwo;
-    }
-    
-    thead {
-        tr {
-            th {
-                
-            }
-        }
-    }
-    
-    tfoot {
-        tr {
-            td {
-                
-            }
-        }
-    }
-    
-    tbody {
-        tr {
-            td {
-                
-            }
-            
-            td#today {
-                background-color: $themeColorTwo;
-                color: $themeColorOne;
-            }
-        }
-    }
-}
-*/
 ol {
   padding-left: 20px; }
-
-.big-space {
-  height: 15vh; }
-
-.medium-space {
-  height: 12vh; }
-
-.small-space {
-  height: 5vh; }
-
-.tiny-space {
-  height: 2vh; }
-
-@media (max-width: 544px) {
-  .big-space {
-    height: 13vh; }
-  .medium-space {
-    height: 10vh; }
-  .small-space {
-    height: 4vh; }
-  .tiny-space {
-    height: 1vh; } }
 
 .sp-xs-1 {
   height: 1vh; }

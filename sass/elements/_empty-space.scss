@@ -1,36 +1,4 @@
-.big-space {
-	height: 15vh;
-}
-
-.medium-space {
-	height: 12vh;
-}
-
-.small-space {
-	height: 5vh;
-}
-
-.tiny-space {
-	height: 2vh;
-}
-
-@media #{$mobile} {
-    .big-space {
-    	height: 13vh;
-    }
-
-    .medium-space {
-    	height: 10vh;
-    }
-
-    .small-space {
-    	height: 4vh;
-    }
-
-    .tiny-space {
-    	height: 1vh;
-    }
-}
+//<div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2">
 
 $space-qty: 10;
 $space-multiplier: 1;

@@ -24,9 +24,9 @@ The Single Posts Loop
             <?php wp_link_pages(); ?>
         </section>
     </article>
-    <div class="tiny-space"></div>
+    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
     <hr>
-    <div class="tiny-space"></div>
+    <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
 <?php comments_template('/loops/comments.php'); ?>
 <?php endwhile; ?>
 
