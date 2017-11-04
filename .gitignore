@@ -2,3 +2,5 @@
 node_modules
 bower_components
 *.map
+style.min.css
+brainworks.min.js
