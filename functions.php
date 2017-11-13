@@ -3,6 +3,11 @@
 All the functions are in the PHP pages in the `functions/` folder.
 */
 
+require_once locate_template('/functions/helpers.php');
+require_once locate_template('/functions/admin.php');
+require_once locate_template('/functions/login.php');
+require_once locate_template('/functions/customizer.php');
+
 require_once locate_template('/functions/breadcrumbs.php');
 require_once locate_template('/functions/cleanup.php');
 require_once locate_template('/functions/custom-logo.php');

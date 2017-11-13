@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.6
+Theme Name: brainworks-v4.7
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.6
+Version: 4.7
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -2895,6 +2895,7 @@ h6 {
   cursor: pointer;
   width: 45px;
   height: 45px;
+  border: 1px solid transparent;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -2907,13 +2908,26 @@ h6 {
   -o-transition: none;
   -webkit-transition: none;
   transition: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
-  .scroll-top:after {
+  .scroll-top.is-right {
+    right: 20px;
+    left: auto; }
+  .scroll-top.is-left {
+    right: auto;
+    left: 20px; }
+  .scroll-top.is-rounded {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; }
+  .scroll-top.is-circle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .scroll-top--arrow, .scroll-top:after {
     content: ' ';
     width: 0;
     height: 0;
@@ -2926,8 +2940,10 @@ h6 {
     border: 6px solid transparent;
     border-top: 0;
     border-bottom: 10px solid #fff; }
+  .scroll-top:after {
+    content: none; }
   .scroll-top:hover, .scroll-top:focus {
-    background-color: #3e3e3e; }
+    background-color: #585858; }
   .scroll-top.is-visible,
   .no-js .scroll-top {
     visibility: visible;
@@ -2936,10 +2952,10 @@ h6 {
   .js .scroll-top,
   .no-js .scroll-top {
     display: block;
-    -moz-transition: 0.3s ease-out;
-    -o-transition: 0.3s ease-out;
-    -webkit-transition: 0.3s ease-out;
-    transition: 0.3s ease-out; }
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out; }
 
 form {
   width: 100%; }

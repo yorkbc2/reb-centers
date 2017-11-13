@@ -18,7 +18,6 @@
     });
     // prefooter height end
 
-
   });
 
   /**
