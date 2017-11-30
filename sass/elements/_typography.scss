@@ -10,13 +10,12 @@ $menu_desktop: 1;
 
 $p_mobile: 0.8;
 
-        $p_size: 18px;
-       $ul_size: 18px;
+$p_size: 18px;
+$ul_size: 18px;
 $menu_size: 16px;
 
-
-        $p_line-height: 22px;
-       $ul_line-height: 22px;
+$p_line-height: 22px;
+$ul_line-height: 22px;
 $menu_line-height: 22px;
 
 
@@ -53,7 +52,8 @@ i.button-style {
         line-height: $p_mobile * $p_line-height;
     }
     
-    ul li, ol li {
+    ul li,
+    ol li {
         font-size: $fonts_mobile * $menu_size;
         line-height: $fonts_mobile * $menu_line-height;
     }
@@ -70,7 +70,8 @@ i.button-style {
         line-height: $fonts_tablet * $p_line-height;
     }
     
-    ul li, ol li {
+    ul li,
+    ol li {
         font-size: $fonts_tablet * $ul_size;
         line-height: $fonts_tablet * $ul_line-height;
     }
@@ -87,7 +88,8 @@ i.button-style {
         line-height: $fonts_laptop * $p_line-height;
     }
     
-    ul li, ol li {
+    ul li,
+    ol li {
         font-size: $fonts_laptop * $ul_size;
         line-height: $fonts_laptop * $ul_line-height;
     }
@@ -104,7 +106,8 @@ i.button-style {
         line-height: $fonts_desktop * $p_line-height;
     }
     
-    ul li, ol li {
+    ul li,
+    ol li {
         font-size: $fonts_desktop * $ul_size;
         line-height: $fonts_desktop * $ul_line-height;
     }
@@ -121,7 +124,8 @@ i.button-style {
         line-height: $fonts_screen * $p_line-height;
     }
     
-    ul li, ol li {
+    ul li,
+    ol li {
         font-size: $fonts_screen * $ul_size;
         line-height: $fonts_screen * $ul_line-height;
     }

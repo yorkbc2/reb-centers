@@ -1,4 +1,6 @@
 <?php
 
-register_nav_menu('main-nav', __('Main Navigation', 'brainworks'));
-register_nav_menu('second-menu', __('Second Menu', 'brainworks'));
+register_nav_menus(array(
+    'main-nav' => __('Main Navigation', 'brainworks'),
+    'second-menu' => __('Second Menu', 'brainworks'),
+));

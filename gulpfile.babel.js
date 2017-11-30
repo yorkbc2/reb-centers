@@ -2,11 +2,13 @@
 
 import gulp from 'gulp';
 import sass from 'gulp-sass';
+import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import cleancss from 'gulp-clean-css';
+import browser_sync from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
-import uglify from 'gulp-uglify';
+const browserSync = browser_sync.create();
 
 gulp.task('sass', () => {
   return gulp.src('sass/**/*.scss')
@@ -42,10 +44,18 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./js'));
 });
 
-gulp.task('minify', gulp.parallel('css', 'js'));
+gulp.task('min', gulp.parallel('css', 'js'));
+
+gulp.task('watch', () => {
+    gulp.watch('sass/**/*.scss', gulp.series('sass'));
+});
 
 gulp.task('default', () => {
-  gulp.watch('sass/**/*.scss', gulp.series('sass'));
-  //gulp.watch('style.css', gulp.series('css'));
+  browserSync.init({
+    proxy: "sites.local/brainworks",
+  });
+  //gulp.watch('sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('style.css').on('change', browserSync.reload);
   //gulp.watch('js/brainworks.js', gulp.series('js'));
+  gulp.watch('**/*.php').on('change', browserSync.reload);
 });

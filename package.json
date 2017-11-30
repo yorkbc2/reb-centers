@@ -6,6 +6,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-plumber": "^1.1.0",

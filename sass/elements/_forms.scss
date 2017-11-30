@@ -56,7 +56,7 @@ form.form-inline {
 //Search form style end
 
 //Comment form on single post page
-form#commentform {
+#commentform {
     @include form-style;
     
     .form-group {

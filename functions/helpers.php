@@ -7,15 +7,15 @@
  *
  * @return mixed
  */
-function get_clear_phone_number( $phone_number ) {
+function get_phone_number( $phone_number ) {
   return str_replace( array( '-', '(', ')', ' ' ), '', $phone_number );
 }
 
 /**
  * @param $phone_number
  */
-function clear_phone_number( $phone_number ) {
-  echo get_clear_phone_number( $phone_number );
+function the_phone_number( $phone_number ) {
+  echo get_phone_number( $phone_number );
 }
 
 /**

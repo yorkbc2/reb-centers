@@ -29,4 +29,5 @@ function brainworks_widgets_init() {
   ) );
 
 }
+
 add_action( 'widgets_init', 'brainworks_widgets_init' );

@@ -47,7 +47,7 @@ function bw_update_footer() {
   $tel = sprintf(
     '%s <a href="tel:%s" target="_blank">%s</a>',
     __( 'Tel:', 'brainworks' ),
-    get_clear_phone_number( __( '+38 (063) 20-37-137', 'brainworks' ) ),
+    get_phone_number( __( '+38 (063) 20-37-137', 'brainworks' ) ),
     __( '+38 (063) 20-37-137', 'brainworks' )
   );
 

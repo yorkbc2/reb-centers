@@ -1,11 +1,12 @@
 @mixin button-style {
+    cursor: pointer;
     display: inline-block;
-    border: none;
+    vertical-align: middle;
+    border: 0;
     border-radius: $borderRadius;
     background-color: $buttonBgColor;
     color: $buttonFontColor;
     text-transform: uppercase;
-    cursor: pointer;
     text-align: center;
     font-weight: 700;
     @include box-shadow($shadow);
@@ -15,15 +16,14 @@
         color: $buttonFontColor;
         background-color: $buttonBgColorActive;
         @include box-shadow(none);
-  }
+    }
 
-  &:active {
-    background-color: $buttonBgColor;
-    @include box-shadow(none);
-  }
+    &:active {
+        background-color: $buttonBgColor;
+        @include box-shadow(none);
+    }
 
-  &:focus {
-    outline: 0;
-  }
+    &:focus {
+        outline: 0;
+    }
 }
-

@@ -18,3 +18,9 @@
 @import "mixins/triangle";
 @import "mixins/viewport";
 @import "mixins/word-wrap";
+
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
