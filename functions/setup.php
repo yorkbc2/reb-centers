@@ -47,14 +47,14 @@ function brainworks_wp_nav_menu_args( $args ) {
     return $args;
 }
 
-add_filter( 'wp_nav_menu_args', 'brainworks_wp_nav_menu_args' );
+//add_filter( 'wp_nav_menu_args', 'brainworks_wp_nav_menu_args' );
 
 function brainworks_nav_menu_css_class( $classes, $item, $args, $depth ) {
 
     if ( $item->current ) {
         foreach ( $classes as $key => $class ) {
             if ( $class === 'current-menu-item' ) {
-                $classes[ $key ] = 'menu-item-current';
+                $classes[ $key ] .= ' menu-item-current';
             }
         }
     }

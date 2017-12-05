@@ -105,72 +105,72 @@
 }
 
 
-//.nav { }
+//.nav {
+//    .menu {
+//        @extend %reset-list;
 //
-//.menu {
-//  @extend %reset-list;
+//        &-item {
 //
-//  &-item {
+//            &-has-children {
+//                position: relative;
+//            }
 //
-//    &-has-children {
-//      position: relative;
+//            &:hover,
+//            &-current {
+//                .menu-link {
+//
+//                }
+//            }
+//
+//            &:hover {
+//                > .sub-menu {
+//                    display: block;
+//                }
+//            }
+//        }
+//
+//        &-link {
+//
+//        }
 //    }
 //
-//    &:hover,
-//    &-current {
-//      .menu-link {
+//    .sub-menu {
+//        @extend %reset-list;
+//        display: none;
+//        position: absolute;
+//        top: 100%;
+//        left: 0;
+//        z-index: 1;
+//        width: 200px;
+//        background-color: #333;
 //
-//      }
+//        &-item {
+//
+//            &-has-children {
+//                position: relative;
+//            }
+//
+//            &:hover,
+//            &-current {
+//                > .sub-menu-link {
+//
+//                }
+//            }
+//
+//            &:hover {
+//                > .sub-menu {
+//                    display: block;
+//                }
+//            }
+//        }
+//
+//        &-link {
+//
+//        }
+//
+//        .sub-menu {
+//            top: 0;
+//            left: 100%;
+//        }
 //    }
-//
-//    &:hover {
-//      > .sub-menu {
-//        display: block;
-//      }
-//    }
-//  }
-//
-//  &-link {
-//
-//  }
-//}
-//
-//.sub-menu {
-//  @extend %reset-list;
-//  display: none;
-//  position: absolute;
-//  top: 100%;
-//  left: 0;
-//  z-index: 1;
-//  width: 200px;
-//  background-color: #333;
-//
-//  &-item {
-//
-//    &-has-children {
-//      position: relative;
-//    }
-//
-//    &:hover,
-//    &-current {
-//      > .sub-menu-link {
-//
-//      }
-//    }
-//
-//    &:hover {
-//      > .sub-menu {
-//        display: block;
-//      }
-//    }
-//  }
-//
-//  &-link {
-//
-//  }
-//
-//  .sub-menu {
-//    top: 0;
-//    left: 100%;
-//  }
 //}

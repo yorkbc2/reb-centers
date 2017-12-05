@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: YM-WP-Theme-v2.2\n"
+"Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-14 22:14+0000\n"
-"PO-Revision-Date: 2017-03-13 20:52+0000\n"
+"PO-Revision-Date: 2017-12-05 09:16+0000\n"
 "Last-Translator: YegorMamay <yegor19.05@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru-RU\n"
@@ -26,10 +26,6 @@ msgstr ""
 msgid "Sidebar Right"
 msgstr ""
 
-#: functions/feedback.php:28
-msgid "at"
-msgstr "в"
-
 #: functions/navbar.php:3
 msgid "Main Navigation"
 msgstr ""
@@ -48,7 +44,7 @@ msgstr ""
 
 #: functions/widgets.php:22
 msgid "Footer"
-msgstr ""
+msgstr "Подвал"
 
 #: functions/widgets.php:24
 msgid "The footer widget area"
@@ -57,15 +53,11 @@ msgstr ""
 #: loops/comments.php:46
 #, php-format
 msgid "Responses to %s"
-msgstr ""
-
-#: loops/comments.php:65
-msgid "(required, but will not be published)"
-msgstr ""
+msgstr "Ответы для %s"
 
 #: loops/content-single.php:17
 msgid "Filed under"
-msgstr ""
+msgstr "Размещены в разделе"
 
 #. Name of the theme
 msgid "YM-WP-Theme-v2.2"
@@ -78,6 +70,14 @@ msgstr ""
 #. Author URI of the theme
 msgid "http://brainworks.com.ua"
 msgstr ""
+
+#: loops/comments.php:65
+msgid "(required, but will not be published)"
+msgstr "(обязательно)"
+
+#: functions/feedback.php:28
+msgid "at"
+msgstr "в"
 
 #: 404.php:6
 msgid "Error"

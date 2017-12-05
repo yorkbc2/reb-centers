@@ -21,6 +21,7 @@
                 <nav class="second-menu">
                     <?php wp_nav_menu( array(
                         'theme_location' => 'second-menu',
+                        'container'      => false,
                         'menu_class'     => 'menu-container',
                         'menu_id'        => '',
                         'fallback_cb'    => 'wp_page_menu',
@@ -58,6 +59,7 @@
         <nav class="main-nav container">
             <?php wp_nav_menu( array(
                 'theme_location' => 'main-nav',
+                'container'      => false,
                 'menu_class'     => 'menu-container',
                 'menu_id'        => '',
                 'fallback_cb'    => 'wp_page_menu',
