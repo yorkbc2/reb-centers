@@ -25,7 +25,7 @@ $menuFontColorActive: #fff;
 //FOOTER
 $footerBgColor: $themeColorOne;
 $footerFontColor: #fff;
-$footerLinkColorActive: $themeColorTwo;
+$footerLinkColorActive: darken(#fff, 25%);
 
 //WRAPPER
 $wrapperBgColor: #fff;
@@ -51,6 +51,10 @@ $tableBgColor: $themeColorTwo;
 $tableBgColorActive: lighten($themeColorTwo, 10%);
 $tableBorderColor: #fff;
 $tableBorderColorActive: #989898;
+$tableOddBgColor: $themeColorOne;
+$tableOddFontColor: #fff;
+$tableEvenBgColor: $themeColorTwo;
+$tableEvenFontColor: #fff;
 
 //TEXT
 $textMutedColor: #aaa;

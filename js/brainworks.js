@@ -2,21 +2,17 @@
   "use strict";
 
   $(function () {
-    console.info("The site developed by BRAIN WORKS digital agency");
-    console.info("Сайт разработан маркетинговым агентством BRAIN WORKS");
+    console.info('The site developed by BRAIN WORKS digital agency');
+    console.info('Сайт разработан маркетинговым агентством BRAIN WORKS');
 
     $('html').removeClass('no-js').addClass('js');
 
     scrollTop('.js-scroll-top');
 
-    // prefooter height
-    var prefooterHeight = $(".prefooter").outerHeight();
-    var footerHeight = $(".page-footer").outerHeight();
-    var footerAndPreFooterSum = prefooterHeight + footerHeight + 50;
-    $(".page-wrapper").css({
-      "padding-bottom": footerAndPreFooterSum + "px"
-    });
-    // prefooter height end
+    // stick footer
+    var footerHeight = $('.footer').outerHeight() + 20;
+    $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
+    // end stick footer
 
   });
 

@@ -56,6 +56,7 @@
                 background-color: $menuBgColor;
                 list-style: none;
                 position: absolute;
+                width: 220px;
                 top: 100%;
                 left: 0;
                 z-index: 33;
@@ -64,10 +65,9 @@
                 .menu-item {
                     border-right: 0;
                     
-                    a{
+                    a {
+                        display: block;
                         padding: 15px 10px;
-                        width: 100%;
-                        min-width: 200px;
                         text-align: left;
                         @extend %smooth_animation;
                     }

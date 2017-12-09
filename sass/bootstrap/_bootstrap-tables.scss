@@ -70,7 +70,12 @@ caption {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
+  background-color: $tableOddBgColor;
+  color: $tableOddFontColor;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: $tableEvenBgColor;
+  color: $tableEvenFontColor;
 }
 .table-hover > tbody > tr:hover {
   background-color: $tableBgColorActive;
