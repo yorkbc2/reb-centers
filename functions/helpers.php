@@ -91,7 +91,8 @@ function get_analytics_tracking_code( $placed = 'body' ) {
   };
 
   if ( ! empty( $output ) ) {
-    return sprintf( '<script type="text/javascript">%s</script>', $output );
+    //return sprintf( '<script type="text/javascript">%s</script>', $output );
+    return $output;
   }
 
   return '';

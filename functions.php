@@ -2,6 +2,7 @@
 /*
 All the functions are in the PHP pages in the `functions/` folder.
 */
+//show_admin_bar(false);
 
 require_once locate_template('/functions/helpers.php');
 require_once locate_template('/functions/admin.php');

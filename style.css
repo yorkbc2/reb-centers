@@ -3622,6 +3622,7 @@ body {
   font-weight: 300; }
 
 .wrapper {
+  position: relative;
   overflow-x: hidden;
   min-height: 100%; }
 
