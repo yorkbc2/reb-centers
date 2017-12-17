@@ -15,24 +15,28 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
     <article role="article" id="post_<?php the_ID()?>">
         <header>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
+            <?php /*
             <h5>
               <em>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>
-                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php get_option( 'date_format' ) ?></time>
+                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php echo get_option( 'date_format' ) ?></time>
               </em>
             </h5>
+            */ ?>
         </header>
         <section>
             <?php the_post_thumbnail('full'); ?>
             <?php the_excerpt( __( '&hellip; ' . __('Continue reading', 'brainworks' ) . ' <i class="glyphicon glyphicon-arrow-right"></i>', 'brainworks' ) ); ?>
         </section>
         <hr>
+        <?php /*
         <footer>
             <p class="text-muted" style="margin-bottom: 20px;">
                 <i class="fa fa-folder-open-o"></i>&nbsp; <?php _e('Category', 'brainworks'); ?>: <?php the_category(', ') ?><br/>
                 <i class="fa fa-comment-o"></i>&nbsp; <?php _e('Comments', 'brainworks'); ?>: <?php comments_popup_link(__('None', 'brainworks'), '1', '%'); ?>
             </p>
         </footer>
+        */ ?>
     </article>
 <?php endwhile; ?>
 

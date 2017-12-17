@@ -7,7 +7,7 @@
             <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
             <h6>
                 <span class="text-muted author"><?php _e('By', 'brainworks'); echo " "; the_author() ?>,</span>
-                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php get_option( 'date_format' ) ?></time>
+                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php echo get_option( 'date_format' ) ?></time>
             </h6>
         </header>
         <section>
