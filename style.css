@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.7.1
+Theme Name: brainworks-v4.7.2
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.7.1
+Version: 4.7.2
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -258,8 +258,14 @@ a img.aligncenter {
 .text-just {
   text-align: justify; }
 
+.text-uppercase {
+  text-transform: uppercase; }
+
 .text-underline {
   text-decoration: underline; }
+
+.text-nowrap {
+  white-space: nowrap; }
 
 .hide-on-mobile {
   display: block; }
@@ -3124,6 +3130,30 @@ h6 {
     -webkit-transition: 0.2s ease-out;
     transition: 0.2s ease-out; }
 
+form fieldset input, form fieldset textarea, form.form-inline input, #commentform .form-group input, #commentform .form-group textarea, [type='text'],
+[type='password'],
+[type='email'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='number'],
+[type='range'],
+[type='month'],
+[type='week'],
+[type='date'],
+[type='datetime-local'],
+[type='time'],
+textarea,
+select {
+  background-color: #fff;
+  border: 1px solid #989898;
+  padding: 7px 8px;
+  color: #000;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
 form {
   width: 100%; }
   form fieldset {
@@ -3136,10 +3166,7 @@ form {
       font-weight: 800; }
     form fieldset input {
       width: 100%;
-      margin-bottom: 20px;
-      border: 1px solid #989898;
-      padding: 8px;
-      border-radius: 4px; }
+      margin-bottom: 20px; }
     form fieldset input[type="submit"] {
       cursor: pointer;
       display: inline-block;
@@ -3174,19 +3201,13 @@ form {
         outline: 0; }
     form fieldset textarea {
       width: 100%;
-      margin-bottom: 30px;
-      border: 1px solid #989898;
-      padding: 8px;
-      border-radius: 4px; }
+      margin-bottom: 30px; }
 
 form.form-inline {
   margin: 0 auto;
   max-width: 300px; }
   form.form-inline input {
-    width: calc(100% - 40px);
-    border: 1px solid #989898;
-    padding: 8px;
-    border-radius: 4px; }
+    width: calc(100% - 40px); }
     form.form-inline input:focus {
       border: 1px solid #0027ff; }
 
@@ -3200,16 +3221,10 @@ form.form-inline {
     text-align: left; }
   #commentform .form-group input {
     width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #989898;
-    padding: 8px;
-    border-radius: 4px; }
+    margin-bottom: 10px; }
   #commentform .form-group textarea {
     width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #989898;
-    padding: 8px;
-    border-radius: 4px; }
+    margin-bottom: 10px; }
 
 .button-style, .button-large, .button-medium, .button-small, button[type="submit"] {
   cursor: pointer;
@@ -3329,7 +3344,6 @@ ul.pagination li {
 table {
   border-collapse: collapse;
   width: 100%;
-  background-color: #0027ff;
   text-align: center; }
 
 tr > th:first-child, tr > td:first-child {
@@ -3647,10 +3661,13 @@ img {
       width: 1200px; } }
 
 .kama_breadcrumbs {
-  padding: 15px 0; }
+  padding: 10px 0;
+  font-size: 14px;
+  margin-bottom: 10px; }
 
 .page-name {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
 
 .page-404 {
   height: 70vh;

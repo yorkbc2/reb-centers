@@ -65,5 +65,13 @@ $iconColorActive: $themeColorTwo;
 $iconcolorReversed: $themeColorThree;
 
 //FORM
-$formBorderColor: lighten($themeColorOne, 30%);
 $formBgColor: lighten($themeColorOne, 60%);
+
+//FORM Field
+$formFieldBorderWidth: 1px;
+$formFieldBorderColor: lighten($themeColorOne, 30%);
+$formFieldPadding: 7px 8px;
+$formFieldTextColor: #000;
+$formFieldTextSize: 13px;
+$formFieldBorderRadius: $borderRadius;
+$formFieldBackgroundColor: #fff;

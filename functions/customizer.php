@@ -209,6 +209,18 @@ function brainworks_customize_register( $wp_customize ) {
 
   $wp_customize->add_setting( 'bw_analytics_yandex', array() );
 
+  $wp_customize->add_setting( 'bw_chat_placed', array(
+      'default' => 'body',
+  ) );
+
+  $wp_customize->add_setting( 'bw_chat', array() );
+
+  $wp_customize->add_setting( 'bw_remarketing_placed', array(
+      'default' => 'body',
+  ) );
+
+  $wp_customize->add_setting( 'bw_remarketing', array() );
+
   $wp_customize->add_setting( 'bw_analytics_custom_placed', array(
     'default' => 'body',
   ) );
@@ -256,6 +268,50 @@ function brainworks_customize_register( $wp_customize ) {
     'type'        => 'textarea',
     'input_attrs' => array(
       'placeholder' => __( '<!-- paste tracking code here -->', 'brainworks' ),
+    ),
+  ) );
+
+  $wp_customize->add_control( 'bw_chat_placed', array(
+    'label'       => __( 'Chat code', 'brainworks' ),
+    'description' => esc_html__( 'Placed (head/body)', 'brainworks' ),
+    'section'     => 'bw_analytics',
+    'settings'    => 'bw_chat_placed',
+    'type'        => 'select',
+    'choices'     => array(
+        'head' => __( 'Head', 'brainworks' ),
+        'body' => __( 'Body', 'brainworks' ),
+    ),
+  ) );
+
+  $wp_customize->add_control( 'bw_chat', array(
+    'description' => esc_html__( 'Paste chat code here &dArr;', 'brainworks' ),
+    'section'     => 'bw_analytics',
+    'settings'    => 'bw_chat',
+    'type'        => 'textarea',
+    'input_attrs' => array(
+        'placeholder' => __( '<!-- paste chat code here -->', 'brainworks' ),
+    ),
+  ) );
+
+  $wp_customize->add_control( 'bw_remarketing_placed', array(
+    'label'       => __( 'Remarketing code', 'brainworks' ),
+    'description' => esc_html__( 'Placed (head/body)', 'brainworks' ),
+    'section'     => 'bw_analytics',
+    'settings'    => 'bw_remarketing_placed',
+    'type'        => 'select',
+    'choices'     => array(
+        'head' => __( 'Head', 'brainworks' ),
+        'body' => __( 'Body', 'brainworks' ),
+    ),
+  ) );
+
+  $wp_customize->add_control( 'bw_remarketing', array(
+    'description' => esc_html__( 'Paste remarketing code here &dArr;', 'brainworks' ),
+    'section'     => 'bw_analytics',
+    'settings'    => 'bw_remarketing',
+    'type'        => 'textarea',
+    'input_attrs' => array(
+        'placeholder' => __( '<!-- paste remarketing code here -->', 'brainworks' ),
     ),
   ) );
 

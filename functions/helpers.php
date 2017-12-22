@@ -73,11 +73,15 @@ function get_analytics_tracking_code( $placed = 'body' ) {
   $tracking_code = array();
   $tracking_code['google'] = get_theme_mod( 'bw_analytics_google' );
   $tracking_code['yandex'] = get_theme_mod( 'bw_analytics_yandex' );
+  $tracking_code['chat'] = get_theme_mod( 'bw_chat' );
+  $tracking_code['remarketing'] = get_theme_mod( 'bw_remarketing' );
   $tracking_code['custom'] = get_theme_mod( 'bw_analytics_custom' );
 
   $tracking_placed = array();
   $tracking_placed['google'] = get_theme_mod( 'bw_analytics_google_placed', 'body' );
   $tracking_placed['yandex'] = get_theme_mod( 'bw_analytics_yandex_placed', 'body' );
+  $tracking_placed['chat'] = get_theme_mod( 'bw_chat_placed', 'body' );
+  $tracking_placed['remarketing'] = get_theme_mod( 'bw_remarketing_placed', 'body' );
   $tracking_placed['custom'] = get_theme_mod( 'bw_analytics_custom_placed', 'body' );
 
   $output = '';

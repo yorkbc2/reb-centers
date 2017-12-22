@@ -5,9 +5,16 @@
 }
 
 @mixin form-field-style {
-    border: 1px solid $formBorderColor;
-    padding: 8px;
-    border-radius: $borderRadius;
+    background-color: $formFieldBackgroundColor;
+    border: $formFieldBorderWidth solid $formFieldBorderColor;
+    padding: $formFieldPadding;
+    color: $formFieldTextColor;
+    font-size: $formFieldTextSize;
+    @include border-radius($formFieldBorderRadius);
+}
+
+%form-field-style {
+    @include form-field-style();
 }
 
 form {
@@ -23,7 +30,7 @@ form {
         input {
             width: 100%;
             margin-bottom: 20px;
-            @include form-field-style;
+            @extend %form-field-style;
         }
         
         input[type="submit"] {
@@ -34,7 +41,7 @@ form {
         textarea {
             width: 100%;
             margin-bottom: 30px;
-            @include form-field-style;
+            @extend %form-field-style;
         }
     }
 }
@@ -46,8 +53,8 @@ form.form-inline {
     
     input {
         width: calc(100% - 40px);
-        @include form-field-style;
-        
+        @extend %form-field-style;
+
         &:focus {
             border: 1px solid $themeColorTwo;
         }
@@ -67,14 +74,32 @@ form.form-inline {
         input {
             width: 100%;
             margin-bottom: 10px;
-            @include form-field-style;
+            @extend %form-field-style;
         }
         
         textarea {
             width: 100%;
             margin-bottom: 10px;
-            @include form-field-style;
+            @extend %form-field-style;
         }
     }
 }
 //Comment form  end
+
+[type='text'],
+[type='password'],
+[type='email'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='number'],
+[type='range'],
+[type='month'],
+[type='week'],
+[type='date'],
+[type='datetime-local'],
+[type='time'],
+textarea,
+select {
+    @extend %form-field-style;
+}

@@ -78,3 +78,83 @@ function brainworks_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_link_attributes', 'brainworks_nav_menu_link_attributes', 10, 4 );
+
+if (!function_exists('polylang_shortcode')) {
+    /**
+     * Add Shortcode Polylang
+     *
+     * @param $atts
+     * @return array|null|string
+     */
+    function polylang_shortcode($atts) {
+
+        // Attributes
+        $atts = shortcode_atts(
+            array(
+                'dropdown'               => 0, // display as list and not as dropdown
+                'echo'                   => 0, // echoes the list
+                'hide_if_empty'          => 1, // hides languages with no posts ( or pages )
+                'menu'                   => 0, // not for nav menu ( this argument is deprecated since v1.1.1 )
+                'show_flags'             => 0, // don't show flags
+                'show_names'             => 1, // show language names
+                'display_names_as'       => 'name', // valid options are slug and name
+                'force_home'             => 0, // tries to find a translation
+                'hide_if_no_translation' => 0, // don't hide the link if there is no translation
+                'hide_current'           => 0, // don't hide current language
+                'post_id'                => null, // if not null, link to translations of post defined by post_id
+                'raw'                    => 0, // set this to true to build your own custom language switcher
+                'item_spacing'           => 'preserve', // 'preserve' or 'discard' whitespace between list items
+            ),
+            $atts
+        );
+
+        if (function_exists('pll_the_languages')) {
+            $flags = pll_the_languages($atts);
+            return $flags;
+        }
+
+        return '';
+
+    }
+
+    add_shortcode('polylang', 'polylang_shortcode');
+}
+
+/** Woocommerce */
+// Override theme default specification for product # per row
+if (!function_exists('brainworks_loop_shop_columns')) {
+    function brainworks_loop_shop_columns($columns) {
+
+        if (is_shop() || is_product_category() || is_product_tag()) {
+            $columns = 3; // 3 products per row
+        }
+
+        return $columns;
+    }
+}
+
+add_filter('loop_shop_columns', 'brainworks_loop_shop_columns', 4);
+
+if(function_exists('is_shop') && function_exists('is_product_taxonomy')) {
+    function brainworks_body_class($classes) {
+        $classes = (array)$classes;
+
+        // is_woocommerce() // is_shop() || is_product_taxonomy() || is_product()
+        if ( is_shop() || is_product_taxonomy()) {
+            $classes[] = 'columns-3';
+        }
+
+        return $classes;
+    }
+
+    add_filter( 'body_class', 'brainworks_body_class' );
+}
+
+function brainworks_loop_shop_per_page( $cols ) {
+    // $cols contains the current number of products per page based on the value stored on Options -> Reading
+    // Return the number of products you wanna show per page.
+    $cols = 12;
+    return $cols;
+}
+
+add_filter( 'loop_shop_per_page', 'brainworks_loop_shop_per_page', 20 );
