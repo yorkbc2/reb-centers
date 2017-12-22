@@ -1,5 +1,5 @@
 /*
-Theme Name: brainworks-v4.7.1
+Theme Name: brainworks-v4.7.2
 Theme URI:
 Text Domain: brainworks
 Author: Yegor Mamay
@@ -7,7 +7,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.7.1
+Version: 4.7.2
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -21,6 +21,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/wp-core";
 @import "core/help-style";
 //@import "core/theme-style";
+//@import "core/woo-variables";
 
 /* PLUG-INs */
 @import "plugins/font-awesome";
@@ -121,11 +122,14 @@ img {
 }
 
 .kama_breadcrumbs {
-    padding: 15px 0;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .page-name {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .page-404 {
