@@ -13,6 +13,15 @@
     var footerHeight = $('.footer').outerHeight() + 20;
     $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
     // end stick footer
+  
+    // Buy one click
+    var oneClick = $('.one-click');
+    if (oneClick.length) {
+      oneClick.on('click', function () {
+        $('[data-field-id="field7"]').val($('h1.product_title').text());
+      });
+    }
+    // end buy one click
 
   });
 

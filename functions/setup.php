@@ -158,3 +158,9 @@ function brainworks_loop_shop_per_page( $cols ) {
 }
 
 add_filter( 'loop_shop_per_page', 'brainworks_loop_shop_per_page', 20 );
+
+// Remove notice-error about license YITH WooCommerce Zoom Magnifier Premium
+if (class_exists('YIT_Plugin_Licence')) {
+  $yit_plugin_licence = YIT_Plugin_Licence();
+  remove_action('admin_notices', array($yit_plugin_licence, 'activate_license_notice'), 15);
+}

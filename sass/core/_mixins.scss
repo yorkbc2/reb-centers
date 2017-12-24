@@ -1,3 +1,29 @@
+// FUNCTIONS
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $units: px) {
+
+  $font-size-min: strip-unit($font-size-min);
+  $font-size-max: strip-unit($font-size-max);
+  $viewport-width-min: strip-unit($viewport-width-min);
+  $viewport-width-max: strip-unit($viewport-width-max);
+
+  $k: ($font-size-max - $font-size-min) / ($viewport-width-max - $viewport-width-min);
+
+  $b: $font-size-min - $k * $viewport-width-min;
+
+  $b: $b + $units;
+
+  @return calc(#{$k} * 100vw + #{$b});
+
+}
+
 // MIXINS
 @import "mixins/prefixer";
 @import "mixins/button";

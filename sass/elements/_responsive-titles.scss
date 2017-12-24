@@ -1,45 +1,3 @@
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
-
-  @return $number;
-}
-
-@function calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $units: px) {
-
-  $font-size-min: strip-unit($font-size-min);
-  $font-size-max: strip-unit($font-size-max);
-  $viewport-width-min: strip-unit($viewport-width-min);
-  $viewport-width-max: strip-unit($viewport-width-max);
-
-  $k: ($font-size-max - $font-size-min) / ($viewport-width-max - $viewport-width-min);
-    
-  $b: $font-size-min - $k * $viewport-width-min;
-    
-  $b: $b + $units;
-    
-  @return calc(#{$k} * 100vw + #{$b});
-
-}
-
-@mixin responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $fallback: false) {
-  font-size: $font-size-min;
-
-  @media (min-width: $viewport-width-min) and (max-width: $viewport-width-max - 1) {
-
-    @if ($fallback) {
-      font-size: $fallback;
-    }
-
-    font-size: calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max);
-  }
-
-  @media (min-width: $viewport-width-max) {
-    font-size: $font-size-max;
-  }
-}
-
 $viewport-map: (
   viewport-min: 480px,
   viewport-max: 1280px
@@ -119,4 +77,6 @@ $headers-map: (
 }
 
 
-@include responsive-headers();
+@if (mixin_exists('responsive-headers')) {
+  @include responsive-headers();
+}
