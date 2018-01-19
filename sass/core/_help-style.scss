@@ -41,21 +41,21 @@
 }
 
 .hide-on-mobile {
-    display: block;
+    display: block !important;
 }
 
 .hide-on-desktop {
-    display: none;
+    display: none !important;
 }
 
 //xs 544
 @media #{$mobile} {
     .hide-on-mobile {
-        display: none;
+        display: none !important;
     }
     
     .hide-on-desktop {
-        display: block;
+        display: block !important;
     }
 }
 
