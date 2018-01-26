@@ -3671,7 +3671,7 @@ img {
 
 .page-404 {
   height: 70vh;
-  background: url("img/404.jpg") no-repeat center bottom; }
+  background: url("img/404.png") no-repeat center bottom; }
   @media (max-width: 544px) {
     .page-404 {
       background: none; } }
