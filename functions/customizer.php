@@ -355,6 +355,102 @@ function brainworks_customize_register( $wp_customize ) {
     'settings'    => 'bw_login_logo',
   ) ) );
 
+  // Section Social
+  $wp_customize->add_section( 'bw_social', array(
+    'title'       => __( 'Social', 'brainworks' ),
+    'description' => esc_html__( 'Customizer Custom Social links', 'brainworks' ),
+    'panel'       => 'bw_theme_options',
+  ) );
+
+  $wp_customize->add_setting('bw_social_vk', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_twitter', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_facebook', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_linkedin', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_instagram', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_google_plus', array('default' => '#'));
+
+  $wp_customize->add_control( 'bw_social_vk', array(
+    'label'    => __( 'Vk', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_vk',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_twitter', array(
+    'label'    => __( 'Twitter', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_twitter',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_facebook', array(
+    'label'    => __( 'Facebook', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_facebook',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_linkedin', array(
+    'label'    => __( 'Linkedin', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_linkedin',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_instagram', array(
+    'label'    => __( 'Instagram', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_instagram',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_google_plus', array(
+    'label'    => __( 'Google Plus', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_google_plus',
+    'type'     => 'text',
+  ) );
+
+  // Section Phones
+  $wp_customize->add_section( 'bw_phones', array(
+    'title'       => __( 'Phones', 'brainworks' ),
+    'description' => esc_html__( 'Customizer Custom Phone numbers', 'brainworks' ),
+    'panel'       => 'bw_theme_options',
+  ) );
+
+  $wp_customize->add_setting('bw_phone1', array());
+  $wp_customize->add_setting('bw_phone2', array());
+  $wp_customize->add_setting('bw_phone3', array());
+  $wp_customize->add_setting('bw_phone4', array());
+
+  $wp_customize->add_control( 'bw_phone1', array(
+    'label'    => __( 'Phone №1', 'brainworks' ),
+    'section'  => 'bw_phones',
+    'settings' => 'bw_phone1',
+    'type'     => 'tel',
+  ) );
+
+  $wp_customize->add_control( 'bw_phone2', array(
+    'label'    => __( 'Phone №2', 'brainworks' ),
+    'section'  => 'bw_phones',
+    'settings' => 'bw_phone2',
+    'type'     => 'tel',
+  ) );
+
+  $wp_customize->add_control( 'bw_phone3', array(
+    'label'    => __( 'Phone №3', 'brainworks' ),
+    'section'  => 'bw_phones',
+    'settings' => 'bw_phone3',
+    'type'     => 'tel',
+  ) );
+
+  $wp_customize->add_control( 'bw_phone4', array(
+    'label'    => __( 'Phone №4', 'brainworks' ),
+    'section'  => 'bw_phones',
+    'settings' => 'bw_phone4',
+    'type'     => 'tel',
+  ) );
+
 }
 
 add_action( 'customize_register', 'brainworks_customize_register' );
