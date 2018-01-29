@@ -78,6 +78,38 @@
     </a>
 <?php } ?>
 
+<?php if (function_exists('pll_the_languages')) { ?>
+    <ul class="lang">
+        <?php pll_the_languages(array('show_flags' => 0, 'show_names' => 1, 'hide_if_empty' => 0, 'display_names_as' => 'slug')); ?>
+    </ul>
+<?php } ?>
+
+<?php if(has_social()) { ?>
+    <ul class="social">
+        <?php foreach (get_social() as $social) { ?>
+            <li class="social-item">
+                <a href="<?php echo esc_attr(esc_url($social['url'])); ?>" class="social-link">
+                    <i class="fa <?php echo esc_attr($social['icon']); ?>" aria-hidden="true" aria-label="<?php echo esc_attr($social['text']); ?>"></i>
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
+<?php } ?>
+
+<?php if(has_phones()) { ?>
+    <ul class="phones">
+        <?php foreach (get_phones() as $phone) { ?>
+            <li class="phone-item">
+                <a href="tel:<?php echo esc_attr(get_phone_number($phone)); ?>" class="phone-number">
+                    <?php echo esc_html($phone); ?>
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
+<?php } ?>
+
+<button type="button" class="button-medium <?php the_lang_class('js-call-back'); ?>"><?php _e('Call back', 'brainworks'); ?></button>
+
 <h1><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
 <h3><?php bloginfo( 'description' ); ?></h3>
 <h3><?php bloginfo('admin_email'); ?></h3>

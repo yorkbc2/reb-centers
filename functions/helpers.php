@@ -13,6 +13,8 @@ function get_phone_number( $phone_number ) {
 
 /**
  * @param $phone_number
+ *
+ * @return void
  */
 function the_phone_number( $phone_number ) {
   echo get_phone_number( $phone_number );
@@ -58,7 +60,7 @@ function get_scroll_top() {
 }
 
 /**
- *
+ * @return void;
  */
 function scroll_top() {
   echo get_scroll_top();
@@ -108,4 +110,117 @@ function get_analytics_tracking_code( $placed = 'body' ) {
  */
 function analytics_tracking_code($placed = 'body') {
   echo get_analytics_tracking_code($placed);
+}
+
+if (!function_exists('get_lang_class')) {
+    /**
+     * @param string $class
+     *
+     * @return string
+     */
+    function get_lang_class($class)
+    {
+        return function_exists('pll_current_language') ? $class . '-' . pll_current_language('slug') : $class;
+    }
+}
+
+if (!function_exists('the_lang_class')) {
+    /**
+     * @param string $class
+     *
+     * @return void
+     */
+    function the_lang_class($class)
+    {
+        echo get_lang_class($class);
+    }
+}
+
+if (!function_exists('has_social')) {
+    /**
+     * @return bool
+     */
+    function has_social()
+    {
+        return (bool)get_social();
+    }
+}
+
+if (!function_exists('get_social')) {
+    /**
+     * @return array
+     */
+    function get_social()
+    {
+        $_socials = [
+            'vk'          => [
+                'url'  => get_theme_mod('bw_social_vk'),
+                'text' => 'Vk',
+                'icon' => 'fa-vk',
+            ],
+            'twitter'     => [
+                'url'  => get_theme_mod('bw_social_twitter'),
+                'text' => 'Twitter',
+                'icon' => 'fa-twitter',
+            ],
+            'facebook'    => [
+                'url'  => get_theme_mod('bw_social_facebook'),
+                'text' => 'Facebook',
+                'icon' => 'fa-facebook',
+            ],
+            'linkedin'    => [
+                'url'  => get_theme_mod('bw_social_linkedin'),
+                'text' => 'Linkedin',
+                'icon' => 'fa-linkedin',
+            ],
+            'instagram'   => [
+                'url'  => get_theme_mod('bw_social_instagram'),
+                'text' => 'Instagram',
+                'icon' => 'fa-instagram',
+            ],
+            'google-plus' => [
+                'url'  => get_theme_mod('bw_social_google_plus'),
+                'text' => 'Google Plus',
+                'icon' => 'fa-google-plus',
+            ],
+        ];
+
+        $socials = array_filter($_socials, function ($value, $key) {
+            return $value['url'] !== '#' && !empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
+        }, ARRAY_FILTER_USE_BOTH);
+
+        return $socials;
+    }
+}
+
+
+if (!function_exists('has_phones')) {
+    /**
+     * @return bool
+     */
+    function has_phones()
+    {
+        return (bool)get_phones();
+    }
+}
+
+if (!function_exists('get_phones')) {
+    /**
+     * @return array
+     */
+    function get_phones()
+    {
+        $_phones = [
+            get_theme_mod('bw_phone1'),
+            get_theme_mod('bw_phone2'),
+            get_theme_mod('bw_phone3'),
+            get_theme_mod('bw_phone4'),
+        ];
+
+        $phones = array_filter($_phones, function ($value) {
+            return !empty($value);
+        });
+
+        return $phones;
+    }
 }
