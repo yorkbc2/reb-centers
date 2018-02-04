@@ -1,5 +1,5 @@
 /*
-Theme Name: brainworks-v4.7.4
+Theme Name: brainworks-v4.7.5
 Theme URI:
 Text Domain: brainworks
 Author: Brain Works
@@ -7,7 +7,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.7.4
+Version: 4.7.5
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -20,7 +20,6 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-//@import "core/theme-style";
 //@import "core/woo-variables";
 
 /* PLUG-INs */
@@ -53,7 +52,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/empty-space";
 @import "elements/dividers";
 //@import "elements/other";
-//@import "elements/icons";
+@import "elements/icons";
 
 /* BLOCKS */
 @import "blocks/header";
@@ -61,7 +60,6 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/menu";
 @import "blocks/sidebar";
 @import "blocks/menu-second";
-
 
 html {
     @include box-sizing(border-box);
@@ -87,7 +85,7 @@ body {
     background-color: $bodyBgColor;
     color: $bodyFontColor;
     font-family: $fontFamilyTwo;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .wrapper {
@@ -116,8 +114,8 @@ img {
 	margin-right: auto;
 	@extend %clearfix;
 
-	@media only screen and (min-width: 1230px) {
-		width: 1200px;
+	@media only screen and (min-width: 1200px) {
+		width: 1170px;
 	}
 }
 

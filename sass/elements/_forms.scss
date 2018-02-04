@@ -5,9 +5,10 @@
 }
 
 @mixin form-field-style {
-    background-color: $formFieldBackgroundColor;
+    width: 100%;
     border: $formFieldBorderWidth solid $formFieldBorderColor;
     padding: $formFieldPadding;
+    background-color: $formFieldBackgroundColor;
     color: $formFieldTextColor;
     font-size: $formFieldTextSize;
     @include border-radius($formFieldBorderRadius);
@@ -47,7 +48,7 @@ form {
 }
 
 //Search form style
-form.form-inline {
+.form-inline {
     margin: 0 auto;
     max-width: 300px;
     
@@ -102,4 +103,11 @@ form.form-inline {
 textarea,
 select {
     @extend %form-field-style;
+}
+
+.is-mobile {
+    input,
+    select {
+        @include appearance(none);
+    }
 }

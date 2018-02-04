@@ -4,8 +4,15 @@
   $(function () {
     console.info('The site developed by BRAIN WORKS digital agency');
     console.info('Сайт разработан маркетинговым агентством BRAIN WORKS');
-
-    $('html').removeClass('no-js').addClass('js');
+  
+    var html = $('html');
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if(isMobile) {
+      html.addClass('is-mobile');
+    }
+  
+    html.removeClass('no-js').addClass('js');
 
     scrollTop('.js-scroll-top');
 

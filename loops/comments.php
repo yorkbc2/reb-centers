@@ -57,20 +57,20 @@ if (have_comments()) : ?>
     <?php else : ?>
     
     <div class="form-group">
-      <label for="author"><?php _e('Your name', 'brainworks'); if ($req) echo ' <span class="text-muted">' . __('(required)', 'brainworks') . '</span>'; ?></label><br>
+      <label class="screen-reader-text" for="author"><?php _e('Your name', 'brainworks'); if ($req) echo ' <span class="text-muted">' . __('(required)', 'brainworks') . '</span>'; ?></label><br>
       <input type="text" name="author" id="author" placeholder="<?php _e('Your name', 'brainworks'); ?>" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
     </div>
     <div class="form-group">
-      <label for="email"><?php _e('Your email address', 'brainworks'); if ($req) echo ' <span class="text-muted">' . __('(required, but will not be published)', 'brainworks') . '</span>'; ?></label><br>
+      <label class="screen-reader-text" for="email"><?php _e('Your email address', 'brainworks'); if ($req) echo ' <span class="text-muted">' . __('(required, but will not be published)', 'brainworks') . '</span>'; ?></label><br>
       <input type="email" name="email" id="email" placeholder="<?php _e('Your email address', 'brainworks'); ?>" value="<?php echo esc_attr($comment_author_email); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
     </div>
-    <div class="form-group">
-      <label for="url"><?php echo __('Your website', 'brainworks') . ' <span class="text-muted">' . __('if you have one (not required)', 'brainworks') . '</span>'; ?></label><br>
+    <?php /*<div class="form-group">
+      <label class="screen-reader-text" for="url"><?php echo __('Your website', 'brainworks') . ' <span class="text-muted">' . __('if you have one (not required)', 'brainworks') . '</span>'; ?></label><br>
       <input type="url" name="url" id="url" placeholder="<?php _e('Your website url', 'brainworks'); ?>" value="<?php echo esc_attr($comment_author_url); ?>">
-    </div>
+    </div>*/ ?>
     <?php endif; ?>
     <div class="form-group">
-      <label for="comment"><?php _e('Your comment', 'brainworks'); ?></label><br>
+      <label class="screen-reader-text" for="comment"><?php _e('Your comment', 'brainworks'); ?></label><br>
       <textarea name="comment" id="comment" placeholder="<?php _e('Your comment', 'brainworks'); ?>" rows="4" aria-required="true"></textarea>
     </div>
     

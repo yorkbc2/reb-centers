@@ -80,7 +80,7 @@
 
 <?php if (function_exists('pll_the_languages')) { ?>
     <ul class="lang">
-        <?php pll_the_languages(array('show_flags' => 0, 'show_names' => 1, 'hide_if_empty' => 0, 'display_names_as' => 'slug')); ?>
+        <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0, 'hide_if_empty' => 0, 'display_names_as' => 'slug')); ?>
     </ul>
 <?php } ?>
 
@@ -88,7 +88,7 @@
     <ul class="social">
         <?php foreach (get_social() as $social) { ?>
             <li class="social-item">
-                <a href="<?php echo esc_attr(esc_url($social['url'])); ?>" class="social-link">
+                <a href="<?php echo esc_attr(esc_url($social['url'])); ?>" class="social-link" target="_blank">
                     <i class="fa <?php echo esc_attr($social['icon']); ?>" aria-hidden="true" aria-label="<?php echo esc_attr($social['text']); ?>"></i>
                 </a>
             </li>

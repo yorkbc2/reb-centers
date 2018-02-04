@@ -41,7 +41,7 @@ a img.aligncenter {
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
+    max-width: 96%; // Image does not overflow the content area
     padding: 5px 3px 10px;
     text-align: center;
 }
@@ -74,7 +74,7 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
-/* Text meant only for screen readers. */
+// Text meant only for screen readers.
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -100,7 +100,7 @@ a img.aligncenter {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000; // Above WP toolbar.
 }
 
 .sticky { color:red; }

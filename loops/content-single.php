@@ -6,7 +6,7 @@ The Single Posts Loop
 ?> 
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
+    <article id="post_<?php the_ID()?>" <?php post_class()?>>
         <header>
             <h1 class="single-title"><?php the_title()?></h1>
             <?php /*

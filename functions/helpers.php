@@ -183,6 +183,11 @@ if (!function_exists('get_social')) {
                 'text' => 'Google Plus',
                 'icon' => 'fa-google-plus',
             ],
+            'youtube'     => [
+                'url'  => get_theme_mod('bw_social_youtube'),
+                'text' => 'YouTube',
+                'icon' => 'fa-youtube-play',
+            ],
         ];
 
         $socials = array_filter($_socials, function ($value, $key) {

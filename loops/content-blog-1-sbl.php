@@ -6,7 +6,7 @@
     </div>
    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
    <?php if(have_posts()): while(have_posts()): the_post();?>
-    <article role="article" id="post_<?php the_ID()?>">
+    <article id="post_<?php the_ID()?>">
         <header>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
             <h6>

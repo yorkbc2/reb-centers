@@ -368,6 +368,7 @@ function brainworks_customize_register( $wp_customize ) {
   $wp_customize->add_setting('bw_social_linkedin', array('default' => '#'));
   $wp_customize->add_setting('bw_social_instagram', array('default' => '#'));
   $wp_customize->add_setting('bw_social_google_plus', array('default' => '#'));
+  $wp_customize->add_setting('bw_social_youtube', array('default' => '#'));
 
   $wp_customize->add_control( 'bw_social_vk', array(
     'label'    => __( 'Vk', 'brainworks' ),
@@ -408,6 +409,13 @@ function brainworks_customize_register( $wp_customize ) {
     'label'    => __( 'Google Plus', 'brainworks' ),
     'section'  => 'bw_social',
     'settings' => 'bw_social_google_plus',
+    'type'     => 'text',
+  ) );
+
+  $wp_customize->add_control( 'bw_social_youtube', array(
+    'label'    => __( 'YouTube', 'brainworks' ),
+    'section'  => 'bw_social',
+    'settings' => 'bw_social_youtube',
     'type'     => 'text',
   ) );
 
