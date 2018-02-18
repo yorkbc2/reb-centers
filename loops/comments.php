@@ -30,9 +30,9 @@ if (have_comments()) : ?>
 <?php
   else :
 	  if (comments_open()) :
-  echo "<p class='alert alert-info'>" . __('Be the first to write a comment.', 'brainworks') . "</p>";
+      //echo "<p class='alert alert-info'>" . __('Be the first to write a comment.', 'brainworks') . "</p>";
 		else :
-			echo "<p class='alert alert-warning'>" . __('', 'brainworks') . "</p>"; //Comments are closed for this post
+			//echo "<p class='alert alert-warning'>" . __('', 'brainworks') . "</p>"; //Comments are closed for this post
 		endif;
 	endif;
 ?>
@@ -42,11 +42,11 @@ if (have_comments()) : ?>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
  
-  <h3><?php comment_form_title(__('Your feedback', 'brainworks'), __('Responses to %s', 'brainworks')); ?></h3>
+  <?php /* <h3><?php comment_form_title(__('Your feedback', 'brainworks'), __('Responses to %s', 'brainworks')); ?></h3> */ ?>
   <p><?php cancel_comment_reply_link(); ?></p>
   
   <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
-  <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'brainworks'), wp_login_url(get_permalink())); ?></p>
+  <?php /* <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'brainworks'), wp_login_url(get_permalink())); ?></p> */ ?>
   <?php else : ?>
   <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
     <?php if (is_user_logged_in()) : ?>
