@@ -16,6 +16,19 @@ function brainworks_widgets_init() {
   ) );
 
   /*
+  Sidebar (two widget area)
+   */
+  register_sidebar( array(
+    'name'            => __( 'Sidebar 2', 'brainworks' ),
+    'id'              => 'sidebar-widget-area2',
+    'description'     => __( 'The sidebar widget area', 'brainworks' ),
+    'before_widget'   => '<section class="%1$s %2$s">',
+    'after_widget'    => '</section>',
+    'before_title'    => '<h5>',
+    'after_title'     => '</h5>',
+  ) );
+
+  /*
   Footer (three widget areas)
    */
   register_sidebar( array(
