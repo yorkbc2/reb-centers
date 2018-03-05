@@ -21,7 +21,6 @@
 
 <?php get_template_part('loops/content', 'page'); ?>
 
-<?php locate_template("analyticstracking.php", true) ?>
 <?php wp_footer(); ?>
 
 </body>

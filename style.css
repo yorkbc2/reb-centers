@@ -3530,7 +3530,7 @@ ol {
 .sp-xs-10 {
   height: 10vh; }
 
-@media only screen and (min-width: 544px) {
+@media only screen and (min-width: 545px) {
   .sp-sm-1 {
     height: 1vh; }
   .sp-sm-2 {
@@ -3552,7 +3552,7 @@ ol {
   .sp-sm-10 {
     height: 10vh; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .sp-md-1 {
     height: 1vh; }
   .sp-md-2 {
@@ -3574,7 +3574,7 @@ ol {
   .sp-md-10 {
     height: 10vh; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .sp-lg-1 {
     height: 1vh; }
   .sp-lg-2 {
