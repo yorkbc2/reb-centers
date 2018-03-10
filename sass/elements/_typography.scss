@@ -18,20 +18,18 @@ $p_line-height: 22px;
 $ul_line-height: 22px;
 $menu_line-height: 22px;
 
-
 h1, h2, h3, h4, h5, h6, h1.hero-title {
     color: $titleFontColor;
     font-family: $fontFamilyOne;
-    
+
     a {
         color: $titleFontColor;
-        
+
         &:hover {
             color: $titleFontColorActive;
         }
     }
 }
-
 
 h1.hero-title {
     font-weight: 600;
@@ -45,19 +43,18 @@ i.button-style {
     padding: 3px 8px;
 }
 
-
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;
         line-height: $p_mobile * $p_line-height;
     }
-    
+
     ul li,
     ol li {
         font-size: $fonts_mobile * $menu_size;
         line-height: $fonts_mobile * $menu_line-height;
     }
-    
+
     li a {
         font-size: $fonts_mobile * $menu_size;
         line-height: $fonts_mobile * $menu_line-height;
@@ -69,13 +66,13 @@ i.button-style {
         font-size: $fonts_tablet * $p_size;
         line-height: $fonts_tablet * $p_line-height;
     }
-    
+
     ul li,
     ol li {
         font-size: $fonts_tablet * $ul_size;
         line-height: $fonts_tablet * $ul_line-height;
     }
-    
+
     li a {
         font-size: $menu_tablet * $menu_size;
         line-height: $menu_tablet * $menu_line-height;
@@ -87,13 +84,13 @@ i.button-style {
         font-size: $fonts_laptop * $p_size;
         line-height: $fonts_laptop * $p_line-height;
     }
-    
+
     ul li,
     ol li {
         font-size: $fonts_laptop * $ul_size;
         line-height: $fonts_laptop * $ul_line-height;
     }
-    
+
     li a {
         font-size: $menu_laptop * $menu_size;
         line-height: $menu_laptop * $menu_line-height;
@@ -105,13 +102,13 @@ i.button-style {
         font-size: $fonts_desktop * $p_size;
         line-height: $fonts_desktop * $p_line-height;
     }
-    
+
     ul li,
     ol li {
         font-size: $fonts_desktop * $ul_size;
         line-height: $fonts_desktop * $ul_line-height;
     }
-    
+
     li a {
         font-size: $menu_desktop * $menu_size;
         line-height: $menu_desktop * $menu_line-height;
@@ -123,13 +120,13 @@ i.button-style {
         font-size: $fonts_screen * $p_size;
         line-height: $fonts_screen * $p_line-height;
     }
-    
+
     ul li,
     ol li {
         font-size: $fonts_screen * $ul_size;
         line-height: $fonts_screen * $ul_line-height;
     }
-    
+
     li a {
         font-size: $fonts_screen * $menu_size;
         line-height: $fonts_screen * $menu_line-height;

@@ -2,7 +2,7 @@
 $themeColorOne: #4b4b4b; // header, menu, footer, title, 
 $themeColorTwo: #0027ff; // menu active item, button, footer link hover,
 $themeColorThree: #00ff0a; //preHeader bg,
-$themeColorFour: #ff0000; //menu hover item, table border, preHeader font
+$themeColorFour: #f00; //menu hover item, table border, preHeader font
 
 //BODY
 $bodyBgColor: #fff; //white
@@ -38,13 +38,12 @@ $titleFontColorActive: lighten($titleFontColor, 10%);
 $linkFontColor: #000;
 $linkFontColorActive: lighten($linkFontColor, 20%);
 
-
 //BUTTONS
 $buttonFontColor: #fff;
-$buttonFontColorActive: #ffffff;
+$buttonFontColorActive: #fff;
 $buttonBgColor: $themeColorTwo;
 $buttonBgColorActive: lighten($themeColorTwo, 10%);
-$buttonBorderColor: #000000;
+$buttonBorderColor: #000;
 
 //TABLE
 $tableBgColor: $themeColorTwo;

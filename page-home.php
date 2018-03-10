@@ -1,9 +1,8 @@
 <?php
 /**
-* Template Name: Home Page
-**/
+ * Template Name: Home Page
+ **/
 ?>
-
 
 <?php get_header(); ?>
 

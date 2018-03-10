@@ -1,7 +1,7 @@
 <?php
 /**
-* Template Name: Landing
-**/
+ * Template Name: Landing
+ **/
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">

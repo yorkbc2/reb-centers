@@ -6,16 +6,15 @@ table {
     text-align: center;
 }
 
-
-tr>th:first-child, tr>td:first-child {
+tr > th:first-child,
+tr > td:first-child {
     font-weight: 600;
     text-align: left;
 }
 
-tbody>tr:first-child th {
+tbody > tr:first-child th {
     font-weight: 600;
 }
-
 
 table, thead, tfoot, tbody, tr, th, td {
     border: 1px solid $tableBorderColor;

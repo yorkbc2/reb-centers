@@ -152,8 +152,7 @@ $gap: 15px;
     width: 100%
 }
 
-
-@media (min-width:545px) {
+@media (min-width: 545px) {
     .col-sm-1 {
         float: left;
         width: 8.333333%
@@ -204,7 +203,7 @@ $gap: 15px;
     }
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
     .col-md-1 {
         float: left;
         width: 8.333333%
@@ -255,7 +254,7 @@ $gap: 15px;
     }
 }
 
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
     .col-lg-1 {
         float: left;
         width: 8.333333%
@@ -306,7 +305,7 @@ $gap: 15px;
     }
 }
 
-@media (min-width:1367px) {
+@media (min-width: 1367px) {
     .col-xl-1 {
         float: left;
         width: 8.333333%

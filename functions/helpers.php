@@ -229,3 +229,16 @@ if (!function_exists('get_phones')) {
         return $phones;
     }
 }
+
+/**
+ * Fire the wp_body action.
+ */
+if (!function_exists('wp-body')) {
+    function wp_body()
+    {
+        /**
+         * Prints scripts or data in the body tag on the front end.
+         */
+        do_action('wp_body');
+    }
+}

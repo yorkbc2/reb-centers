@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <?php if(!is_single()) : ?>
+    <?php if (!is_single()) : ?>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
             <?php get_sidebar(); ?>
         </div>
@@ -12,3 +12,4 @@
 </div><!-- /.row -->
 
 <?php get_footer(); ?>
+

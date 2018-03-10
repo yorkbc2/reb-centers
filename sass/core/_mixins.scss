@@ -1,27 +1,35 @@
 // FUNCTIONS
 @function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
 
-  @return $number;
+    @return $number;
 }
 
 @function calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $units: px) {
 
-  $font-size-min: strip-unit($font-size-min);
-  $font-size-max: strip-unit($font-size-max);
-  $viewport-width-min: strip-unit($viewport-width-min);
-  $viewport-width-max: strip-unit($viewport-width-max);
+    $font-size-min: strip-unit($font-size-min);
+    $font-size-max: strip-unit($font-size-max);
+    $viewport-width-min: strip-unit($viewport-width-min);
+    $viewport-width-max: strip-unit($viewport-width-max);
 
-  $k: ($font-size-max - $font-size-min) / ($viewport-width-max - $viewport-width-min);
+    $k: ($font-size-max - $font-size-min) / ($viewport-width-max - $viewport-width-min);
 
-  $b: $font-size-min - $k * $viewport-width-min;
+    $b: $font-size-min - $k * $viewport-width-min;
 
-  $b: $b + $units;
+    $b: $b + $units;
 
-  @return calc(#{$k} * 100vw + #{$b});
+    @return calc(#{$k} * 100vw + #{$b});
 
+}
+
+@function image-url($url) {
+    @return url("#{$image-url-path}#{$url}");
+}
+
+@function image_url($url) {
+    @return url("#{$image-url-path}#{$url}");
 }
 
 // MIXINS
@@ -46,7 +54,7 @@
 @import "mixins/word-wrap";
 
 %reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

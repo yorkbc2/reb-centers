@@ -1,136 +1,136 @@
 %button-style {
-  @include button-style;
+    @include button-style;
 }
 
 %button-style-pseudo {
-  &:hover {
-    color: $buttonFontColor;
-    background-color: $buttonBgColorActive;
-    @include box-shadow(0 0 10px rgba(#000, .3));
-  }
+    &:hover {
+        color: $buttonFontColor;
+        background-color: $buttonBgColorActive;
+        @include box-shadow(0 0 10px rgba(#000, .3));
+    }
 
-  &:active {
-    background-color: $buttonBgColor;
-    @include box-shadow(none);
-  }
+    &:active {
+        background-color: $buttonBgColor;
+        @include box-shadow(none);
+    }
 
-  &:focus {
-    outline: 0;
-  }
+    &:focus {
+        outline: 0;
+    }
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .button-style {
-  @extend %button-style;
+    @extend %button-style;
 }
 
 .button-large {
-  @extend %button-style;
-  padding: 16px 60px;
-  font-size: 20px;
+    @extend %button-style;
+    padding: 16px 60px;
+    font-size: 20px;
 }
 
 .button-medium {
-  @extend %button-style;
-  padding: 14px 25px;
-  font-size: 16px;
+    @extend %button-style;
+    padding: 14px 25px;
+    font-size: 16px;
 }
 
 .button-small {
-  @extend %button-style;
-  padding: 10px 15px;
-  font-size: 14px;
+    @extend %button-style;
+    padding: 10px 15px;
+    font-size: 14px;
 }
 
 button[type="submit"] {
-  @extend %button-style;
-  padding: 8px 10px;
+    @extend %button-style;
+    padding: 8px 10px;
 }
 
 @media #{$mobile} {
-  .button-large {
-    padding: 11px 45px;
-    font-size: 12px;
-  }
+    .button-large {
+        padding: 11px 45px;
+        font-size: 12px;
+    }
 
-  .button-medium {
-    padding: 9px 22px;
-    font-size: 10px;
-  }
+    .button-medium {
+        padding: 9px 22px;
+        font-size: 10px;
+    }
 
-  .button-small {
-    padding: 6px 12px;
-    font-size: 8px;
-  }
+    .button-small {
+        padding: 6px 12px;
+        font-size: 8px;
+    }
 }
 
 @media #{$tablet} {
-  .button-large {
-    padding: 12px 50px;
-    font-size: 13px;
-  }
+    .button-large {
+        padding: 12px 50px;
+        font-size: 13px;
+    }
 
-  .button-medium {
-    padding: 10px 25px;
-    font-size: 11px;
-  }
+    .button-medium {
+        padding: 10px 25px;
+        font-size: 11px;
+    }
 
-  .button-small {
-    padding: 7px 14px;
-    font-size: 9px;
-  }
+    .button-small {
+        padding: 7px 14px;
+        font-size: 9px;
+    }
 }
 
 @media #{$laptop} {
-  .button-large {
-    padding: 13px 55px;
-    font-size: 14px;
-  }
+    .button-large {
+        padding: 13px 55px;
+        font-size: 14px;
+    }
 
-  .button-medium {
-    padding: 11px 28px;
-    font-size: 12px;
-  }
+    .button-medium {
+        padding: 11px 28px;
+        font-size: 12px;
+    }
 
-  .button-small {
-    padding: 8px 16px;
-    font-size: 10px;
-  }
+    .button-small {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
 }
 
 @media #{$desktop} {
-  .button-large {
-    padding: 14px 60px;
-    font-size: 16px;
-  }
+    .button-large {
+        padding: 14px 60px;
+        font-size: 16px;
+    }
 
-  .button-medium {
-    padding: 12px 32px;
-    font-size: 14px;
-  }
+    .button-medium {
+        padding: 12px 32px;
+        font-size: 14px;
+    }
 
-  .button-small {
-    padding: 9px 18px;
-    font-size: 12px;
-  }
+    .button-small {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
 }
 
 @media #{$screen} {
-  .button-large {
-    padding: 15px 65px;
-    font-size: 18px;
-  }
+    .button-large {
+        padding: 15px 65px;
+        font-size: 18px;
+    }
 
-  .button-medium {
-    padding: 13px 35px;
-    font-size: 15px;
-  }
+    .button-medium {
+        padding: 13px 35px;
+        font-size: 15px;
+    }
 
-  .button-small {
-    padding: 10px 20px;
-    font-size: 13px;
-  }
+    .button-small {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
 }
