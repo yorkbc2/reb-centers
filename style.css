@@ -3067,9 +3067,6 @@ h1, h2, h3, h4, h5, h6, h1.hero-title {
 h1.hero-title {
   font-weight: 600; }
 
-.bold {
-  font-weight: 600; }
-
 i.button-style {
   padding: 3px 8px; }
 
@@ -3861,3 +3858,6 @@ img {
   @media (min-width: 545px) and (max-width: 768px) {
     .page-404 {
       background: none; } }
+
+.is-hide {
+  display: none; }

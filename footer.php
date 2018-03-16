@@ -36,6 +36,13 @@
     </button>
 <?php } ?>
 
+<?php
+$svg_sprite = get_template_directory() . '/img/svg-sprite.svg';
+
+if (file_exists($svg_sprite) && filesize($svg_sprite) > 0) { ?>
+    <div class="is-hide"><?php require_once($svg_sprite); ?></div>
+<?php } ?>
+
 <?php wp_footer(); ?>
 
 </body>
