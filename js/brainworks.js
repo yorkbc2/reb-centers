@@ -16,21 +16,33 @@
 
         scrollTop('.js-scroll-top');
 
-        // stick footer
+        // Stick Footer
         var footerHeight = $('.footer').outerHeight() + 20;
         $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
-        // end stick footer
 
         // Buy one click
-        var oneClick = $('.one-click');
-        if (oneClick.length) {
-            oneClick.on('click', function () {
-                $('[data-field-id="field7"]').val($('h1.product_title').text());
-            });
-        }
-        // end buy one click
+        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.product_title');
 
     });
+
+    /**
+     * Buy in one click
+     *
+     * @example
+     * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.product_title');
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
+     * @param {(string|Object)} field - The selected field for writing the value
+     * @param {(string|Object)} headline - The element from which we get the value to write to the field
+     */
+    function buyOneClick(button, field, headline) {
+        var btn = $(button);
+        if (btn.length) {
+            btn.on('click', function () {
+                $(field).val($(headline).text());
+            });
+        }
+    }
 
     /**
      * Scroll Top
@@ -38,7 +50,7 @@
      * @example
      * scrollTop('.js-scroll-top');
      * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @param {(string|Object)} element - selected element
+     * @param {(string|Object)} element - Selected element
      */
     function scrollTop(element) {
         var el = $(element);
