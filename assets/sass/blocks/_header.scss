@@ -64,3 +64,19 @@
         }
     }
 }
+
+.lang {
+    @extend %reset-list;
+
+    &,
+    &-item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-item {
+        a {
+            display: block;
+        }
+    }
+}

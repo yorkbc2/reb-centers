@@ -12,4 +12,3 @@
 </div><!-- /.row -->
 
 <?php get_footer(); ?>
-

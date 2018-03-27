@@ -32,6 +32,14 @@
     @return url("#{$image-url-path}#{$url}");
 }
 
+@function font-url($url) {
+    @return url("#{$font-url-path}#{$url}");
+}
+
+@function font_url($url) {
+    @return url("#{$font-url-path}#{$url}");
+}
+
 // MIXINS
 @import "mixins/prefixer";
 @import "mixins/button";

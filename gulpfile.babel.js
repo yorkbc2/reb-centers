@@ -27,16 +27,16 @@ const getFullDate = () => {
 };
 
 gulp.task('svg', () => {
-    return gulp.src(`${themeName}/img/svg/*.svg`)
+    return gulp.src(`${themeName}/assets/img/svg/*.svg`)
         .pipe(plumber())
         .pipe(svgmin({js2svg: {pretty: false}}))
         .pipe(svgstore({inlineSvg: true}))
         .pipe(rename({basename: 'svg', prefix: '', suffix: '-sprite', extname: '.svg'}))
-        .pipe(gulp.dest(`${themeName}/img/`));
+        .pipe(gulp.dest(`${themeName}/assets/img/`));
 });
 
 gulp.task('sass', () => {
-    return gulp.src('sass/**/*.scss')
+    return gulp.src('assets/sass/**/*.scss')
         .pipe(plumber())
         //.pipe(sourcemaps.init())
         .pipe(sass({
@@ -59,14 +59,14 @@ gulp.task('css', () => {
 });
 
 gulp.task('js', () => {
-    return gulp.src('js/brainworks.js')
+    return gulp.src('assets/js/brainworks.js')
         .pipe(plumber())
         .pipe(uglify({
             mangle: false,
             compress: false,
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./assets/js'));
 });
 
 gulp.task('zip', () => {
@@ -79,17 +79,17 @@ gulp.task('zip', () => {
 gulp.task('min', gulp.parallel('css', 'js'));
 
 gulp.task('watch', () => {
-    gulp.watch('sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('img/svg/*.svg', gulp.series('svg'));
+    gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('assets/img/svg/*.svg', gulp.series('svg'));
 });
 
 gulp.task('default', () => {
     browserSync.init({
         proxy: "sites.local/brainworks",
     });
-    //gulp.watch('sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('img/svg/*.svg', gulp.series('svg'));
+    //gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('assets/img/svg/*.svg', gulp.series('svg'));
     gulp.watch('style.css').on('change', browserSync.reload);
-    //gulp.watch('js/brainworks.js', gulp.series('js'));
+    //gulp.watch('assets/js/brainworks.js', gulp.series('js'));
     gulp.watch('**/*.php').on('change', browserSync.reload);
 });

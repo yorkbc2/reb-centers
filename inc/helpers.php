@@ -7,8 +7,9 @@
  *
  * @return mixed
  */
-function get_phone_number( $phone_number ) {
-  return str_replace( array( '-', '(', ')', ' ' ), '', $phone_number );
+function get_phone_number($phone_number)
+{
+    return str_replace(array('-', '(', ')', ' '), '', $phone_number);
 }
 
 /**
@@ -16,54 +17,57 @@ function get_phone_number( $phone_number ) {
  *
  * @return void
  */
-function the_phone_number( $phone_number ) {
-  echo get_phone_number( $phone_number );
+function the_phone_number($phone_number)
+{
+    echo get_phone_number($phone_number);
 }
 
 /**
  * @return bool|string
  */
-function get_scroll_top() {
+function get_scroll_top()
+{
 
-  if ( get_theme_mod( 'bw_scroll_top_display', true ) ) {
+    if (get_theme_mod('bw_scroll_top_display', true)) {
 
-    $shape = '';
-    switch ( get_theme_mod( 'bw_scroll_top_shape', 'circle' ) ) {
-      case 'circle':
-        $shape = 'is-circle';
-        break;
-      case 'rounded':
-        $shape = 'is-rounded';
-        break;
+        $shape = '';
+        switch (get_theme_mod('bw_scroll_top_shape', 'circle')) {
+            case 'circle':
+                $shape = 'is-circle';
+                break;
+            case 'rounded':
+                $shape = 'is-rounded';
+                break;
+        }
+
+        $position = '';
+        switch (get_theme_mod('bw_scroll_top_position', 'right')) {
+            case 'left':
+                $position = 'is-left';
+                break;
+            case 'right':
+                $position = 'is-right';
+                break;
+        }
+
+        $output = sprintf(
+            '<a href="#top" class="scroll-top js-scroll-top %s %s"><i class="scroll-top--arrow"></i></a>',
+            $shape,
+            $position
+        );
+
+        return $output;
     }
 
-    $position = '';
-    switch ( get_theme_mod( 'bw_scroll_top_position', 'right' ) ) {
-      case 'left':
-        $position = 'is-left';
-        break;
-      case 'right':
-        $position = 'is-right';
-        break;
-    }
-
-    $output = sprintf(
-      '<a href="#top" class="scroll-top js-scroll-top %s %s"><i class="scroll-top--arrow"></i></a>',
-      $shape,
-      $position
-    );
-
-    return $output;
-  }
-
-  return false;
+    return false;
 }
 
 /**
  * @return void;
  */
-function scroll_top() {
-  echo get_scroll_top();
+function scroll_top()
+{
+    echo get_scroll_top();
 }
 
 /**
@@ -71,45 +75,47 @@ function scroll_top() {
  *
  * @return string
  */
-function get_analytics_tracking_code( $placed = 'body' ) {
-  $tracking_code = array();
-  $tracking_code['google'] = get_theme_mod( 'bw_analytics_google' );
-  $tracking_code['yandex'] = get_theme_mod( 'bw_analytics_yandex' );
-  $tracking_code['chat'] = get_theme_mod( 'bw_chat' );
-  $tracking_code['remarketing'] = get_theme_mod( 'bw_remarketing' );
-  $tracking_code['custom'] = get_theme_mod( 'bw_analytics_custom' );
+function get_analytics_tracking_code($placed = 'body')
+{
+    $tracking_code                = array();
+    $tracking_code['google']      = get_theme_mod('bw_analytics_google');
+    $tracking_code['yandex']      = get_theme_mod('bw_analytics_yandex');
+    $tracking_code['chat']        = get_theme_mod('bw_chat');
+    $tracking_code['remarketing'] = get_theme_mod('bw_remarketing');
+    $tracking_code['custom']      = get_theme_mod('bw_analytics_custom');
 
-  $tracking_placed = array();
-  $tracking_placed['google'] = get_theme_mod( 'bw_analytics_google_placed', 'body' );
-  $tracking_placed['yandex'] = get_theme_mod( 'bw_analytics_yandex_placed', 'body' );
-  $tracking_placed['chat'] = get_theme_mod( 'bw_chat_placed', 'body' );
-  $tracking_placed['remarketing'] = get_theme_mod( 'bw_remarketing_placed', 'body' );
-  $tracking_placed['custom'] = get_theme_mod( 'bw_analytics_custom_placed', 'body' );
+    $tracking_placed                = array();
+    $tracking_placed['google']      = get_theme_mod('bw_analytics_google_placed', 'body');
+    $tracking_placed['yandex']      = get_theme_mod('bw_analytics_yandex_placed', 'body');
+    $tracking_placed['chat']        = get_theme_mod('bw_chat_placed', 'body');
+    $tracking_placed['remarketing'] = get_theme_mod('bw_remarketing_placed', 'body');
+    $tracking_placed['custom']      = get_theme_mod('bw_analytics_custom_placed', 'body');
 
-  $output = '';
+    $output = '';
 
-  foreach ( $tracking_code as $key => $script ) {
-    if ( ! empty( $tracking_placed[ $key ] ) && ! empty( $script ) ) {
-      if ( $tracking_placed[ $key ] === $placed ) {
-        $output .= $script . PHP_EOL;
-      }
+    foreach ($tracking_code as $key => $script) {
+        if (!empty($tracking_placed[$key]) && !empty($script)) {
+            if ($tracking_placed[$key] === $placed) {
+                $output .= $script . PHP_EOL;
+            }
+        }
+    };
+
+    if (!empty($output)) {
+        //return sprintf( '<script type="text/javascript">%s</script>', $output );
+        return $output;
     }
-  };
 
-  if ( ! empty( $output ) ) {
-    //return sprintf( '<script type="text/javascript">%s</script>', $output );
-    return $output;
-  }
-
-  return '';
+    return '';
 
 }
 
 /**
  * @param string $placed
  */
-function analytics_tracking_code($placed = 'body') {
-  echo get_analytics_tracking_code($placed);
+function analytics_tracking_code($placed = 'body')
+{
+    echo get_analytics_tracking_code($placed);
 }
 
 if (!function_exists('get_lang_class')) {

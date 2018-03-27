@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.7.5
+Theme Name: brainworks-v4.8.0
 Theme URI:
 Text Domain: brainworks
 Author: Brain Works
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.7.5
+Version: 4.8.0
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -133,7 +133,7 @@ ul {
   content: " ";
   display: table; }
 
-.phone, .social {
+.phone, .social, .lang {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -3235,7 +3235,8 @@ h6 {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%; }
-  .scroll-top--arrow, .scroll-top:after {
+  .scroll-top--arrow,
+  .scroll-top:after {
     content: ' ';
     width: 0;
     height: 0;
@@ -3386,18 +3387,18 @@ form {
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, button[type="submit"]:hover {
+  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, button:hover[type="submit"] {
     color: #fff;
     background-color: #3352ff;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, button[type="submit"]:active {
+  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, button:active[type="submit"] {
     background-color: #0027ff;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, button[type="submit"]:focus {
+  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, button:focus[type="submit"] {
     outline: 0; }
 
 button {
@@ -3768,6 +3769,13 @@ hr.style-four {
   text-align: center;
   text-decoration: none; }
 
+.lang, .lang-item {
+  display: inline-block;
+  vertical-align: middle; }
+
+.lang-item a {
+  display: block; }
+
 .footer {
   position: absolute;
   right: 0;
@@ -3851,7 +3859,7 @@ img {
 
 .page-404 {
   height: 70vh;
-  background: url("img/404.png") no-repeat center bottom; }
+  background: url("assets/img/404.png") no-repeat center bottom; }
   @media (max-width: 544px) {
     .page-404 {
       background: none; } }

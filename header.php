@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
-    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/img/favicon.ico'); ?>" type="image/x-icon">
-    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/img/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>" type="image/x-icon">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="top">
@@ -78,7 +78,7 @@
             the_custom_logo();
         } else { ?>
             <a class="logo-link" href="<?php echo esc_url(home_url('/')); ?>">
-                <img class="logo-img" src="<?php echo esc_url(get_template_directory_uri() . '/img/logo.png'); ?>"
+                <img class="logo-img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>"
                      alt="<?php bloginfo('name'); ?>">
             </a>
         <?php } ?>

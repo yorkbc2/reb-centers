@@ -3,4 +3,3 @@
         <?php dynamic_sidebar('sidebar-widget-area'); ?>
     </aside>
 <?php endif; ?>
-
