@@ -45,6 +45,18 @@ button {
     font-size: 14px;
 }
 
+.button-inverse {
+    @extend %button-style;
+    color: $buttonFontColorActive;
+    background-color: $buttonBgColorActive;
+
+    &:hover,
+    &:active {
+        color: $buttonFontColor;
+        background-color: $buttonBgColor;
+    }
+}
+
 .button-block {
     display: block;
     width: 100%;

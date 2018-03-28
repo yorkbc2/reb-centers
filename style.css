@@ -3379,7 +3379,7 @@ form {
   -moz-appearance: none;
   appearance: none; }
 
-.button-style, .button-large, .button-medium, .button-small, button[type="submit"] {
+.button-style, .button-large, .button-medium, .button-small, .button-inverse, button[type="submit"] {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -3398,18 +3398,18 @@ form {
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, button:hover[type="submit"] {
+  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, .button-inverse:hover, button:hover[type="submit"] {
     color: #fff;
     background-color: #3352ff;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, button:active[type="submit"] {
+  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, .button-inverse:active, button:active[type="submit"] {
     background-color: #0027ff;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, button:focus[type="submit"] {
+  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, .button-inverse:focus, button:focus[type="submit"] {
     outline: 0; }
 
 button {
@@ -3426,6 +3426,13 @@ button {
 .button-small {
   padding: 10px 15px;
   font-size: 14px; }
+
+.button-inverse {
+  color: #fff;
+  background-color: #3352ff; }
+  .button-inverse:hover, .button-inverse:active {
+    color: #fff;
+    background-color: #0027ff; }
 
 .button-block {
   display: block;

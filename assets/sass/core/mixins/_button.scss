@@ -14,7 +14,7 @@
     @include smooth_animation;
 
     &:hover {
-        color: $buttonFontColor;
+        color: $buttonFontColorActive;
         background-color: $buttonBgColorActive;
         @include box-shadow(none);
     }
