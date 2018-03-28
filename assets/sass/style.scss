@@ -104,6 +104,13 @@ img {
     height: auto;
 }
 
+.svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    @extend %smooth_animation;
+}
+
 .container {
     position: relative;
     padding-left: 15px;

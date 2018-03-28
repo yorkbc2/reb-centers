@@ -53,8 +53,8 @@
     $direction: 180deg;
   }
 
-  background-color: nth(nth($color-stops, 1), 1);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{nth(nth($color-stops, 1), 1)}", endColorstr="#{nth(nth($color-stops, length($color-stops)), 1)}", GradientType=0); // IE6-9
+  //background-color: nth(nth($color-stops, 1), 1);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{nth(nth($color-stops, 1), 1)}", endColorstr="#{nth(nth($color-stops, length($color-stops)), 1)}", GradientType=0); // IE6-9
   background-image: -o-linear-gradient(legacy-direction($direction), $color-stops);
   background-image: -moz-linear-gradient(legacy-direction($direction), $color-stops);
   background-image: -webkit-linear-gradient(legacy-direction($direction), $color-stops);

@@ -273,6 +273,15 @@ a img.aligncenter {
 .hide-on-desktop {
   display: none !important; }
 
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.pull-none {
+  float: none; }
+
 @media (max-width: 544px) {
   .hide-on-mobile {
     display: none !important; }
@@ -2603,7 +2612,7 @@ a img.aligncenter {
   overflow: visible;
   clip: auto; }
 
-a, .fa, .main-nav .menu-container .current-menu-item:after, .main-nav .menu-container .menu-item a, .main-nav .menu-container .menu-item-has-children .sub-menu .menu-item a {
+a, .fa, .main-nav .menu-container .current-menu-item:after, .main-nav .menu-container .menu-item a, .main-nav .menu-container .menu-item-has-children .sub-menu .menu-item a, .svg-icon {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -3314,6 +3323,7 @@ form {
       color: #fff;
       text-transform: uppercase;
       text-align: center;
+      font-family: inherit;
       font-weight: 700;
       -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -3379,6 +3389,7 @@ form {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
+  font-family: inherit;
   font-weight: 700;
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -3415,6 +3426,10 @@ button {
 .button-small {
   padding: 10px 15px;
   font-size: 14px; }
+
+.button-block {
+  display: block;
+  width: 100%; }
 
 button[type="submit"] {
   padding: 8px 10px; }
@@ -3837,6 +3852,11 @@ img {
   vertical-align: middle;
   max-width: 100%;
   height: auto; }
+
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%; }
 
 .container {
   position: relative;

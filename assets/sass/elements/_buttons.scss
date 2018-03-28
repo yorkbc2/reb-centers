@@ -45,6 +45,11 @@ button {
     font-size: 14px;
 }
 
+.button-block {
+    display: block;
+    width: 100%;
+}
+
 button[type="submit"] {
     @extend %button-style;
     padding: 8px 10px;

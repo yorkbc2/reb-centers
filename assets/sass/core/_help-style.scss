@@ -48,6 +48,18 @@
     display: none !important;
 }
 
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-none {
+    float: none;
+}
+
 //xs 544
 @media #{$mobile} {
     .hide-on-mobile {

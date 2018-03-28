@@ -3,7 +3,9 @@ a {
     color: $linkFontColor;
     @extend %smooth_animation;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         text-decoration: none;
         color: $linkFontColorActive;
     }

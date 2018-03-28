@@ -8,6 +8,7 @@
     color: $buttonFontColor;
     text-transform: uppercase;
     text-align: center;
+    font-family: inherit;
     font-weight: 700;
     @include box-shadow($shadow);
     @include smooth_animation;
