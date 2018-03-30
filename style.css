@@ -235,6 +235,10 @@ a img.aligncenter {
 .gallery-caption {
   background-color: lightblue; }
 
+.link {
+  text-decoration: underline;
+  color: #00ff0a; }
+
 .bold {
   font-weight: 900; }
 
