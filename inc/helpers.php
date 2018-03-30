@@ -196,9 +196,9 @@ if (!function_exists('get_social')) {
             ],
         ];
 
-        $socials = array_filter($_socials, function ($value, $key) {
+        $socials = array_filter($_socials, function ($value) {
             return $value['url'] !== '#' && !empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
-        }, ARRAY_FILTER_USE_BOTH);
+        });
 
         return $socials;
     }
