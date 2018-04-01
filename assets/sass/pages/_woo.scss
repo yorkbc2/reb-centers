@@ -24,7 +24,15 @@
     button,
     input {
         &.button {
-            @extend %button-style;
+            &,
+            &.disabled,
+            &.disabled:hover,
+            &:disabled,
+            &:disabled:hover,
+            &:disabled[disabled],
+            &:disabled[disabled]:hover {
+                @extend %button-style;
+            }
 
             &.alt {
                 @extend %button-style;
@@ -192,6 +200,12 @@
             }
         }
     }
+
+    #reviews {
+        #comment {
+            height: 120px;
+        }
+    }
 }
 
 .woocommerce-cart,
@@ -227,6 +241,13 @@
     li {
         font-size: 16px;
         padding: 0 !important;
+    }
+}
+
+.woocommerce-Reviews {
+    .comment-reply-title {
+        display: block;
+        margin-bottom: 15px;
     }
 }
 

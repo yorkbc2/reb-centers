@@ -1,0 +1,11 @@
+// popup-maker
+html.pum-open.pum-open-overlay.pum-open-scrollable body > [aria-hidden],
+html.pum-open.pum-open-overlay.pum-open-scrollable body > *[aria-hidden] {
+    padding-right: 0 !important;
+}
+
+html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
+    overflow-y: hidden;
+}
+
+// popup-maker end

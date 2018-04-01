@@ -13,6 +13,7 @@ function get_phone_number($phone_number)
 }
 
 /**
+ * @see get_phone_number()
  * @param $phone_number
  *
  * @return void
@@ -27,7 +28,6 @@ function the_phone_number($phone_number)
  */
 function get_scroll_top()
 {
-
     if (get_theme_mod('bw_scroll_top_display', true)) {
 
         $shape = '';
@@ -63,7 +63,8 @@ function get_scroll_top()
 }
 
 /**
- * @return void;
+ * @see get_scroll_top()
+ * @return void
  */
 function scroll_top()
 {
@@ -111,7 +112,9 @@ function get_analytics_tracking_code($placed = 'body')
 }
 
 /**
+ * @see get_analytics_tracking_code()
  * @param string $placed
+ * @return void
  */
 function analytics_tracking_code($placed = 'body')
 {
@@ -132,6 +135,7 @@ if (!function_exists('get_lang_class')) {
 
 if (!function_exists('the_lang_class')) {
     /**
+     * @see get_lang_class()
      * @param string $class
      *
      * @return void
@@ -144,6 +148,7 @@ if (!function_exists('the_lang_class')) {
 
 if (!function_exists('has_social')) {
     /**
+     * @see get_social()
      * @return bool
      */
     function has_social()
@@ -207,6 +212,7 @@ if (!function_exists('get_social')) {
 
 if (!function_exists('has_phones')) {
     /**
+     * @see get_phones()
      * @return bool
      */
     function has_phones()
@@ -269,6 +275,9 @@ if (!function_exists('get_svg_sprite')) {
 if (!function_exists('svg_sprite')) {
     /**
      * Display svg sprite
+     *
+     * @see get_svg_sprite()
+     * @return void
      */
     function svg_sprite()
     {

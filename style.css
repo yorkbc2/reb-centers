@@ -3799,8 +3799,10 @@ hr.style-four {
   display: inline-block;
   vertical-align: middle; }
 
-.lang-item a {
-  display: block; }
+.lang-item {
+  margin: 0 5px; }
+  .lang-item a {
+    display: block; }
 
 .footer {
   position: absolute;
@@ -3825,6 +3827,20 @@ hr.style-four {
 
 .sidebar {
   margin-top: 20px; }
+  .sidebar .menu li {
+    border-bottom: 1px solid #939393;
+    padding: 5px 0; }
+    .sidebar .menu li:hover, .sidebar .menu li.current-menu-item, .sidebar .menu li.menu-item-current {
+      background-color: #0027ff;
+      padding-left: 10px; }
+      .sidebar .menu li:hover a, .sidebar .menu li.current-menu-item a, .sidebar .menu li.menu-item-current a {
+        color: #fff; }
+
+.widget-item {
+  margin-bottom: 20px; }
+
+.widget-title {
+  margin-bottom: 10px; }
 
 html {
   -webkit-box-sizing: border-box;

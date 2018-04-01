@@ -86,7 +86,7 @@
 
     <?php if (function_exists('pll_the_languages')) { ?>
         <ul class="lang">
-            <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0, 'hide_if_empty' => 0, 'display_names_as' => 'slug')); ?>
+            <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0, 'hide_if_empty' => 0, 'display_names_as' => 'name')); ?>
         </ul>
     <?php } ?>
 
