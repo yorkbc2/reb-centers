@@ -143,6 +143,7 @@ if (!function_exists('bw_html_sitemap')) {
         // If you would like to ignore some post types just add them to the array below
         $ignoreposttypes = array(
             'attachment',
+            'popup',
         );
 
         $post_types = get_post_types($args, 'objects');
