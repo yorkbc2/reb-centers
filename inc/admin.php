@@ -67,3 +67,22 @@ function bw_update_footer()
 }
 
 add_filter('update_footer', 'bw_update_footer', 10);
+
+/**
+ * PHP version
+ *
+ * @param $content
+ * @return string
+ */
+function bw_php_version($content)
+{
+    $php_version = sprintf(
+        '<br>%s: <b style="color: #080;">%s</b>',
+        __('Running PHP version', 'brainworks'),
+        phpversion()
+    );
+
+    return $content . $php_version;
+}
+
+//add_filter('update_right_now_text', 'bw_php_version');
