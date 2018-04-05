@@ -11,6 +11,11 @@ function bw_admin_footer_text()
         __('https://brainworks.com.ua', 'brainworks'),
         __('brainworks.com.ua', 'brainworks')
     );
+    $php_version  = sprintf(
+        '%s: <b style="color: #080;">%s</b>',
+        __('Running PHP version', 'brainworks'),
+        phpversion()
+    );
     $queries      = sprintf(
         __('%d request pear %s sec.', 'brainworks'),
         get_num_queries(),
@@ -23,8 +28,9 @@ function bw_admin_footer_text()
     );
 
     $output = sprintf(
-        '<span id="footer-thankyou">%s</span><br>%s<br>%s',
+        '<span id="footer-thankyou">%s</span><br>%s<br>%s<br>%s',
         $developed_by,
+        $php_version,
         $queries,
         $memory
     );
