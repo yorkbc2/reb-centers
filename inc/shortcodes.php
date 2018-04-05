@@ -150,14 +150,14 @@ if (!function_exists('bw_html_sitemap')) {
 
         foreach ($post_types as $post_type) {
             if (!in_array($post_type->name, $ignoreposttypes)) {
-                $output      .= '<h2>' . $post_type->labels->name . '</h2>';
+                $output      .= '<h2 class="sitemap-headline">' . $post_type->labels->name . '</h2>';
                 $args        = array(
                     'posts_per_page' => -1,
                     'post_type'      => $post_type->name,
                     'post_status'    => 'publish'
                 );
                 $posts_array = get_posts($args);
-                $output      .= '<ul class="sitemap">';
+                $output      .= '<ul class="sitemap-list">';
                 foreach ($posts_array as $pst) {
                     $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_permalink($pst->ID) . '">' . $pst->post_title . '</a></li>';
                 }

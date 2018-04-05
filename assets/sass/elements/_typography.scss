@@ -39,6 +39,15 @@ i.button-style {
     padding: 3px 8px;
 }
 
+.highlight-header {
+    background-color: $themeColorTwo;
+
+    &,
+    a {
+        color: #fff;
+    }
+}
+
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;

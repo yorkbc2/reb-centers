@@ -15,14 +15,14 @@
 
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-                <h1><?php the_title(); ?></h1>
+                <h1 class="page-name"><?php the_title(); ?></h1>
                 <?php the_content() ?>
             </article>
         <?php endwhile; ?>
 
         <?php else : ?>
             <article id="post_<?php the_ID() ?>" <?php post_class() ?>>
-                <h1><?php the_title(); ?></h1>
+                <h1 class="page-name"><?php the_title(); ?></h1>
                 <?php echo do_shortcode('[bw-html-sitemap]'); ?>
             </article>
         <?php endif; ?>
