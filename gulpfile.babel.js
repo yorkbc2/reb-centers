@@ -42,7 +42,8 @@ gulp.task('sass', () => {
         .pipe(sass({
             outputStyle: 'nested', // nested, expanded, compact, compressed
             precision: 5,
-            sourceComments: false
+            sourceComments: false,
+            linefeed: 'crlf',
         }).on('error', sass.logError))
         //.pipe(sourcemaps.write('/'))
         .pipe(gulp.dest('./'));
