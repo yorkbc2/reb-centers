@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: brainworks-v4.8.0
+Theme Name: brainworks-v4.8.1
 Theme URI:
 Text Domain: brainworks
 Author: Brain Works
@@ -8,7 +8,7 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.8.0
+Version: 4.8.1
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 /* CORE */
@@ -3083,10 +3083,12 @@ h1.hero-title {
 i.button-style {
   padding: 3px 8px; }
 
-.highlight-header {
+.highlighted {
+  display: inline-block;
+  padding: 5px 15px;
   background-color: #0027ff; }
-  .highlight-header,
-  .highlight-header a {
+  .highlighted,
+  .highlighted a {
     color: #fff; }
 
 @media (max-width: 544px) {
@@ -3343,6 +3345,8 @@ form {
       -webkit-transition: 0.2s;
       transition: 0.2s;
       margin-bottom: 0; }
+      form fieldset input[type="submit"].fa {
+        font-family: FontAwesome; }
       form fieldset input[type="submit"]:hover {
         color: #fff;
         background-color: #3352ff;
@@ -3408,6 +3412,8 @@ form {
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
+  .fa.button-style, .fa.button-large, .fa.button-medium, .fa.button-small, .fa.button-inverse, button.fa[type="submit"] {
+    font-family: FontAwesome; }
   .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, .button-inverse:hover, button:hover[type="submit"] {
     color: #fff;
     background-color: #3352ff;

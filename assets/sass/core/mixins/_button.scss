@@ -13,6 +13,10 @@
     @include box-shadow($shadow);
     @include smooth_animation;
 
+    &.fa {
+        font-family: FontAwesome;
+    }
+
     &:hover {
         color: $buttonFontColorActive;
         background-color: $buttonBgColorActive;

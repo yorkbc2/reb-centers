@@ -21,7 +21,7 @@
         $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
 
         // Buy one click
-        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.product_title');
+        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
     });
 
@@ -29,17 +29,17 @@
      * Buy in one click
      *
      * @example
-     * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.product_title');
+     * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
      * @author Fedor Kudinov <brothersrabbits@mail.ru>
      * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
-     * @param {(string|Object)} field - The selected field for writing the value
+     * @param {(string|Object)} field - The selected field for writing the value (disabled field)
      * @param {(string|Object)} headline - The element from which we get the value to write to the field
      */
     function buyOneClick(button, field, headline) {
         var btn = $(button);
         if (btn.length) {
             btn.on('click', function () {
-                $(field).val($(headline).text());
+                $(field).prop('disabled', true).val($(headline).text());
             });
         }
     }

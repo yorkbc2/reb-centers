@@ -39,12 +39,14 @@ i.button-style {
     padding: 3px 8px;
 }
 
-.highlight-header {
-    background-color: $themeColorTwo;
+.highlighted {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: $headerHighlightBgColor;
 
     &,
     a {
-        color: #fff;
+        color: $headerHighlightColor;
     }
 }
 
