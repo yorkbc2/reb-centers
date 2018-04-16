@@ -59,16 +59,19 @@ function bw_wp_nav_menu_args($args)
 function bw_nav_menu_css_class($classes, $item, $args, $depth)
 {
     if ($item->current) {
-        foreach ($classes as $key => $class) {
+        foreach ($classes as $class) {
             if ($class === 'current-menu-item') {
-                $classes[$key] .= ' menu-item-current';
+                $classes[] = $depth > 0 ? 'sub-menu-item-current' : 'menu-item-current';
+                break;
             }
         }
     }
 
     if ($depth > 0) {
         foreach ($classes as $key => $class) {
-            $classes[$key] = 'sub-' . $class;
+            if(preg_match('/^menu-item/', $class)) {
+                $classes[$key] = 'sub-' . $class;
+            }
         }
     }
 
@@ -86,6 +89,16 @@ function bw_nav_menu_link_attributes($atts, $item, $args, $depth)
 }
 
 add_filter('nav_menu_link_attributes', 'bw_nav_menu_link_attributes', 10, 4);
+
+function bw_menu_no_link($nav_menu)
+{
+    $in_link  = '!<li(.*?)class="(.*?)current-menu-item(.*?)"><a(.*?)class="(.*?)">(.*?)</a>!si';
+    $out_link = '<li$1class="\\2current-menu-item\\3"><span class="$5">$6</span>';
+
+    return preg_replace($in_link, $out_link, $nav_menu);
+}
+
+add_filter('wp_nav_menu', 'bw_menu_no_link');
 
 /** Woocommerce */
 // Override theme default specification for product # per row
