@@ -90,15 +90,24 @@ function bw_nav_menu_link_attributes($atts, $item, $args, $depth)
 
 add_filter('nav_menu_link_attributes', 'bw_nav_menu_link_attributes', 10, 4);
 
-function bw_menu_no_link($nav_menu)
+function bw_menu_no_link($nav_menu, $args)
 {
-    $in_link  = '!<li(.*?)class="(.*?)current-menu-item(.*?)"><a(.*?)class="(.*?)">(.*?)</a>!si';
-    $out_link = '<li$1class="\\2current-menu-item\\3"><span class="$5">$6</span>';
+    $theme_locations = array('main-nav', 'second-menu');
 
-    return preg_replace($in_link, $out_link, $nav_menu);
+    if (in_array($args->theme_location, $theme_locations, true)) {
+
+        $in_link  = '!<li(.*?)class="(.*?)current-menu-item(.*?)"><a(.*?)class="(.*?)">(.*?)</a>!si';
+        $out_link = '<li$1class="\\2current-menu-item\\3"><span class="$5">$6</span>';
+
+        return preg_replace($in_link, $out_link, $nav_menu);
+
+    }
+
+    return $nav_menu;
+
 }
 
-add_filter('wp_nav_menu', 'bw_menu_no_link');
+add_filter('wp_nav_menu', 'bw_menu_no_link', 10, 2);
 
 /** Woocommerce */
 // Override theme default specification for product # per row
