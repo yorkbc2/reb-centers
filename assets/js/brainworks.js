@@ -14,16 +14,47 @@
 
         html.removeClass('no-js').addClass('js');
 
-        scrollTop('.js-scroll-top');
-
         // Stick Footer
         var footerHeight = $('.footer').outerHeight() + 20;
         $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
+
+        // Scroll Top
+        scrollTop('.js-scroll-top');
+
+        // Hamburger Menu
+        hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
 
         // Buy one click
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
     });
+
+    /**
+     * Hamburger Menu
+     *
+     * @example
+     * hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     * @param {(string|Object)} menuElement - Selected menu
+     * @param {(string|Object)} hamburgerElement - Trigger element for open/close menu
+     * @param {(string|Object)} closeTrigger - Trigger element for close opened menu
+     */
+    function hamburgerMenu(menuElement, hamburgerElement, closeTrigger) {
+        var menu = $(menuElement),
+            close = $(closeTrigger),
+            hamburger = $(hamburgerElement),
+            menuAll = hamburger.add(menu);
+
+        hamburger.add(close).on('click', function () {
+            menu.toggleClass('is-active');
+        });
+
+        $(window).on('click', function (e) {
+            if (!$(e.target).closest(menuAll).length) {
+                menu.removeClass('is-active');
+            }
+        });
+    }
 
     /**
      * Buy in one click
