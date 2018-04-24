@@ -81,11 +81,11 @@
     </button>
 
    <div class="logo">
-        <?php $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."' alt='".bloginfo('name')."'>"; ?>
-        <?php if ($wp->request === "" && empty($_GET)): ?>
-            <span class="logo-link"><?=$logo?></span>
+        <?php $logo = has_custom_logo() ? get_custom_logo() : "<img class='logo-img' src='" . esc_url(get_template_directory_uri() . '/assets/img/logo.png') . "' alt='" . get_bloginfo('name') . "'>"; ?>
+        <?php if ($wp->request === '' && empty($_GET)): ?>
+            <span class="logo-link"><?= $logo ?></span>
         <?php else: ?>
-            <a href="<?= esc_url(home_url('/')) ?>"><?=$logo?></a>
+            <a class="logo-link" href="<?= esc_url(home_url('/')) ?>"><?= $logo ?></a>
         <?php endif; ?>
     </div>
 

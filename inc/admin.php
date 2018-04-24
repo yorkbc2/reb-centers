@@ -71,7 +71,8 @@ add_filter('update_footer', 'bw_update_footer', 10);
 /**
  * PHP version
  *
- * @param $content
+ * @param string $content Default text
+ *
  * @return string
  */
 function bw_php_version($content)
@@ -89,14 +90,19 @@ function bw_php_version($content)
 
 /**
  * Adding the title attribute to images
- * @param  $attr  Аттрибуты изображения
- * @param  $attachment 
+ *
+ * @param array $attr Аттрибуты изображения
+ * @param WP_Post $attachment Image attachment post.
+ *
  * @return array
  */
-function isa_add_img_title( $attr, $attachment = null ) {
-    $img_title = trim( strip_tags( $attachment->post_title ) );
+function bw_add_image_attributes($attr, $attachment = null)
+{
+    $img_title     = trim(strip_tags($attachment->post_title));
+    $attr['alt']   = $img_title;
     $attr['title'] = $img_title;
-    $attr['alt'] = $img_title;
+
     return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes','isa_add_img_title', 10, 2 );
+
+add_filter('wp_get_attachment_image_attributes', 'bw_add_image_attributes', 10, 2);
