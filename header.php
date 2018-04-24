@@ -80,15 +80,13 @@
         </span>
     </button>
 
-    <div class="logo">
-        <?php if (has_custom_logo()) {
-            the_custom_logo();
-        } else { ?>
-            <a class="logo-link" href="<?php echo esc_url(home_url('/')); ?>">
-                <img class="logo-img" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>"
-                     alt="<?php bloginfo('name'); ?>">
-            </a>
-        <?php } ?>
+   <div class="logo">
+        <?php $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."' alt='".bloginfo('name')."'>"; ?>
+        <?php if ($wp->request === "" && empty($_GET)): ?>
+            <span class="logo-link"><?=$logo?></span>
+        <?php else: ?>
+            <a href="<?= esc_url(home_url('/')) ?>"><?=$logo?></a>
+        <?php endif; ?>
     </div>
 
     <?php if (function_exists('pll_the_languages')) { ?>

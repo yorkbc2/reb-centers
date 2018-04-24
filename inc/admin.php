@@ -86,3 +86,17 @@ function bw_php_version($content)
 }
 
 //add_filter('update_right_now_text', 'bw_php_version');
+
+/**
+ * Adding the title attribute to images
+ * @param  $attr  Аттрибуты изображения
+ * @param  $attachment 
+ * @return array
+ */
+function isa_add_img_title( $attr, $attachment = null ) {
+    $img_title = trim( strip_tags( $attachment->post_title ) );
+    $attr['title'] = $img_title;
+    $attr['alt'] = $img_title;
+    return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes','isa_add_img_title', 10, 2 );
