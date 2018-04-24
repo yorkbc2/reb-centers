@@ -102,6 +102,7 @@
     }
 }
 
+
 //.nav {
 //    .menu {
 //        @extend %reset-list;
@@ -358,10 +359,20 @@
 //                display: block;
 //
 //                .menu-item-has-children-arrow {
-//                  position: absolute;
-//                  border-right: 2px solid $navArrowColor;
-//                  border-left: 2px solid $navArrowColor;
-//                  transform: rotate(45deg);
+//                    position: absolute;
+//                    border: 0;
+//                    padding: 0;
+//                    border-right: 2px solid $navArrowColor;
+//                    border-bottom: 2px solid $navArrowColor;
+//                    transform: rotate(45deg);
+//                    background-color: transparent;
+//                    width: 10px;
+//                    height: 10px;
+//                    top: 20px;
+//                    right: 15px;
+//                    &-active {
+//                        transform: rotate(45deg) scale(-1);
+//                    }
 //                }
 //
 //                &-current,
@@ -374,7 +385,6 @@
 //
 //            &-link {
 //                color: #fff;
-//                font-size: 20px;
 //                display: block;
 //            }
 //        }
@@ -387,6 +397,9 @@
 //            @include box-shadow(none);
 //
 //            &-item {
+//                .menu-item-has-children-arrow {
+//                    top: 12px;
+//                }
 //
 //                & + .sub-menu-item {
 //                }
@@ -399,7 +412,6 @@
 //
 //            &-link {
 //                color: #fff;
-//                font-size: 18px;
 //            }
 //        }
 //    }
