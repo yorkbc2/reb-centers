@@ -22,8 +22,13 @@
         scrollTop('.js-scroll-top');
 
         // Hamburger Menu
-        hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-
+        // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
+        anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
+        $(window).on("resize", function (e) {
+            if (window.innerWidth >= 630) {
+                removeAllStyles($(".js-menu"));
+            }
+        })
         // Buy one click
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
@@ -54,6 +59,36 @@
                 menu.removeClass('is-active');
             }
         });
+    }
+
+    function anotherHamburgerMenu (menuElement, hamburgerElement, closeTrigger) {
+        var Elements = {
+            menu: $(menuElement),
+            button: $(hamburgerElement),
+            close: $(closeTrigger)
+        }
+
+        Elements.button.add(Elements.close).on('click', function () {
+            Elements.menu.toggleClass('is-active');
+        })
+        var arrowOpener = function (parent) {
+            var activeArrowClass = "menu-item-has-children-arrow-active";
+            return $("<button />")
+                .addClass("menu-item-has-children-arrow")
+                .click(function (ev) {
+                    parent.children(".sub-menu").eq(0).slideToggle(300)
+                    if ($(this).hasClass(activeArrowClass)) $(this).removeClass(activeArrowClass);
+                    else $(this).addClass(activeArrowClass);
+                })
+        }
+        var items = Elements.menu.find('.menu-item-has-children, .sub-menu-item-has-children')
+        for (var i = 0 ; i < items.length ; i++) {
+            items.eq(i).append(arrowOpener(items.eq(i)))
+        }
+    }
+
+    function removeAllStyles (elementParent) {
+        elementParent.find(".sub-menu").removeAttr("style")
     }
 
     /**

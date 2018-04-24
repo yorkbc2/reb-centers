@@ -357,6 +357,13 @@
 //            &-item {
 //                display: block;
 //
+//                .menu-item-has-children-arrow {
+//                  position: absolute;
+//                  border-right: 2px solid $navArrowColor;
+//                  border-left: 2px solid $navArrowColor;
+//                  transform: rotate(45deg);
+//                }
+//
 //                &-current,
 //                &.current-menu-parent,
 //                &.current-menu-ancestor {
@@ -367,6 +374,7 @@
 //
 //            &-link {
 //                color: #fff;
+//                font-size: 20px;
 //                display: block;
 //            }
 //        }
@@ -391,6 +399,7 @@
 //
 //            &-link {
 //                color: #fff;
+//                font-size: 18px;
 //            }
 //        }
 //    }
