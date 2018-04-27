@@ -170,3 +170,63 @@ if (!function_exists('bw_html_sitemap')) {
 
     add_shortcode('bw-html-sitemap', 'bw_html_sitemap');
 }
+
+if (!function_exists("bw_last_posts")) {
+    /**
+     * 
+     * Shortcode для отображения трёх последних новостей в блоге. 
+     * Новости должны быть: 
+     * - Опубликованы
+     * - Желательно с картинкой
+     * ТАКЖЕ! Шорткод может принимать такие аттрибуты, как:
+     * - count - число новостей для вывода (по-стандарту: 3)
+     * - button_title - текст в кнопке (по-стандарту: "Читать полностью")
+     * @param  array  $atts Аттрибуты шорткода
+     * @return string       Разметка (на Bootstrap)
+     */
+    function bw_last_posts ( $atts = array() ) {
+        $count = isset($atts['count'])? $atts['count']: 3;
+        $button_title = isset($atts['button_title'])? $atts['button_title']: "Читать полностью";
+
+        $posts = wp_get_recent_posts( array(
+            'numberposts' => $count,
+            'orderby' => 'post_date',
+            'order' => 'DESC',
+            'post_type' => 'post',
+            'post_status' => 'publish'
+        ), ARRAY_A );
+
+        $output = '<div class="container"><div class="row">';
+
+        foreach ($posts as $key => $post) {
+            $thumbnail = get_the_post_thumbnail_url($post['ID']);
+            $permalink = get_permalink($post['ID']);
+            $output .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
+                if ($thumbnail !== false) {
+                    $output .= '<div class="custom-card-image">
+                                    <img src="'.$thumbnail.'" title="'.$post['post_title'].'" alt="" width="100%" height="auto"  />
+                                </div>';
+                }
+                $output .= '<div class="custom-card-body">
+                                <h3>
+                                    <a href="'.$permalink.'">'.$post['post_title'].'</a>
+                                </h3>
+                                <p>
+                                    '.$post['post_excerpt'].'
+                                </p>
+                                <br />
+                                <a href="'.$permalink.'" class="button-small button-inverse">
+                                    '.$button_title.'
+                                </a>
+                            </div>';
+            $output .= '</div></div>';
+        }
+
+        $output .= '</div></div>';
+
+        return $output;
+
+    } 
+
+    add_shortcode( "bw-last-posts", "bw_last_posts" );
+}
