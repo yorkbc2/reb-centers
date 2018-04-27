@@ -185,11 +185,14 @@ if (!function_exists("bw_last_posts")) {
      * @return string       Разметка (на Bootstrap)
      */
     function bw_last_posts ( $atts = array() ) {
-        $count = isset($atts['count'])? $atts['count']: 3;
-        $button_title = isset($atts['button_title'])? $atts['button_title']: "Читать полностью";
+        $atts = shortcode_atts( 
+        array(
+            'count' => 3, // Кол-во новостей для отображения
+            'button_title' => "Читать полностью" // Текст в ссылке
+        ), $atts );
 
         $posts = wp_get_recent_posts( array(
-            'numberposts' => $count,
+            'numberposts' => $atts['count'],
             'orderby' => 'post_date',
             'order' => 'DESC',
             'post_type' => 'post',
@@ -216,7 +219,7 @@ if (!function_exists("bw_last_posts")) {
                                 </p>
                                 <br />
                                 <a href="'.$permalink.'" class="button-small button-inverse">
-                                    '.$button_title.'
+                                    '.$atts['button_title'].'
                                 </a>
                             </div>';
             $output .= '</div></div>';
