@@ -58,6 +58,11 @@
 
     <?php if (has_nav_menu('main-nav')) { ?>
         <nav class="main-nav container js-menu">
+            <?php /* echo '<button class="hamburger js-hamburger" type="button" tabindex="0">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>'; */ ?>
             <?php // echo '<button type="button" tabindex="0" class="menu-close js-menu-close"></button>'; ?>
             <?php wp_nav_menu(array(
                 'theme_location' => 'main-nav',
@@ -73,12 +78,7 @@
 
     <div class="page-wrapper container">
 
-    <?php /* 
-    <button class="hamburger js-hamburger" type="button" tabindex="0">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
+    <?php /*
 
    <div class="logo">
         <?php $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."' alt='".bloginfo('name')."'>"; ?>

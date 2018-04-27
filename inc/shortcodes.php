@@ -202,12 +202,14 @@ if (!function_exists("bw_last_posts")) {
         $output = '<div class="container"><div class="row">';
 
         foreach ($posts as $key => $post) {
-            $thumbnail = get_the_post_thumbnail_url($post['ID']);
+            $thumbnail_id = get_post_thumbnail_id($post['ID']);
+            $thumbnail = get_the_post_thumbnail_url($post['ID'], 'medium');
+            $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
             $permalink = get_permalink($post['ID']);
             $output .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
                 if ($thumbnail !== false) {
                     $output .= '<div class="custom-card-image">
-                                    <img src="'.$thumbnail.'" title="'.$post['post_title'].'" alt="" width="100%" height="auto"  />
+                                    <img src="'.$thumbnail.'" title="'.$post['post_title'].'" alt="'.$thumbnail_alt.'" width="100%" height="auto"  />
                                 </div>';
                 }
                 $output .= '<div class="custom-card-body">
