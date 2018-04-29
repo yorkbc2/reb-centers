@@ -57,12 +57,7 @@
     </header>
 
     <?php if (has_nav_menu('main-nav')) { ?>
-        <nav class="main-nav container js-menu">
-            <?php /* echo '<button class="hamburger js-hamburger" type="button" tabindex="0">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>'; */ ?>
+        <nav class="nav js-menu">
             <?php // echo '<button type="button" tabindex="0" class="menu-close js-menu-close"></button>'; ?>
             <?php wp_nav_menu(array(
                 'theme_location' => 'main-nav',
@@ -77,17 +72,21 @@
     <?php } ?>
 
     <div class="page-wrapper container">
+    
+    <div class="nav-mobile-header">  
+        <button class="hamburger js-hamburger" type="button" tabindex="0">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="logo">
+            <?php get_default_logo_link(); ?>
+        </div>
+    </div> 
 
     <?php /*
 
-   <div class="logo">
-        <?php $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."' alt='".bloginfo('name')."'>"; ?>
-        <?php if ($wp->request === "" && empty($_GET)): ?>
-            <span class="logo-link"><?=$logo?></span>
-        <?php else: ?>
-            <a href="<?= esc_url(home_url('/')) ?>"><?=$logo?></a>
-        <?php endif; ?>
-    </div>
+   get_default_logo_link();
 
     <?php if (function_exists('pll_the_languages')) { ?>
         <ul class="lang">

@@ -284,3 +284,19 @@ if (!function_exists('svg_sprite')) {
         echo get_svg_sprite();
     }
 }
+
+if (!function_exists('get_default_logo_link')) {
+    /**
+     * Отображает логотип сайта
+     * @return void
+     */
+    function get_default_logo_link () {
+        global $wp;
+        $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."' alt='".bloginfo('name')."'>";
+        if ($wp->request === "" && empty($_GET)):
+            echo '<span class="logo-link">'.$logo.'</span>';
+        else:
+            echo '<a href="'.esc_url(home_url('/')).'">'.$logo.'</a>';
+        endif;
+    }
+}
