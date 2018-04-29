@@ -54,9 +54,51 @@
             menu.toggleClass('is-active');
         });
 
+        $(window).on('load', function (e) {
+            if (document.location.hash !== "") {
+                scrollToElement(document.location.hash);
+            }
+        });
+
         $(window).on('click', function (e) {
             if (!$(e.target).closest(menuAll).length) {
                 menu.removeClass('is-active');
+            }
+        });
+    }
+
+    /**
+     * Скролл к элементу
+     * @param  {string|object} elements Элементы, которым добавляем Handler
+     */
+    function scrollHandlerForButton (elements) {
+        var elements = $(elements);
+        for (var i = 0; i < elements.length; i++) {
+
+            var el = elements.eq(i);
+
+            el.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollToElement($(e.target.hash), function () {
+                    document.location.hash = e.target.hash;
+                });
+            });
+
+        }
+    }
+
+    /**
+     * Скроллим к элементу
+     * @param {object|string} element
+     */
+    function scrollToElement (element, callback) {
+        element = $(element);
+        $('html, body').animate({
+            scrollTop: element.offset().top
+        }, 600, function () {
+            if (typeof callback === 'function') {
+                callback();
             }
         });
     }
