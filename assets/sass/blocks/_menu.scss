@@ -8,6 +8,11 @@
         .current-menu-item {
             position: relative;
 
+            .menu-link {
+              display: block;
+              padding: 15px 20px;
+            }
+
             &:after {
                 content: "";
                 display: block;

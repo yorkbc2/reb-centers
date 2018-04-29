@@ -29,6 +29,7 @@
                 removeAllStyles($(".js-menu"));
             }
         })
+        wrapHighlightedElements('.highlighted')
         // Buy one click
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
@@ -131,6 +132,18 @@
 
     function removeAllStyles (elementParent) {
         elementParent.find(".sub-menu").removeAttr("style")
+    }
+
+    /**
+     * Оборачиваем все Highlighted елементы в блок
+     * @param  {string|object} elements 
+     */
+    function wrapHighlightedElements (elements) {
+        elements = $(elements);
+        for (var i = 0; i < elements.length; i++) {
+            var highlightedHeader = elements.eq(i);
+            highlightedHeader.wrap('<div style="display: block;"></div>');
+        }
     }
 
     /**

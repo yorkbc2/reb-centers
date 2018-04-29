@@ -3757,6 +3757,9 @@ hr.style-four {
   list-style: none; }
   .main-nav .menu-container .current-menu-item {
     position: relative; }
+    .main-nav .menu-container .current-menu-item .menu-link {
+      display: block;
+      padding: 15px 20px; }
     .main-nav .menu-container .current-menu-item:after {
       content: "";
       display: block;
