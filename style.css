@@ -3569,8 +3569,39 @@ a {
     text-decoration: none;
     color: #333333; }
 
-ul.pagination li {
-  display: inline-block; }
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 10px auto; }
+  ul.pagination li.page-item {
+    display: inline-block; }
+    ul.pagination li.page-item:first-child a.page-link,
+    ul.pagination li.page-item:first-child span.current {
+      border-radius: 3px 0 0 3px;
+      border-left: 1px solid silver; }
+    ul.pagination li.page-item:last-child a.page-link,
+    ul.pagination li.page-item:last-child span.current {
+      border-radius: 0 3px 3px 0; }
+    ul.pagination li.page-item a.page-link,
+    ul.pagination li.page-item span.current {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+      border-top: 1px solid silver;
+      border-bottom: 1px solid silver;
+      border-right: 1px solid silver; }
+    ul.pagination li.page-item a.page-link:hover {
+      background-color: #213ccf;
+      color: #fff;
+      border-color: transparent; }
+    ul.pagination li.page-item span.current {
+      color: #fff;
+      background-color: #0027ff;
+      border-color: transparent; }
 
 table {
   border-collapse: collapse;
