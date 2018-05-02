@@ -47,6 +47,8 @@ $buttonFontColorActive: #fff;
 $buttonBgColor: $themeColorTwo;
 $buttonBgColorActive: lighten($themeColorTwo, 10%);
 $buttonBorderColor: #000;
+$buttonOutlinedFirstColor: $themeColorTwo;
+$buttonOutlinedSecondColor: #fff;
 
 //TABLE
 $tableBgColor: $themeColorTwo;
@@ -77,3 +79,8 @@ $formFieldTextColor: #000;
 $formFieldTextSize: 13px;
 $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: #fff;
+
+// Menu
+$navArrowColor: white;
+$navHeaderMobileBGColor: #fff;
+$navHamburgerMobileColor: #199ec7;

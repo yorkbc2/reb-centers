@@ -88,21 +88,22 @@ function bw_php_version($content)
 
 //add_filter('update_right_now_text', 'bw_php_version');
 
-/**
- * Adding the title attribute to images
- *
- * @param array $attr Аттрибуты изображения
- * @param WP_Post $attachment Image attachment post.
- *
- * @return array
- */
-function bw_add_image_attributes($attr, $attachment = null)
-{
-    $img_title     = trim(strip_tags($attachment->post_title));
-    $attr['alt']   = $img_title;
-    $attr['title'] = $img_title;
+if (!function_exists( 'bw_add_img_attributes' )) {
+    /**
+     * Добавление аттрибутов title и alt для картинок
+     * @param  array $attr       Аттрибуты картинки
+     * @param  WP_Post|array $attachment Наша картинка
+     * @return array             Аттрибуты картинки
+     */
+    function bw_add_img_attributes ($attr=array(), $attachment) {
+        $title = trim( strip_tags( $attachment->post_title ) );
+        $alt   = trim( strip_tags( get_post_meta($attachment->ID, '_wp_attachment_image_alt', true) ) );
 
-    return $attr;
+        $attr['title'] = $title;
+        $attr['alt'] = $alt;
+
+        return $attr;
+    }   
 }
 
-add_filter('wp_get_attachment_image_attributes', 'bw_add_image_attributes', 10, 2);
+add_filter( 'wp_get_attachment_image_attributes', 'bw_add_img_attributes', 10, 3 );
