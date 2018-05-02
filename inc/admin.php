@@ -71,7 +71,8 @@ add_filter('update_footer', 'bw_update_footer', 10);
 /**
  * PHP version
  *
- * @param $content
+ * @param string $content Default text
+ *
  * @return string
  */
 function bw_php_version($content)

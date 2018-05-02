@@ -86,7 +86,7 @@
 
     <?php /*
 
-   get_default_logo_link();
+    get_default_logo_link();
 
     <?php if (function_exists('pll_the_languages')) { ?>
         <ul class="lang">
