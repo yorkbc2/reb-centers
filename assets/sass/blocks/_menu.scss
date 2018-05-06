@@ -106,6 +106,7 @@
     nav.main-nav {
         display: none;
         .menu-container {
+            padding-top: $menuContainerMobilePaddingTop;
             display: block;
         }
     }
@@ -120,7 +121,7 @@
         
         border-bottom: 1px solid #e7e7e7;
         background-color: $navHeaderMobileBGColor;
-        text-align: center;
+        text-align: left;
 
         z-index: 99;
 
@@ -130,8 +131,8 @@
 
         .hamburger {
             position: absolute;
-            top: 20px;
-            left: 10px;
+            top: 15px;
+            right: 10px;
         }
     }
 }

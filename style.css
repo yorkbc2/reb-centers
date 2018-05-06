@@ -3068,6 +3068,161 @@ ol.commentlist .comment-body {
 article header p {
   text-align: justify; }
 
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #f56b3e; }
+
+.woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #f56b3e; }
+
+.woocommerce span.onsale {
+  background-color: #f56b3e;
+  color: #fff; }
+
+.woocommerce ul.products li.product {
+  text-align: center; }
+  .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    line-height: 1.1;
+    font-size: 18px; }
+    @media (min-width: 480px) and (max-width: 1199px) {
+      .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        font-size: 20px;
+        font-size: calc(0.00833 * 100vw + 14px); } }
+    @media (min-width: 1200px) {
+      .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        font-size: 24px; } }
+  .woocommerce ul.products li.product .price {
+    color: #f56b3e;
+    font-size: 20px;
+    line-height: 1; }
+
+.woocommerce div.product .product_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+  @media (min-width: 480px) and (max-width: 1023px) {
+    .woocommerce div.product .product_title {
+      font-size: 26px;
+      font-size: calc(0.02206 * 100vw + 9.41176px); } }
+  @media (min-width: 1024px) {
+    .woocommerce div.product .product_title {
+      font-size: 32px; } }
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: #f56b3e; }
+  @media (min-width: 480px) and (max-width: 1023px) {
+    .woocommerce div.product p.price,
+    .woocommerce div.product span.price {
+      font-size: 26px;
+      font-size: calc(0.02206 * 100vw + 9.41176px); } }
+  @media (min-width: 1024px) {
+    .woocommerce div.product p.price,
+    .woocommerce div.product span.price {
+      font-size: 32px; } }
+
+.woocommerce div.product .woocommerce-product-details__short-description {
+  margin-bottom: 20px; }
+
+.woocommerce div.product form.cart .button + .button {
+  margin-left: 5px; }
+
+.woocommerce .quantity .qty {
+  padding-top: 10px;
+  padding-bottom: 9px; }
+
+.woocommerce .sku_wrapper {
+  display: block;
+  margin-bottom: 5px; }
+
+.woocommerce .cart-collaterals .cart_totals h2 {
+  text-align: center; }
+
+.woocommerce .col2-set {
+  padding-top: 20px; }
+
+.woocommerce fieldset {
+  background-color: transparent;
+  padding: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.woocommerce-error a, .woocommerce-info a, .woocommerce-message a {
+  text-decoration: underline; }
+
+.woocommerce-error {
+  border-top-color: #b81c23; }
+  .woocommerce-error::before {
+    color: #b81c23; }
+
+.woocommerce-info {
+  border-top-color: #1e85be; }
+  .woocommerce-info::before {
+    color: #1e85be; }
+
+.woocommerce-message {
+  border-top-color: #8fae1b; }
+  .woocommerce-message::before {
+    color: #8fae1b; }
+
+.woocommerce form .form-row .required {
+  text-decoration: none; }
+
+.woocommerce #reviews #comment {
+  height: 120px; }
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  width: 100%;
+  display: block; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+  margin-bottom: 5px; }
+
+.woof_container_inner h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.woof_list li {
+  font-size: 16px;
+  padding: 0 !important; }
+
+.woocommerce-Reviews .comment-reply-title {
+  display: block;
+  margin-bottom: 15px; }
+
+@media only screen and (max-width: 480px) {
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products li.product,
+  .woocommerce-page[class*=columns-] ul.products li.product,
+  .woocommerce[class*=columns-] ul.products li.product {
+    float: none;
+    width: auto; }
+    .woocommerce ul.products li.product:nth-child(2n),
+    .woocommerce-page ul.products li.product:nth-child(2n),
+    .woocommerce-page[class*=columns-] ul.products li.product:nth-child(2n),
+    .woocommerce[class*=columns-] ul.products li.product:nth-child(2n) {
+      float: none; } }
+
 /* ELEMENTS */
 h1, h2, h3, h4, h5, h6, h1.hero-title {
   color: #4b4b4b;
@@ -3393,73 +3548,306 @@ form {
   -moz-appearance: none;
   appearance: none; }
 
-.button-style, .button-large, .button-medium, .button-small, .button-inverse, button[type="submit"], .button-outlined {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-  border: 0;
-  border-radius: 4px;
-  background-color: #0027ff;
-  color: #fff;
-  text-transform: uppercase;
+.woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button, .woocommerce a.button.disabled, .woocommerce a.button.disabled:hover, .woocommerce a.button:disabled, .woocommerce a.button:disabled:hover, .woocommerce a.button:disabled[disabled], .woocommerce a.button:disabled[disabled]:hover,
+.woocommerce button.button,
+.woocommerce button.button.disabled,
+.woocommerce button.button.disabled:hover,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled:hover,
+.woocommerce button.button:disabled[disabled],
+.woocommerce button.button:disabled[disabled]:hover,
+.woocommerce input.button,
+.woocommerce input.button.disabled,
+.woocommerce input.button.disabled:hover,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled:hover,
+.woocommerce input.button:disabled[disabled],
+.woocommerce input.button:disabled[disabled]:hover, .woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  top: 0;
   text-align: center;
-  font-family: inherit;
-  font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-  .fa.button-style, .fa.button-large, .fa.button-medium, .fa.button-small, .fa.button-inverse, button.fa[type="submit"], .fa.button-outlined {
-    font-family: FontAwesome; }
-  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, .button-inverse:hover, button:hover[type="submit"], .button-outlined:hover {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; }
+  .woocommerce #respond input#submit a, .woocommerce #respond input#submit.alt a, .woocommerce a.button a, .woocommerce a.button.disabled a, .woocommerce a.button.disabled:hover a, .woocommerce a.button:disabled a, .woocommerce a.button:disabled:hover a, .woocommerce a.button:disabled[disabled] a, .woocommerce a.button:disabled[disabled]:hover a, .woocommerce button.button a, .woocommerce button.button.disabled a, .woocommerce button.button.disabled:hover a, .woocommerce button.button:disabled a, .woocommerce button.button:disabled:hover a, .woocommerce button.button:disabled[disabled] a, .woocommerce button.button:disabled[disabled]:hover a, .woocommerce input.button a, .woocommerce input.button.disabled a, .woocommerce input.button.disabled:hover a, .woocommerce input.button:disabled a, .woocommerce input.button:disabled:hover a, .woocommerce input.button:disabled[disabled] a, .woocommerce input.button:disabled[disabled]:hover a, .woocommerce a.button.alt a, .woocommerce button.button.alt a, .woocommerce input.button.alt a {
     color: #fff;
-    background-color: #3352ff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, .button-inverse:active, button:active[type="submit"], .button-outlined:active {
-    background-color: #0027ff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, .button-inverse:focus, button:focus[type="submit"], .button-outlined:focus {
+    display: inline-block; }
+  .woocommerce #respond input#submit span, .woocommerce #respond input#submit.alt span, .woocommerce a.button span, .woocommerce a.button.disabled span, .woocommerce a.button.disabled:hover span, .woocommerce a.button:disabled span, .woocommerce a.button:disabled:hover span, .woocommerce a.button:disabled[disabled] span, .woocommerce a.button:disabled[disabled]:hover span, .woocommerce button.button span, .woocommerce button.button.disabled span, .woocommerce button.button.disabled:hover span, .woocommerce button.button:disabled span, .woocommerce button.button:disabled:hover span, .woocommerce button.button:disabled[disabled] span, .woocommerce button.button:disabled[disabled]:hover span, .woocommerce input.button span, .woocommerce input.button.disabled span, .woocommerce input.button.disabled:hover span, .woocommerce input.button:disabled span, .woocommerce input.button:disabled:hover span, .woocommerce input.button:disabled[disabled] span, .woocommerce input.button:disabled[disabled]:hover span, .woocommerce a.button.alt span, .woocommerce button.button.alt span, .woocommerce input.button.alt span {
+    color: #fff;
+    display: inline-block; }
+  .woocommerce #respond input#submit:focus, .woocommerce a.button:focus, .woocommerce a.button.disabled:focus:hover, .woocommerce a.button:focus:disabled:hover, .woocommerce a.button:focus:disabled[disabled],
+  .woocommerce button.button:focus,
+  .woocommerce button.button.disabled:focus:hover,
+  .woocommerce button.button:focus:disabled:hover,
+  .woocommerce button.button:focus:disabled[disabled],
+  .woocommerce input.button:focus,
+  .woocommerce input.button.disabled:focus:hover,
+  .woocommerce input.button:focus:disabled:hover,
+  .woocommerce input.button:focus:disabled[disabled] {
     outline: 0; }
+  .woocommerce #respond input.button-inverse#submit, .woocommerce a.button-inverse.button, .woocommerce a.button-inverse.button.disabled:hover, .woocommerce a.button-inverse.button:disabled:hover, .woocommerce a.button-inverse.button:disabled[disabled],
+  .woocommerce button.button-inverse.button,
+  .woocommerce button.button-inverse.button.disabled:hover,
+  .woocommerce button.button-inverse.button:disabled:hover,
+  .woocommerce button.button-inverse.button:disabled[disabled],
+  .woocommerce input.button-inverse.button,
+  .woocommerce input.button-inverse.button.disabled:hover,
+  .woocommerce input.button-inverse.button:disabled:hover,
+  .woocommerce input.button-inverse.button:disabled[disabled] {
+    background: #0027ff;
+    color: #fff; }
+    .woocommerce #respond input.button-inverse#submit:hover, .woocommerce a.button-inverse.button:hover,
+    .woocommerce button.button-inverse.button:hover,
+    .woocommerce input.button-inverse.button:hover, .woocommerce #respond input.button-inverse#submit:active, .woocommerce a.button-inverse.button:active, .woocommerce a.button-inverse.button:active:disabled[disabled]:hover,
+    .woocommerce button.button-inverse.button:active,
+    .woocommerce button.button-inverse.button:active:disabled[disabled]:hover,
+    .woocommerce input.button-inverse.button:active,
+    .woocommerce input.button-inverse.button:active:disabled[disabled]:hover {
+      color: #0027ff;
+      background: #fff; }
+  .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce a.button.disabled:hover, .woocommerce a.button:hover:disabled[disabled],
+  .woocommerce button.button:hover,
+  .woocommerce button.button.disabled:hover,
+  .woocommerce button.button:hover:disabled[disabled],
+  .woocommerce input.button:hover,
+  .woocommerce input.button.disabled:hover,
+  .woocommerce input.button:hover:disabled[disabled], .woocommerce #respond input#submit:active, .woocommerce a.button:active, .woocommerce a.button.disabled:active:hover, .woocommerce a.button:active:disabled:hover, .woocommerce a.button:active:disabled[disabled],
+  .woocommerce button.button:active,
+  .woocommerce button.button.disabled:active:hover,
+  .woocommerce button.button:active:disabled:hover,
+  .woocommerce button.button:active:disabled[disabled],
+  .woocommerce input.button:active,
+  .woocommerce input.button.disabled:active:hover,
+  .woocommerce input.button:active:disabled:hover,
+  .woocommerce input.button:active:disabled[disabled] {
+    background-color: #0027ff;
+    color: #fff; }
 
-button {
-  cursor: pointer; }
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  color: #fff;
+  background-color: #3352ff;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
+.woocommerce #respond input#submit.alt:active, .woocommerce a.button.alt:active,
+.woocommerce button.button.alt:active,
+.woocommerce input.button.alt:active {
+  background-color: #0027ff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.woocommerce #respond input#submit.alt:focus, .woocommerce a.button.alt:focus,
+.woocommerce button.button.alt:focus,
+.woocommerce input.button.alt:focus {
+  outline: 0; }
+
+.button-style {
+  top: 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; }
+  .button-style a {
+    color: #fff;
+    display: inline-block; }
+  .button-style span {
+    color: #fff;
+    display: inline-block; }
+  .button-style:focus {
+    outline: 0; }
+  .button-style.button-inverse {
+    background: #0027ff;
+    color: #fff; }
+    .button-style.button-inverse:hover, .button-style.button-inverse:active {
+      color: #0027ff;
+      background: #fff; }
+  .button-style:hover, .button-style:active {
+    background-color: #0027ff;
+    color: #fff; }
 
 .button-large {
-  padding: 16px 60px;
+  top: 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 10px 60px;
   font-size: 20px; }
+  .button-large a {
+    color: #fff;
+    display: inline-block; }
+  .button-large span {
+    color: #fff;
+    display: inline-block; }
+  .button-large:focus {
+    outline: 0; }
+  .button-large.button-inverse {
+    background: #0027ff;
+    color: #fff; }
+    .button-large.button-inverse:hover, .button-large.button-inverse:active {
+      color: #0027ff;
+      background: #fff; }
+  .button-large:hover, .button-large:active {
+    background-color: #0027ff;
+    color: #fff; }
 
 .button-medium {
+  top: 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   padding: 14px 25px;
   font-size: 16px; }
+  .button-medium a {
+    color: #fff;
+    display: inline-block; }
+  .button-medium span {
+    color: #fff;
+    display: inline-block; }
+  .button-medium:focus {
+    outline: 0; }
+  .button-medium.button-inverse {
+    background: #0027ff;
+    color: #fff; }
+    .button-medium.button-inverse:hover, .button-medium.button-inverse:active {
+      color: #0027ff;
+      background: #fff; }
+  .button-medium:hover, .button-medium:active {
+    background-color: #0027ff;
+    color: #fff; }
 
 .button-small {
+  top: 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   padding: 10px 15px;
   font-size: 14px; }
-
-.button-inverse {
-  color: #fff;
-  background-color: #3352ff; }
-  .button-inverse:hover, .button-inverse:active {
+  .button-small a {
     color: #fff;
-    background-color: #0027ff; }
-
-.button-block {
-  display: block;
-  width: 100%; }
+    display: inline-block; }
+  .button-small span {
+    color: #fff;
+    display: inline-block; }
+  .button-small:focus {
+    outline: 0; }
+  .button-small.button-inverse {
+    background: #0027ff;
+    color: #fff; }
+    .button-small.button-inverse:hover, .button-small.button-inverse:active {
+      color: #0027ff;
+      background: #fff; }
+  .button-small:hover, .button-small:active {
+    background-color: #0027ff;
+    color: #fff; }
 
 button[type="submit"] {
-  padding: 8px 10px; }
+  top: 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #0027ff;
+  background-color: #fff;
+  box-shadow: none;
+  line-height: 0;
+  color: #0027ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 5px 10px; }
+  button[type="submit"] a {
+    color: #fff;
+    display: inline-block; }
+  button[type="submit"] span {
+    color: #fff;
+    display: inline-block; }
+  button[type="submit"]:focus {
+    outline: 0; }
+  button[type="submit"].button-inverse {
+    background: #0027ff;
+    color: #fff; }
+    button[type="submit"].button-inverse:hover, button[type="submit"].button-inverse:active {
+      color: #0027ff;
+      background: #fff; }
+  button[type="submit"]:hover, button[type="submit"]:active {
+    background-color: #0027ff;
+    color: #fff; }
 
 @media (max-width: 544px) {
   .button-large {
-    padding: 11px 45px;
+    padding: 10px 45px;
     font-size: 12px; }
   .button-medium {
     padding: 9px 22px;
@@ -3470,7 +3858,7 @@ button[type="submit"] {
 
 @media (min-width: 545px) and (max-width: 768px) {
   .button-large {
-    padding: 12px 50px;
+    padding: 10px 50px;
     font-size: 13px; }
   .button-medium {
     padding: 10px 25px;
@@ -3481,7 +3869,7 @@ button[type="submit"] {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .button-large {
-    padding: 13px 55px;
+    padding: 10px 55px;
     font-size: 14px; }
   .button-medium {
     padding: 11px 28px;
@@ -3492,7 +3880,7 @@ button[type="submit"] {
 
 @media (min-width: 1025px) and (max-width: 1366px) {
   .button-large {
-    padding: 14px 60px;
+    padding: 10px 60px;
     font-size: 16px; }
   .button-medium {
     padding: 12px 32px;
@@ -3503,7 +3891,7 @@ button[type="submit"] {
 
 @media (min-width: 1367px) {
   .button-large {
-    padding: 15px 65px;
+    padding: 10px 65px;
     font-size: 18px; }
   .button-medium {
     padding: 13px 35px;
@@ -3511,56 +3899,6 @@ button[type="submit"] {
   .button-small {
     padding: 10px 20px;
     font-size: 13px; } }
-
-.button-style, .button-large, .button-medium, .button-small, .button-inverse, button[type="submit"], .button-outlined {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-  border: 0;
-  border-radius: 4px;
-  background-color: #0027ff;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: inherit;
-  font-weight: 700;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-  .fa.button-style, .fa.button-large, .fa.button-medium, .fa.button-small, .fa.button-inverse, button.fa[type="submit"], .fa.button-outlined {
-    font-family: FontAwesome; }
-  .button-style:hover, .button-large:hover, .button-medium:hover, .button-small:hover, .button-inverse:hover, button:hover[type="submit"], .button-outlined:hover {
-    color: #fff;
-    background-color: #3352ff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .button-style:active, .button-large:active, .button-medium:active, .button-small:active, .button-inverse:active, button:active[type="submit"], .button-outlined:active {
-    background-color: #0027ff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .button-style:focus, .button-large:focus, .button-medium:focus, .button-small:focus, .button-inverse:focus, button:focus[type="submit"], .button-outlined:focus {
-    outline: 0; }
-
-.button-outlined {
-  border: 1px solid #0027ff;
-  background-color: #fff;
-  box-shadow: none;
-  color: #0027ff; }
-  .button-outlined.button-inverse {
-    background: #0027ff;
-    color: #fff; }
-    .button-outlined.button-inverse:hover {
-      color: #fff;
-      background: #fff; }
-  .button-outlined:hover {
-    background-color: #0027ff;
-    color: #fff; }
 
 a {
   text-decoration: none;
@@ -3780,6 +4118,39 @@ hr.style-four {
 .fa.reversed-color {
   color: #00ff0a; }
 
+::-webkit-scrollbar {
+  width: 7px;
+  height: 2px; }
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0; }
+
+::-webkit-scrollbar-thumb {
+  background: #7eb1ea;
+  border: 0 none #fff;
+  border-radius: 0; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff; }
+
+::-webkit-scrollbar-thumb:active {
+  background: #aaa; }
+
+::-webkit-scrollbar-track {
+  background: #14151d;
+  border: 0 none #fff;
+  border-radius: 0; }
+
+::-webkit-scrollbar-track:hover {
+  background: #111219; }
+
+::-webkit-scrollbar-track:active {
+  background: #333; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
 /* BLOCKS */
 .main-nav .menu-container {
   display: flex;
@@ -3853,6 +4224,7 @@ hr.style-four {
   nav.main-nav {
     display: none; }
     nav.main-nav .menu-container {
+      padding-top: 100px;
       display: block; }
   .nav-mobile-header {
     display: block;
@@ -3863,14 +4235,14 @@ hr.style-four {
     left: 0;
     border-bottom: 1px solid #e7e7e7;
     background-color: #fff;
-    text-align: center;
+    text-align: left;
     z-index: 99; }
     .nav-mobile-header img {
       max-height: 50px; }
     .nav-mobile-header .hamburger {
       position: absolute;
-      top: 20px;
-      left: 10px; } }
+      top: 15px;
+      right: 10px; } }
 
 .nav .menu {
   font-size: 0; }
