@@ -24,7 +24,8 @@
     ]
   },
   "scripts": {
-    "start": "yarn"
+    "start": "yarn",
+    "sass": "node ./node_modules/gulp/bin/gulp.js sass"
   },
   "repository": {
     "type": "git",

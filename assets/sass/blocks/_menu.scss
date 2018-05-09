@@ -105,10 +105,7 @@
 @media #{$mobile} {
     nav.main-nav {
         display: none;
-        .menu-container {
-            padding-top: $menuContainerMobilePaddingTop;
-            display: block;
-        }
+       
     }
     .nav-mobile-header {
         display: block;
@@ -139,6 +136,12 @@
 
 
 .nav {
+  display: block;
+  position: relative;
+  margin: 10px 15px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.35);
+  border-radius: 4px;
+  text-align: center;
    .menu {
        @extend %reset-list;
        font-size: 0;
@@ -193,6 +196,23 @@
 
            &-has-children {
                position: relative;
+               padding-right: 15px;
+               &:hover {
+                &::after {
+                  top: 14px;
+                  transform: scale(-1);
+                }
+               }
+               &::after {
+                content: "";
+                position: absolute;
+                top: 19px;
+                right: 5px;
+
+                border: 5px solid #000;
+                border-color: #000 transparent transparent transparent;
+                transition: transform 0.3s ease-in-out;
+               }
            }
 
            .no-touch &:hover,
@@ -246,6 +266,23 @@
            }
            &-has-children {
                position: relative;
+               padding-right: 15px;
+               &:hover {
+                &::after {
+                  top: 14px;
+                  transform: scale(-1);
+                }
+               }
+               &::after {
+                content: "";
+                position: absolute;
+                top: 19px;
+                right: 5px;
+
+                border: 5px solid #000;
+                border-color: #000 transparent transparent transparent;
+                transition: transform 0.3s ease-in-out;
+               }
            }
 
            .no-touch &:hover,
@@ -372,8 +409,9 @@
        position: fixed;
        top: 0;
        left: 0;
-       right: 0;
-       bottom: 0;
+       width: 100%;
+       height: 100%;
+       margin: 0;
        z-index: 100;
        overflow: auto;
        background-color: #333;
@@ -384,6 +422,11 @@
        &.is-active {
            @include transform(translateX(0%));
        }
+
+      .menu-container {
+          padding-top: $menuContainerMobilePaddingTop;
+          display: block;
+      }
 
        .menu {
            display: block;
@@ -398,9 +441,13 @@
 
            &-item {
                display: block;
+               &::after {
+                display: none;
+               }
 
                .menu-item-has-children-arrow {
                    position: absolute;
+                   display: block;
                    border: 0;
                    padding: 0;
                    border-right: 2px solid $navArrowColor;
@@ -409,7 +456,7 @@
                    background-color: transparent;
                    width: 10px;
                    height: 10px;
-                   top: 20px;
+                   top: 12px;
                    right: 15px;
                    &-active {
                        transform: rotate(45deg) scale(-1);
@@ -433,11 +480,15 @@
        .sub-menu {
            position: static;
            width: auto;
+           display: none;
            visibility: visible;
            @include opacity(1);
            @include box-shadow(none);
 
            &-item {
+              &::after {
+                display: none;
+              }
                .menu-item-has-children-arrow {
                    top: 12px;
                }

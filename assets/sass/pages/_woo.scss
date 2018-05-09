@@ -1,8 +1,18 @@
 .woocommerce {
+    input.input-text {
+        min-height: $inputFieldMinHeight;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        
+    }
     #respond {
         input#submit {
             @extend %button-style;
-
+            &.loading {
+                &::after {
+                    top: 19px;
+                }
+            }
             &.alt {
                 @extend %button-style;
                 @extend %button-style-pseudo;

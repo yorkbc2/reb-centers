@@ -6,14 +6,12 @@
     border-radius: $borderRadius;
     font-family: $fontFamilyTwo;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
     cursor: pointer;
     font-size: 16px;
     border: 1px solid $buttonOutlinedFirstColor;
     background-color: $buttonOutlinedSecondColor;
     box-shadow: none;
-    line-height: 0;
+    line-height: 1!important;
 
     color: $buttonOutlinedFirstColor;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -73,9 +71,11 @@
     @include button-style;
 }
 
-.button-large {
+.button-large,
+button.button,
+a.button {
     @include button-style;
-    padding: 10px 60px;
+    padding: 15px 60px;
     font-size: 20px;
 }
 
@@ -97,7 +97,9 @@ button[type="submit"] {
 }
 
 @media #{$mobile} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 45px;
         font-size: 12px;
     }
@@ -114,7 +116,9 @@ button[type="submit"] {
 }
 
 @media #{$tablet} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 50px;
         font-size: 13px;
     }
@@ -131,7 +135,9 @@ button[type="submit"] {
 }
 
 @media #{$laptop} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 55px;
         font-size: 14px;
     }
@@ -148,8 +154,10 @@ button[type="submit"] {
 }
 
 @media #{$desktop} {
-    .button-large {
-        padding: 10px 60px;
+    .button-large,
+    button.button,
+    a.button {
+        padding: 15px 60px;
         font-size: 16px;
     }
 
@@ -165,7 +173,9 @@ button[type="submit"] {
 }
 
 @media #{$screen} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 65px;
         font-size: 18px;
     }
