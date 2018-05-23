@@ -4,13 +4,14 @@
   "description": "Workpieces code and structure that I use in every project",
   "main": "gulpfile.babel.js",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.6",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/register": "^7.0.0-beta.47",
+    "browser-sync": "^2.24.4",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-clean-css": "^3.9.4",
     "gulp-plumber": "^1.2.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgmin": "^1.2.4",
@@ -20,11 +21,11 @@
   },
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "scripts": {
-    "start": "yarn",
+    "start": "yarn install --modules-folder ./../node_modules",
     "sass": "node ./node_modules/gulp/bin/gulp.js sass"
   },
   "repository": {

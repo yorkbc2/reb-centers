@@ -1,10 +1,11 @@
 <?php
 
-if (!function_exists('bw_polylang_shortcode')) {
+if ( ! function_exists('bw_polylang_shortcode')) {
     /**
      * Add Shortcode Polylang
      *
      * @param $atts
+     *
      * @return array|null|string
      */
     function polylang_shortcode($atts)
@@ -31,6 +32,7 @@ if (!function_exists('bw_polylang_shortcode')) {
 
         if (function_exists('pll_the_languages')) {
             $flags = pll_the_languages($atts);
+
             return $flags;
         }
 
@@ -41,11 +43,12 @@ if (!function_exists('bw_polylang_shortcode')) {
     add_shortcode('polylang', 'bw_polylang_shortcode');
 }
 
-if (!function_exists('bw_social_shortcode')) {
+if ( ! function_exists('bw_social_shortcode')) {
     /**
      * Add Shortcode Socials
      *
      * @param $atts
+     *
      * @return string
      */
     function bw_social_shortcode($atts)
@@ -84,11 +87,12 @@ if (!function_exists('bw_social_shortcode')) {
     add_shortcode('bw-social', 'bw_social_shortcode');
 }
 
-if (!function_exists('bw_phone_shortcode')) {
+if ( ! function_exists('bw_phone_shortcode')) {
     /**
      * Add Shortcode Phones
      *
      * @param $atts
+     *
      * @return string
      */
     function bw_phone_shortcode($atts)
@@ -126,11 +130,12 @@ if (!function_exists('bw_phone_shortcode')) {
     add_shortcode('bw-phone', 'bw_phone_shortcode');
 }
 
-if (!function_exists('bw_html_sitemap')) {
+if ( ! function_exists('bw_html_sitemap')) {
     /**
      * Add Shortcode HTML Sitemap
      *
      * @param $atts
+     *
      * @return string
      */
     function bw_html_sitemap($atts)
@@ -149,7 +154,7 @@ if (!function_exists('bw_html_sitemap')) {
         $post_types = get_post_types($args, 'objects');
 
         foreach ($post_types as $post_type) {
-            if (!in_array($post_type->name, $ignoreposttypes)) {
+            if ( ! in_array($post_type->name, $ignoreposttypes)) {
                 $output      .= '<h2 class="sitemap-headline">' . $post_type->labels->name . '</h2>';
                 $args        = array(
                     'posts_per_page' => -1,
@@ -173,57 +178,60 @@ if (!function_exists('bw_html_sitemap')) {
     add_shortcode('bw-html-sitemap', 'bw_html_sitemap');
 }
 
-if (!function_exists("bw_last_posts")) {
+if ( ! function_exists('bw_last_posts')) {
     /**
-     * 
-     * Shortcode для отображения трёх последних новостей в блоге. 
-     * Новости должны быть: 
+     *
+     * Shortcode для отображения трёх последних новостей в блоге.
+     * Новости должны быть:
      * - Опубликованы
      * - Желательно с картинкой
      * ТАКЖЕ! Шорткод может принимать такие аттрибуты, как:
      * - count - число новостей для вывода (по-стандарту: 3)
-     * - button_title - текст в кнопке (по-стандарту: "Читать полностью")
-     * @param  array  $atts Аттрибуты шорткода
+     * - button_title - текст в кнопке (по-стандарту: 'Читать полностью')
+     *
+     * @param  array $atts Аттрибуты шорткода
+     *
      * @return string       Разметка (на Bootstrap)
      */
-    function bw_last_posts ( $atts = array() ) {
-        $atts = shortcode_atts( 
-        array(
-            'count' => 3, // Кол-во новостей для отображения
-            'button_title' => "Читать полностью" // Текст в ссылке
-        ), $atts );
+    function bw_last_posts($atts = array())
+    {
+        $atts = shortcode_atts(
+            array(
+                'count'        => 3, // Кол-во новостей для отображения
+                'button_title' => __('Читать полностью', 'brainworks') // Текст в ссылке
+            ), $atts);
 
-        $posts = wp_get_recent_posts( array(
+        $posts = wp_get_recent_posts(array(
             'numberposts' => $atts['count'],
-            'orderby' => 'post_date',
-            'order' => 'DESC',
-            'post_type' => 'post',
+            'orderby'     => 'post_date',
+            'order'       => 'DESC',
+            'post_type'   => 'post',
             'post_status' => 'publish'
-        ), ARRAY_A );
+        ), ARRAY_A);
 
         $output = '<div class="container"><div class="row">';
 
         foreach ($posts as $key => $post) {
-            $thumbnail_id = get_post_thumbnail_id($post['ID']);
-            $thumbnail = get_the_post_thumbnail_url($post['ID'], 'medium');
+            $thumbnail_id  = get_post_thumbnail_id($post['ID']);
+            $thumbnail     = get_the_post_thumbnail_url($post['ID'], 'medium');
             $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-            $permalink = get_permalink($post['ID']);
-            $output .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
-                if ($thumbnail !== false) {
-                    $output .= '<div class="custom-card-image">
-                                    <img src="'.$thumbnail.'" title="'.$post['post_title'].'" alt="'.$thumbnail_alt.'" width="100%" height="auto"  />
+            $permalink     = get_permalink($post['ID']);
+            $output        .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
+            if ($thumbnail !== false) {
+                $output .= '<div class="custom-card-image">
+                                    <img src="' . $thumbnail . '" title="' . $post['post_title'] . '" alt="' . $thumbnail_alt . '" width="100%" height="auto"  />
                                 </div>';
-                }
-                $output .= '<div class="custom-card-body">
+            }
+            $output .= '<div class="custom-card-body">
                                 <h3>
-                                    <a href="'.$permalink.'">'.$post['post_title'].'</a>
+                                    <a href="' . $permalink . '">' . $post['post_title'] . '</a>
                                 </h3>
                                 <p>
-                                    '.$post['post_excerpt'].'
+                                    ' . $post['post_excerpt'] . '
                                 </p>
                                 <br />
-                                <a href="'.$permalink.'" class="button-small button-inverse">
-                                    '.$atts['button_title'].'
+                                <a href="' . $permalink . '" class="button-small button-inverse">
+                                    ' . $atts['button_title'] . '
                                 </a>
                             </div>';
             $output .= '</div></div>';
@@ -233,7 +241,7 @@ if (!function_exists("bw_last_posts")) {
 
         return $output;
 
-    } 
+    }
 
-    add_shortcode( "bw-last-posts", "bw_last_posts" );
+    add_shortcode('bw-last-posts', 'bw_last_posts');
 }

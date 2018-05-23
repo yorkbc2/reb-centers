@@ -14,6 +14,7 @@ function get_phone_number($phone_number)
 
 /**
  * @see get_phone_number()
+ *
  * @param $phone_number
  *
  * @return void
@@ -95,14 +96,14 @@ function get_analytics_tracking_code($placed = 'body')
     $output = '';
 
     foreach ($tracking_code as $key => $script) {
-        if (!empty($tracking_placed[$key]) && !empty($script)) {
+        if ( ! empty($tracking_placed[$key]) && ! empty($script)) {
             if ($tracking_placed[$key] === $placed) {
                 $output .= $script . PHP_EOL;
             }
         }
     };
 
-    if (!empty($output)) {
+    if ( ! empty($output)) {
         //return sprintf( '<script type="text/javascript">%s</script>', $output );
         return $output;
     }
@@ -113,7 +114,9 @@ function get_analytics_tracking_code($placed = 'body')
 
 /**
  * @see get_analytics_tracking_code()
+ *
  * @param string $placed
+ *
  * @return void
  */
 function analytics_tracking_code($placed = 'body')
@@ -121,7 +124,7 @@ function analytics_tracking_code($placed = 'body')
     echo get_analytics_tracking_code($placed);
 }
 
-if (!function_exists('get_lang_class')) {
+if ( ! function_exists('get_lang_class')) {
     /**
      * @param string $class
      *
@@ -133,9 +136,10 @@ if (!function_exists('get_lang_class')) {
     }
 }
 
-if (!function_exists('the_lang_class')) {
+if ( ! function_exists('the_lang_class')) {
     /**
      * @see get_lang_class()
+     *
      * @param string $class
      *
      * @return void
@@ -146,7 +150,7 @@ if (!function_exists('the_lang_class')) {
     }
 }
 
-if (!function_exists('has_social')) {
+if ( ! function_exists('has_social')) {
     /**
      * @see get_social()
      * @return bool
@@ -157,7 +161,7 @@ if (!function_exists('has_social')) {
     }
 }
 
-if (!function_exists('get_social')) {
+if ( ! function_exists('get_social')) {
     /**
      * @return array
      */
@@ -202,7 +206,7 @@ if (!function_exists('get_social')) {
         ];
 
         $socials = array_filter($_socials, function ($value) {
-            return $value['url'] !== '#' && !empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
+            return $value['url'] !== '#' && ! empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
         });
 
         return $socials;
@@ -210,7 +214,7 @@ if (!function_exists('get_social')) {
 }
 
 
-if (!function_exists('has_phones')) {
+if ( ! function_exists('has_phones')) {
     /**
      * @see get_phones()
      * @return bool
@@ -221,7 +225,7 @@ if (!function_exists('has_phones')) {
     }
 }
 
-if (!function_exists('get_phones')) {
+if ( ! function_exists('get_phones')) {
     /**
      * @return array
      */
@@ -235,14 +239,14 @@ if (!function_exists('get_phones')) {
         ];
 
         $phones = array_filter($_phones, function ($value) {
-            return !empty($value);
+            return ! empty($value);
         });
 
         return $phones;
     }
 }
 
-if (!function_exists('wp-body')) {
+if ( ! function_exists('wp-body')) {
     /**
      * Fire the wp_body action.
      */
@@ -255,7 +259,7 @@ if (!function_exists('wp-body')) {
     }
 }
 
-if (!function_exists('get_svg_sprite')) {
+if ( ! function_exists('get_svg_sprite')) {
     /**
      * @return mixed|string
      */
@@ -272,7 +276,7 @@ if (!function_exists('get_svg_sprite')) {
     }
 }
 
-if (!function_exists('svg_sprite')) {
+if ( ! function_exists('svg_sprite')) {
     /**
      * Display svg sprite
      *
@@ -285,18 +289,36 @@ if (!function_exists('svg_sprite')) {
     }
 }
 
-if (!function_exists('get_default_logo_link')) {
+if ( ! function_exists('get_default_logo_link')) {
     /**
-     * Отображает логотип сайта
+     * Display site logo
+     *
      * @return void
      */
-    function get_default_logo_link () {
-        global $wp;
-        $logo = has_custom_logo()? the_custom_logo(): "<img class='logo-img' src='".esc_url(get_template_directory_uri() . '/assets/img/logo.png')."'>";
-        if ($wp->request === "" && empty($_GET)):
-            echo '<span class="logo-link">'.$logo.'</span>';
-        else:
-            echo '<a href="'.esc_url(home_url('/')).'">'.$logo.'</a>';
-        endif;
+    function get_default_logo_link()
+    {
+        $desc = sprintf('<span class="logo-desc">%s</span>', get_bloginfo('description'));
+
+        if (has_custom_logo()) {
+
+            the_custom_logo();
+            echo $desc;
+
+        } else {
+
+            $file = get_template_directory_uri() . '/assets/img/logo.png';
+
+            $img = sprintf('<img class="logo-img" src="%s" alt="%s">', esc_url($file), get_bloginfo('name'));
+
+            $link = sprintf('<a class="logo-link" href="%s">%s</a>', esc_url(home_url('/')), $img);
+
+            $span = sprintf('<span class="logo-link">%s</span>', $img);
+
+            $html = is_front_page() ? $span : $link;
+
+            $html .= $desc;
+
+            echo $html;
+        }
     }
 }

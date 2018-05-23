@@ -4636,6 +4636,16 @@ hr.style-four {
 .widget-title {
   margin-bottom: 10px; }
 
+::-moz-selection {
+  background-color: #338fff;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background-color: #338fff;
+  color: #fff;
+  text-shadow: none; }
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

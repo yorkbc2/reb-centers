@@ -21,15 +21,18 @@
         // Scroll Top
         scrollTop('.js-scroll-top');
 
+        // On Copy
+        $(document).on('copy', addLink);
+
         // Hamburger Menu
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        $(window).on("resize", function (e) {
+        $(window).on('resize', function (e) {
             if (window.innerWidth >= 630) {
-                removeAllStyles($(".js-menu"));
+                removeAllStyles($('.js-menu'));
             }
-        })
-        wrapHighlightedElements('.highlighted')
+        });
+        wrapHighlightedElements('.highlighted');
         // Buy one click
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
 
@@ -56,7 +59,7 @@
         });
 
         $(window).on('load', function (e) {
-            if (document.location.hash !== "") {
+            if (document.location.hash !== '') {
                 scrollToElement(document.location.hash);
             }
         });
@@ -72,8 +75,8 @@
      * Скролл к элементу
      * @param  {string|object} elements Элементы, которым добавляем Handler
      */
-    function scrollHandlerForButton (elements) {
-        var elements = $(elements);
+    function scrollHandlerForButton(elements) {
+        elements = $(elements);
         for (var i = 0; i < elements.length; i++) {
 
             var el = elements.eq(i);
@@ -92,8 +95,9 @@
     /**
      * Скроллим к элементу
      * @param {object|string} element
+     * @param callback
      */
-    function scrollToElement (element, callback) {
+    function scrollToElement(element, callback) {
         element = $(element);
         $('html, body').animate({
             scrollTop: element.offset().top
@@ -104,41 +108,44 @@
         });
     }
 
-    function anotherHamburgerMenu (menuElement, hamburgerElement, closeTrigger) {
+    function anotherHamburgerMenu(menuElement, hamburgerElement, closeTrigger) {
         var Elements = {
             menu: $(menuElement),
             button: $(hamburgerElement),
-            close: $(closeTrigger)
-        }
+            close: $(closeTrigger),
+        };
 
         Elements.button.add(Elements.close).on('click', function () {
             Elements.menu.toggleClass('is-active');
-        })
+        });
+
         var arrowOpener = function (parent) {
-            var activeArrowClass = "menu-item-has-children-arrow-active";
-            return $("<button />")
-                .addClass("menu-item-has-children-arrow")
-                .click(function (ev) {
-                    parent.children(".sub-menu").eq(0).slideToggle(300)
+            var activeArrowClass = 'menu-item-has-children-arrow-active';
+            return $('<button />')
+                .addClass('menu-item-has-children-arrow')
+                .on('click', function (ev) {
+                    parent.children('.sub-menu').eq(0).slideToggle(300);
                     if ($(this).hasClass(activeArrowClass)) $(this).removeClass(activeArrowClass);
                     else $(this).addClass(activeArrowClass);
                 })
-        }
-        var items = Elements.menu.find('.menu-item-has-children, .sub-menu-item-has-children')
-        for (var i = 0 ; i < items.length ; i++) {
-            items.eq(i).append(arrowOpener(items.eq(i)))
+        };
+
+        var items = Elements.menu.find('.menu-item-has-children, .sub-menu-item-has-children');
+
+        for (var i = 0; i < items.length; i++) {
+            items.eq(i).append(arrowOpener(items.eq(i)));
         }
     }
 
-    function removeAllStyles (elementParent) {
-        elementParent.find(".sub-menu").removeAttr("style")
+    function removeAllStyles(elementParent) {
+        elementParent.find('.sub-menu').removeAttr('style');
     }
 
     /**
      * Оборачиваем все Highlighted елементы в блок
-     * @param  {string|object} elements 
+     * @param  {string|object} elements
      */
-    function wrapHighlightedElements (elements) {
+    function wrapHighlightedElements(elements) {
         elements = $(elements);
         for (var i = 0; i < elements.length; i++) {
             var highlightedHeader = elements.eq(i);
@@ -191,6 +198,34 @@
                 el.removeClass('is-visible');
             }
         });
+    }
+
+    /**
+     * Adding link to the site resource at copying
+     *
+     * @example
+     * document.oncopy = addLink; or $(document).on('copy', addLink);
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     * @return void
+     */
+    function addLink() {
+        var body = document.body || document.getElementsByTagName('body')[0];
+        var selection = window.getSelection();
+        var page_link = ' Источник: ' + document.location.href + ' © brainworks.com.ua';
+        var copy_text = selection + page_link;
+        var div = document.createElement('div');
+
+        div.style.position = 'absolute';
+        div.style.left = '-9999px';
+
+        body.appendChild(div);
+        div.innerText = copy_text;
+
+        selection.selectAllChildren(div);
+
+        window.setTimeout(function () {
+            body.removeChild(div);
+        }, 0);
     }
 
 })(jQuery);

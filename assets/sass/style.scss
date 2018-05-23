@@ -56,6 +56,12 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/sidebar";
 @import "blocks/menu-second";
 
+@include selection() {
+    background-color: $selectionBgColor;
+    color: $selectionFontColor;
+    text-shadow: none;
+}
+
 html {
     @include box-sizing(border-box);
 }

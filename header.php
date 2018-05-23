@@ -79,9 +79,7 @@
                 <span class="hamburger-inner"></span>
             </span>
         </button>
-        <div class="logo">
-            <?php get_default_logo_link(); ?>
-        </div>
+        <div class="logo"><?php get_default_logo_link(); ?></div>
     </div>
 
     <?php /*
