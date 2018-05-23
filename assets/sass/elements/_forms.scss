@@ -19,8 +19,6 @@
 }
 
 form {
-    width: 100%;
-
     fieldset {
         @include form-style;
 
@@ -51,6 +49,10 @@ form {
 .form-inline {
     margin: 0 auto;
     max-width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
     input {
         width: calc(100% - 40px);

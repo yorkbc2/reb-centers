@@ -57,8 +57,8 @@
     </header>
 
     <?php if (has_nav_menu('main-nav')) { ?>
-        <nav class="main-nav container js-menu">
-            <?php // echo '<button type="button" tabindex="0" class="menu-close js-menu-close"></button>'; ?>
+        <nav class="nav js-menu">
+            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
             <?php wp_nav_menu(array(
                 'theme_location' => 'main-nav',
                 'container' => false,
@@ -72,7 +72,7 @@
     <?php } ?>
 
     <div class="page-wrapper container">
-    <?php /*
+    
     <div class="nav-mobile-header">  
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">
@@ -82,7 +82,7 @@
         <div class="logo">
             <?php get_default_logo_link(); ?>
         </div>
-    </div> */ ?>
+    </div>
 
     <?php /*
 

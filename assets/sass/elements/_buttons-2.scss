@@ -2,18 +2,19 @@
     top: 0;
     text-align: center;
     position: relative;
-    border: none;
     display: inline-block;
     border-radius: $borderRadius;
-    background-color: $buttonBgColor;
-    color: $buttonFontColor;
     font-family: $fontFamilyTwo;
-    height: 40px;
+    height: auto;
     cursor: pointer;
     font-size: 16px;
-    border-bottom: 1px solid $buttonBorderColor;
-    @include box-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.25));
-    @include smooth_animation;
+    border: 1px solid $buttonOutlinedFirstColor;
+    background-color: $buttonOutlinedSecondColor;
+    box-shadow: none;
+    line-height: 1!important;
+
+    color: $buttonOutlinedFirstColor;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     a {
         color: $buttonFontColor;
@@ -29,25 +30,18 @@
         outline: 0;
     }
 
-    &:hover {
-        background-color: $buttonBgColorActive;
-        color: $buttonFontColorActive;
-        top: -2px;
-        height: 40px;
-        border-bottom: 4px solid $buttonBorderColor;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-        &.static {
-            top: 0;
-            height: 40px;
+    &.button-inverse {
+        background: $buttonOutlinedFirstColor;
+        color: $buttonOutlinedSecondColor;
+        &:hover, &:active {
+            color: $buttonOutlinedFirstColor;
+            background: $buttonOutlinedSecondColor;
         }
     }
 
-    &:active {
-        top: 0;
-        height: 40px;
-        background-color: $buttonBgColorActive;
-        color: $buttonFontColorActive;
-        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.15);
+    &:hover, &:active {
+        background-color: $buttonOutlinedFirstColor;
+        color: $buttonOutlinedSecondColor;
     }
 
 }
@@ -77,9 +71,11 @@
     @include button-style;
 }
 
-.button-large {
+.button-large,
+button.button,
+a.button {
     @include button-style;
-    padding: 10px 60px;
+    padding: 15px 60px;
     font-size: 20px;
 }
 
@@ -101,7 +97,9 @@ button[type="submit"] {
 }
 
 @media #{$mobile} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 45px;
         font-size: 12px;
     }
@@ -118,7 +116,9 @@ button[type="submit"] {
 }
 
 @media #{$tablet} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 50px;
         font-size: 13px;
     }
@@ -135,7 +135,9 @@ button[type="submit"] {
 }
 
 @media #{$laptop} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 55px;
         font-size: 14px;
     }
@@ -152,8 +154,10 @@ button[type="submit"] {
 }
 
 @media #{$desktop} {
-    .button-large {
-        padding: 10px 60px;
+    .button-large,
+    button.button,
+    a.button {
+        padding: 15px 60px;
         font-size: 16px;
     }
 
@@ -169,7 +173,9 @@ button[type="submit"] {
 }
 
 @media #{$screen} {
-    .button-large {
+    .button-large,
+    button.button,
+    a.button {
         padding: 10px 65px;
         font-size: 18px;
     }

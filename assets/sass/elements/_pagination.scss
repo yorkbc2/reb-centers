@@ -1,5 +1,46 @@
 ul.pagination {
-    li {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin: 10px auto;
+    li.page-item {
         display: inline-block;
+		&:first-child {
+			a.page-link,
+			span.current {
+				border-radius: 3px 0 0 3px;
+				border-left: 1px solid silver;
+			}
+		}
+		&:last-child {
+			a.page-link,
+			span.current {
+				border-radius: 0 3px 3px 0;
+			}
+		}
+		a.page-link,
+		span.current {
+			display: inline-block;
+			padding: 10px 15px;
+			font-size: 16px;
+			color: #333;
+			transition: all 0.3s ease-in-out;
+		    border-top: 1px solid silver;
+		    border-bottom: 1px solid silver;
+		    border-right: 1px solid silver;
+		}
+		a.page-link {
+			&:hover {
+				background-color: $paginationLinkOnHover;
+				color: $paginationLinkOnHoverText;
+				border-color: transparent;
+			}
+		}
+		span.current {
+			color: $paginationActiveLinkText;
+			background-color: $paginationActiveLink;
+			border-color: transparent;
+		}
     }
 }
