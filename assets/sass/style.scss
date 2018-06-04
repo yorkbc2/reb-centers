@@ -19,9 +19,9 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-@import "core/woo-variables";
+//@import "core/woo-variables";
 /* PLUG-INs */
-@import "plugins/font-awesome";
+@import "plugins/font-awesome-5";
 //@import "plugins/plug-ins";
 @import "plugins/animations";
 /* BOOTSTRAP */
@@ -31,7 +31,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 /* PAGES */
 @import "pages/single-post";
 @import "pages/blog-page";
-@import "pages/woo";
+//@import "pages/woo";
 /* ELEMENTS */
 @import "elements/typography";
 @import "elements/responsive-titles";

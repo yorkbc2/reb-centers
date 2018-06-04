@@ -4,9 +4,9 @@
   "description": "Workpieces code and structure that I use in every project",
   "main": "gulpfile.babel.js",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.47",
-    "@babel/preset-env": "^7.0.0-beta.47",
-    "@babel/register": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/register": "^7.0.0-beta.49",
     "browser-sync": "^2.24.4",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.4",

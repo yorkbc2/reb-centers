@@ -297,7 +297,7 @@ if ( ! function_exists('get_default_logo_link')) {
      */
     function get_default_logo_link()
     {
-        $desc = sprintf('<span class="logo-desc">%s</span>', get_bloginfo('description'));
+        $desc = sprintf('<span class="logo-desc screen-reader-text">%s</span>', get_bloginfo('description'));
 
         if (has_custom_logo()) {
 

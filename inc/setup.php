@@ -30,7 +30,8 @@ if (!isset($content_width)) {
 function bw_excerpt_readmore()
 {
     //return '&nbsp; <a href="'. get_permalink() . '">' . '&hellip;' . '<div class="button-small text-center">' . __('Read more', 'brainworks') . ' <i class="fa fa-arrow-right"></i></div>' . '</a></p>';
-    return '&nbsp; <a href="' . get_permalink() . '">' . '&hellip;' . ' <i class="fa fa-arrow-right button-style"></i>' . '</a>';
+    //return '&nbsp; <a href="' . get_permalink() . '">' . '&hellip;' . ' <i class="fa fa-arrow-right button-style"></i>' . '</a>';
+    return '&nbsp; &hellip; <a class="button-style" style="padding: 0 5px" href="' . get_permalink() . '"><i class="fa fa-arrow-right"></i></a>';
 }
 
 add_filter('excerpt_more', 'bw_excerpt_readmore');
