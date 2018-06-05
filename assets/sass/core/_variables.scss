@@ -1,16 +1,109 @@
 $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
+
 $borderRadius: 4px;
 $shadow: 0 0 10px rgba(#000, .7);
+
+// BRAND
+$themeColorOne: #2c3e50; // header, menu, footer, title,
+$themeColorTwo: #e74c3c; // menu active item, button, footer link hover,
+$themeColorThree: #3498db; // preHeader bg,
+$themeColorFour: #2980b9; //menu hover item, table border, preHeader font
+
+// SELECTION
+$selectionBgColor: $themeColorTwo;
+$selectionFontColor: #fff;
+
+// BODY
+$bodyBgColor: #fff; //white
+$bodyFontColor: #000; // black
+
+// PreHeader
+$preHeaderBgColor: $themeColorThree;
+$preHeaderColor: $themeColorFour;
+
+// HEADER
+$headerBgColor: #232323;
+$headerFontColor: #fff;
+$headerHighlightBgColor: $themeColorTwo;
+$headerHighlightColor: #fff;
+
+// MENU
+$menuBgColor: $themeColorOne;
+$menuBgColorActive: $themeColorFour;
+$menuFontColor: #fff;
+$menuFontColorActive: #fff;
+
+$navArrowColor: #fff;
+$navHeaderMobileBGColor: #232323;
+$navHamburgerMobileColor: $themeColorTwo;
 
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
 $hamburger-delay: .1s;
-$hamburger-color: #199ec7;
+$hamburger-color: $themeColorTwo;
 
 $menu-close-size: 25px;
-$menu-close-color: #199ec7;
-$menuContainerMobilePaddingTop: 50px;
+$menu-close-color: $themeColorTwo;
+$menuContainerMobilePaddingTop: 30%;
 
+// FOOTER
+$footerBgColor: #fff;
+$footerFontColor: #232323;
+$footerLinkColorActive: darken($footerFontColor, 5%);
+
+// WRAPPER
+$wrapperBgColor: #fff;
+
+// TITLES
+$titleFontColor: $themeColorOne;
+$titleFontColorActive: lighten($titleFontColor, 10%);
+
+// LINKS
+$linkFontColor: #000;
+$linkFontColorActive: lighten($linkFontColor, 20%);
+
+// BUTTONS
+$buttonFontColor: #fff;
+$buttonFontColorActive: #fff;
+$buttonBgColor: $themeColorTwo;
+$buttonBgColorActive: darken($buttonBgColor, 10%);
+$buttonBorderColor: $themeColorTwo;
+$buttonOutlinedFirstColor: $themeColorTwo;
+$buttonOutlinedSecondColor: #fff;
+
+// TABLE
+$tableBgColor: $themeColorTwo;
+$tableBgColorActive: lighten($themeColorTwo, 10%);
+$tableBorderColor: #fff;
+$tableBorderColorActive: #989898;
+$tableOddBgColor: $themeColorOne;
+$tableOddFontColor: #fff;
+$tableEvenBgColor: $themeColorTwo;
+$tableEvenFontColor: #fff;
+
+// TEXT
+$textMutedColor: #aaa;
+
+// Icons
+$iconColor: #fff;
+$iconColorActive: #fff;
+$iconColorReversed: #fff;
+
+// FORMS
+$formFieldBorderWidth: 1px;
+$formFieldBorderColor: lighten($themeColorOne, 30%);
+$formFieldPadding: 10px 8px;
+$formFieldTextColor: #000;
+$formFieldTextSize: 13px;
+$formFieldBorderRadius: $borderRadius;
+$formFieldBackgroundColor: #fff;
 $inputFieldMinHeight: 38px;
+$formBgColor: lighten($themeColorOne, 60%);
+
+// Pagination
+$paginationActiveLink: $themeColorTwo;
+$paginationActiveLinkText: #fff;
+$paginationLinkOnHover: $themeColorTwo;
+$paginationLinkOnHoverText: #fff;

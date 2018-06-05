@@ -1,51 +1,81 @@
 $viewport-map: (
-    viewport-min: 480px,
-    viewport-max: 1280px
+        viewport-min: 480px,
+        viewport-max: 1280px
 );
 
 $basic-font-size: 16px;
 
 $headers-map: (
-    'h1.hero-title': (
-        fons-size-min: 32px,
-        font-size-max: $basic-font-size * 3.5,
-        font-size-fallback: 43px
-    ),
-    '.single-title': (
-        fons-size-min: 27px,
-        font-size-max: $basic-font-size * 2.6,
-        font-size-fallback: 36px
-    ),
-    h1: (
-        fons-size-min: 30px,
-        font-size-max: $basic-font-size * 3,
-        font-size-fallback: 38px
-    ),
-    h2: (
-        fons-size-min: 27px,
-        font-size-max: $basic-font-size * 2.6,
-        font-size-fallback: 36px
-    ),
-    h3: (
-        fons-size-min: 23px,
-        font-size-max: $basic-font-size * 2,
-        font-size-fallback: 34px
-    ),
-    h4: (
-        fons-size-min: 21px,
-        font-size-max: $basic-font-size * 1.8,
-        font-size-fallback: 32px
-    ),
-    h5: (
-        fons-size-min: 18px,
-        font-size-max: $basic-font-size * 1.6,
-        font-size-fallback: 30px
-    ),
-    h6: (
-        fons-size-min: 16px,
-        font-size-max: $basic-font-size * 1.4,
-        font-size-fallback: 28px
-    )
+        'h1.hero-title': (
+                fons-size-min: 32px,
+                font-size-max: $basic-font-size * 3.5,
+                font-size-fallback: 43px
+        ),
+        '.single-title': (
+                fons-size-min: 27px,
+                font-size-max: $basic-font-size * 2.6,
+                font-size-fallback: 36px
+        ),
+        h1: (
+                fons-size-min: 30px,
+                font-size-max: $basic-font-size * 3,
+                font-size-fallback: 38px
+        ),
+        '.h1': (
+                fons-size-min: 30px,
+                font-size-max: $basic-font-size * 3,
+                font-size-fallback: 38px
+        ),
+        h2: (
+                fons-size-min: 27px,
+                font-size-max: $basic-font-size * 2.6,
+                font-size-fallback: 36px
+        ),
+        '.h2': (
+                fons-size-min: 27px,
+                font-size-max: $basic-font-size * 2.6,
+                font-size-fallback: 36px
+        ),
+        h3: (
+                fons-size-min: 23px,
+                font-size-max: $basic-font-size * 2,
+                font-size-fallback: 34px
+        ),
+        '.h3': (
+                fons-size-min: 23px,
+                font-size-max: $basic-font-size * 2,
+                font-size-fallback: 34px
+        ),
+        h4: (
+                fons-size-min: 21px,
+                font-size-max: $basic-font-size * 1.8,
+                font-size-fallback: 32px
+        ),
+        '.h4': (
+                fons-size-min: 21px,
+                font-size-max: $basic-font-size * 1.8,
+                font-size-fallback: 32px
+        ),
+        h5: (
+                fons-size-min: 18px,
+                font-size-max: $basic-font-size * 1.6,
+                font-size-fallback: 30px
+        ),
+        '.h5': (
+                fons-size-min: 18px,
+                font-size-max: $basic-font-size * 1.6,
+                font-size-fallback: 30px
+        ),
+        h6: (
+                fons-size-min: 16px,
+                font-size-max: $basic-font-size * 1.4,
+                font-size-fallback: 28px
+        ),
+        '.h6': (
+                fons-size-min: 16px,
+                font-size-max: $basic-font-size * 1.4,
+                font-size-fallback: 28px
+        )
 );
 
 @mixin responsive-headers() {
