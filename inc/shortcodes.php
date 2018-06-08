@@ -69,7 +69,7 @@ if ( ! function_exists('bw_social_shortcode')) {
                 $items .= sprintf(
                     '<li class="social-item">%s</li>',
                     sprintf(
-                        '<a class="social-link" href="%s" target="_blank"><i class="fa %s" aria-hidden="true" aria-label="%s"></i></a>',
+                        '<a class="social-link" href="%s" target="_blank"><i class="%s" aria-hidden="true" aria-label="%s"></i></a>',
                         esc_attr(esc_url($social['url'])),
                         esc_attr($social['icon']),
                         esc_attr($social['text'])

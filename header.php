@@ -97,7 +97,7 @@
             <?php foreach (get_social() as $social) { ?>
                 <li class="social-item">
                     <a href="<?php echo esc_attr(esc_url($social['url'])); ?>" class="social-link" target="_blank">
-                        <i class="fa <?php echo esc_attr($social['icon']); ?>" aria-hidden="true"
+                        <i class="<?php echo esc_attr($social['icon']); ?>" aria-hidden="true"
                            aria-label="<?php echo esc_attr($social['text']); ?>"></i>
                     </a>
                 </li>

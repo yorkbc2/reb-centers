@@ -14,7 +14,7 @@ function theme_mod($name, $default = false)
 }
 
 /**
- * @param $wp_customize
+ * @param $wp_customize WP_Customize_Manager
  */
 function bw_customize_register($wp_customize)
 {
@@ -357,6 +357,62 @@ function bw_customize_register($wp_customize)
         'settings'    => 'bw_login_logo',
     )));
 
+    // Section Additional
+    $wp_customize->add_section('bw_additional', array(
+        'title'       => 'Additional',
+        'description' => 'Additional links',
+        'panel'       => 'bw_theme_options',
+    ));
+
+    $wp_customize->add_setting('bw_additional_address', array('default' => ''));
+    $wp_customize->add_setting('bw_additional_email', array('default' => ''));
+    $wp_customize->add_setting('bw_additional_skype', array('default' => ''));
+    $wp_customize->add_setting('bw_additional_viber', array('default' => ''));
+    $wp_customize->add_setting('bw_additional_whatsapp', array('default' => ''));
+    $wp_customize->add_setting('bw_additional_telegram', array('default' => ''));
+
+    $wp_customize->add_control('bw_additional_address', array(
+        'label'    => 'Address',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_address',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_control('bw_social_email', array(
+        'label'    => 'Email',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_email',
+        'type'     => 'email',
+    ));
+
+    $wp_customize->add_control('bw_additional_skype', array(
+        'label'    => 'Skype',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_skype',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_control('bw_additional_viber', array(
+        'label'    => 'Viber',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_viber',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_control('bw_additional_whatsapp', array(
+        'label'    => 'WhatsApp',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_whatsapp',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_control('bw_additional_telegram', array(
+        'label'    => 'Telegram',
+        'section'  => 'bw_additional',
+        'settings' => 'bw_additional_telegram',
+        'type'     => 'text',
+    ));
+
     // Section Social
     $wp_customize->add_section('bw_social', array(
         'title'       => __('Social', 'brainworks'),
@@ -364,13 +420,14 @@ function bw_customize_register($wp_customize)
         'panel'       => 'bw_theme_options',
     ));
 
-    $wp_customize->add_setting('bw_social_vk', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_twitter', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_facebook', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_linkedin', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_instagram', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_google_plus', array('default' => '#'));
-    $wp_customize->add_setting('bw_social_youtube', array('default' => '#'));
+    $wp_customize->add_setting('bw_social_vk', array('default' => ''));
+    $wp_customize->add_setting('bw_social_twitter', array('default' => ''));
+    $wp_customize->add_setting('bw_social_facebook', array('default' => ''));
+    $wp_customize->add_setting('bw_social_linkedin', array('default' => ''));
+    $wp_customize->add_setting('bw_social_instagram', array('default' => ''));
+    $wp_customize->add_setting('bw_social_google_plus', array('default' => ''));
+    $wp_customize->add_setting('bw_social_youtube', array('default' => ''));
+    $wp_customize->add_setting('bw_social_odnoklassniki', array('default' => ''));
 
     $wp_customize->add_control('bw_social_vk', array(
         'label'    => __('Vk', 'brainworks'),
@@ -418,6 +475,13 @@ function bw_customize_register($wp_customize)
         'label'    => __('YouTube', 'brainworks'),
         'section'  => 'bw_social',
         'settings' => 'bw_social_youtube',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_control('bw_social_odnoklassniki', array(
+        'label'    => __('Odnoklassniki', 'brainworks'),
+        'section'  => 'bw_social',
+        'settings' => 'bw_social_odnoklassniki',
         'type'     => 'text',
     ));
 

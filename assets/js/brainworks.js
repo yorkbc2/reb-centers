@@ -211,7 +211,7 @@
     function addLink() {
         var body = document.body || document.getElementsByTagName('body')[0];
         var selection = window.getSelection();
-        var page_link = ' Источник: ' + document.location.href + ' © brainworks.com.ua';
+        var page_link = '\n Источник: ' + document.location.href;
         var copy_text = selection + page_link;
         var div = document.createElement('div');
 
