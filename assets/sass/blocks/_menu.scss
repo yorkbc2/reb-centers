@@ -281,7 +281,7 @@
             .no-touch &:hover,
             &-current {
                 > .sub-menu-link {
-                    background-color: #ccc;
+                    background-color: $menuMobileSubMenuBGOnHover;
                 }
             }
 
@@ -407,7 +407,7 @@
         margin: 0;
         z-index: 100;
         overflow: auto;
-        background-color: #333;
+        background-color: $menuMobileBGColor;
         will-change: transform;
         @include transform(translateX(100%));
         @include transition(transform .2s ease-out);
@@ -470,8 +470,9 @@
             }
 
             &-link {
-                color: #fff;
+                color: $menuMobileTextColor;
                 display: block;
+                font-size: $menuMobileLinkFontSize;
             }
         }
 
@@ -480,7 +481,7 @@
             width: auto;
             display: none;
             visibility: visible;
-            background-color: #444;
+            background-color: $menuMobileSubMenuBGColor;
             @include opacity(1);
             @include box-shadow(none);
             @include transition(none);
@@ -503,7 +504,8 @@
             }
 
             &-link {
-                color: #fff;
+                color: $menuMobileSubMenuTextColor;
+                font-size: $menuMobileSubMenuLinkFontSize;
             }
         }
     }
