@@ -4486,7 +4486,7 @@ button[type="submit"] {
   .button-large,
   button.button,
   a.button {
-    padding: 10px 45px;
+    padding: 11px 45px;
     font-size: 12px; }
   .button-medium {
     padding: 9px 22px;
@@ -4499,7 +4499,7 @@ button[type="submit"] {
   .button-large,
   button.button,
   a.button {
-    padding: 10px 50px;
+    padding: 12px 50px;
     font-size: 13px; }
   .button-medium {
     padding: 10px 25px;
@@ -4512,7 +4512,7 @@ button[type="submit"] {
   .button-large,
   button.button,
   a.button {
-    padding: 10px 55px;
+    padding: 13px 55px;
     font-size: 14px; }
   .button-medium {
     padding: 11px 28px;
@@ -4525,7 +4525,7 @@ button[type="submit"] {
   .button-large,
   button.button,
   a.button {
-    padding: 15px 60px;
+    padding: 14px 60px;
     font-size: 16px; }
   .button-medium {
     padding: 12px 32px;
@@ -4538,7 +4538,7 @@ button[type="submit"] {
   .button-large,
   button.button,
   a.button {
-    padding: 10px 65px;
+    padding: 15px 65px;
     font-size: 18px; }
   .button-medium {
     padding: 13px 35px;
@@ -4758,12 +4758,12 @@ hr.style-four {
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5); }
 
 .fa {
-  color: #fff; }
+  color: #e74c3c; }
   .fa:hover {
-    color: #fff; }
+    color: #e74c3c; }
 
 .fa.reversed-color {
-  color: #fff; }
+  color: #e74c3c; }
 
 @media only screen and (min-width: 480px) {
   ::-webkit-scrollbar {

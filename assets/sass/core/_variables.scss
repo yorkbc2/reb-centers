@@ -39,6 +39,18 @@ $navArrowColor: #fff;
 $navHeaderMobileBGColor: #232323;
 $navHamburgerMobileColor: $themeColorTwo;
 
+// Menu mobile
+
+$menuMobileBGColor: #333;
+$menuMobileSubMenuBGColor: #444;
+$menuMobileLinkFontSize: 16px;
+$menuMobileSubMenuLinkFontSize: 14px;
+$menuMobileTextColor: #fff;
+$menuMobileSubMenuTextColor: $menuMobileTextColor;
+$menuMobileSubMenuBGOnHover: #ccc;
+
+// MENU END
+
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
 $hamburger-delay: .1s;
@@ -87,9 +99,9 @@ $tableEvenFontColor: #fff;
 $textMutedColor: #aaa;
 
 // Icons
-$iconColor: #fff;
-$iconColorActive: #fff;
-$iconColorReversed: #fff;
+$iconColor: $themeColorTwo;
+$iconColorActive: $themeColorTwo;
+$iconColorReversed: $themeColorTwo;
 
 // FORMS
 $formFieldBorderWidth: 1px;
