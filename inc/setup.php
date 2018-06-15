@@ -46,7 +46,7 @@ add_action('init', 'page_excerpt');
 /**
  * Add post formats support. See http://codex.wordpress.org/Post_Formats
  */
-add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+//add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
 function bw_wp_nav_menu_args($args)
 {
