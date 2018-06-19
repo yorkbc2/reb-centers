@@ -130,6 +130,57 @@ if ( ! function_exists('bw_phone_shortcode')) {
     add_shortcode('bw-phone', 'bw_phone_shortcode');
 }
 
+if (!function_exists('bw_messengers_shortcode')) {
+    /**
+     * Add Shortcode Messengers
+     *
+     * @param $atts
+     *
+     * @return string
+     */
+    function bw_messengers_shortcode($atts)
+    {
+
+        // Attributes
+        $atts = shortcode_atts(
+            array(),
+            $atts
+        );
+
+        $output = '';
+
+        if (has_messengers()) {
+            $items = '';
+
+            foreach (get_messengers() as $name => $messenger) {
+                $icon = sprintf(
+                    '<i class="%s" aria-hidden="true" aria-label="%s"></i>',
+                    esc_attr($messenger['icon']),
+                    esc_attr($messenger['text'])
+                );
+
+                $link = sprintf(
+                    '<a class="messenger-link messenger-%s" href="tel:%s" target="_blank" rel="nofollow noopener">%s</a>',
+                    esc_attr($name),
+                    esc_attr(get_phone_number($messenger['tel'])),
+                    $icon
+                );
+
+                $item = sprintf('<li class="messenger-item">%s</li>', $link);
+
+                $items .= $item . PHP_EOL;
+            }
+
+            $output = sprintf('<ul class="messenger">%s</ul>', $items);
+        }
+
+        return $output;
+
+    }
+
+    add_shortcode('bw-messengers', 'bw_messengers_shortcode');
+}
+
 if ( ! function_exists('bw_html_sitemap')) {
     /**
      * Add Shortcode HTML Sitemap

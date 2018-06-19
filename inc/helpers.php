@@ -150,6 +150,58 @@ if ( ! function_exists('the_lang_class')) {
     }
 }
 
+if ( ! function_exists('has_messengers')) {
+    /**
+     * Determines whether the site has a messenger.
+     *
+     * @see get_messengers()
+     * @return bool
+     */
+    function has_messengers()
+    {
+        return (bool)get_messengers();
+    }
+}
+
+if ( ! function_exists('get_messengers')) {
+    /**
+     * Return Messengers in array
+     *
+     * @return array
+     */
+    function get_messengers()
+    {
+        $_messengers = [
+            'skype'    => [
+                'tel'  => get_theme_mod('bw_messenger_skype'),
+                'text' => 'Skype',
+                'icon' => 'fab fa-skype',
+            ],
+            'viber'    => [
+                'tel'  => get_theme_mod('bw_messenger_viber'),
+                'text' => 'Viber',
+                'icon' => 'fab fa-viber',
+            ],
+            'whatsapp' => [
+                'tel'  => get_theme_mod('bw_messenger_whatsapp'),
+                'text' => 'WhatsApp',
+                'icon' => 'fab fa-whatsapp',
+            ],
+            'telegram' => [
+                'tel'  => get_theme_mod('bw_messenger_telegram'),
+                'text' => 'Telegram',
+                'icon' => 'fab fa-telegram-plane',
+            ],
+        ];
+
+        $messengers = array_filter($_messengers, function ($value) {
+            return ! empty($value['tel']);
+        });
+
+        return $messengers;
+    }
+}
+
 if ( ! function_exists('has_social')) {
     /**
      * @see get_social()

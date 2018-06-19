@@ -65,6 +65,29 @@
     }
 }
 
+.messenger {
+    @extend %reset-list;
+
+    &,
+    &-item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-item {
+        margin: 0 5px;
+    }
+
+    &-link {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+        }
+    }
+}
+
 .lang {
     @extend %reset-list;
 

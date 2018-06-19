@@ -105,6 +105,19 @@
         </ul>
     <?php } ?>
 
+    <?php if (has_messengers()) { ?>
+        <ul class="messenger">
+            <?php foreach (get_messengers() as $name => $messenger) { ?>
+                <li class="messenger-item">
+                    <a class="messenger-link messenger-<?php echo esc_attr($name) ?>" href="tel:<?php echo esc_attr(get_phone_number($messenger['tel'])); ?>"  target="_blank">
+                        <i class="<?php echo esc_attr($messenger['icon']); ?>" aria-hidden="true"
+                           aria-label="<?php echo esc_attr($messenger['text']); ?>"></i>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    <?php } ?>
+
     <?php if (has_phones()) { ?>
         <ul class="phone">
             <?php foreach (get_phones() as $phone) { ?>
@@ -115,6 +128,22 @@
                 </li>
             <?php } ?>
         </ul>
+    <?php } ?>
+
+    <?php
+    $email   = get_theme_mod('bw_additional_email');
+    $address = get_theme_mod('bw_additional_address');
+    if ( ! empty($email)) { ?>
+        <a href="mailto:<?php echo esc_attr($email); ?>">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <?php echo esc_html($email); ?>
+        </a>
+    <?php }
+    if ( ! empty($address)) { ?>
+        <span>
+            <b><?php _e('Address', 'brainworks'); ?>:</b>
+            <?php echo esc_html($address); ?>
+        </span>
     <?php } ?>
 
     <button type="button" class="button-medium <?php the_lang_class('js-call-back'); ?>"><?php _e('Call back', 'brainworks'); ?></button>

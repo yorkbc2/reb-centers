@@ -357,6 +357,8 @@ function bw_customize_register($wp_customize)
         'settings'    => 'bw_login_logo',
     )));
 
+
+
     // Section Additional
     $wp_customize->add_section('bw_additional', array(
         'title'       => 'Additional',
@@ -366,10 +368,6 @@ function bw_customize_register($wp_customize)
 
     $wp_customize->add_setting('bw_additional_address', array('default' => ''));
     $wp_customize->add_setting('bw_additional_email', array('default' => ''));
-    $wp_customize->add_setting('bw_additional_skype', array('default' => ''));
-    $wp_customize->add_setting('bw_additional_viber', array('default' => ''));
-    $wp_customize->add_setting('bw_additional_whatsapp', array('default' => ''));
-    $wp_customize->add_setting('bw_additional_telegram', array('default' => ''));
 
     $wp_customize->add_control('bw_additional_address', array(
         'label'    => 'Address',
@@ -392,25 +390,48 @@ function bw_customize_register($wp_customize)
         'type'     => 'text',
     ));
 
-    $wp_customize->add_control('bw_additional_viber', array(
+    // Section Messenger
+    $wp_customize->add_section('bw_messenger', array(
+        'title'       => 'Messenger',
+        'description' => 'Customizer Custom Messenger links',
+        'panel'       => 'bw_theme_options',
+    ));
+
+    $wp_customize->add_setting('bw_messenger_skype', array('default' => '', 'sanitize_callback' => '',));
+    $wp_customize->add_setting('bw_messenger_viber', array('default' => '', 'sanitize_callback' => '',));
+    $wp_customize->add_setting('bw_messenger_whatsapp', array('default' => '', 'sanitize_callback' => '',));
+    $wp_customize->add_setting('bw_messenger_telegram', array('default' => '', 'sanitize_callback' => '',));
+
+    $wp_customize->selective_refresh->add_partial('bw_messenger_skype', array(
+        'selector' => '.messenger',
+    ));
+
+    $wp_customize->add_control('bw_messenger_skype', array(
+        'label'    => 'Skype',
+        'section'  => 'bw_messenger',
+        'settings' => 'bw_messenger_skype',
+        'type'     => 'tel',
+    ));
+
+    $wp_customize->add_control('bw_messenger_viber', array(
         'label'    => 'Viber',
-        'section'  => 'bw_additional',
-        'settings' => 'bw_additional_viber',
-        'type'     => 'text',
+        'section'  => 'bw_messenger',
+        'settings' => 'bw_messenger_viber',
+        'type'     => 'tel',
     ));
 
-    $wp_customize->add_control('bw_additional_whatsapp', array(
+    $wp_customize->add_control('bw_messenger_whatsapp', array(
         'label'    => 'WhatsApp',
-        'section'  => 'bw_additional',
-        'settings' => 'bw_additional_whatsapp',
-        'type'     => 'text',
+        'section'  => 'bw_messenger',
+        'settings' => 'bw_messenger_whatsapp',
+        'type'     => 'tel',
     ));
 
-    $wp_customize->add_control('bw_additional_telegram', array(
+    $wp_customize->add_control('bw_messenger_telegram', array(
         'label'    => 'Telegram',
-        'section'  => 'bw_additional',
-        'settings' => 'bw_additional_telegram',
-        'type'     => 'text',
+        'section'  => 'bw_messenger',
+        'settings' => 'bw_messenger_telegram',
+        'type'     => 'tel',
     ));
 
     // Section Social
