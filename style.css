@@ -5008,7 +5008,7 @@ form fieldset {
     transition: 0.2s;
     margin-bottom: 0; }
     form fieldset input[type="submit"].fa {
-      font-family: Font Awesome\ 5 Free; }
+      font-family: 'Font Awesome 5 Pro'; }
     form fieldset input[type="submit"]:hover {
       color: #fff;
       background-color: #d62c1a;
@@ -6048,7 +6048,7 @@ hr.style-four {
       content: "\f068";
       display: block;
       padding: 0 7px 0 0;
-      font-family: 'FontAwesome';
+      font-family: 'Font Awesome 5 Pro';
       color: #e74c3c;
       float: left;
       margin-left: 5px;
