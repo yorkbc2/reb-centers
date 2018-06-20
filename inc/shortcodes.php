@@ -117,7 +117,7 @@ if (!function_exists('bw_phone_shortcode')) {
                 $items .= sprintf(
                     '<li class="phone-item">%s</li>',
                     sprintf(
-                        '<a class="phone-number" href="tel:%s"></a>',
+                        '<a class="phone-number" href="tel:%s">%s</a>',
                         esc_attr(get_phone_number($phone)),
                         esc_html($phone)
                     )
