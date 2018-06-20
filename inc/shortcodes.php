@@ -33,6 +33,10 @@ if (!function_exists('bw_polylang_shortcode')) {
         if (function_exists('pll_the_languages')) {
             $flags = pll_the_languages($atts);
 
+            if (0 === (int)$atts['dropdown']) {
+                $flags = sprintf('<ul class="lang"></ul>', $flags);
+            }
+
             return $flags;
         }
 
@@ -372,5 +376,5 @@ if (!function_exists('bw_advert_shortcode')) {
         return $output;
     }
 
-    add_shortcode('bw_advert', 'bw_advert_shortcode');
+    add_shortcode('bw-advert', 'bw_advert_shortcode');
 }
