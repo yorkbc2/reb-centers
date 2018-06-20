@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists('bw_polylang_shortcode')) {
+if (!function_exists('bw_polylang_shortcode')) {
     /**
      * Add Shortcode Polylang
      *
@@ -13,19 +13,19 @@ if ( ! function_exists('bw_polylang_shortcode')) {
         // Attributes
         $atts = shortcode_atts(
             array(
-                'dropdown'               => 0, // display as list and not as dropdown
-                'echo'                   => 0, // echoes the list
-                'hide_if_empty'          => 1, // hides languages with no posts ( or pages )
-                'menu'                   => 0, // not for nav menu ( this argument is deprecated since v1.1.1 )
-                'show_flags'             => 0, // don't show flags
-                'show_names'             => 1, // show language names
-                'display_names_as'       => 'name', // valid options are slug and name
-                'force_home'             => 0, // tries to find a translation
+                'dropdown' => 0, // display as list and not as dropdown
+                'echo' => 0, // echoes the list
+                'hide_if_empty' => 1, // hides languages with no posts ( or pages )
+                'menu' => 0, // not for nav menu ( this argument is deprecated since v1.1.1 )
+                'show_flags' => 0, // don't show flags
+                'show_names' => 1, // show language names
+                'display_names_as' => 'name', // valid options are slug and name
+                'force_home' => 0, // tries to find a translation
                 'hide_if_no_translation' => 0, // don't hide the link if there is no translation
-                'hide_current'           => 0, // don't hide current language
-                'post_id'                => null, // if not null, link to translations of post defined by post_id
-                'raw'                    => 0, // set this to true to build your own custom language switcher
-                'item_spacing'           => 'preserve', // 'preserve' or 'discard' whitespace between list items
+                'hide_current' => 0, // don't hide current language
+                'post_id' => null, // if not null, link to translations of post defined by post_id
+                'raw' => 0, // set this to true to build your own custom language switcher
+                'item_spacing' => 'preserve', // 'preserve' or 'discard' whitespace between list items
             ),
             $atts
         );
@@ -43,7 +43,7 @@ if ( ! function_exists('bw_polylang_shortcode')) {
     add_shortcode('polylang', 'bw_polylang_shortcode');
 }
 
-if ( ! function_exists('bw_social_shortcode')) {
+if (!function_exists('bw_social_shortcode')) {
     /**
      * Add Shortcode Socials
      *
@@ -87,7 +87,7 @@ if ( ! function_exists('bw_social_shortcode')) {
     add_shortcode('bw-social', 'bw_social_shortcode');
 }
 
-if ( ! function_exists('bw_phone_shortcode')) {
+if (!function_exists('bw_phone_shortcode')) {
     /**
      * Add Shortcode Phones
      *
@@ -181,7 +181,7 @@ if (!function_exists('bw_messengers_shortcode')) {
     add_shortcode('bw-messengers', 'bw_messengers_shortcode');
 }
 
-if ( ! function_exists('bw_html_sitemap')) {
+if (!function_exists('bw_html_sitemap')) {
     /**
      * Add Shortcode HTML Sitemap
      *
@@ -192,7 +192,7 @@ if ( ! function_exists('bw_html_sitemap')) {
     function bw_html_sitemap($atts)
     {
         $output = '';
-        $args   = array(
+        $args = array(
             'public' => 1,
         );
 
@@ -205,17 +205,17 @@ if ( ! function_exists('bw_html_sitemap')) {
         $post_types = get_post_types($args, 'objects');
 
         foreach ($post_types as $post_type) {
-            if ( ! in_array($post_type->name, $ignoreposttypes)) {
-                $output      .= '<h2 class="sitemap-headline">' . $post_type->labels->name . '</h2>';
-                $args        = array(
+            if (!in_array($post_type->name, $ignoreposttypes)) {
+                $output .= '<h2 class="sitemap-headline">' . $post_type->labels->name . '</h2>';
+                $args = array(
                     'posts_per_page' => -1,
-                    'post_type'      => $post_type->name,
-                    'post_status'    => 'publish',
-                    'orderby'        => 'title',
-                    'order'          => 'ASC',
+                    'post_type' => $post_type->name,
+                    'post_status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                 );
                 $posts_array = get_posts($args);
-                $output      .= '<ul class="sitemap-list">';
+                $output .= '<ul class="sitemap-list">';
                 foreach ($posts_array as $pst) {
                     $output .= '<li class="sitemap-item"><a class="sitemap-link" href="' . get_permalink($pst->ID) . '">' . $pst->post_title . '</a></li>';
                 }
@@ -229,7 +229,7 @@ if ( ! function_exists('bw_html_sitemap')) {
     add_shortcode('bw-html-sitemap', 'bw_html_sitemap');
 }
 
-if ( ! function_exists('bw_last_posts')) {
+if (!function_exists('bw_last_posts')) {
     /**
      *
      * Shortcode для отображения трёх последних новостей в блоге.
@@ -248,26 +248,26 @@ if ( ! function_exists('bw_last_posts')) {
     {
         $atts = shortcode_atts(
             array(
-                'count'        => 3, // Кол-во новостей для отображения
+                'count' => 3, // Кол-во новостей для отображения
                 'button_title' => __('Читать полностью', 'brainworks') // Текст в ссылке
             ), $atts);
 
         $posts = wp_get_recent_posts(array(
             'numberposts' => $atts['count'],
-            'orderby'     => 'post_date',
-            'order'       => 'DESC',
-            'post_type'   => 'post',
+            'orderby' => 'post_date',
+            'order' => 'DESC',
+            'post_type' => 'post',
             'post_status' => 'publish'
         ), ARRAY_A);
 
         $output = '<div class="container"><div class="row">';
 
         foreach ($posts as $key => $post) {
-            $thumbnail_id  = get_post_thumbnail_id($post['ID']);
-            $thumbnail     = get_the_post_thumbnail_url($post['ID'], 'medium');
+            $thumbnail_id = get_post_thumbnail_id($post['ID']);
+            $thumbnail = get_the_post_thumbnail_url($post['ID'], 'medium');
             $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-            $permalink     = get_permalink($post['ID']);
-            $output        .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
+            $permalink = get_permalink($post['ID']);
+            $output .= '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"><div class="custom-card custom-card-with-image">';
             if ($thumbnail !== false) {
                 $output .= '<div class="custom-card-image">
                                     <img src="' . $thumbnail . '" title="' . $post['post_title'] . '" alt="' . $thumbnail_alt . '" width="100%" height="auto"  />
@@ -295,4 +295,82 @@ if ( ! function_exists('bw_last_posts')) {
     }
 
     add_shortcode('bw-last-posts', 'bw_last_posts');
+}
+
+if (!function_exists('bw_advert_shortcode')) {
+    /**
+     * Add Shortcode Advert Post List
+     *
+     * @param $atts
+     *
+     * @return string
+     */
+    function bw_advert_shortcode($atts)
+    {
+        // Attributes
+        $atts = shortcode_atts(
+            array(
+                'count' => 3,
+                'class' => 'advert'
+            ),
+            $atts
+        );
+
+        $output = '';
+
+        $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => $atts['count'],
+            'meta_query' => array(
+                'relation' => 'OR',
+                array(
+                    'key' => 'on-front',
+                    'value' => 'yes',
+                ),
+            )
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) {
+            $items = '';
+            $basic_class = trim(strip_tags($atts['class']));
+
+            while ($query->have_posts()) {
+                $query->the_post();
+
+                $thumbnail = has_post_thumbnail() ? sprintf(
+                    '<figure class="%s-preview"><a href="%s">%s</a></figure>',
+                    $basic_class, get_the_permalink(),
+                    get_the_post_thumbnail(null, 'medium', array('class' => $basic_class . '-thumbnail'))
+                ) : '';
+
+                $headline = sprintf('<h3 class="%s-headline"><a href="%s">%s</a></h3>',
+                    $basic_class, get_the_permalink(), get_the_title()
+                );
+
+                $excerpt = sprintf('<div class="%s-excerpt">%s</div>', $basic_class, get_the_excerpt());
+
+                $btn = sprintf('<div class="text-right"><a class="button-small %s-link" href="%s">%s</a></div>',
+                    $basic_class, get_the_permalink(), __('Continue reading', 'brainworks')
+                );
+
+                $item = sprintf('<section id="post-%s" class="%s">%s %s %s %s</section>', get_the_ID(),
+                    join(' ', get_post_class(array('col-md-4', $basic_class . '-item'))),
+                    $thumbnail, $headline, $excerpt, $btn
+                );
+
+                $items .= $item;
+            }
+
+            wp_reset_postdata();
+
+            $output = sprintf('<div class="container"><div class="row %s-list">%s</div>', $basic_class, $items);
+        }
+
+        return $output;
+    }
+
+    add_shortcode('bw_advert', 'bw_advert_shortcode');
 }

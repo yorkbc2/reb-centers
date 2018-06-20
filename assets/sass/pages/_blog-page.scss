@@ -1,6 +1,7 @@
 article {
     header {
-        h2 {}
+        h2 {
+        }
 
         p {
             text-align: justify;
@@ -8,4 +9,45 @@ article {
     }
 }
 
-section {}
+section {
+}
+
+.advert {
+    &-list {
+
+    }
+
+    &-item {
+        margin-bottom: 20px;
+    }
+
+    &-headline {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    &-preview {
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+        }
+    }
+
+    &-thumbnail {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    &-excerpt {
+        margin-bottom: 10px;
+
+        &,
+        p {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333333;
+        }
+    }
+}

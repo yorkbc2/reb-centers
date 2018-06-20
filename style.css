@@ -4192,8 +4192,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 300;
-  src: url("assets/fonts/font-awesome/fa-light-300.eot");
-  src: url("assets/fonts/font-awesome/fa-light-300.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome/fa-light-300.woff2") format("woff2"), url("assets/fonts/font-awesome/fa-light-300.woff") format("woff"), url("assets/fonts/font-awesome/fa-light-300.ttf") format("truetype"), url("assets/fonts/font-awesome/fa-light-300.svg#fontawesome") format("svg"); }
+  src: url("assets/fonts/font-awesome-5/fa-light-300.eot");
+  src: url("assets/fonts/font-awesome-5/fa-light-300.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome-5/fa-light-300.woff2") format("woff2"), url("assets/fonts/font-awesome-5/fa-light-300.woff") format("woff"), url("assets/fonts/font-awesome-5/fa-light-300.ttf") format("truetype"), url("assets/fonts/font-awesome-5/fa-light-300.svg#fontawesome") format("svg"); }
 
 .fal {
   font-family: 'Font Awesome 5 Pro';
@@ -4203,8 +4203,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 900;
-  src: url("assets/fonts/font-awesome/fa-solid-900.eot");
-  src: url("assets/fonts/font-awesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome/fa-solid-900.woff2") format("woff2"), url("assets/fonts/font-awesome/fa-solid-900.woff") format("woff"), url("assets/fonts/font-awesome/fa-solid-900.ttf") format("truetype"), url("assets/fonts/font-awesome/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("assets/fonts/font-awesome-5/fa-solid-900.eot");
+  src: url("assets/fonts/font-awesome-5/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome-5/fa-solid-900.woff2") format("woff2"), url("assets/fonts/font-awesome-5/fa-solid-900.woff") format("woff"), url("assets/fonts/font-awesome-5/fa-solid-900.ttf") format("truetype"), url("assets/fonts/font-awesome-5/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -4215,8 +4215,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 400;
-  src: url("assets/fonts/font-awesome/fa-regular-400.eot");
-  src: url("assets/fonts/font-awesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome/fa-regular-400.woff2") format("woff2"), url("assets/fonts/font-awesome/fa-regular-400.woff") format("woff"), url("assets/fonts/font-awesome/fa-regular-400.ttf") format("truetype"), url("assets/fonts/font-awesome/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("assets/fonts/font-awesome-5/fa-regular-400.eot");
+  src: url("assets/fonts/font-awesome-5/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome-5/fa-regular-400.woff2") format("woff2"), url("assets/fonts/font-awesome-5/fa-regular-400.woff") format("woff"), url("assets/fonts/font-awesome-5/fa-regular-400.ttf") format("truetype"), url("assets/fonts/font-awesome-5/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Pro';
@@ -4226,8 +4226,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("assets/fonts/font-awesome/fa-brands-400.eot");
-  src: url("assets/fonts/font-awesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome/fa-brands-400.woff2") format("woff2"), url("assets/fonts/font-awesome/fa-brands-400.woff") format("woff"), url("assets/fonts/font-awesome/fa-brands-400.ttf") format("truetype"), url("assets/fonts/font-awesome/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("assets/fonts/font-awesome-5/fa-brands-400.eot");
+  src: url("assets/fonts/font-awesome-5/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/font-awesome-5/fa-brands-400.woff2") format("woff2"), url("assets/fonts/font-awesome-5/fa-brands-400.woff") format("woff"), url("assets/fonts/font-awesome-5/fa-brands-400.ttf") format("truetype"), url("assets/fonts/font-awesome-5/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
@@ -4684,6 +4684,31 @@ ol.commentlist .comment-body {
 article header p {
   text-align: justify; }
 
+.advert-item {
+  margin-bottom: 20px; }
+
+.advert-headline {
+  font-size: 28px;
+  margin-bottom: 10px; }
+
+.advert-preview {
+  margin-bottom: 10px; }
+  .advert-preview a {
+    display: block; }
+
+.advert-thumbnail {
+  display: block;
+  margin-bottom: 0; }
+
+.advert-excerpt {
+  margin-bottom: 10px; }
+  .advert-excerpt,
+  .advert-excerpt p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333; }
+
 /* ELEMENTS */
 h1, h2, h3, h4, h5, h6, h1.hero-title {
   color: #2c3e50;
@@ -4987,7 +5012,7 @@ form fieldset {
   form fieldset input {
     width: 100%;
     margin-bottom: 20px; }
-  form fieldset input[type="submit"] {
+  form fieldset [type="submit"] {
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -5007,20 +5032,20 @@ form fieldset {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin-bottom: 0; }
-    form fieldset input[type="submit"].fa {
+    form fieldset [type="submit"].fa {
       font-family: 'Font Awesome 5 Pro'; }
-    form fieldset input[type="submit"]:hover {
+    form fieldset [type="submit"]:hover {
       color: #fff;
       background-color: #d62c1a;
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none; }
-    form fieldset input[type="submit"]:active {
+    form fieldset [type="submit"]:active {
       background-color: #e74c3c;
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none; }
-    form fieldset input[type="submit"]:focus {
+    form fieldset [type="submit"]:focus {
       outline: 0; }
   form fieldset textarea {
     width: 100%;
@@ -5218,7 +5243,7 @@ a.button {
     background-color: #e74c3c;
     color: #fff; }
 
-button[type="submit"] {
+[type="submit"] {
   top: 0;
   text-align: center;
   position: relative;
@@ -5235,21 +5260,21 @@ button[type="submit"] {
   color: #e74c3c;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   padding: 5px 10px; }
-  button[type="submit"] a {
+  [type="submit"] a {
     color: #fff;
     display: inline-block; }
-  button[type="submit"] span {
+  [type="submit"] span {
     color: #fff;
     display: inline-block; }
-  button[type="submit"]:focus {
+  [type="submit"]:focus {
     outline: 0; }
-  button[type="submit"].button-inverse {
+  [type="submit"].button-inverse {
     background: #e74c3c;
     color: #fff; }
-    button[type="submit"].button-inverse:hover, button[type="submit"].button-inverse:active {
+    [type="submit"].button-inverse:hover, [type="submit"].button-inverse:active {
       color: #e74c3c;
       background: #fff; }
-  button[type="submit"]:hover, button[type="submit"]:active {
+  [type="submit"]:hover, [type="submit"]:active {
     background-color: #e74c3c;
     color: #fff; }
 

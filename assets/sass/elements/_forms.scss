@@ -32,7 +32,7 @@ form {
             @extend %form-field-style;
         }
 
-        input[type="submit"] {
+        [type="submit"] {
             @include button-style;
             margin-bottom: 0;
         }

@@ -62,7 +62,7 @@ button {
     width: 100%;
 }
 
-button[type="submit"] {
+[type="submit"] {
     @extend %button-style;
     padding: 8px 10px;
 }
