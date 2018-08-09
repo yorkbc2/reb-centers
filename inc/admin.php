@@ -107,3 +107,12 @@ if (!function_exists( 'bw_add_img_attributes' )) {
 }
 
 add_filter( 'wp_get_attachment_image_attributes', 'bw_add_img_attributes', 10, 3 );
+
+/**
+ * Admin Enqueue Script
+ */
+function bw_admin_enqueue_script() {
+    wp_add_inline_script('postbox', '(function($){$(function(){var customFields=$("#postcustom-hide");if(customFields.length&&customFields.prop("checked")){setTimeout(function(){customFields.trigger("click.postboxes");},100);}});})(jQuery);');
+}
+
+add_action('admin_enqueue_scripts', 'bw_admin_enqueue_script');
