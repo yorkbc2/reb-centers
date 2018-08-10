@@ -1,5 +1,28 @@
 <?php
 
+function bw_switch_theme()
+{
+    if (get_option('uploads_use_yearmonth_folders') == 1) {
+        update_option('uploads_use_yearmonth_folders', '');
+    }
+
+    update_option('sidebars_widgets', array(
+        'wp_inactive_widgets' => array(),
+        'sidebar-widget-area' => array(),
+        'sidebar-widget-area2' => array(),
+        'footer-widget-area' => array(),
+        'array_version' => 3
+    ));
+
+    $post_ids = array(1, 2, 3);
+
+    foreach ($post_ids as $id) {
+        wp_delete_post($id, true);
+    }
+}
+
+add_action('after_switch_theme', 'bw_switch_theme');
+
 function bw_setup()
 {
     /** Translate Theme */
@@ -70,7 +93,7 @@ function bw_nav_menu_css_class($classes, $item, $args, $depth)
 
     if ($depth > 0) {
         foreach ($classes as $key => $class) {
-            if(preg_match('/^menu-item/', $class)) {
+            if (preg_match('/^menu-item/', $class)) {
                 $classes[$key] = 'sub-' . $class;
             }
         }
@@ -97,7 +120,7 @@ function bw_menu_no_link($nav_menu, $args)
 
     if (in_array($args->theme_location, $theme_locations, true)) {
 
-        $in_link  = '!<li(.*?)class="(.*?)current-menu-item(.*?)"><a(.*?)class="(.*?)">(.*?)</a>!si';
+        $in_link = '!<li(.*?)class="(.*?)current-menu-item(.*?)"><a(.*?)class="(.*?)">(.*?)</a>!si';
         $out_link = '<li$1class="\\2current-menu-item\\3"><span class="$5">$6</span>';
 
         return preg_replace($in_link, $out_link, $nav_menu);
@@ -162,17 +185,18 @@ if (class_exists('YIT_Plugin_Licence')) {
 function bw_breadcrumbs_localization($l10n)
 {
     return array(
-        'home'       => __('Front page', 'brainworks'),
-        'paged'      => __('Page %d', 'brainworks'),
-        '_404'       => __('Error 404', 'brainworks'),
-        'search'     => __('Search results by query - <b>%s</b>', 'brainworks'),
-        'author'     => __('Author archve: <b>%s</b>', 'brainworks'),
-        'year'       => __('Archive by <b>%d</b> year', 'brainworks'),
-        'month'      => __('Archive by: <b>%s</b>', 'brainworks'),
-        'day'        => '',
+        'home' => __('Front page', 'brainworks'),
+        'paged' => __('Page %d', 'brainworks'),
+        '_404' => __('Error 404', 'brainworks'),
+        'search' => __('Search results by query - <b>%s</b>', 'brainworks'),
+        'author' => __('Author archve: <b>%s</b>', 'brainworks'),
+        'year' => __('Archive by <b>%d</b> year', 'brainworks'),
+        'month' => __('Archive by: <b>%s</b>', 'brainworks'),
+        'day' => '',
         'attachment' => __('Media: %s', 'brainworks'),
-        'tag'        => __('Posts by tag: <b>%s</b>', 'brainworks'),
-        'tax_tag'    => __('%1$s from "%2$s" by tag: <b>%3$s</b>', 'brainworks'),);
+        'tag' => __('Posts by tag: <b>%s</b>', 'brainworks'),
+        'tax_tag' => __('%1$s from "%2$s" by tag: <b>%3$s</b>', 'brainworks'),
+    );
 }
 
 add_filter('kama_breadcrumbs_default_loc', 'bw_breadcrumbs_localization', 10, 1);
