@@ -1,0 +1,298 @@
+$theme-colors: () !default;
+$theme-colors: map-merge((
+    'primary': #007bff,
+    'secondary': #28a745,
+), $theme-colors);
+
+$yiq-contrasted-threshold: 150 !default;
+$yiq-text-dark: #212529 !default;
+$yiq-text-light: #fff !default;
+
+@function theme-color($key: 'primary') {
+    @return map-get($theme-colors, $key);
+}
+
+@function color-yiq($color) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+    @if ($yiq >= $yiq-contrasted-threshold) {
+        @return $yiq-text-dark;
+    } @else {
+        @return $yiq-text-light;
+    }
+}
+
+$btn-enable-rounded: true !default;
+$btn-enable-shadows: false !default;
+$btn-enable-gradients: false !default;
+
+$btn-padding-y: 6px !default;
+$btn-padding-x: 12px !default;
+$btn-font-size: 16px !default;
+$btn-line-height: 1.5 !default;
+
+$btn-padding-y-sm: 4px !default;
+$btn-padding-x-sm: 8px !default;
+$btn-font-size-sm: ($btn-font-size * .875) !default;
+$btn-line-height-sm: 1.5 !default;
+
+$btn-padding-y-lg: 8px !default;
+$btn-padding-x-lg: 16px !default;
+$btn-font-size-lg: ($btn-font-size * 1.25) !default;
+$btn-line-height-lg: 1.5 !default;
+
+$btn-border-width: 1px !default;
+
+$btn-font-weight: 400 !default;
+$btn-box-shadow: inset 0 1px 0 rgba(#fff, .15), 0 1px 1px rgba(#000, .075) !default;
+$btn-focus-width: 3px !default;
+$btn-focus-box-shadow: 0 0 0 3px rgba(theme-color('primary'), .25) !default;
+$btn-disabled-opacity: .65 !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba(#000, .125) !default;
+
+$btn-link-disabled-color: #6c757d !default;
+
+$btn-block-spacing-y: 8px !default;
+
+$btn-border-radius: 4px !default;
+$btn-border-radius-lg: 5px !default;
+$btn-border-radius-sm: 3px !default;
+
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+$btn-link-color: theme-color('primary') !default;
+$btn-link-decoration: none !default;
+$btn-link-hover-color: darken($btn-link-color, 15%) !default;
+$btn-link-hover-decoration: underline !default;
+
+.btn {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: $btn-border-width solid transparent;
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    @if $btn-enable-rounded {
+        border-radius: $btn-border-radius;
+    } @else {
+        border-radius: 0;
+    }
+    transition: $btn-transition;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-image: none;
+        box-shadow: $btn-active-box-shadow;
+
+        &:focus {
+            box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+        }
+    }
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+@each $name, $value in $theme-colors {
+    .btn-#{$name} {
+        $background: $value;
+        $border: $value;
+        $hover-background: darken($background, 7.5%);
+        $hover-border: darken($border, 10%);
+        $active-background: darken($background, 10%);
+        $active-border: darken($border, 12.5%);
+        color: color-yiq($background);
+        @if $btn-enable-gradients {
+            background: $background linear-gradient(180deg, mix(#fff, $background, 15%), $background) repeat-x;
+        } @else {
+            background-color: $background;
+        }
+        border-color: $border;
+        box-shadow: $btn-box-shadow;
+
+        &:hover {
+            color: color-yiq($hover-background);
+            @if $btn-enable-gradients {
+                background: $hover-background linear-gradient(180deg, mix(#fff, $hover-background, 15%), $hover-background) repeat-x;
+            } @else {
+                background-color: $hover-background;
+            }
+            border-color: $hover-border;
+        }
+
+        &:focus,
+        &.focus {
+            @if $btn-enable-shadows {
+                box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
+            } @else {
+                box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            color: color-yiq($background);
+            background-color: $background;
+            border-color: $border;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            color: color-yiq($active-background);
+            background-color: $active-background;
+            @if $btn-enable-gradients {
+                background-image: none;
+            }
+            border-color: $active-border;
+
+            &:focus {
+                @if $btn-enable-shadows {
+                    box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($border, .5);
+                } @else {
+                    box-shadow: 0 0 0 $btn-focus-width rgba($border, .5);
+                }
+            }
+        }
+    }
+}
+
+@each $name, $value in $theme-colors {
+    .btn-outline-#{$name} {
+        $color: $value;
+        $color-hover: color-yiq($color);
+        $active-background: $color;
+        $active-border: $color;
+        color: $color;
+        background-color: transparent;
+        background-image: none;
+        border-color: $color;
+
+        &:hover {
+            color: $color-hover;
+            background-color: $active-background;
+            border-color: $active-border;
+        }
+
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+        }
+
+        &.disabled,
+        &:disabled {
+            color: $color;
+            background-color: transparent;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            color: color-yiq($active-background);
+            background-color: $active-background;
+            border-color: $active-border;
+
+            &:focus {
+                @if $btn-enable-shadows and $btn-active-box-shadow != none {
+                    box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
+                } @else {
+                    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+                }
+            }
+        }
+    }
+}
+
+.btn-link {
+    font-weight: $btn-font-weight;
+    color: $btn-link-color;
+    background-color: transparent;
+
+    &:hover {
+        color: $btn-link-hover-color;
+        text-decoration: $btn-link-hover-decoration;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+        text-decoration: $btn-link-hover-decoration;
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+    }
+}
+
+.btn-lg {
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+    font-size: $btn-font-size-lg;
+    line-height: $btn-line-height-lg;
+    @if $btn-enable-rounded {
+        border-radius: $btn-border-radius-lg;
+    } @else {
+        border-radius: 0;
+    }
+}
+
+.btn-sm {
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    font-size: $btn-font-size-sm;
+    line-height: $btn-line-height-sm;
+    @if $btn-enable-rounded {
+        border-radius: $btn-border-radius-sm;
+    } @else {
+        border-radius: 0;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+
+    + .btn-block {
+        margin-top: $btn-block-spacing-y;
+    }
+}
+
+[type="submit"],
+[type="reset"],
+[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}

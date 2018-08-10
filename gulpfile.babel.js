@@ -13,6 +13,7 @@ import svgstore from 'gulp-svgstore';
 import cleancss from 'gulp-clean-css';
 import browser_sync from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
+import autoprefixer from 'gulp-autoprefixer';
 
 const browserSync = browser_sync.create();
 
@@ -45,6 +46,10 @@ gulp.task('sass', () => {
             sourceComments: false,
             linefeed: 'crlf',
         }).on('error', sass.logError))
+        // .pipe(autoprefixer({
+        //     browsers: ['last 5 versions'],
+        //     cascade: false
+        // }))
         // .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest('./'));
 });

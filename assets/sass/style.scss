@@ -24,9 +24,10 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 //@import "plugins/plug-ins";
 @import "plugins/animations";
 /* BOOTSTRAP */
+//@import "bootstrap/bootstrap-buttons";
+//@import "bootstrap/bootstrap-embded";
 @import "bootstrap/bootstrap-grid";
 @import "bootstrap/bootstrap-tables";
-//@import "bootstrap/bootstrap-embded";
 /* PAGES */
 @import "pages/single-post";
 @import "pages/blog-page";
