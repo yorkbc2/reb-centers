@@ -28,7 +28,7 @@ function bw_admin_footer_text()
     );
 
     $output = sprintf(
-        '<span id="footer-thankyou">%s</span><br>%s<br>%s<br>%s',
+        '<span id="footer-thankyou">%s</span><br>%s / %s<br>%s',
         $developed_by,
         $php_version,
         $queries,
@@ -38,7 +38,7 @@ function bw_admin_footer_text()
     echo $output;
 }
 
-add_filter('admin_footer_text', 'bw_admin_footer_text');
+//add_filter('admin_footer_text', 'bw_admin_footer_text');
 
 /**
  * Footer right text
