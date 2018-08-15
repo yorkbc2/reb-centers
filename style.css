@@ -4665,22 +4665,11 @@ table th[class*="col-"] {
   clear: both; }
 
 /* PAGES */
-section p {
-  text-align: justify; }
-
-section img {
-  margin-bottom: 20px;
-  width: 100%;
-  height: auto; }
-
 ol.commentlist .comment-body {
   margin-bottom: 25px; }
 
 #respond p {
   text-align: left; }
-
-article header p {
-  text-align: justify; }
 
 .advert-item {
   margin-bottom: 20px; }
