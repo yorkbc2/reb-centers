@@ -79,31 +79,31 @@ function scroll_top()
  */
 function get_analytics_tracking_code($placed = 'body')
 {
-    $tracking_code                = array();
-    $tracking_code['google']      = get_theme_mod('bw_analytics_google');
-    $tracking_code['yandex']      = get_theme_mod('bw_analytics_yandex');
-    $tracking_code['chat']        = get_theme_mod('bw_chat');
+    $tracking_code = array();
+    $tracking_code['google'] = get_theme_mod('bw_analytics_google');
+    $tracking_code['yandex'] = get_theme_mod('bw_analytics_yandex');
+    $tracking_code['chat'] = get_theme_mod('bw_chat');
     $tracking_code['remarketing'] = get_theme_mod('bw_remarketing');
-    $tracking_code['custom']      = get_theme_mod('bw_analytics_custom');
+    $tracking_code['custom'] = get_theme_mod('bw_analytics_custom');
 
-    $tracking_placed                = array();
-    $tracking_placed['google']      = get_theme_mod('bw_analytics_google_placed', 'body');
-    $tracking_placed['yandex']      = get_theme_mod('bw_analytics_yandex_placed', 'body');
-    $tracking_placed['chat']        = get_theme_mod('bw_chat_placed', 'body');
+    $tracking_placed = array();
+    $tracking_placed['google'] = get_theme_mod('bw_analytics_google_placed', 'body');
+    $tracking_placed['yandex'] = get_theme_mod('bw_analytics_yandex_placed', 'body');
+    $tracking_placed['chat'] = get_theme_mod('bw_chat_placed', 'body');
     $tracking_placed['remarketing'] = get_theme_mod('bw_remarketing_placed', 'body');
-    $tracking_placed['custom']      = get_theme_mod('bw_analytics_custom_placed', 'body');
+    $tracking_placed['custom'] = get_theme_mod('bw_analytics_custom_placed', 'body');
 
     $output = '';
 
     foreach ($tracking_code as $key => $script) {
-        if ( ! empty($tracking_placed[$key]) && ! empty($script)) {
+        if (!empty($tracking_placed[$key]) && !empty($script)) {
             if ($tracking_placed[$key] === $placed) {
                 $output .= $script . PHP_EOL;
             }
         }
     };
 
-    if ( ! empty($output)) {
+    if (!empty($output)) {
         //return sprintf( '<script type="text/javascript">%s</script>', $output );
         return $output;
     }
@@ -124,7 +124,7 @@ function analytics_tracking_code($placed = 'body')
     echo get_analytics_tracking_code($placed);
 }
 
-if ( ! function_exists('get_lang_class')) {
+if (!function_exists('get_lang_class')) {
     /**
      * @param string $class
      *
@@ -136,7 +136,7 @@ if ( ! function_exists('get_lang_class')) {
     }
 }
 
-if ( ! function_exists('the_lang_class')) {
+if (!function_exists('the_lang_class')) {
     /**
      * @see get_lang_class()
      *
@@ -150,7 +150,7 @@ if ( ! function_exists('the_lang_class')) {
     }
 }
 
-if ( ! function_exists('has_messengers')) {
+if (!function_exists('has_messengers')) {
     /**
      * Determines whether the site has a messenger.
      *
@@ -163,7 +163,7 @@ if ( ! function_exists('has_messengers')) {
     }
 }
 
-if ( ! function_exists('get_messengers')) {
+if (!function_exists('get_messengers')) {
     /**
      * Return Messengers in array
      *
@@ -172,37 +172,37 @@ if ( ! function_exists('get_messengers')) {
     function get_messengers()
     {
         $_messengers = [
-            'skype'    => [
-                'tel'  => get_theme_mod('bw_messenger_skype'),
+            'skype' => [
+                'tel' => get_theme_mod('bw_messenger_skype'),
                 'text' => 'Skype',
                 'icon' => 'fab fa-skype',
             ],
-            'viber'    => [
-                'tel'  => get_theme_mod('bw_messenger_viber'),
+            'viber' => [
+                'tel' => get_theme_mod('bw_messenger_viber'),
                 'text' => 'Viber',
                 'icon' => 'fab fa-viber',
             ],
             'whatsapp' => [
-                'tel'  => get_theme_mod('bw_messenger_whatsapp'),
+                'tel' => get_theme_mod('bw_messenger_whatsapp'),
                 'text' => 'WhatsApp',
                 'icon' => 'fab fa-whatsapp',
             ],
             'telegram' => [
-                'tel'  => get_theme_mod('bw_messenger_telegram'),
+                'tel' => get_theme_mod('bw_messenger_telegram'),
                 'text' => 'Telegram',
                 'icon' => 'fab fa-telegram-plane',
             ],
         ];
 
         $messengers = array_filter($_messengers, function ($value) {
-            return ! empty($value['tel']);
+            return !empty($value['tel']);
         });
 
         return $messengers;
     }
 }
 
-if ( ! function_exists('has_social')) {
+if (!function_exists('has_social')) {
     /**
      * @see get_social()
      * @return bool
@@ -213,57 +213,57 @@ if ( ! function_exists('has_social')) {
     }
 }
 
-if ( ! function_exists('get_social')) {
+if (!function_exists('get_social')) {
     /**
      * @return array
      */
     function get_social()
     {
         $_socials = [
-            'vk'          => [
-                'url'  => get_theme_mod('bw_social_vk'),
+            'vk' => [
+                'url' => get_theme_mod('bw_social_vk'),
                 'text' => 'Vk',
                 'icon' => 'fab fa-vk',
             ],
-            'twitter'     => [
-                'url'  => get_theme_mod('bw_social_twitter'),
+            'twitter' => [
+                'url' => get_theme_mod('bw_social_twitter'),
                 'text' => 'Twitter',
                 'icon' => 'fab fa-twitter',
             ],
-            'facebook'    => [
-                'url'  => get_theme_mod('bw_social_facebook'),
+            'facebook' => [
+                'url' => get_theme_mod('bw_social_facebook'),
                 'text' => 'Facebook',
                 'icon' => 'fab fa-facebook-f',
             ],
-            'linkedin'    => [
-                'url'  => get_theme_mod('bw_social_linkedin'),
+            'linkedin' => [
+                'url' => get_theme_mod('bw_social_linkedin'),
                 'text' => 'Linkedin',
                 'icon' => 'fab fa-linkedin-in',
             ],
-            'instagram'   => [
-                'url'  => get_theme_mod('bw_social_instagram'),
+            'instagram' => [
+                'url' => get_theme_mod('bw_social_instagram'),
                 'text' => 'Instagram',
                 'icon' => 'fab fa-instagram',
             ],
             'google-plus' => [
-                'url'  => get_theme_mod('bw_social_google_plus'),
+                'url' => get_theme_mod('bw_social_google_plus'),
                 'text' => 'Google Plus',
                 'icon' => 'fab fa-google-plus-g',
             ],
-            'youtube'     => [
-                'url'  => get_theme_mod('bw_social_youtube'),
+            'youtube' => [
+                'url' => get_theme_mod('bw_social_youtube'),
                 'text' => 'YouTube',
                 'icon' => 'fab fa-youtube',
             ],
             'odnoklassniki' => [
-                'url'  => get_theme_mod('bw_social_odnoklassniki'),
+                'url' => get_theme_mod('bw_social_odnoklassniki'),
                 'text' => 'Odnoklassniki',
                 'icon' => 'fab fa-odnoklassniki',
             ],
         ];
 
         $socials = array_filter($_socials, function ($value) {
-            return $value['url'] !== '#' && ! empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
+            return $value['url'] !== '#' && !empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL);
         });
 
         return $socials;
@@ -271,7 +271,7 @@ if ( ! function_exists('get_social')) {
 }
 
 
-if ( ! function_exists('has_phones')) {
+if (!function_exists('has_phones')) {
     /**
      * @see get_phones()
      * @return bool
@@ -282,7 +282,7 @@ if ( ! function_exists('has_phones')) {
     }
 }
 
-if ( ! function_exists('get_phones')) {
+if (!function_exists('get_phones')) {
     /**
      * @return array
      */
@@ -296,14 +296,14 @@ if ( ! function_exists('get_phones')) {
         ];
 
         $phones = array_filter($_phones, function ($value) {
-            return ! empty($value);
+            return !empty($value);
         });
 
         return $phones;
     }
 }
 
-if ( ! function_exists('wp-body')) {
+if (!function_exists('wp-body')) {
     /**
      * Fire the wp_body action.
      */
@@ -316,7 +316,7 @@ if ( ! function_exists('wp-body')) {
     }
 }
 
-if ( ! function_exists('get_svg_sprite')) {
+if (!function_exists('get_svg_sprite')) {
     /**
      * @return mixed|string
      */
@@ -333,7 +333,7 @@ if ( ! function_exists('get_svg_sprite')) {
     }
 }
 
-if ( ! function_exists('svg_sprite')) {
+if (!function_exists('svg_sprite')) {
     /**
      * Display svg sprite
      *
@@ -346,7 +346,7 @@ if ( ! function_exists('svg_sprite')) {
     }
 }
 
-if ( ! function_exists('get_default_logo_link')) {
+if (!function_exists('get_default_logo_link')) {
     /**
      * Display site logo
      *
@@ -377,5 +377,114 @@ if ( ! function_exists('get_default_logo_link')) {
 
             echo $html;
         }
+    }
+}
+
+if (!function_exists('get_background_login_page')) {
+    /**
+     * Get Background style for Login Page
+     *
+     * @return string
+     */
+    function get_background_login_page()
+    {
+        $background = get_theme_mod('bw_login_background_image');
+        $color = get_theme_mod('bw_login_background_color');
+
+        $style = $color ? "background-color: #$color;" : '';
+
+        if ($background) {
+            $image = ' background-image: url("' . esc_url_raw($background) . '");';
+
+            $position = get_theme_mod('bw_login_background_position');
+
+            if (!in_array($position, array(
+                'left top',
+                'center top',
+                'right top',
+                'left center',
+                'center center',
+                'right center',
+                'left bottom',
+                'center bottom',
+                'right bottom'
+            ), true)) {
+                $position = 'left top';
+            }
+
+            $position = " background-position: $position;";
+
+            $size = get_theme_mod('bw_login_background_size');
+
+            if (!in_array($size, array('auto', 'contain', 'cover'), true)) {
+                $size = 'auto';
+            }
+
+            $size = " background-size: $size;";
+
+            $repeat = get_theme_mod('bw_login_background_repeat');
+
+            if (!in_array($repeat, array('repeat-x', 'repeat-y', 'repeat', 'no-repeat'), true)) {
+                $repeat = 'repeat';
+            }
+
+            $repeat = " background-repeat: $repeat;";
+
+            $attachment = get_theme_mod('background_attachment');
+
+            if ('fixed' !== $attachment) {
+                $attachment = 'scroll';
+            }
+
+            $attachment = " background-attachment: $attachment;";
+
+            $style .= $image . $position . $size . $repeat . $attachment;
+
+        }
+
+        return trim($style);
+    }
+}
+
+if (!function_exists('sanitize_background_setting')) {
+    /**
+     * @param $value
+     * @param $setting
+     * @return string|WP_Error
+     */
+    function sanitize_background_setting($value, $setting)
+    {
+        if ('bw_login_background_repeat' === $setting->id) {
+            if (!in_array($value, array('repeat-x', 'repeat-y', 'repeat', 'no-repeat'))) {
+                return new WP_Error('invalid_value', __('Invalid value for background repeat.'));
+            }
+        } elseif ('bw_login_background_attachment' === $setting->id) {
+            if (!in_array($value, array('fixed', 'scroll'))) {
+                return new WP_Error('invalid_value', __('Invalid value for background attachment.'));
+            }
+        } elseif ('bw_login_background_position' === $setting->id) {
+            if (!in_array($value, array(
+                'left top',
+                'center top',
+                'right top',
+                'left center',
+                'center center',
+                'right center',
+                'left bottom',
+                'center bottom',
+                'right bottom'
+            ), true)) {
+                return new WP_Error('invalid_value', __('Invalid value for background position X.'));
+            }
+        } elseif ('bw_login_background_size' === $setting->id) {
+            if (!in_array($value, array('auto', 'contain', 'cover'), true)) {
+                return new WP_Error('invalid_value', __('Invalid value for background size.'));
+            }
+        } elseif ('bw_login_background_image' === $setting->id || 'bw_login_background_image_thumb' === $setting->id) {
+            $value = empty($value) ? '' : esc_url_raw($value);
+        } else {
+            return new WP_Error('unrecognized_setting', __('Unrecognized background setting.'));
+        }
+        return $value;
     }
 }

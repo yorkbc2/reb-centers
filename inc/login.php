@@ -3,13 +3,13 @@
 /** Login page logo */
 function bw_login_head()
 {
-    $default_image   = get_template_directory_uri() . '/assets/img/login-logo.png';
-    $customize_image = get_theme_mod('bw_login_logo', $default_image);
-    $image           = !empty($customize_image) ? $customize_image : $default_image;
+    $default_logo_url = get_template_directory_uri() . '/assets/img/login-logo.png';
+    $logo_url = get_theme_mod('bw_login_logo', $default_logo_url);
+    $background = get_background_login_page();
 
     echo sprintf(
-        '<style type="text/css">.login h1 a{background-image: url("%s"); }</style>',
-        $image
+        '<style>.login{%s}.login h1 a{background-image: url("%s"); }</style>',
+        $background, $logo_url
     );
 }
 
@@ -21,7 +21,7 @@ function bw_login_error()
     return __('<strong>ERROR:</strong> The username and password is incorrect.', 'brainworks');
 }
 
-add_filter( 'login_errors', 'bw_login_error' );
+add_filter('login_errors', 'bw_login_error');
 
 /** Login page logo url */
 function bw_login_headerurl($login_header_url)
