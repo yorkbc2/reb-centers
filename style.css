@@ -6151,7 +6151,7 @@ img {
 
 .page-404 {
   height: 70vh;
-  background: url("assets/img/404.png") no-repeat center bottom; }
+  background: url("assets/img/404.png") no-repeat center center; }
   @media (max-width: 544px) {
     .page-404 {
       background: none; } }

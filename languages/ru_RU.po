@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: brainworks-v4.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-23 11:57+0000\n"
-"PO-Revision-Date: 2018-03-23 12:01+0000\n"
-"Last-Translator: Kudinov Fedor <brothersrabbits@mail.ru>\n"
-"Language-Team: Russian\n"
+"PO-Revision-Date: 2018-08-27 14:22+0000\n"
+"Last-Translator: admin <brothersrabbits@mail.ru>\n"
+"Language-Team: Русский\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
@@ -24,11 +24,11 @@ msgstr "Такой страницы не существует."
 
 #: 404.php:13
 msgid "Back to the homepage"
-msgstr ""
+msgstr "Вернуться на главную"
 
 #: 404.php:18
 msgid "Or use search"
-msgstr ""
+msgstr "Или используйте поиск"
 
 #: category.php:6 loops/content-blog-1-sbl.php:24
 #: loops/content-blog-1-sbr.php:21 loops/content-blog-2.php:20

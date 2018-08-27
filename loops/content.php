@@ -14,7 +14,8 @@
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
     <article id="post_<?php the_ID() ?>">
         <header>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+            <div class="sp-xs-1 sp-sm-1 sp-md-1 sp-lg-1 sp-xl-1"></div>
             <?php /*
             <h5>
               <em>
@@ -26,9 +27,14 @@
         </header>
         <section>
             <?php the_post_thumbnail('full'); ?>
+            <div class="sp-xs-1 sp-sm-1 sp-md-1 sp-lg-1 sp-xl-1"></div>
             <?php the_excerpt(__('&hellip; ' . __('Continue reading', 'brainworks') . ' <i class="glyphicon glyphicon-arrow-right"></i>', 'brainworks')); ?>
         </section>
+        
+        <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
         <hr>
+        <div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
+        
         <?php /*
         <footer>
             <p class="text-muted" style="margin-bottom: 20px;">

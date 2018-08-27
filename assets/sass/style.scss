@@ -148,7 +148,7 @@ img {
 
 .page-404 {
     height: 70vh;
-    background: image-url('404.png') no-repeat center bottom;
+    background: image-url('404.png') no-repeat center center;
 
     //xs 544
     @media #{$mobile} {

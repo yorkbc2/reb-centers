@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<div class="sp-xs-2 sp-sm-2 sp-md-2 sp-lg-2 sp-xl-2"></div>
 <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
 
 <h1><?php _e('Category', 'brainworks'); ?>: <?php echo single_cat_title(); ?></h1>
