@@ -6,6 +6,7 @@
 show_admin_bar(false);
 
 require_once locate_template('/inc/helpers.php');
+require_once locate_template('/inc/auth.php');
 require_once locate_template('/inc/admin.php');
 require_once locate_template('/inc/login.php');
 require_once locate_template('/inc/customizer.php');
