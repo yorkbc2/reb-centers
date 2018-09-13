@@ -378,3 +378,97 @@ if (!function_exists('bw_advert_shortcode')) {
 
     add_shortcode('bw-advert', 'bw_advert_shortcode');
 }
+
+if (!function_exists('bw_custom_login_shortcode')) {
+    function bw_custom_login_shortcode($atts)
+    {
+        if (!bw_user_logged_in()) {
+            $output = '
+                <form class="login-form form-" action="/wp-json/api/auth/login" method="POST" autocomplete="off">
+                <fieldset>
+                    <input type="hidden" name="_redirect_url" value="'.strtok($_SERVER['REQUEST_URI'], '?').'" />
+                    <div class="login-form-row form-group">
+                        <label for="login">'.__('Login', 'brainworks').'</label>
+                        <input type="text" id="login" name="login" class="form-field" required />
+                    </div>
+                    <div class="login-form-row form-group">
+                        <label for="password">'.__('Password', 'brainworks').'</label>
+                        <input type="password" id="password" name="password" class="form-field" required />
+                    </div>
+                    <div class="login-form-row form-group">
+                        <button type="submit" name="submit" class="btn btn-primary login-form-submit">
+                            '.__('Login', 'brainworks').'
+                        </button>
+                    </div>   
+                </fieldset>   
+                </form>
+            ';
+            return $output;
+        }
+        return '';
+    }
+
+    add_shortcode( 'bw-custom-login', 'bw_custom_login_shortcode' );
+}
+
+if (!function_exists('bw_custom_register_shortcode')) {
+    function bw_custom_register_shortcode ($atts) 
+    {
+        if (!bw_user_logged_in()) {
+            $output = '
+            <form class="login-form form-" action="/wp-json/api/auth/register" method="POST" autocomplete="off">
+            <fieldset>
+                <input type="hidden" name="_redirect_url" value="'.strtok($_SERVER['REQUEST_URI'], '?').'" />
+                <div class="login-form-row form-group">
+                    <label for="login">'.__('Login', 'brainworks').'</label>
+                    <input type="text" id="login" name="login" class="form-field" required />
+                </div>
+                <div class="login-form-row form-group">
+                    <label for="email">'.__('Email', 'brainworks').'</label>
+                    <input type="email" id="email" name="email" class="form-field" required />
+                </div>
+                <div class="login-form-row form-group">
+                    <label for="password">'.__('Password', 'brainworks').'</label>
+                    <input type="password" id="password" name="password" class="form-field" required />
+                </div>
+                <div class="login-form-row form-group">
+                    <label for="retry_password">'.__('Retry password', 'brainworks').'</label>
+                    <input type="password" id="retry_password" name="retry_password" class="form-field" required />
+                </div>
+                <div class="login-form-row form-group">
+                    <button type="submit" name="submit" class="btn btn-primary login-form-submit">
+                        '.__('Register', 'brainworks').'
+                    </button>
+                </div>    
+            </fieldset>  
+            </form>
+            ';
+            return $output;
+        }
+        return '';
+    }
+    add_shortcode( 'bw-custom-register', 'bw_custom_register_shortcode' );
+}
+
+
+if (!function_exists('bw_custom_auth_shortcode')) {
+    function bw_custom_auth_shortcode ($atts) {
+        
+        if (!bw_user_logged_in()) {
+            $login_form = do_shortcode('[bw-custom-login]');
+            $register_form = do_shortcode('[bw-custom-register]');
+            $output = '<div class="login-block row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                '.$login_form.' 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                '.$register_form.'
+                </div>
+            </div>';
+            return $output;
+        }
+        return '';
+    }
+
+    add_shortcode( 'bw-custom-auth', 'bw_custom_auth_shortcode' );
+}
