@@ -55,7 +55,6 @@
                 $current_date = microtime(true);
                 if ($current_date - $user_date >= 3600) {
                     set_auth_session(null);
-                    continue;
                 }
             }
         }
