@@ -43,11 +43,14 @@ gulp.task('sass', () => {
         .pipe(sass({
             outputStyle: 'nested', // nested, expanded, compact, compressed
             precision: 5,
-            sourceComments: false,
+            includePaths: ['assets/sass'],
+            indentType: 'space',
+            indentWidth: 2,
             linefeed: 'crlf',
+            sourceComments: false,
         }).on('error', sass.logError))
         // .pipe(autoprefixer({
-        //     browsers: ['last 5 versions'],
+        //     browsers: ['last 3 versions'],
         //     cascade: false
         // }))
         // .pipe(sourcemaps.write('/'))

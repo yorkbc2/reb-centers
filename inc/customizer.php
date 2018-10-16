@@ -223,6 +223,12 @@ function bw_customize_register($wp_customize)
 
     $wp_customize->add_setting('bw_remarketing', array());
 
+    $wp_customize->add_setting('bw_facebook_pixel_placed', array(
+        'default' => 'body',
+    ));
+
+    $wp_customize->add_setting('bw_facebook_pixel', array());
+
     $wp_customize->add_setting('bw_analytics_custom_placed', array(
         'default' => 'body',
     ));
@@ -317,6 +323,28 @@ function bw_customize_register($wp_customize)
         ),
     ));
 
+    $wp_customize->add_control('bw_facebook_pixel_placed', array(
+        'label' => __('Facebook Pixel code', 'brainworks'),
+        'description' => esc_html__('Placed (head/body)', 'brainworks'),
+        'section' => 'bw_analytics',
+        'settings' => 'bw_facebook_pixel_placed',
+        'type' => 'select',
+        'choices' => array(
+            'head' => __('Head', 'brainworks'),
+            'body' => __('Body', 'brainworks'),
+        ),
+    ));
+
+    $wp_customize->add_control('bw_facebook_pixel', array(
+        'description' => esc_html__('Paste Facebook Pixel code here &dArr;', 'brainworks'),
+        'section' => 'bw_analytics',
+        'settings' => 'bw_facebook_pixel',
+        'type' => 'textarea',
+        'input_attrs' => array(
+            'placeholder' => __('<!-- paste remarketing code here -->', 'brainworks'),
+        ),
+    ));
+
     $wp_customize->add_control('bw_analytics_custom_placed', array(
         'label' => __('Custom Analytics', 'brainworks'),
         'description' => esc_html__('Placed (head/body)', 'brainworks'),
@@ -347,7 +375,7 @@ function bw_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('bw_login_logo', array(
-        'default' => get_template_directory_uri() . '/assets/img/login-logo.png',
+        'default' => get_template_directory_uri() . '/assets/img/login-logo.svg',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bw_login_logo', array(

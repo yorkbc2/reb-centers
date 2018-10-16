@@ -3,12 +3,12 @@
 /** Login page logo */
 function bw_login_head()
 {
-    $default_logo_url = get_template_directory_uri() . '/assets/img/login-logo.png';
+    $default_logo_url = get_template_directory_uri() . '/assets/img/login-logo.svg';
     $logo_url = get_theme_mod('bw_login_logo', $default_logo_url);
     $background = get_background_login_page();
 
     echo sprintf(
-        '<style>.login{%s}.login h1 a{background-image: url("%s"); }</style>',
+        '<style>.login{%s}.login h1 a{background-image: url("%s"); background-position: center center;}</style>',
         $background, $logo_url
     );
 }
