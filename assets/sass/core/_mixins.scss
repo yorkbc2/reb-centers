@@ -28,41 +28,150 @@
     @return url("#{$image-url-path}#{$url}");
 }
 
-@function image_url($url) {
-    @return url("#{$image-url-path}#{$url}");
-}
-
 @function font-url($url) {
     @return url("#{$font-url-path}#{$url}");
 }
 
-@function font_url($url) {
-    @return url("#{$font-url-path}#{$url}");
+// MIXINS
+@mixin smooth_animation {
+    transition: .2s;
 }
 
-// MIXINS
-@import "mixins/prefixer";
-@import "mixins/button";
-@import "mixins/clearfix";
-@import "mixins/css3";
-@import "mixins/ellipsis";
-@import "mixins/font-smoothing";
-@import "mixins/grid-column";
-@import "mixins/letter-spacing";
-@import "mixins/line-height";
-@import "mixins/position";
-@import "mixins/responsive-font-size";
-@import "mixins/responsive-headers";
-@import "mixins/size-block";
-@import "mixins/sprite";
-@import "mixins/text-size-adjust";
-@import "mixins/touch-action";
-@import "mixins/triangle";
-@import "mixins/viewport";
-@import "mixins/word-wrap";
+@mixin button-style {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    border-radius: $borderRadius;
+    background-color: $buttonBgColor;
+    color: $buttonFontColor;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
+    box-shadow: $shadow;
+    @include smooth_animation;
+
+    &.fa {
+        font-family: 'Font Awesome 5 Pro';
+    }
+
+    &:hover {
+        color: $buttonFontColorActive;
+        background-color: $buttonBgColorActive;
+        box-shadow: none;
+    }
+
+    &:active {
+        background-color: $buttonBgColor;
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+@mixin form-style {
+    background-color: $formBgColor;
+    padding: 25px;
+    box-shadow: $shadow;
+}
+
+@mixin form-field-style {
+    width: 100%;
+    border: $formFieldBorderWidth solid $formFieldBorderColor;
+    padding: $formFieldPadding;
+    background-color: $formFieldBackgroundColor;
+    color: $formFieldTextColor;
+    font-size: $formFieldTextSize;
+    border-radius: $formFieldBorderRadius;
+}
+
+@mixin responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max, $fallback: false) {
+    font-size: $font-size-min;
+
+    @media (min-width: $viewport-width-min) and (max-width: $viewport-width-max - 1) {
+
+        @if ($fallback) {
+            font-size: $fallback;
+        }
+
+        font-size: calc-responsive-font-size($font-size-min, $font-size-max, $viewport-width-min, $viewport-width-max);
+    }
+
+    @media (min-width: $viewport-width-max) {
+        font-size: $font-size-max;
+    }
+}
+
+@mixin responsive-headers() {
+
+    @each $name, $value in $headers-map {
+        #{$name} {
+            font-size: round(map-get($value, fons-size-min));
+        }
+    }
+
+    $viewport-min: map-get($viewport-map, viewport-min);
+    $viewport-max: map-get($viewport-map, viewport-max);
+
+    @media (min-width: $viewport-min) and (max-width: $viewport-max - 1) {
+
+        @each $name, $value in $headers-map {
+            #{$name} {
+
+                $fallback: map-get($value, font-size-fallback);
+
+                @if ($fallback != null and $fallback != "") {
+                    font-size: $fallback;
+                }
+
+                font-size: calc-responsive-font-size(map-get($value, fons-size-min), map-get($value, font-size-max), $viewport-min, $viewport-max);
+            }
+        }
+
+    }
+
+    @media (min-width: $viewport-max) {
+        @each $name, $value in $headers-map {
+            #{$name} {
+                font-size: round(map-get($value, font-size-max));
+            }
+        }
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: " ";
+        display: table;
+    }
+}
+
+@mixin letter-spacing($letter-spacing, $font-size, $unit: px) {
+    @if ($unit == px) {
+        letter-spacing: #{($letter-spacing * $font-size / 1000) * 1px};
+    } @else if ($unit == em) {
+        letter-spacing: #{($letter-spacing / 1000) * 1em};
+    }
+}
+
+%smooth_animation {
+    @include smooth_animation;
+}
+
+%clearfix {
+    @include clearfix;
+}
 
 %reset-list {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+%form-field-style {
+    @include form-field-style();
 }

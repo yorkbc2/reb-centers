@@ -6,12 +6,12 @@
     &:hover {
         color: $buttonFontColor;
         background-color: $buttonBgColorActive;
-        @include box-shadow(0 0 10px rgba(#000, .3));
+        box-shadow: 0 0 10px rgba(#000, .3);
     }
 
     &:active {
         background-color: $buttonBgColor;
-        @include box-shadow(none);
+        box-shadow: none;
     }
 
     &:focus {

@@ -1,3 +1,0 @@
-@mixin box-sizing($box-model: content-box) {
-  @include prefixer(box-sizing, $box-model, webkit moz spec);
-}

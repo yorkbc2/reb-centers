@@ -19,10 +19,10 @@ $scroll-triangle-height: 10px !default; // The height of the triangle
     z-index: $scroll-zindex;
     background-color: $scroll-color;
     visibility: hidden;
-    @include opacity(0);
-    @include transition(none);
-    @include touch-action(manipulation);
-    @include box-shadow(0 5px 10px rgba(#000, .3));
+    opacity: 0;
+    transition: none;
+    touch-action: manipulation;
+    box-shadow: 0 5px 10px rgba(#000, .3);
 
     &.is-right {
         right: $scroll-offset;
@@ -35,11 +35,11 @@ $scroll-triangle-height: 10px !default; // The height of the triangle
     }
 
     &.is-rounded {
-        @include border-radius($scroll-rounding-size);
+        border-radius: $scroll-rounding-size;
     }
 
     &.is-circle {
-        @include border-radius(50%);
+        border-radius: 50%;
     }
 
     @at-root {
@@ -72,12 +72,12 @@ $scroll-triangle-height: 10px !default; // The height of the triangle
     &.is-visible,
     .no-js & {
         visibility: visible;
-        @include opacity(1);
+        opacity: 1;
     }
 
     .js &,
     .no-js & {
         display: block;
-        @include transition(.2s ease-out);
+        transition: .2s ease-out;
     }
 }

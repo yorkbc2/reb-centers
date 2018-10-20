@@ -157,7 +157,7 @@
     fieldset {
         background-color: transparent;
         padding: 0;
-        @include box-shadow(none);
+        box-shadow: none;
     }
 
     // error, info, message

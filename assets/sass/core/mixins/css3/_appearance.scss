@@ -1,3 +1,0 @@
-@mixin appearance($appearance: none) {
-  @include prefixer(appearance, $appearance, webkit moz spec);
-}

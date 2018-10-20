@@ -1,3 +1,0 @@
-@mixin background-size($size...) {
-  @include prefixer(background-size, $size, webkit moz o spec);
-}

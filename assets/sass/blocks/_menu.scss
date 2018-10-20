@@ -48,7 +48,7 @@
                 }
 
                 &:active {
-                    @include box-shadow(inset 0 0 10px #3b3b3b);
+                    box-shadow: inset 0 0 10px #3b3b3b;
                 }
             }
         }
@@ -159,11 +159,11 @@
                 border: 0;
                 background-color: transparent;
                 -webkit-tap-highlight-color: transparent;
-                @include touch-action(manipulation);
+                touch-action: manipulation;
 
                 &:focus {
                     outline: 0;
-                    @include box-shadow(0 0 0 4px rgba($menu-close-color, .2));
+                    box-shadow: 0 0 0 4px rgba($menu-close-color, .2);
                 }
 
                 &::before,
@@ -181,11 +181,11 @@
                 }
 
                 &::before {
-                    @include transform(rotate(45deg));
+                    transform: rotate(45deg);
                 }
 
                 &::after {
-                    @include transform(rotate(-45deg));
+                    transform: rotate(-45deg);
                 }
             }
 
@@ -222,7 +222,7 @@
                 > .sub-menu {
                     top: 100%;
                     visibility: visible;
-                    @include opacity(1);
+                    opacity: 1;
                 }
             }
         }
@@ -250,8 +250,8 @@
         background-color: #fff;
         visibility: hidden;
         text-align: left;
-        @include opacity(0);
-        @include box-shadow(0 5px 20px rgba(#000, .2));
+        opacity: 0;
+        box-shadow: 0 5px 20px rgba(#000, .2);
         @extend %smooth_animation;
 
         &-item {
@@ -289,7 +289,7 @@
                 > .sub-menu {
                     display: block;
                     visibility: visible;
-                    @include opacity(1);
+                    opacity: 1;
                 }
             }
         }
@@ -315,12 +315,12 @@
     display: none;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
-    @include touch-action(manipulation);
-    @include transition(.2s ease-out);
+    touch-action: manipulation;
+    transition: .2s ease-out;
 
     &:focus {
         outline: 0;
-        @include box-shadow(0 0 0 4px rgba($hamburger-color, .2));
+        box-shadow: 0 0 0 4px rgba($hamburger-color, .2);
     }
 
     &,
@@ -339,7 +339,7 @@
 
     &-inner {
         position: relative;
-        @include transition(background-color 0s ease-out $hamburger-delay);
+        transition: background-color 0s ease-out $hamburger-delay;
 
         &,
         &::before,
@@ -355,7 +355,7 @@
             content: '';
             position: absolute;
             left: 0;
-            @include transition(bottom $hamburger-duration ease-out $hamburger-delay, top $hamburger-duration ease-out $hamburger-delay, transform $hamburger-duration ease-out);
+            transition: bottom $hamburger-duration ease-out $hamburger-delay, top $hamburger-duration ease-out $hamburger-delay, transform $hamburger-duration ease-out;
         }
 
         &::before {
@@ -374,17 +374,17 @@
 
         &::before,
         &::after {
-            @include transition(bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transform $hamburger-duration ease-out $hamburger-delay);
+            transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transfom $hamburger-duration ease-out $hamburger-delay;
         }
 
         &::before {
             bottom: 0;
-            @include transform(rotate(45deg));
+            transform: rotate(45deg);
         }
 
         &::after {
             top: 0;
-            @include transform(rotate(-45deg));
+            transform: rotate(-45deg);
         }
     }
 }
@@ -409,11 +409,11 @@
         overflow: auto;
         background-color: $menuMobileBGColor;
         will-change: transform;
-        @include transform(translateX(100%));
-        @include transition(transform .2s ease-out);
+        transform: translateX(100%);
+        transition: transform .2s ease-out;
 
         &.is-active {
-            @include transform(translateX(0%));
+            transform: translateX(0%);
         }
 
         .menu-container {
@@ -482,9 +482,9 @@
             display: none;
             visibility: visible;
             background-color: $menuMobileSubMenuBGColor;
-            @include opacity(1);
-            @include box-shadow(none);
-            @include transition(none);
+            opacity: 1;
+            box-shadow: none;
+            transition: none;
 
             &-item {
                 &::after {

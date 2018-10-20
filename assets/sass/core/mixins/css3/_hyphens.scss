@@ -1,3 +1,0 @@
-@mixin hyphens($value: manual) {
-  @include prefixer(hyphens, $value, webkit moz ms spec);
-}

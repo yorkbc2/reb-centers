@@ -1,8 +1,11 @@
 .idea
+ignored
 node_modules
 bower_components
+*.zip
+*.rar
+*.log
 *.map
 *.pot~
 style.min.css
 brainworks.min.js
-/ignored

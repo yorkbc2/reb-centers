@@ -1,6 +1,6 @@
 .sidebar {
     .widget_nav_menu {
-        @include box-shadow(0 0 46px rgba(#000, .07));
+        box-shadow: 0 0 46px rgba(#000, .07);
         padding: 15px;
 
         .sub-current-menu-item {

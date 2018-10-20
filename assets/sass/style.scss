@@ -10,7 +10,7 @@ License URI:
 Version: 4.8.1
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
-/* CORE */
+// CORE
 @import "core/reset";
 @import "core/mediaqueries";
 @import "core/variables";
@@ -19,20 +19,19 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/wp-core";
 @import "core/help-style";
 //@import "core/woo-variables";
-/* PLUG-INs */
+// PLUG-INs
 @import "plugins/font-awesome/font-awesome";
 //@import "plugins/plug-ins";
-@import "plugins/animations";
-/* BOOTSTRAP */
+// BOOTSTRAP
 //@import "bootstrap/bootstrap-buttons";
 //@import "bootstrap/bootstrap-embded";
 @import "bootstrap/bootstrap-grid";
 @import "bootstrap/bootstrap-tables";
-/* PAGES */
+// PAGES
 @import "pages/single-post";
 @import "pages/blog-page";
 //@import "pages/woo";
-/* ELEMENTS */
+// ELEMENTS
 @import "elements/typography";
 @import "elements/responsive-titles";
 @import "elements/scroll-top";
@@ -49,21 +48,20 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 //@import "elements/other";
 @import "elements/icons";
 @import "elements/custom-scrollbar";
-/* BLOCKS */
-@import "blocks/menu";
+// BLOCKS
 @import "blocks/header";
-@import "blocks/footer";
+@import "blocks/menu";
 @import "blocks/sidebar";
-@import "blocks/menu-second";
+@import "blocks/footer";
 
-@include selection() {
+::selection {
     background-color: $selectionBgColor;
     color: $selectionFontColor;
     text-shadow: none;
 }
 
 html {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 * {
@@ -74,7 +72,7 @@ html {
     &,
     &:before,
     &:after {
-        @include box-sizing(inherit);
+        box-sizing: inherit;
     }
 }
 

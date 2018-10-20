@@ -11,7 +11,7 @@
     border: 1px solid $buttonOutlinedFirstColor;
     background-color: $buttonOutlinedSecondColor;
     box-shadow: none;
-    line-height: 1!important;
+    line-height: 1 !important;
 
     color: $buttonOutlinedFirstColor;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -54,12 +54,12 @@
     &:hover {
         color: $buttonFontColor;
         background-color: $buttonBgColorActive;
-        @include box-shadow(0 0 10px rgba(#000, .3));
+        box-shadow: 0 0 10px rgba(#000, .3);
     }
 
     &:active {
         background-color: $buttonBgColor;
-        @include box-shadow(none);
+        box-shadow: none;
     }
 
     &:focus {
