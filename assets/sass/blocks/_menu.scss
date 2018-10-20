@@ -374,7 +374,7 @@
 
         &::before,
         &::after {
-            transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transfom $hamburger-duration ease-out $hamburger-delay;
+            transition: bottom $hamburger-duration ease-out, top $hamburger-duration ease-out, transform $hamburger-duration ease-out $hamburger-delay;
         }
 
         &::before {
