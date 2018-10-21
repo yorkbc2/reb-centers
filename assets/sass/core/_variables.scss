@@ -7,8 +7,8 @@ $shadow: 0 0 10px rgba(#000, .7);
 
 // BRAND
 $themeColorOne: #2c3e50; // header, menu, footer, title,
-$themeColorTwo: #e74c3c; // menu active item, button, footer link hover,
-$themeColorThree: #3498db; // preHeader bg,
+$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
+$themeColorThree: #3498db; // preHeader bg, wooOnSale
 $themeColorFour: #2980b9; //menu hover item, table border, preHeader font
 
 // SELECTION
@@ -99,8 +99,8 @@ $tableEvenFontColor: #fff;
 $textMutedColor: #aaa;
 
 // Icons
-$iconColor: $themeColorTwo;
-$iconColorActive: $themeColorTwo;
+$iconColor: $bodyBgColor;
+$iconColorActive: $bodyBgColor;
 $iconColorReversed: $themeColorTwo;
 
 // FORMS
@@ -119,3 +119,29 @@ $paginationActiveLink: $themeColorTwo;
 $paginationActiveLinkText: #fff;
 $paginationLinkOnHover: $themeColorTwo;
 $paginationLinkOnHoverText: #fff;
+
+
+//WOOCOMMERCE
+$wooThemeColor: $themeColorTwo;
+
+// On sale
+$onsaleBackgroundColor: $wooThemeColor;
+$onsaleFontColor: #fff;
+
+// Products price
+$productsPriceFontColor: $wooThemeColor;
+
+// Single Product page
+$productPriceFontColor: $wooThemeColor;
+
+// error
+$errorBorderTopColor: #b81c23;
+$errorIconFontColor: #b81c23;
+
+// info
+$infoBorderTopColor: #1e85be;
+$infoIconFontColor: #1e85be;
+
+// message
+$messageBorderTopColor: $themeColorTwo;
+$messageIconFontColor: $themeColorTwo;

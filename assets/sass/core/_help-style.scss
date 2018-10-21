@@ -45,14 +45,6 @@
     white-space: nowrap;
 }
 
-.hide-on-mobile {
-    display: block !important;
-}
-
-.hide-on-desktop {
-    display: none !important;
-}
-
 .pull-right {
     float: right;
 }
@@ -63,6 +55,14 @@
 
 .pull-none {
     float: none;
+}
+
+.hide-on-mobile {
+    display: block !important;
+}
+
+.hide-on-desktop {
+    display: none !important;
 }
 
 //xs 544
