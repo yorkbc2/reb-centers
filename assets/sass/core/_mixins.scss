@@ -21,7 +21,6 @@
     $b: $b + $units;
 
     @return calc(#{$k} * 100vw + #{$b});
-
 }
 
 @function image-url($url) {
@@ -106,7 +105,6 @@
 }
 
 @mixin responsive-headers() {
-
     @each $name, $value in $headers-map {
         #{$name} {
             font-size: round(map-get($value, fons-size-min));
