@@ -7,9 +7,10 @@ Author URI: http://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 4.8.1
+Version: 4.8.2
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
+
 // CORE
 @import "core/reset";
 @import "core/mediaqueries";
@@ -18,19 +19,22 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-//@import "core/woo-variables";
+
 // PLUG-INs
 @import "plugins/font-awesome/font-awesome";
-//@import "plugins/plug-ins";
+@import "plugins/plug-ins";
+
 // BOOTSTRAP
 //@import "bootstrap/bootstrap-buttons";
-//@import "bootstrap/bootstrap-embded";
+@import "bootstrap/bootstrap-embded";
 @import "bootstrap/bootstrap-grid";
 @import "bootstrap/bootstrap-tables";
+
 // PAGES
 @import "pages/single-post";
 @import "pages/blog-page";
 //@import "pages/woo";
+
 // ELEMENTS
 @import "elements/typography";
 @import "elements/responsive-titles";
@@ -38,19 +42,19 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/forms";
 //@import "elements/buttons";
 @import "elements/buttons-2";
-//@import "elements/images";
 @import "elements/links";
 @import "elements/pagination";
 @import "elements/tables";
 @import "elements/lists";
 @import "elements/empty-space";
 @import "elements/dividers";
-//@import "elements/other";
 @import "elements/icons";
 @import "elements/custom-scrollbar";
+
 // BLOCKS
 @import "blocks/header";
 @import "blocks/menu";
+@import "blocks/menu-mobile";
 @import "blocks/sidebar";
 @import "blocks/footer";
 
