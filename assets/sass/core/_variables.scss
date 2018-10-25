@@ -2,8 +2,8 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
-$borderRadius: 4px;
-$shadow: 0 0 10px rgba(#000, .7);
+$borderRadius: 0px;
+$shadow: 0 0 10px rgba(#000, .2);
 
 // BRAND
 $themeColorOne: #2c3e50; // header, menu, footer, title,
@@ -24,7 +24,7 @@ $preHeaderBgColor: $themeColorThree;
 $preHeaderColor: $themeColorFour;
 
 // HEADER
-$headerBgColor: #232323;
+$headerBgColor: $themeColorOne;
 $headerFontColor: #fff;
 $headerHighlightBgColor: $themeColorTwo;
 $headerHighlightColor: #fff;
@@ -40,7 +40,6 @@ $navHeaderMobileBGColor: #232323;
 $navHamburgerMobileColor: $themeColorTwo;
 
 // Menu mobile
-
 $menuMobileBGColor: #333;
 $menuMobileSubMenuBGColor: #444;
 $menuMobileLinkFontSize: 16px;
@@ -50,7 +49,6 @@ $menuMobileSubMenuTextColor: $menuMobileTextColor;
 $menuMobileSubMenuBGOnHover: #ccc;
 
 // MENU END
-
 $hamburger-offset: 8px;
 $hamburger-duration: .1s;
 $hamburger-delay: .1s;
@@ -61,8 +59,8 @@ $menu-close-color: $themeColorTwo;
 $menuContainerMobilePaddingTop: 30%;
 
 // FOOTER
-$footerBgColor: #fff;
-$footerFontColor: #232323;
+$footerBgColor: $themeColorOne;
+$footerFontColor: #fff;
 $footerLinkColorActive: darken($footerFontColor, 5%);
 
 // WRAPPER
@@ -99,9 +97,9 @@ $tableEvenFontColor: #fff;
 $textMutedColor: #aaa;
 
 // Icons
-$iconColor: $bodyBgColor;
+$iconColor: $themeColorTwo;
 $iconColorActive: $bodyBgColor;
-$iconColorReversed: $themeColorTwo;
+$iconColorReversed: $bodyBgColor;
 
 // FORMS
 $formFieldBorderWidth: 1px;
@@ -112,7 +110,7 @@ $formFieldTextSize: 13px;
 $formFieldBorderRadius: $borderRadius;
 $formFieldBackgroundColor: #fff;
 $inputFieldMinHeight: 38px;
-$formBgColor: lighten($themeColorOne, 60%);
+$formBgColor: lighten($themeColorOne, 75%);
 
 // Pagination
 $paginationActiveLink: $themeColorTwo;
