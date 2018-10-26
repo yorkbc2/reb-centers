@@ -10,3 +10,11 @@
 .fa.reversed-color {
     color: $iconColorReversed
 }
+
+button:hover .fa {
+    color: $iconColorReversed
+}
+
+a:hover .fa {
+    color: $iconColorReversed
+}
