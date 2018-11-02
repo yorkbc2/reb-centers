@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-23 11:57+0000\n"
+"POT-Creation-Date: 2018-11-02 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -30,9 +30,9 @@ msgstr ""
 msgid "Or use search"
 msgstr ""
 
-#: category.php:6 loops/content-blog-1-sbl.php:24
-#: loops/content-blog-1-sbr.php:21 loops/content-blog-2.php:20
-#: loops/content-blog-3.php:21
+#: category.php:5 loops/content-blog-1-sbl.php:29
+#: loops/content-blog-1-sbr.php:26 loops/content-blog-2.php:25
+#: loops/content-blog-3.php:26
 msgid "Category"
 msgstr ""
 
@@ -52,52 +52,12 @@ msgstr ""
 msgid "Edit Login Logo"
 msgstr ""
 
-#: functions.php:25
-msgid "Front page"
+#. Name of the template
+msgid "Only Logged In"
 msgstr ""
 
-#: functions.php:26
-#, php-format
-msgid "Page %d"
-msgstr ""
-
-#: functions.php:27
-msgid "Error 404"
-msgstr ""
-
-#: functions.php:28
-#, php-format
-msgid "Search results by query - <b>%s</b>"
-msgstr ""
-
-#: functions.php:29
-#, php-format
-msgid "Author archve: <b>%s</b>"
-msgstr ""
-
-#: functions.php:30
-#, php-format
-msgid "Archive by <b>%d</b> year"
-msgstr ""
-
-#: functions.php:31
-#, php-format
-msgid "Archive by: <b>%s</b>"
-msgstr ""
-
-#: functions.php:33
-#, php-format
-msgid "Media: %s"
-msgstr ""
-
-#: functions.php:34
-#, php-format
-msgid "Posts by tag: <b>%s</b>"
-msgstr ""
-
-#: functions.php:35
-#, php-format
-msgid "%1$s from \"%2$s\" by tag: <b>%3$s</b>"
+#: page-auth-only.php:12
+msgid "You must be logged in to see this page!"
 msgstr ""
 
 #. Name of the template
@@ -113,6 +73,10 @@ msgid "Page Without Breadcrumbs"
 msgstr ""
 
 #. Name of the template
+msgid "Page Without Title"
+msgstr ""
+
+#. Name of the template
 msgid "Sidebar Left"
 msgstr ""
 
@@ -120,432 +84,544 @@ msgstr ""
 msgid "Sidebar Right"
 msgstr ""
 
-#: search.php:6
+#. Name of the template
+msgid "Sitemap Page"
+msgstr ""
+
+#: search.php:4
 msgid "Search Results for"
 msgstr ""
 
-#: searchform.php:4
+#: searchform.php:2
 msgid "Search"
 msgstr ""
 
-#: functions/admin.php:9
+#: tag.php:5
+msgid "Tag"
+msgstr ""
+
+#: inc/admin.php:10
 msgid "Developed by:"
 msgstr ""
 
-#: functions/admin.php:10
+#: inc/admin.php:11
 msgid "https://brainworks.com.ua"
 msgstr ""
 
-#: functions/admin.php:11
+#: inc/admin.php:12
 msgid "brainworks.com.ua"
 msgstr ""
 
-#: functions/admin.php:14
+#: inc/admin.php:16 inc/admin.php:82
+msgid "Running PHP version"
+msgstr ""
+
+#: inc/admin.php:20
 #, php-format
 msgid "%d request pear %s sec."
 msgstr ""
 
-#: functions/admin.php:19
+#: inc/admin.php:25
 #, php-format
 msgid "Spent %d Mb of memory (including unused pages %d Mb)"
 msgstr ""
 
-#: functions/admin.php:42
+#: inc/admin.php:50
 msgid "Support:"
 msgstr ""
 
-#: functions/admin.php:43 functions/admin.php:44
+#: inc/admin.php:51 inc/admin.php:52
 msgid "web@brainworks.com.ua"
 msgstr ""
 
-#: functions/admin.php:49
+#: inc/admin.php:57
 msgid "Tel:"
 msgstr ""
 
-#: functions/admin.php:50 functions/admin.php:51
+#: inc/admin.php:58 inc/admin.php:59
 msgid "+38 (063) 20-37-137"
 msgstr ""
 
-#: functions/customizer.php:28
+#: inc/auth.php:74
+msgid "Password is incorrect!"
+msgstr ""
+
+#: inc/auth.php:77
+msgid "Login is incorrect!"
+msgstr ""
+
+#: inc/auth.php:226
+msgid "Passwords must be the same!"
+msgstr ""
+
+#: inc/auth.php:229
+msgid "Error with creating user. Please, try again later!"
+msgstr ""
+
+#: inc/auth.php:232
+msgid "User with this login or email has already registered"
+msgstr ""
+
+#: inc/auth.php:236
+msgid "Login or password are incorrect!"
+msgstr ""
+
+#: inc/customizer.php:30
 msgid "Theme Options"
 msgstr ""
 
-#: functions/customizer.php:29
+#: inc/customizer.php:31
 msgid "Theme Options Customizer"
 msgstr ""
 
-#: functions/customizer.php:35
+#: inc/customizer.php:37
 msgid "Scroll Top"
 msgstr ""
 
-#: functions/customizer.php:36
+#: inc/customizer.php:38
 msgid "Customizer Custom Scroll Top"
 msgstr ""
 
-#: functions/customizer.php:100
+#: inc/customizer.php:102
 msgid "Display"
 msgstr ""
 
-#: functions/customizer.php:101
+#: inc/customizer.php:103
 msgid "Show/Hide scroll top"
 msgstr ""
 
-#: functions/customizer.php:108
+#: inc/customizer.php:110
 msgid "Width"
 msgstr ""
 
-#: functions/customizer.php:115
+#: inc/customizer.php:117
 msgid "Height"
 msgstr ""
 
-#: functions/customizer.php:122
+#: inc/customizer.php:124
 msgid "Shape"
 msgstr ""
 
-#: functions/customizer.php:127
+#: inc/customizer.php:129
 msgid "Circle"
 msgstr ""
 
-#: functions/customizer.php:128
+#: inc/customizer.php:130
 msgid "Rounded"
 msgstr ""
 
-#: functions/customizer.php:129
+#: inc/customizer.php:131
 msgid "Square"
 msgstr ""
 
-#: functions/customizer.php:134
+#: inc/customizer.php:136
 msgid "Position"
 msgstr ""
 
-#: functions/customizer.php:139
+#: inc/customizer.php:141
 msgid "Right"
 msgstr ""
 
-#: functions/customizer.php:140
+#: inc/customizer.php:142
 msgid "Left"
 msgstr ""
 
-#: functions/customizer.php:145
+#: inc/customizer.php:147
 msgid "Offset Left/Right"
 msgstr ""
 
-#: functions/customizer.php:152
+#: inc/customizer.php:154
 msgid "Offset bottom"
 msgstr ""
 
-#: functions/customizer.php:159
+#: inc/customizer.php:161
 msgid "Border width"
 msgstr ""
 
-#: functions/customizer.php:166
+#: inc/customizer.php:168
 msgid "Border color"
 msgstr ""
 
-#: functions/customizer.php:173
+#: inc/customizer.php:175
 msgid "Background color"
 msgstr ""
 
-#: functions/customizer.php:180
+#: inc/customizer.php:182
 msgid "Background color hover"
 msgstr ""
 
-#: functions/customizer.php:187
+#: inc/customizer.php:189
 msgid "Arrow color"
 msgstr ""
 
-#: functions/customizer.php:195
+#: inc/customizer.php:197
 msgid "Analytics"
 msgstr ""
 
-#: functions/customizer.php:196
+#: inc/customizer.php:198
 msgid "Analytics Tracking Code"
 msgstr ""
 
-#: functions/customizer.php:231
+#: inc/customizer.php:239
 msgid "Google Analytics"
 msgstr ""
 
-#: functions/customizer.php:232 functions/customizer.php:254
-#: functions/customizer.php:276 functions/customizer.php:298
-#: functions/customizer.php:320
+#: inc/customizer.php:240 inc/customizer.php:262 inc/customizer.php:284
+#: inc/customizer.php:306 inc/customizer.php:328 inc/customizer.php:350
 msgid "Placed (head/body)"
 msgstr ""
 
-#: functions/customizer.php:237 functions/customizer.php:259
-#: functions/customizer.php:281 functions/customizer.php:303
-#: functions/customizer.php:325
+#: inc/customizer.php:245 inc/customizer.php:267 inc/customizer.php:289
+#: inc/customizer.php:311 inc/customizer.php:333 inc/customizer.php:355
 msgid "Head"
 msgstr ""
 
-#: functions/customizer.php:238 functions/customizer.php:260
-#: functions/customizer.php:282 functions/customizer.php:304
-#: functions/customizer.php:326
+#: inc/customizer.php:246 inc/customizer.php:268 inc/customizer.php:290
+#: inc/customizer.php:312 inc/customizer.php:334 inc/customizer.php:356
 msgid "Body"
 msgstr ""
 
-#: functions/customizer.php:243 functions/customizer.php:265
-#: functions/customizer.php:331
+#: inc/customizer.php:251 inc/customizer.php:273 inc/customizer.php:361
 msgid "Paste tracking code here &dArr;"
 msgstr ""
 
-#: functions/customizer.php:248 functions/customizer.php:270
-#: functions/customizer.php:336
+#: inc/customizer.php:256 inc/customizer.php:278 inc/customizer.php:366
 msgid "<!-- paste tracking code here -->"
 msgstr ""
 
-#: functions/customizer.php:253
+#: inc/customizer.php:261
 msgid "Yandex Metrika"
 msgstr ""
 
-#: functions/customizer.php:275
+#: inc/customizer.php:283
 msgid "Chat code"
 msgstr ""
 
-#: functions/customizer.php:287
+#: inc/customizer.php:295
 msgid "Paste chat code here &dArr;"
 msgstr ""
 
-#: functions/customizer.php:292
+#: inc/customizer.php:300
 msgid "<!-- paste chat code here -->"
 msgstr ""
 
-#: functions/customizer.php:297
+#: inc/customizer.php:305
 msgid "Remarketing code"
 msgstr ""
 
-#: functions/customizer.php:309
+#: inc/customizer.php:317
 msgid "Paste remarketing code here &dArr;"
 msgstr ""
 
-#: functions/customizer.php:314
+#: inc/customizer.php:322 inc/customizer.php:344
 msgid "<!-- paste remarketing code here -->"
 msgstr ""
 
-#: functions/customizer.php:319
+#: inc/customizer.php:327
+msgid "Facebook Pixel code"
+msgstr ""
+
+#: inc/customizer.php:339
+msgid "Paste Facebook Pixel code here &dArr;"
+msgstr ""
+
+#: inc/customizer.php:349
 msgid "Custom Analytics"
 msgstr ""
 
-#: functions/customizer.php:342
+#: inc/customizer.php:372 inc/shortcodes.php:391 inc/shortcodes.php:400
+#: inc/shortcodes.php:423
 msgid "Login"
 msgstr ""
 
-#: functions/customizer.php:343
+#: inc/customizer.php:373
 msgid "Customizer Custom Login"
 msgstr ""
 
-#: functions/customizer.php:352
+#: inc/customizer.php:382
 msgid "Logo"
 msgstr ""
 
-#: functions/customizer.php:353
+#: inc/customizer.php:383
 msgid "Image size 80x80 px"
 msgstr ""
 
-#: functions/customizer.php:360
+#: inc/customizer.php:561
 msgid "Social"
 msgstr ""
 
-#: functions/customizer.php:361
+#: inc/customizer.php:562
 msgid "Customizer Custom Social links"
 msgstr ""
 
-#: functions/customizer.php:374
+#: inc/customizer.php:576
 msgid "Vk"
 msgstr ""
 
-#: functions/customizer.php:381
+#: inc/customizer.php:583
 msgid "Twitter"
 msgstr ""
 
-#: functions/customizer.php:388
+#: inc/customizer.php:590
 msgid "Facebook"
 msgstr ""
 
-#: functions/customizer.php:395
+#: inc/customizer.php:597
 msgid "Linkedin"
 msgstr ""
 
-#: functions/customizer.php:402
+#: inc/customizer.php:604
 msgid "Instagram"
 msgstr ""
 
-#: functions/customizer.php:409
+#: inc/customizer.php:611
 msgid "Google Plus"
 msgstr ""
 
-#: functions/customizer.php:416
+#: inc/customizer.php:618
 msgid "YouTube"
 msgstr ""
 
-#: functions/customizer.php:424
+#: inc/customizer.php:625
+msgid "Odnoklassniki"
+msgstr ""
+
+#: inc/customizer.php:633
 msgid "Phones"
 msgstr ""
 
-#: functions/customizer.php:425
+#: inc/customizer.php:634
 msgid "Customizer Custom Phone numbers"
 msgstr ""
 
-#: functions/customizer.php:435
+#: inc/customizer.php:644
 msgid "Phone №1"
 msgstr ""
 
-#: functions/customizer.php:442
+#: inc/customizer.php:651
 msgid "Phone №2"
 msgstr ""
 
-#: functions/customizer.php:449
+#: inc/customizer.php:658
 msgid "Phone №3"
 msgstr ""
 
-#: functions/customizer.php:456
+#: inc/customizer.php:665
 msgid "Phone №4"
 msgstr ""
 
-#: functions/feedback.php:28
+#: inc/feedback.php:30
 msgid "at"
 msgstr ""
 
-#: functions/feedback.php:30
+#: inc/feedback.php:34
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions/feedback.php:41
+#: inc/feedback.php:46
 msgid "Edit"
 msgstr ""
 
-#: functions/index-pagination.php:17
+#: inc/index-pagination.php:20
 msgid "<i class=\"fa fa-angle-left\"></i> Newer"
 msgstr ""
 
-#: functions/index-pagination.php:18
+#: inc/index-pagination.php:21
 msgid "Older <i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: functions/login.php:19
+#: inc/login.php:21
 msgid "<strong>ERROR:</strong> The username and password is incorrect."
 msgstr ""
 
-#: functions/navbar.php:4
+#: inc/navbar.php:4
 msgid "Main Navigation"
 msgstr ""
 
-#: functions/navbar.php:5
+#: inc/navbar.php:5
 msgid "Second Menu"
 msgstr ""
 
-#: functions/widgets.php:9
-msgid "Sidebar"
+#: inc/setup.php:188
+msgid "Front page"
 msgstr ""
 
-#: functions/widgets.php:11 functions/widgets.php:24
-msgid "The sidebar widget area"
+#: inc/setup.php:189
+#, php-format
+msgid "Page %d"
 msgstr ""
 
-#: functions/widgets.php:22
-msgid "Sidebar 2"
+#: inc/setup.php:190
+msgid "Error 404"
 msgstr ""
 
-#: functions/widgets.php:35
-msgid "Footer"
+#: inc/setup.php:191
+#, php-format
+msgid "Search results by query - <b>%s</b>"
 msgstr ""
 
-#: functions/widgets.php:37
-msgid "The footer widget area"
+#: inc/setup.php:192
+#, php-format
+msgid "Author archve: <b>%s</b>"
 msgstr ""
 
-#: loops/comments.php:8
-msgid "This post is password protected. Enter the password to view comments."
+#: inc/setup.php:193
+#, php-format
+msgid "Archive by <b>%d</b> year"
 msgstr ""
 
-#: loops/comments.php:17
-msgid "Feedback"
+#: inc/setup.php:194
+#, php-format
+msgid "Archive by: <b>%s</b>"
 msgstr ""
 
-#: loops/comments.php:19 loops/content-blog-1-sbl.php:25
-#: loops/content-blog-1-sbr.php:22 loops/content-blog-2.php:21
-#: loops/content-blog-3.php:22
-msgid "Comments"
+#: inc/setup.php:196
+#, php-format
+msgid "Media: %s"
 msgstr ""
 
-#: loops/comments.php:19 loops/content-blog-1-sbl.php:25
-#: loops/content-blog-1-sbr.php:22 loops/content-blog-2.php:21
-#: loops/content-blog-3.php:22
-msgid "None"
+#: inc/setup.php:197
+#, php-format
+msgid "Posts by tag: <b>%s</b>"
 msgstr ""
 
-#: loops/comments.php:54
-msgid "Logged in as"
+#: inc/setup.php:198
+#, php-format
+msgid "%1$s from \"%2$s\" by tag: <b>%3$s</b>"
 msgstr ""
 
-#: loops/comments.php:55
-msgid "Log out of this account"
+#: inc/shortcodes.php:256
+msgid "Читать полностью"
 msgstr ""
 
-#: loops/comments.php:55
-msgid "Log out"
-msgstr ""
-
-#: loops/comments.php:60 loops/comments.php:61
-msgid "Your name"
-msgstr ""
-
-#: loops/comments.php:60
-msgid "(required)"
-msgstr ""
-
-#: loops/comments.php:64 loops/comments.php:65
-msgid "Your email address"
-msgstr ""
-
-#: loops/comments.php:64
-msgid "(required, but will not be published)"
-msgstr ""
-
-#: loops/comments.php:73 loops/comments.php:74
-msgid "Your comment"
-msgstr ""
-
-#: loops/comments.php:78
-msgid "Submit comment"
-msgstr ""
-
-#: loops/content-2.php:33
+#: inc/shortcodes.php:360 loops/content-2.php:34
 msgid "Continue reading"
 msgstr ""
 
-#: loops/content-2.php:45 loops/content-blog-1-sbl.php:36
-#: loops/content-blog-1-sbr.php:36 loops/content-blog-2.php:32
-#: loops/content-blog-3.php:33 loops/content.php:45
+#: inc/shortcodes.php:395 inc/shortcodes.php:431
+msgid "Password"
+msgstr ""
+
+#: inc/shortcodes.php:427
+msgid "Email"
+msgstr ""
+
+#: inc/shortcodes.php:435
+msgid "Retry password"
+msgstr ""
+
+#: inc/shortcodes.php:440
+msgid "Register"
+msgstr ""
+
+#: inc/widgets.php:10
+msgid "Sidebar"
+msgstr ""
+
+#: inc/widgets.php:12 inc/widgets.php:25
+msgid "The sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:23
+msgid "Sidebar 2"
+msgstr ""
+
+#: inc/widgets.php:36
+msgid "Footer"
+msgstr ""
+
+#: inc/widgets.php:38
+msgid "The footer widget area"
+msgstr ""
+
+#: loops/comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: loops/comments.php:18
+msgid "Feedback"
+msgstr ""
+
+#: loops/comments.php:20 loops/content-blog-1-sbl.php:31
+#: loops/content-blog-1-sbr.php:28 loops/content-blog-2.php:27
+#: loops/content-blog-3.php:28
+msgid "Comments"
+msgstr ""
+
+#: loops/comments.php:21 loops/content-blog-1-sbl.php:32
+#: loops/content-blog-1-sbr.php:29 loops/content-blog-2.php:28
+#: loops/content-blog-3.php:29
+msgid "None"
+msgstr ""
+
+#: loops/comments.php:56
+msgid "Logged in as"
+msgstr ""
+
+#: loops/comments.php:58
+msgid "Log out of this account"
+msgstr ""
+
+#: loops/comments.php:58
+msgid "Log out"
+msgstr ""
+
+#: loops/comments.php:63 loops/comments.php:66
+msgid "Your name"
+msgstr ""
+
+#: loops/comments.php:64
+msgid "(required)"
+msgstr ""
+
+#: loops/comments.php:70 loops/comments.php:73
+msgid "Your email address"
+msgstr ""
+
+#: loops/comments.php:71
+msgid "(required, but will not be published)"
+msgstr ""
+
+#: loops/comments.php:82 loops/comments.php:83
+msgid "Your comment"
+msgstr ""
+
+#: loops/comments.php:88
+msgid "Submit comment"
+msgstr ""
+
+#: loops/content-2.php:49 loops/content-blog-1-sbl.php:45
+#: loops/content-blog-1-sbr.php:45 loops/content-blog-2.php:41
+#: loops/content-blog-3.php:42 loops/content.php:53
 msgid "Previous"
 msgstr ""
 
-#: loops/content-2.php:46 loops/content-blog-1-sbl.php:37
-#: loops/content-blog-1-sbr.php:37 loops/content-blog-2.php:33
-#: loops/content-blog-3.php:34 loops/content.php:46
+#: loops/content-2.php:50 loops/content-blog-1-sbl.php:46
+#: loops/content-blog-1-sbr.php:46 loops/content-blog-2.php:42
+#: loops/content-blog-3.php:43 loops/content.php:54
 msgid "Next"
 msgstr ""
 
-#: loops/content-blog-1-sbl.php:13 loops/content-blog-1-sbr.php:10
-#: loops/content-blog-2.php:9 loops/content-blog-3.php:10
+#: loops/content-blog-1-sbl.php:15 loops/content-blog-1-sbr.php:12
+#: loops/content-blog-2.php:11 loops/content-blog-3.php:12
 msgid "By"
 msgstr ""
 
-#: loops/content-search.php:17
+#: loops/content-search.php:21
 msgid "Sorry, your search yielded no results."
 msgstr ""
 
-#: loops/content.php:29
+#: loops/content.php:31
 msgid " <i class=\"glyphicon glyphicon-arrow-right\"></i>"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:59
-#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:35
-msgid "Купить в 1 клик"
+#: woocommerce/single-product/add-to-cart/simple.php:48
+#: woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php:30
+msgid "Buy in one click"
 msgstr ""
 
 #. Name of the theme
-msgid "brainworks-v4.7.5"
+msgid "brainworks-v4.8.3"
 msgstr ""
 
 #. Author of the theme
