@@ -65,6 +65,11 @@
     display: none !important;
 }
 
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
 //xs 544
 @media #{$mobile} {
     .hide-on-mobile {

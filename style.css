@@ -123,9 +123,6 @@ q:before,
 q:after {
   content: none; }
 
-ul {
-  list-style: none; }
-
 a, .fa, .main-nav .menu-container .current-menu-item:after, .main-nav .menu-container .menu-item a, .main-nav .menu-container .menu-item-has-children .sub-menu .menu-item a, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -312,6 +309,10 @@ a img.aligncenter {
 
 .hide-on-desktop {
   display: none !important; }
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
 
 @media (max-width: 544px) {
   .hide-on-mobile {
@@ -5464,6 +5465,7 @@ table, thead, tfoot, tbody, tr, th, td {
   border: 1px solid #fff;
   padding: 5px; }
 
+ul,
 ol {
   padding-left: 20px; }
 
