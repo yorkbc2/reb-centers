@@ -44,12 +44,12 @@ function bw_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('bw_scroll_top_width', array(
-        'default' => '55',
+        'default' => 50,
         'transport' => 'postMessage',
     ));
 
     $wp_customize->add_setting('bw_scroll_top_height', array(
-        'default' => '55',
+        'default' => 50,
         'transport' => 'postMessage',
     ));
 
@@ -700,8 +700,8 @@ function bw_customizer_css()
 { ?>
     <style type="text/css">
         .scroll-top {
-            width: <?php theme_mod('bw_scroll_top_width', 55); ?>px;
-            height: <?php theme_mod('bw_scroll_top_height', 55); ?>px;
+            width: <?php theme_mod('bw_scroll_top_width', 50); ?>px;
+            height: <?php theme_mod('bw_scroll_top_height', 50); ?>px;
             background-color: <?php theme_mod('bw_scroll_top_background_color', '#000000'); ?>;
             border-width: <?php theme_mod('bw_scroll_top_border_width', 1); ?>px;
             border-color: <?php theme_mod('bw_scroll_top_border_color', '#000000'); ?>;
