@@ -38,3 +38,41 @@ function bw_register_cpts_reviews()
 }
 
 add_action('init', 'bw_register_cpts_reviews');
+
+function bw_review_get_meta_box($meta_boxes)
+{
+    $prefix = 'review-';
+
+    $meta_boxes[] = array(
+        'id' => 'additional',
+        'title' => esc_html__('Additional', 'brainworks'),
+        'post_types' => array('reviews'),
+        'context' => 'advanced',
+        'priority' => 'default',
+        'autosave' => 'true',
+        'fields' => array(
+            array(
+                'id' => $prefix . 'display',
+                'name' => esc_html__('Enable/Disable', 'brainworks'),
+                'type' => 'checkbox',
+                'desc' => esc_html__('Display review on Home page.', 'brainworks'),
+            ),
+            array(
+                'id' => $prefix . 'facebook',
+                'type' => 'url',
+                'name' => esc_html__('Facebook URL', 'brainworks'),
+                'placeholder' => 'https://www.facebook.com',
+            ),
+            array(
+                'id' => $prefix . 'instagram',
+                'type' => 'url',
+                'name' => esc_html__('Instagram URL', 'brainworks'),
+                'placeholder' => 'https://www.instagram.com',
+            ),
+        ),
+    );
+
+    return $meta_boxes;
+}
+
+add_filter('rwmb_meta_boxes', 'bw_review_get_meta_box');
