@@ -510,34 +510,52 @@ if (!function_exists('bw_reviews_shortcode')) {
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {
-            $output .= '<div class="reviews-wrapper">';
-            $output .= '<div class="reviews-list text-center js-reviews">';
+
+            $output .= '<div class="review-slider text-center js-reviews">';
+
             while ($query->have_posts()) {
                 $query->the_post();
-                $client = get_post_meta(get_the_ID(), 'review-client', true);
-                $location = get_post_meta(get_the_ID(), 'review-location', true);
-                $output .= '<div>';
-                $output .= '<div class="reviews-item">';
-                $output .= '<div class="reviews-title">' . get_the_title() . '</div>';
-                $output .= '<div class="reviews-content">' . get_the_content() . '</div>';
-                if ($client) {
-                    $output .= '<div class="reviews-client">- ' . $client . '</div>';
+
+                $id = get_the_ID();
+                $social = array();
+                $socials = array(
+                    'facebook' => array(
+                        'url' => get_post_meta($id, 'review-facebook', true),
+                        'icon' => 'fa-facebook-f',
+                    ),
+                    'twitter' => array(
+                        'url' => get_post_meta($id, 'review-instagram', true),
+                        'icon' => 'fa-instagram',
+                    ),
+                );
+
+                foreach ($socials as $item) {
+                    if (!empty($item['url'])) {
+                        $social['url'] = $item['url'];
+                        $social['icon'] = $item['icon'];
+                    }
                 }
-                if ($location) {
-                    $output .= '<div class="reviews-location">' . $location . '</div>';
+
+                $post_class = 'class="' . join(' ', get_post_class('review-item', null)) . '"';
+
+                $output .= '<div id="post-' . get_the_ID() . '" ' . $post_class . '>';
+
+                $output .= '<div class="review-client">';
+                $output .= get_the_post_thumbnail(null, 'thumbnail', array('class' => 'review-avatar'));
+                if (count($social)) {
+                    $output .= '<a class="review-social" href="' . esc_url($social['url']) . '" target="_blank" rel="noopener noreferrer">';
+                    $output .= '<i class="fab ' . esc_attr($social['icon']) . '" aria-hidden="true"></i>';
+                    $output .= '</a>';
                 }
                 $output .= '</div>';
+                $output .= '<div class="review-title text-bold">' . get_the_title() . '</div>';
+                $output .= '<div class="review-content">' . get_the_content() . '</div>';
+
                 $output .= '</div>';
             }
+
             wp_reset_postdata();
-            $output .= '</div>';
-            $output .= '<div class="reviews-thumbnails reviews-nav js-reviews-nav text-center">';
-            while ($query->have_posts()) {
-                $query->the_post();
-                $output .= '<div class="reviews-thumbnail">' . get_the_post_thumbnail() . '</div>';
-            }
-            wp_reset_postdata();
-            $output .= '</div>';
+
             $output .= '</div>';
         }
 

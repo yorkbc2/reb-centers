@@ -5,6 +5,8 @@
         console.info('The site developed by BRAIN WORKS digital agency');
         console.info('Сайт разработан маркетинговым агентством BRAIN WORKS');
 
+        var w = $(w);
+        var d = $(d);
         var html = $('html');
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -14,29 +16,88 @@
 
         html.removeClass('no-js').addClass('js');
 
-        // Stick Footer
-        var footerHeight = $('.footer').outerHeight() + 20;
-        $('.page-wrapper').css('padding-bottom', footerHeight + 'px');
-
-        // Scroll Top
+        reviews('.js-reviews');
         scrollTop('.js-scroll-top');
-
-        // On Copy
-        $(document).on('copy', addLink);
-
-        // Hamburger Menu
+        stickFooter('.footer', '.page-wrapper');
+        wrapHighlightedElements('.highlighted');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        $(window).on('resize', function (e) {
-            if (window.innerWidth >= 630) {
+        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
+
+        // On Copy
+        d.on('copy', addLink);
+
+        w.on('resize', function (e) {
+            if (w.innerWidth >= 630) {
                 removeAllStyles($('.js-menu'));
             }
         });
-        wrapHighlightedElements('.highlighted');
-        // Buy one click
-        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
-
     });
+
+    /**
+     * Stick Footer
+     *
+     * @example
+     * stickFooter('.js-footer', '.js-wrapper');
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     *
+     * @param {(string|Object)} footer - footer element
+     * @param {(string|Object)} container - container element
+     * @returns {void}
+     */
+    function stickFooter(footer, container) {
+        var el = $(footer);
+        var height = (el.outerHeight() + 20) + 'px';
+
+        $(container).css('paddingBottom', height);
+    }
+
+    /**
+     * Reviews - Slick Slider
+     *
+     * @example
+     * reviews('.js-reviews');
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     * @param {(string|Object)} container - reviews container
+     * @returns {void}
+     */
+    function reviews(container) {
+        var element = $(container);
+
+        if (element.children().length > 1 && typeof $.fn.slick === 'function') {
+            element.slick({
+                adaptiveHeight: false,
+                autoplay: false,
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
+                nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
+                dots: false,
+                dotsClass: 'slick-dots',
+                draggable: true,
+                fade: false,
+                infinite: true,
+                responsive: [],
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 300,
+                swipe: true,
+                zIndex: 10,
+            });
+
+            element.on('swipe', function (slick, direction) {
+
+            });
+
+            element.on('afterChange', function (slick, currentSlide) {
+
+            });
+
+            element.on('beforeChange', function (slick, currentSlide, nextSlide) {
+
+            });
+        }
+    }
 
     /**
      * Hamburger Menu
@@ -47,6 +108,7 @@
      * @param {(string|Object)} menuElement - Selected menu
      * @param {(string|Object)} hamburgerElement - Trigger element for open/close menu
      * @param {(string|Object)} closeTrigger - Trigger element for close opened menu
+     * @returns {void}
      */
     function hamburgerMenu(menuElement, hamburgerElement, closeTrigger) {
         var menu = $(menuElement),
@@ -73,10 +135,13 @@
 
     /**
      * Скролл к элементу
-     * @param  {string|object} elements Элементы, которым добавляем Handler
+     *
+     * @param {string|object} elements Элементы, которым добавляем Handler
+     * @returns {void}
      */
     function scrollHandlerForButton(elements) {
         elements = $(elements);
+
         for (var i = 0; i < elements.length; i++) {
 
             var el = elements.eq(i);
@@ -84,6 +149,7 @@
             el.on('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
+
                 scrollToElement($(e.target.hash), function () {
                     document.location.hash = e.target.hash;
                 });
@@ -94,11 +160,14 @@
 
     /**
      * Скроллим к элементу
+     *
      * @param {object|string} element
      * @param callback
+     * @returns {void}
      */
     function scrollToElement(element, callback) {
         element = $(element);
+
         $('html, body').animate({
             scrollTop: element.offset().top
         }, 600, function () {
@@ -121,6 +190,7 @@
 
         var arrowOpener = function (parent) {
             var activeArrowClass = 'menu-item-has-children-arrow-active';
+
             return $('<button />')
                 .addClass('menu-item-has-children-arrow')
                 .on('click', function (ev) {
@@ -143,12 +213,16 @@
 
     /**
      * Оборачиваем все Highlighted елементы в блок
-     * @param  {string|object} elements
+     *
+     * @param {string|object} elements
+     * @returns {void}
      */
     function wrapHighlightedElements(elements) {
         elements = $(elements);
+
         for (var i = 0; i < elements.length; i++) {
             var highlightedHeader = elements.eq(i);
+
             highlightedHeader.wrap('<div style="display: block;"></div>');
         }
     }
@@ -162,9 +236,11 @@
      * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
      * @param {(string|Object)} field - The selected field for writing the value (disabled field)
      * @param {(string|Object)} headline - The element from which we get the value to write to the field
+     * @returns {void}
      */
     function buyOneClick(button, field, headline) {
         var btn = $(button);
+
         if (btn.length) {
             btn.on('click', function () {
                 $(field).prop('disabled', true).val($(headline).text());
@@ -179,6 +255,7 @@
      * scrollTop('.js-scroll-top');
      * @author Fedor Kudinov <brothersrabbits@mail.ru>
      * @param {(string|Object)} element - Selected element
+     * @returns {void}
      */
     function scrollTop(element) {
         var el = $(element);
@@ -190,6 +267,7 @@
 
         $(window).on('scroll', function () {
             var scrollPosition = $(this).scrollTop();
+
             if (scrollPosition > 200) {
                 if (!el.hasClass('is-visible')) {
                     el.addClass('is-visible');
@@ -206,7 +284,7 @@
      * @example
      * document.oncopy = addLink; or $(document).on('copy', addLink);
      * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @return void
+     * @returns {void}
      */
     function addLink() {
         var body = document.body || document.getElementsByTagName('body')[0];
@@ -228,4 +306,4 @@
         }, 0);
     }
 
-})(jQuery);
+})(window, document, jQuery);

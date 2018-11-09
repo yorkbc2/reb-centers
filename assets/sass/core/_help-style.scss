@@ -13,36 +13,43 @@
     margin: 0 auto;
 }
 
-.text-muted {
-    color: $textMutedColor;
-}
+.text {
+    &-muted {
+        color: $textMutedColor;
+    }
 
-.text-center {
-    text-align: center;
-}
+    &-center {
+        text-align: center;
+    }
 
-.text-left {
-    text-align: left;
-}
+    &-left {
+        text-align: left;
+    }
 
-.text-right {
-    text-align: right;
-}
+    &-right {
+        text-align: right;
+    }
 
-.text-just {
-    text-align: justify;
-}
+    &-just {
+        text-align: justify;
+    }
 
-.text-uppercase {
-    text-transform: uppercase;
-}
+    &-uppercase {
+        text-transform: uppercase;
+    }
 
-.text-underline {
-    text-decoration: underline;
-}
+    &-underline {
+        text-decoration: underline;
+    }
 
-.text-nowrap {
-    white-space: nowrap;
+    &-nowrap {
+        white-space: nowrap;
+    }
+
+    &-bold {
+        font-weight: bold;
+    }
+
 }
 
 .pull-right {

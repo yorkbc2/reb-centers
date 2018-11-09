@@ -19,6 +19,13 @@ function bw_enqueues()
         null, true);
     wp_enqueue_script('modernizr');
 
+    wp_register_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'),
+        null, true);
+
+    if (is_front_page()) {
+        wp_enqueue_script('slick');
+    }
+
     if ( ! WP_DEBUG) {
         wp_deregister_script('jquery');
         wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery-1.12.4.min.js', array(), null,

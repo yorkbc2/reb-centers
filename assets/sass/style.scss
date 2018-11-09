@@ -23,6 +23,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 // PLUG-INs
 @import "plugins/font-awesome/font-awesome";
 @import "plugins/plug-ins";
+@import "plugins/slick";
 
 // BOOTSTRAP
 //@import "bootstrap/bootstrap-buttons";
@@ -116,6 +117,10 @@ img {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+}
+
+:focus {
+    outline: 0;
 }
 
 .svg-icon {
