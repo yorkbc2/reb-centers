@@ -1,15 +1,11 @@
-(function ($) {
-    "use strict";
+"use strict";
 
-    $(function () {
-
+(function($, wp) {
+    $(function() {
         var api = wp.customize;
-
-        api.previewer.bind('preview-edit', function (data) {
+        api.previewer.bind("preview-edit", function(data) {
             var control = api.control(data.name);
             control.focus();
         });
-
     });
-
-})(jQuery);
+})(jQuery, window.wp);

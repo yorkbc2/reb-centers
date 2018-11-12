@@ -1,7 +1,6 @@
 "use strict";
 
 (function(w, d, $) {
-    "use strict";
     $(function() {
         console.info("The site developed by BRAIN WORKS digital agency");
         console.info("Сайт разработан маркетинговым агентством BRAIN WORKS");

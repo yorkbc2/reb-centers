@@ -1,5 +1,6 @@
+'use strict';
+
 ((w, d, $) => {
-    'use strict';
 
     $(() => {
         console.info('The site developed by BRAIN WORKS digital agency');
