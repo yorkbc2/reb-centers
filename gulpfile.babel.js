@@ -5,6 +5,7 @@ const themeName = 'brainworks';
 import gulp from 'gulp';
 import zip from 'gulp-zip';
 import sass from 'gulp-sass';
+import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import svgmin from 'gulp-svgmin';
 import rename from 'gulp-rename';
@@ -12,7 +13,7 @@ import plumber from 'gulp-plumber';
 import svgstore from 'gulp-svgstore';
 import cleancss from 'gulp-clean-css';
 import browser_sync from 'browser-sync';
-import sourcemaps from 'gulp-sourcemaps';
+//import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 
 const browserSync = browser_sync.create();
@@ -28,12 +29,18 @@ const getFullDate = () => {
 };
 
 gulp.task('svg', () => {
-    return gulp.src(`${themeName}/assets/img/svg/*.svg`)
+    return gulp.src('assets/img/svg/*.svg')
         .pipe(plumber())
-        .pipe(svgmin({js2svg: {pretty: false}}))
+        .pipe(svgmin({
+            plugins: [
+                {removeViewBox: false},
+                {removeUselessDefs: true},
+            ],
+            js2svg: {pretty: false}
+        }))
         .pipe(svgstore({inlineSvg: true}))
-        .pipe(rename({basename: 'svg', prefix: '', suffix: '-sprite', extname: '.svg'}))
-        .pipe(gulp.dest(`${themeName}/assets/img/`));
+        .pipe(rename({basename: 'sprite', extname: '.svg'}))
+        .pipe(gulp.dest('assets/img'));
 });
 
 gulp.task('sass', () => {
@@ -67,6 +74,20 @@ gulp.task('css', () => {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('babel', () => {
+    return gulp.src('assets/js/es6/**/*.js')
+        .pipe(plumber())
+        .pipe(babel())
+        .pipe(uglify({
+            mangle: false,
+            compress: false,
+            output: {
+                beautify: true,
+            },
+        }))
+        .pipe(gulp.dest('assets/js'));
+});
+
 gulp.task('js', () => {
     return gulp.src('assets/js/brainworks.js')
         .pipe(plumber())
@@ -79,7 +100,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('zip', () => {
-    return gulp.src(`**/{*,}.*`, {base: '.'})
+    return gulp.src('**/{*,}.*', {base: '.'})
         .pipe(plumber())
         .pipe(zip(`${themeName}_(${getFullDate()}).zip`, {compress: true}))
         .pipe(gulp.dest('./'));
@@ -94,11 +115,14 @@ gulp.task('watch', () => {
 
 gulp.task('default', () => {
     browserSync.init({
-        proxy: "sites.local/brainworks",
+        baseDir: './',
+        ghostMode: false,
+        //proxy: 'http://yourlocal.dev',
     });
-    //gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('assets/img/svg/*.svg', gulp.series('svg'));
-    gulp.watch('style.css').on('change', browserSync.reload);
-    //gulp.watch('assets/js/brainworks.js', gulp.series('js'));
     gulp.watch('**/*.php').on('change', browserSync.reload);
+    gulp.watch('style.css').on('change', browserSync.reload);
+    gulp.watch('assets/js/*.js').on('change', browserSync.reload);
+    gulp.watch('assets/img/svg/*.svg', gulp.series('svg'));
+    //gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
+    //gulp.watch('assets/js/brainworks.js', gulp.series('js'));
 });

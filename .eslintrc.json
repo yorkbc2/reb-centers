@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "error",
+        "no-unused-vars": "error",
+        "eol-last": "warn",
+        "valid-jsdoc": "off",
+        "require-jsdoc": [
+            "off",
+            {
+                "require": {
+                    "ClassDeclaration": true,
+                    "MethodDefinition": true,
+                    "FunctionExpression": true,
+                    "FunctionDeclaration": true,
+                    "ArrowFunctionExpression": true
+                }
+            }
+        ]
+    }
+}
