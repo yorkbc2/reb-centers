@@ -131,7 +131,7 @@ function bw_menu_no_link($nav_menu, $args)
 
 }
 
-add_filter('wp_nav_menu', 'bw_menu_no_link', 10, 2);
+//add_filter('wp_nav_menu', 'bw_menu_no_link', 10, 2);
 
 /** Woocommerce */
 // Override theme default specification for product # per row
