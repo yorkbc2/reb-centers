@@ -24,9 +24,10 @@
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
-
+        scrollToElement();
         // On Copy
         d.on('copy', addLink);
+
 
         w.on('resize', () => {
             if (w.innerWidth >= 630) {
@@ -330,6 +331,27 @@
         window.setTimeout(() => {
             body.removeChild(div);
         }, 0);
+    };
+
+
+    /**
+     * Function to add scroll handler for all links with hash as first symbol of href
+     * @return {void} 
+     */
+    const scrollToElement = () => {
+        const links = $('a');
+
+        links.each(index => {
+            if (links.eq(index).attr('href')[0] === '#') {
+                links.eq(index).click(e => {
+                    e.preventDefault();
+
+                    $('html, body').animate({
+                        scrollTop: $( links.eq(index).attr('href') ).offset().top
+                    }, 400);
+                });
+            }
+        });
     };
 
 })(window, document, jQuery);
