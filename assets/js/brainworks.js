@@ -138,14 +138,16 @@
         }, 0);
     };
     var scrollToElement = function scrollToElement() {
+        var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
         var links = $("a");
-        links.each(function(index) {
-            if (links.eq(index).attr("href")[0] === "#") {
-                links.eq(index).click(function(e) {
+        links.each(function(index, element) {
+            var $element = element, href = $element.attr("href");
+            if (href[0] === "#") {
+                $element.on("click", function(e) {
                     e.preventDefault();
                     $("html, body").animate({
-                        scrollTop: $(links.eq(index).attr("href")).offset().top
-                    }, 400);
+                        scrollTop: $(href).offset().top
+                    }, animationSpeed);
                 });
             }
         });

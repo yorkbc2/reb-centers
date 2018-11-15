@@ -162,24 +162,6 @@
         }
     };*/
 
-    /**
-     * Скроллим к элементу
-     *
-     * @param {object|string} element
-     * @param callback
-     * @returns {void}
-     */
-    /*const scrollToElement = (element, callback) => {
-        element = $(element);
-
-        $('html, body').animate({
-            scrollTop: element.offset().top
-        }, 600, () => {
-            if (typeof callback === 'function') {
-                callback();
-            }
-        });
-    };*/
 
     /**
      *
@@ -336,19 +318,21 @@
 
     /**
      * Function to add scroll handler for all links with hash as first symbol of href
-     * @return {void} 
+     * @returns {void} 
      */
-    const scrollToElement = () => {
+    const scrollToElement = (animationSpeed = 400) => {
         const links = $('a');
 
-        links.each(index => {
-            if (links.eq(index).attr('href')[0] === '#') {
-                links.eq(index).click(e => {
+        links.each((index, element) => {
+            const $element = element,
+                    href = $element.attr('href');
+            if (href[0] === '#') {
+                $element.on('click', (e) => {
                     e.preventDefault();
 
                     $('html, body').animate({
-                        scrollTop: $( links.eq(index).attr('href') ).offset().top
-                    }, 400);
+                        scrollTop: $( href ).offset().top
+                    }, animationSpeed);
                 });
             }
         });
