@@ -18,6 +18,7 @@
         wrapHighlightedElements(".highlighted");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
         buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
+        scrollToElement();
         d.on("copy", addLink);
         w.on("resize", function() {
             if (w.innerWidth >= 630) {
@@ -135,5 +136,20 @@
         window.setTimeout(function() {
             body.removeChild(div);
         }, 0);
+    };
+    var scrollToElement = function scrollToElement() {
+        var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
+        var links = $("a");
+        links.each(function(index, element) {
+            var $element = element, href = $element.attr("href");
+            if (href[0] === "#") {
+                $element.on("click", function(e) {
+                    e.preventDefault();
+                    $("html, body").animate({
+                        scrollTop: $(href).offset().top
+                    }, animationSpeed);
+                });
+            }
+        });
     };
 })(window, document, jQuery);

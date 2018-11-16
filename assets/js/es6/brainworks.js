@@ -24,9 +24,10 @@
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
-
+        scrollToElement();
         // On Copy
         d.on('copy', addLink);
+
 
         w.on('resize', () => {
             if (w.innerWidth >= 630) {
@@ -161,24 +162,6 @@
         }
     };*/
 
-    /**
-     * Скроллим к элементу
-     *
-     * @param {object|string} element
-     * @param callback
-     * @returns {void}
-     */
-    /*const scrollToElement = (element, callback) => {
-        element = $(element);
-
-        $('html, body').animate({
-            scrollTop: element.offset().top
-        }, 600, () => {
-            if (typeof callback === 'function') {
-                callback();
-            }
-        });
-    };*/
 
     /**
      *
@@ -330,6 +313,29 @@
         window.setTimeout(() => {
             body.removeChild(div);
         }, 0);
+    };
+
+
+    /**
+     * Function to add scroll handler for all links with hash as first symbol of href
+     * @returns {void} 
+     */
+    const scrollToElement = (animationSpeed = 400) => {
+        const links = $('a');
+
+        links.each((index, element) => {
+            const $element = element,
+                    href = $element.attr('href');
+            if (href[0] === '#') {
+                $element.on('click', (e) => {
+                    e.preventDefault();
+
+                    $('html, body').animate({
+                        scrollTop: $( href ).offset().top
+                    }, animationSpeed);
+                });
+            }
+        });
     };
 
 })(window, document, jQuery);
