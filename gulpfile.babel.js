@@ -109,8 +109,9 @@ gulp.task('zip', () => {
 gulp.task('min', gulp.parallel('css', 'js'));
 
 gulp.task('watch', () => {
-    gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
     gulp.watch('assets/img/svg/*.svg', gulp.series('svg'));
+    gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('assets/js/es6/**/*.js', gulp.series('babel'));
 });
 
 gulp.task('default', () => {

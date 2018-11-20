@@ -1,0 +1,163 @@
+.d {
+    &-flex {
+        display: flex;
+    }
+
+    &-inline-flex {
+        display: inline-flex;
+    }
+}
+
+.flex {
+    &-row {
+        flex-direction: row;
+
+        &-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &-column {
+        flex-direction: column;
+
+        &-reverse {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+
+        &-reverse {
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    &-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &-fill {
+        flex: 1 1 auto;
+    }
+
+    &-grow {
+        &-0 {
+            flex-grow: 0;
+        }
+
+        &-1 {
+            flex-grow: 1;
+        }
+    }
+
+    &-shrink {
+        &-0 {
+            flex-shrink: 0;
+        }
+
+        &-1 {
+            flex-shrink: 1;
+        }
+    }
+}
+
+.justify {
+    &-content {
+        &-start {
+            justify-content: flex-start;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+
+        &-center {
+            justify-content: center;
+        }
+
+        &-between {
+            justify-content: space-between;
+        }
+
+        &-around {
+            justify-content: space-around;
+        }
+    }
+}
+
+.align {
+    &-items {
+        &-start {
+            align-items: flex-start;
+        }
+
+        &-end {
+            align-items: flex-end;
+        }
+
+        &-center {
+            align-items: center;
+        }
+
+        &-baseline {
+            align-items: baseline;
+        }
+
+        &-stretch {
+            align-items: stretch;
+        }
+    }
+
+    &-content {
+        &-start {
+            align-content: flex-start;
+        }
+
+        &-end {
+            align-content: flex-end;
+        }
+
+        &-center {
+            align-content: center;
+        }
+
+        &-between {
+            align-content: space-between;
+        }
+
+        &-around {
+            align-content: space-around;
+        }
+
+        &-stretch {
+            align-content: stretch;
+        }
+    }
+
+    &-self {
+        &-auto {
+            align-self: auto;
+        }
+
+        &-start {
+            align-self: flex-start;
+        }
+
+        &-end {
+            align-self: flex-end;
+        }
+
+        &-center {
+            align-self: center;
+        }
+
+        &-baseline {
+            align-self: baseline;
+        }
+
+        &-stretch {
+            align-self: stretch;
+        }
+    }
+}

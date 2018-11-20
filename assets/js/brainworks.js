@@ -14,7 +14,7 @@
         html.removeClass("no-js").addClass("js");
         reviews(".js-reviews");
         scrollTop(".js-scroll-top");
-        stickFooter(".footer", ".page-wrapper");
+        stickFooter(".js-footer", ".js-container");
         wrapHighlightedElements(".highlighted");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
         buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
@@ -53,9 +53,6 @@
                 swipe: true,
                 zIndex: 10
             });
-            element.on("swipe", function(slick, direction) {});
-            element.on("afterChange", function(slick, currentSlide) {});
-            element.on("beforeChange", function(slick, currentSlide, nextSlide) {});
         }
     };
     var anotherHamburgerMenu = function anotherHamburgerMenu(menuElement, hamburgerElement, closeTrigger) {
@@ -69,7 +66,7 @@
         });
         var arrowOpener = function arrowOpener(parent) {
             var activeArrowClass = "menu-item-has-children-arrow-active";
-            return $("<button />").addClass("menu-item-has-children-arrow").on("click", function(event) {
+            return $("<button />").addClass("menu-item-has-children-arrow").on("click", function() {
                 parent.children(".sub-menu").eq(0).slideToggle(300);
                 if ($(this).hasClass(activeArrowClass)) {
                     $(this).removeClass(activeArrowClass);
@@ -141,7 +138,7 @@
         var animationSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 400;
         var links = $("a");
         links.each(function(index, element) {
-            var $element = element, href = $element.attr("href");
+            var $element = $(element), href = $element.attr("href");
             if (href[0] === "#") {
                 $element.on("click", function(e) {
                     e.preventDefault();

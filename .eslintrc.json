@@ -30,10 +30,29 @@
         ],
         "no-console": "warn",
         "no-unused-vars": "warn",
-        "eol-last": "warn",
-        "valid-jsdoc": "off",
+        "eol-last": "error",
+        "valid-jsdoc": [
+            "error",
+            {
+                "prefer": {
+                    "return": "returns"
+                },
+                "preferType": {
+                    "Boolean": "boolean",
+                    "Number": "number",
+                    "object": "Object",
+                    "String": "string"
+                },
+                "requireReturn": true,
+                "requireParamType": true,
+                "requireReturnType": true,
+                "matchDescription": ".+",
+                "requireParamDescription": true,
+                "requireReturnDescription": true
+            }
+        ],
         "require-jsdoc": [
-            "off",
+            "error",
             {
                 "require": {
                     "ClassDeclaration": true,

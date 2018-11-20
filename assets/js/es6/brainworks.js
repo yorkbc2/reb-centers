@@ -19,7 +19,7 @@
 
         reviews('.js-reviews');
         scrollTop('.js-scroll-top');
-        stickFooter('.footer', '.page-wrapper');
+        stickFooter('.js-footer', '.js-container');
         wrapHighlightedElements('.highlighted');
         // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
         anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
@@ -27,7 +27,6 @@
         scrollToElement();
         // On Copy
         d.on('copy', addLink);
-
 
         w.on('resize', () => {
             if (w.innerWidth >= 630) {
@@ -87,17 +86,17 @@
                 zIndex: 10,
             });
 
-            element.on('swipe', (slick, direction) => {
-
+            /*element.on('swipe', (slick, direction) => {
+                console.log(slick, direction);
             });
 
             element.on('afterChange', (slick, currentSlide) => {
-
+                console.log(slick, currentSlide);
             });
 
             element.on('beforeChange', (slick, currentSlide, nextSlide) => {
-
-            });
+                console.log(slick, currentSlide, nextSlide);
+            });*/
         }
     };
 
@@ -138,7 +137,7 @@
     /**
      * Скролл к элементу
      *
-     * @param {string|object} elements Элементы, которым добавляем Handler
+     * @param {(string|Object)} elements Элементы, которым добавляем Handler
      * @returns {void}
      */
     /*const scrollHandlerForButton = (elements) => {
@@ -164,10 +163,12 @@
 
 
     /**
+     * Another Hamburger Menu
      *
-     * @param menuElement
-     * @param hamburgerElement
-     * @param closeTrigger
+     * @param {string} menuElement
+     * @param {string} hamburgerElement
+     * @param {string} closeTrigger
+     * @returns {void}
      */
     const anotherHamburgerMenu = (menuElement, hamburgerElement, closeTrigger) => {
         const Elements = {
@@ -181,8 +182,9 @@
         });
 
         /**
+         * Arrow Opener
          *
-         * @param parent
+         * @param {Object} parent
          * @returns {*}
          */
         const arrowOpener = function (parent) {
@@ -190,7 +192,7 @@
 
             return $('<button />')
                 .addClass('menu-item-has-children-arrow')
-                .on('click', function (event) {
+                .on('click', function () {
                     parent.children('.sub-menu').eq(0).slideToggle(300);
                     if ($(this).hasClass(activeArrowClass)) {
                         $(this).removeClass(activeArrowClass);
@@ -209,8 +211,10 @@
     };
 
     /**
+     *  Remove All Styles from sub menu element
      *
-     * @param elementParent
+     * @param {Object} elementParent
+     * @returns {void}
      */
     const removeAllStyles = (elementParent) => {
         elementParent.find('.sub-menu').removeAttr('style');
@@ -219,7 +223,7 @@
     /**
      * Оборачиваем все Highlighted елементы в блок
      *
-     * @param {string|object} elements
+     * @param {(string|Object)} elements
      * @returns {void}
      */
     const wrapHighlightedElements = (elements) => {
@@ -318,20 +322,22 @@
 
     /**
      * Function to add scroll handler for all links with hash as first symbol of href
-     * @returns {void} 
+     *
+     * @param {number} [animationSpeed=400]
+     * @returns {void}
      */
     const scrollToElement = (animationSpeed = 400) => {
         const links = $('a');
 
         links.each((index, element) => {
-            const $element = element,
-                    href = $element.attr('href');
+            const $element = $(element), href = $element.attr('href');
+
             if (href[0] === '#') {
                 $element.on('click', (e) => {
                     e.preventDefault();
 
                     $('html, body').animate({
-                        scrollTop: $( href ).offset().top
+                        scrollTop: $(href).offset().top
                     }, animationSpeed);
                 });
             }
