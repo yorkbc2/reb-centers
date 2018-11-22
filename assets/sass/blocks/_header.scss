@@ -1,21 +1,77 @@
+// Pre header - logo container
+// @author yorkbc2@gmail.com
+@mixin textLogoStyles ($size: 32px) {
+    padding: 3px 0;
+    font-size: $size;
+    font-weight: bolder;
+}
 .pre-header {
-    padding: 5px 0;
-    background-color: $preHeaderBgColor;
-    color: $preHeaderColor;
+    position: relative;
+    background-color: $themeColorTwo;
+    *,
+    *:hover {
+        color: #fff;
+    }
+    .pre-header-container {
+        @include flex(space-between);
+
+        .pre-header-logo {
+            @include flex(center, column);
+            @include textLogoStyles();
+        }
+
+        .pre-header-buttons {
+            @include flex();
+            a {
+                @include flex(center, column);
+                padding: 15px 18px;
+                font-size: 18px;
+                &:first-child {
+                    border-right: 1px solid lighten($themeColorTwo, 20%);
+                }
+                i {
+                    font-size: 20px;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
 }
 
-.page-header {
-    padding: 10px 0;
-    background-color: $headerBgColor;
-    color: $headerFontColor;
-}
+.search-trigger {
+    position: relative;
 
-.logo {
-    &,
-    &-link,
-    &-img {
-        display: inline-block;
-        vertical-align: middle;
+    &:hover {
+        .search-form {
+            opacity: 1;
+            top: 100%;
+        }
+    }
+
+    .search-form {
+        position: absolute;
+        top: -999px;
+        width: 240px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 13px rgba(0,0,0,0.25);
+        border-radius: 3px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;   
+
+        input {
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            color: #000;
+            &:focus {
+                box-shadow: 0px 0px 13px lighten($themeColorTwo, 20%);
+            }
+        }
+
+        z-index: 9999;
     }
 }
 

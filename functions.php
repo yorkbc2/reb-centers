@@ -24,3 +24,4 @@ require_once locate_template('/inc/feedback.php');
 require_once locate_template('/inc/shortcodes.php');
 require_once locate_template('/inc/meta-boxes.php');
 require_once locate_template('/inc/custom-post-types.php');
+require_once locate_template('/inc/rehab.custom-type.php');

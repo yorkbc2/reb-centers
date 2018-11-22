@@ -17,46 +17,34 @@
 <?php wp_body(); ?>
 
 <div class="wrapper">
-    <?php /*
+ 
     <div class="pre-header">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <nav class="second-menu">
-                        <?php wp_nav_menu(array(
-                            'theme_location' => 'second-menu',
-                            'container' => false,
-                            'menu_class' => 'menu-container',
-                            'menu_id' => '',
-                            'fallback_cb' => 'wp_page_menu',
-                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth' => 2
-                        )); ?>
-                    </nav>
+            <div class="pre-header-container">
+                <div class="pre-header-logo">
+                    <?php echo get_default_logo_link("Лого"); ?>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    Some info here
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    Some info here
+                <div class="pre-header-buttons">
+                    <a href="#" class="search-trigger">
+                        <i class="fa fa-search"></i>
+                        <div class="search-form">
+                            <form action="<?php echo esc_url(home_url()); ?>" method="get">    
+                                <input type="search" name="s" placeholder="<?php _e("Поиск", "brainworks"); ?>">
+                            </form>
+                        </div>
+                    </a>
+                    <a href="/login">
+                        <span>
+                            <i class="fa fa-sign-in"></i>&nbsp;
+                            <?php _e("Войти", 'brainworks'); ?>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    */ ?>
 
-    <header class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
 
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <?php get_search_form(); ?>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <?php if (has_nav_menu('main-nav')) { ?>
         <nav class="nav js-menu">

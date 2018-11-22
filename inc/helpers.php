@@ -354,7 +354,7 @@ if (!function_exists('get_default_logo_link')) {
      *
      * @return void
      */
-    function get_default_logo_link()
+    function get_default_logo_link($text=false)
     {
         $desc = sprintf('<span class="logo-desc screen-reader-text">%s</span>', get_bloginfo('description'));
 
@@ -369,9 +369,13 @@ if (!function_exists('get_default_logo_link')) {
 
             $img = sprintf('<img class="logo-img" src="%s" alt="%s">', esc_url($file), get_bloginfo('name'));
 
+            if ($text) {
+                $img = '<span class="text-logo" title="'.$text.'">'.$text.'</span>';
+            }
+
             $link = sprintf('<a class="logo-link" href="%s">%s</a>', esc_url(home_url('/')), $img);
 
-            $span = sprintf('<span class="logo-link">%s</span>', $img);
+            $span = sprintf('<div class="logo-link">%s</div>', $img);
 
             $html = is_front_page() ? $span : $link;
 
@@ -488,5 +492,22 @@ if (!function_exists('sanitize_background_setting')) {
             return new WP_Error('unrecognized_setting', __('Unrecognized background setting.'));
         }
         return $value;
+    }
+}
+
+if (!function_exists("reb_combine_address")) 
+{
+    function reb_combine_address($id) {
+        // https://www.google.com/maps/place/проспект+Космонавтов,+31А,+Винница
+        $google_maps = "https://www.google.com/maps/place/%s,%s";
+        $result = "%s, %s, %s";
+        $address = get_post_meta($id, "bw-reb-address", true);
+        $city = get_post_meta($id, "bw-reb-city", true);
+        $region = get_post_meta($id, "bw-reb-region", true);
+
+        return [
+            'address' => sprintf($result, $region, $city, $address),
+            'link' => sprintf($google_maps, $address, $city)
+        ];  
     }
 }

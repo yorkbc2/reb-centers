@@ -2,3 +2,17 @@ ul,
 ol {
     padding-left: 20px;
 }
+
+.social-links {
+    @extend %reset-list;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+            font-size: 18px;
+        }
+    }
+}

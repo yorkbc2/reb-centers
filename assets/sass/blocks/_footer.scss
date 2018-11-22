@@ -3,6 +3,27 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    padding: 15px 0;
+    background: #3f3f3f;
+
+    * { 
+        color: #fff;
+    }
+
+    .footer-logo {
+        @include textLogoStyles(28px);
+    }
+
+    .footer-copy {
+        span {
+            color: #666;
+            a {
+                text-decoration: underline;
+                color: #666;
+            }
+        }
+    }
 }
 
 .pre-footer {

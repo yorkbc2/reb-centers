@@ -1,0 +1,7 @@
+.flex-container {
+    @include flex(space-between);
+    &._vc {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

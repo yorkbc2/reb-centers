@@ -34,10 +34,8 @@
 .nav {
     display: block;
     position: relative;
-    margin: 10px 15px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
     text-align: center;
+    border-bottom: 1px solid #e7e7e7;
     .menu {
         @extend %reset-list;
         font-size: 0;
@@ -45,7 +43,8 @@
         &-item {
             display: inline-block;
             vertical-align: middle;
-            padding: 5px;
+            padding: 7px 5px;
+            margin: 0 7px;
 
             .menu-item-has-children-arrow {
                 display: none;
@@ -114,8 +113,9 @@
             &-current,
             &.current-menu-parent,
             &.current-menu-ancestor {
+                border-bottom: 2px solid $themeColorTwo;
                 .menu-link {
-                    text-decoration: none;
+                    color: $themeColorTwo;
                 }
             }
 
@@ -132,11 +132,12 @@
             display: block;
             padding: 8px 10px;
             color: #000;
-            font-size: 16px;
+            font-size: 13px;
             line-height: 1.3;
             text-align: center;
             text-transform: none;
             text-decoration: none;
+            text-transform: uppercase;
             @extend %smooth_animation;
         }
     }

@@ -7,7 +7,7 @@ $shadow: 0 0 10px rgba(#000, .2);
 
 // BRAND
 $themeColorOne: #2c3e50; // header, menu, footer, title,
-$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
+$themeColorTwo: #5886cb; // menu active item, button, footer link hover, woo
 $themeColorThree: #3498db; // preHeader bg, wooOnSale
 $themeColorFour: #2980b9; //menu hover item, table border, preHeader font
 
@@ -16,7 +16,7 @@ $selectionBgColor: $themeColorTwo;
 $selectionFontColor: #fff;
 
 // BODY
-$bodyBgColor: #fff; //white
+$bodyBgColor: #f4f5f9; //white
 $bodyFontColor: #000; // black
 
 // PreHeader
@@ -59,7 +59,7 @@ $menu-close-color: $themeColorTwo;
 $menuContainerMobilePaddingTop: 30%;
 
 // FOOTER
-$footerBgColor: $themeColorOne;
+$footerBgColor: #3f3f3f;
 $footerFontColor: #fff;
 $footerLinkColorActive: darken($footerFontColor, 5%);
 

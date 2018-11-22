@@ -48,6 +48,30 @@ i.button-style {
     a {
         color: $headerHighlightColor;
     }
+} 
+
+h1.archive-header {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #222;
+
+    margin: 20px 0;
+    padding: 0;
+}
+
+.kama_breadcrumbs {
+    color: #666;
+
+    > span:first-child {
+        font-size: 0px;
+        &::before {
+            content: "\f015";
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: bolder;
+            font-size: 16px;
+            color: #666;
+        }
+    }
 }
 
 @media #{$mobile} {

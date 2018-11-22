@@ -1,22 +1,31 @@
 </div><!-- .page-wrapper end-->
 
 <footer class="footer js-footer">
-    <?php if (is_active_sidebar('footer-widget-area')) : ?>
-        <div class="pre-footer">
-            <div class="container">
-                <div class="row">
-                    <?php dynamic_sidebar('footer-widget-area'); ?>
-                </div>
+    <div class="container">
+        <div class="flex-container">
+            <div class="footer-logo flex-container _vc">
+                <?php echo get_default_logo_link("Лого"); ?>
             </div>
-        </div><!-- .pre-footer end-->
-    <?php endif; ?>
-
-    <div class="copyright">
-        <p class="container">
-            <?php _e('Developed by', 'brainworks') ?>
-            <a href="https://brainworks.com.ua/" target="_blank">BRAIN WORKS</a>
-            &copy; <?php echo date('Y'); ?>
-        </p>
+            <div class="footer-links flex-container _vc">
+                <ul class="social-links">
+                    <?php foreach (get_social() as $social): ?>
+                    <li>
+                        <a href="<?php echo $social["url"]; ?>" title="<?php echo $social["text"]; ?>">
+                            <i class="<?php echo $social["icon"]; ?>"></i>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+            <div class="footer-copy flex-container _vc">
+                <span>
+                    <?php _e("Сайт разработан", "brainworks"); ?>&nbsp;
+                    <a href="https://brainworks.com.ua">
+                        BrainWorks
+                    </a>
+                </span>
+            </div>
+        </div>
     </div>
 </footer>
 
