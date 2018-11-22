@@ -36,11 +36,6 @@
         "babel": "node ./node_modules/gulp/bin/gulp.js babel",
         "lint": "./node_modules/.bin/eslint assets/js/es6/**/*.js"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint"
-        }
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kudinovfedor/fk-template.git"
