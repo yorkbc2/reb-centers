@@ -4,4 +4,23 @@
         flex-direction: column;
         justify-content: center;
     }
+    > div {
+    	flex: 1;
+    }
+
+    .flex-1 {
+    	flex: 1;
+    }
+    .flex-2 {
+    	flex: 2;
+    }
+    .flex-3 {
+    	flex: 3;
+    }
+    .flex-4 {
+    	flex: 4;
+    }
+    .flex-5 {
+    	flex: 5;
+    }
 }

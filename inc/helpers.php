@@ -511,3 +511,12 @@ if (!function_exists("reb_combine_address"))
         ];  
     }
 }
+
+if (!function_exists("_require")) {
+    function _require($className="") {
+        $path = __DIR__ . "/classes/" . $className . ".php";
+        if (file_exists($path)) {
+            require $path;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+$cardPadding: 12px;
+
 .reb-item {
     position: relative;
     @include flex(space-between, column);
@@ -37,5 +39,49 @@
         a {
             font-size: 14px;
         }
+    }
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    margin: 5px;
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+
+    @include flex(space-between, column);
+ 
+    &.card--single { 
+        padding: $cardPadding;
+    }
+
+    > div {
+        padding: $cardPadding;
+    }
+
+    .card-header {
+        border-bottom: 1px solid #e7e7e7;
+
+        h2 {
+            font-size: 22px;
+            font-weight: bolder;
+            color: #111;
+            padding: 10px 0;
+        }
+    }
+    .card-footer {
+        border-top: 1px solid #e7e7e7;
+    }
+}
+
+p.labeled {
+    label {
+        display: block;
+        font-size: 14px;
+        color: #666;
+    }
+    a, span {
+        color: #111;
+        font-size: 16px;
     }
 }
