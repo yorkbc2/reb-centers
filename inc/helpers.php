@@ -520,3 +520,9 @@ if (!function_exists("_require")) {
         }
     }
 }
+
+if (!function_exists("filter_str")) {
+    function filter_str($str) {
+        return !empty($str) ? filter_var($str, FILTER_SANITIZE_STRING) : "";
+    }
+}
