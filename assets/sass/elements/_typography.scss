@@ -74,6 +74,10 @@ h1.archive-header {
     }
 }
 
+p.medium-size {
+    font-size: 16px;
+}
+
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;

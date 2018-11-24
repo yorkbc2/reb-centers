@@ -4,7 +4,7 @@
     <div class="container">
         <div class="flex-container">
             <div class="footer-logo flex-container _vc">
-                <?php echo get_default_logo_link("Лого"); ?>
+                <?php echo get_default_logo_link(); ?>
             </div>
             <div class="footer-links flex-container _vc">
                 <ul class="social-links">

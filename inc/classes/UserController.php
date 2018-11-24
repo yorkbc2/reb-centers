@@ -50,13 +50,31 @@
 		 */
 		public static function check();
 
-		// public static function logout();
+		/**
+		 * Logout user from the service
+		 * @return void
+		 */
+		public static function logout();
+
 		/**
 		 * Get current user
 		 * @return array 
 		 */
 		public static function get_current();
 
+		/**
+		 * Calculate reputation based on fullfilled meta
+		 * Updates _reputation user meta
+		 * @param  number $id 
+		 * @return void
+		 */
+		public static function calculate_reputation($id);
+
+		/**
+		 * Returns users's id
+		 * @return number 
+		 */
+		public static function get_current_id();
 	}
 
 	class UserController implements IUserController {
@@ -123,6 +141,8 @@
 
 					self::insert_meta($id, $user_meta);
 
+					self::calculate_reputation($id);
+
 					return true;
 				}
 				else 
@@ -170,5 +190,36 @@
 				}
 			}
 		}
-	}
+
+		public static function get_current_id()
+		{
+			return get_current_user_id();
+		}
+
+		public static function logout()
+		{
+			wp_logout();
+		}
+
+		public static function calculate_reputation($id=0) 
+		{
+			$progress_scores = array(
+				"_sex", "_address", "_about", "_problem", "_date_born"
+			);
+			$progress = 0;
+			if (!$id)
+			{
+				$id = self::get_current_id();
+			}
+			foreach ($progress_scores as $meta)
+			{
+				$check = get_user_meta($id, $meta, true);
+				if (!empty($check) && $check !== "N/A" && $check != "0" && $check != "Не выбран")
+				{
+					$progress += 10;
+				}
+			}
+			update_user_meta($id, "_reputation", $progress);
+		}
+	}	
 ?>

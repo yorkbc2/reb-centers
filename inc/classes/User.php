@@ -1,7 +1,7 @@
 <?php 
 
 	interface IUser {
-
+		public function get_age();
 	}
 	
 	class User implements IUser {
@@ -40,5 +40,11 @@
 			$this->problem = get_user_meta($this->id, "_problem", true);
 			$this->about = get_user_meta($this->id, "_about", true);
 			$this->reputation = get_user_meta($this->id, "_reputation", true);
+		}
+
+		public function get_age() {
+			$year = intval(date("Y"));
+			$user_date = intval(date("Y", strtotime($this->date_born)));
+			return $year - $user_date;
 		}
 	}

@@ -1,4 +1,5 @@
 <?php 
+	require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
 	if (!function_exists("register_handler"))
 	{
 		function register_handler() {
@@ -7,7 +8,6 @@
 			
 			if (empty($_POST)) 
 			{	
-				// Error message: Fields must be fullfilled
 				wp_redirect("/auth?error_message=1&type=register");
 				return;
 			}
@@ -72,26 +72,6 @@
 			}
 		}
 
-		add_action( "rest_api_init", function () {
-			register_rest_route( "brainworks", "register", array(
-				"methods" => "POST",
-				"callback" => "register_handler",
-			) );
-		} );
+		return register_handler();
 	}
-
-	if (!function_exists("logout_handler"))
-	{
-		function logout_handler () {
-			UserController::logout();
-			return wp_redirect(home_url());
-		}
-		add_action( "init", function () {
-			register_rest_route( "brainworks", "auth/logout", array(
-				"methods" => "GET",
-				"callback" => "logout_handler",
-			) );
-		} );
-	}
-
 ?>

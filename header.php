@@ -22,7 +22,7 @@
         <div class="container">
             <div class="pre-header-container">
                 <div class="pre-header-logo">
-                    <?php echo get_default_logo_link("Лого"); ?>
+                    <?php echo get_default_logo_link(); ?>
                 </div>
                 <div class="pre-header-buttons">
                     <a href="#" class="search-trigger">
@@ -33,12 +33,21 @@
                             </form>
                         </div>
                     </a>
-                    <a href="/login">
+                    <?php if (!UserController::check()): ?>
+                    <a href="/auth">
                         <span>
                             <i class="fa fa-sign-in"></i>&nbsp;
-                            <?php _e("Войти", 'brainworks'); ?>
+                        <?php _e("Войти", 'brainworks'); ?>
                         </span>
                     </a>
+                    <?php else: ?>
+                    <a href="<?php echo get_template_directory_uri(); ?>/logout.php">
+                        <span>
+                            <i class="fa fa-sign-out"></i>&nbsp;
+                        <?php _e("Выйти", 'brainworks'); ?>
+                        </span>
+                    </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

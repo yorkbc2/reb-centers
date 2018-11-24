@@ -190,3 +190,24 @@ a.button {
         font-size: 13px;
     }
 }
+
+.button-alt {
+    position: relative;
+    padding: 12px 18px;
+    text-align: center;
+    display: inline-block;
+    background-color: $themeColorTwo;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+
+    &.block {
+        display: block;
+        box-shadow: 1px 2px 13px lighten($themeColorTwo, 40%);
+    }
+
+    &:hover {
+        background-color: lighten($themeColorTwo, 10%);
+        color: #fff;
+    }
+}

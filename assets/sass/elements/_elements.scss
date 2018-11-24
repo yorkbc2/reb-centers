@@ -85,3 +85,34 @@ p.labeled {
         font-size: 16px;
     }
 }
+
+.alert-error {
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 13px rgba(0,0,0,0.2);
+    background-color: #ff3333;
+}
+
+.user-info {
+    @include flex(flex-start, row, wrap); 
+    > div {
+        @include flex();
+        width: 48%;
+        margin: 10px 0;
+
+        .user-info-element-icon-container {
+            @include flex(center, column);
+            margin-right: 15px;
+            i {
+                font-size: 24px;
+                color: $themeColorTwo;
+            }
+        }
+    }
+}

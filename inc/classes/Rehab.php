@@ -5,50 +5,50 @@
 		 * ID of the post
 		 * @var number | null
 		 */
-		static $id = 0;
+		public $id = 0;
 
 		/**
 		 * Rehab name
 		 * @var string
 		 */
-		static $title = "";
+		public $title = "";
 
 		/**
 		 * Rehab content
 		 * @var string
 		 */
-		static $content = "";
+		public $content = "";
 
 		/**
 		 * Rehab address (array of address and google link)
 		 * @var array
 		 */
-		static $address = ["address" => "", "link" => ""];
+		public $address = ["address" => "", "link" => ""];
 
 		/**
 		 * Rehab image
 		 * @var string
 		 */
-		static $thumbnail = "";
+		public $thumbnail = "";
 
 		/**
 		 * Phone number of Rehab
 		 * @var string
 		 */
-		static $phone = "";
+		public $phone = "";
 
 
 		/**
 		 * An email of rehab
 		 * @var string
 		 */
-		static $email = "";
+		public $email = "";
 
 		/**
 		 * Array of social link of rhab
 		 * @var array
 		 */
-		static $socials = [];
+		public $socials = [];
 
 
 
