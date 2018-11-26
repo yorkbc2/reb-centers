@@ -526,3 +526,40 @@ if (!function_exists("filter_str")) {
         return !empty($str) ? filter_var($str, FILTER_SANITIZE_STRING) : "";
     }
 }
+
+if (!function_exists("get_social_by_url"))
+{
+    function get_social_by_url ($url)
+    {
+        if (strpos($url, "facebook"))
+            return ["icon" => "fab fa-facebook", "type" => "facebook", "url" => $url];
+            elseif (strpos($url, "instagram"))
+                return ["icon" => "fab fa-instagram", "type" => "instagram", "url" => $url];
+                elseif (strpos($url, "vk"))
+                    return ["icon" => "fab fa-vk", "type" => "vk", "url" => $url];
+                    elseif (strpos($url, "linkedin"))
+                        return ["icon" => "fab fa-linkedin", "type" => "linkedin", "url" => $url];
+                        elseif (strpos($url, "twitter"))
+                            return ["icon" => "fab fa-twitter", "type" => "twitter", "url" => $url];
+    }
+}
+
+if (!function_exists("draw_stars"))
+{
+    function draw_stars($stars=0, $max = 5)
+    {
+        $output = "";
+        for ($i = 1; $i <= $max; $i++)
+        {
+            if ($i <= $stars)
+            {
+                $output .= '<i class="fa fa-star"></i>';
+            }
+            else
+            {
+                $output .= '<i class="fal fa-star"></i>';
+            }
+        }
+        return $output;
+    }
+}

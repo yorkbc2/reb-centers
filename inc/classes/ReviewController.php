@@ -17,7 +17,12 @@
 			            "key"     => "_post_id",
 			            "value"   => array( $post_id ),
 			            "compare" => "IN",
-			        )
+					),
+					array(
+						"key"     => "_reply_to",
+						"value"   => array(0),
+						"compare" => "IN"
+					)
 			    ),
 			]);
 
@@ -38,5 +43,16 @@
 			$review->save();
 
 			return $review;
+		}
+
+		public static function get_review_user($review_id, $user_id)
+		{	
+			$user = UserController::get_user($user_id);
+			return $user;
+		}
+
+		public static function get_rating($review_id)
+		{
+			return intval(get_post_meta($review_id, "_rating", true));
 		}
 	}

@@ -72,6 +72,14 @@ $cardPadding: 12px;
     .card-footer {
         border-top: 1px solid #e7e7e7;
     }
+
+    &--nospaces {
+        .card-content,
+        .card-header,
+        .card-footer {
+            padding: 0;
+        }
+    }
 }
 
 p.labeled {
@@ -112,6 +120,56 @@ p.labeled {
             i {
                 font-size: 24px;
                 color: $themeColorTwo;
+            }
+        }
+    }
+}
+
+.rating-input {
+    input {
+        display: none;
+    }
+} 
+
+.r-review-item {
+    @include flex();
+    border-bottom: 1px solid #e7e7e7;
+    padding: 20px 0;
+
+    &:last-child {
+        border-bottom: 0px;
+    }
+
+    .review-thumbnail-container {
+        width: 75px;
+    }
+
+    .review-content-container {
+        flex: 1;
+        @include flex(flex-start, column);
+        .review-rating {
+            padding-bottom: 5px;
+            span {
+                color: #ccc;
+                font-size: 14px;
+            }
+        }
+        .review-item-content {
+            line-height: 150%;
+            font-size: 16px;
+        }
+        .review-item-header {
+            padding: 5px 0;
+
+            a {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .review-item-date {
+                float: right;
+                font-size: 14px;
+                color: #ccc;
             }
         }
     }

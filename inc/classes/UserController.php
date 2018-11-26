@@ -75,6 +75,13 @@
 		 * @return number 
 		 */
 		public static function get_current_id();
+
+		/**
+		 * Returns User by ID
+		 * @param number $user_id 
+		 * @return User
+		 */
+		public static function get_user($user_id);
 	}
 
 	class UserController implements IUserController {
@@ -220,6 +227,16 @@
 				}
 			}
 			update_user_meta($id, "_reputation", $progress);
+		}
+
+		public static function get_user($user_id)
+		{
+			$user = get_user_by("id", $user_id);
+			if ($user)
+			{
+				return new User($user);
+			}
+			return false;			
 		}
 	}	
 ?>

@@ -110,6 +110,23 @@
 			return;
 		}
 
+		public function get_socials_parsed() { 
+			$socials = $this->get_socials()[0];
+			if (sizeof($socials) > 0)
+			{
+				$list = array();
+				
+				foreach ($socials as $social)
+				{ 
+					if (isset($social["url"]))
+						array_push($list, get_social_by_url($social["url"]));
+				}
+
+				return $list;
+			}
+			return false;
+		}
+
 		private function get_post() {
 			$post = get_post($this->id);
 			if ($post) {
