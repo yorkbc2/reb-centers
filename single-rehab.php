@@ -44,6 +44,30 @@
 				</div>
 			</div>
 		</div>
+		<?php if (UserController::check()): ?>
+		<div class="flex-container">
+			<div class="card">
+				<div class="card-content">
+					<form class="review-form" action="/wp-json/brainworks/reviews/add" method="POST" enctype="multipart/form-data">
+						<input type="hidden" name="rating" value="4">
+						<input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
+						<input type="hidden" name="reply_to" value="0">
+						<input type="hidden" name="user_id" value="<?php echo UserController::get_current_id(); ?>">
+						<input type="hidden" name="user_pass" value="<?php echo UserController::get_current()->password; ?>">
+						<p class="labeled">
+							<label for="content">Ваш отзыв:</label>
+							<textarea name="content" id="content" placeholder="Введите Ваш отзыв"></textarea>
+						</p>
+						<div>
+							<button type="submit" class="button-alt">
+								Отправить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
 	</div>
 
 <?php get_footer(); ?>

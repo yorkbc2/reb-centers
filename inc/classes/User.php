@@ -31,6 +31,7 @@
 			$this->id = $user->ID;
 			$this->login = $user->user_login;
 			$this->name = $user->display_name;
+			$this->password = $user->user_pass;
 
 			$this->progress = get_user_meta($this->id, "_progress", true);
 			$this->address = get_user_meta($this->id, "_address", true);
