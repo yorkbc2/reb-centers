@@ -82,6 +82,15 @@
 		 * @return User
 		 */
 		public static function get_user($user_id);
+
+		
+		/**
+		 * Test user data on correctness
+		 * @param number $user_id 
+		 * @param string $user_pass
+		 * @return number
+		 */
+		public static function test_user($user_id, $user_pass);
 	}
 
 	class UserController implements IUserController {
@@ -237,6 +246,20 @@
 				return new User($user);
 			}
 			return false;			
+		}
+
+		public static function test_user($user_id, $user_pass)
+		{
+			$user = self::get_user($user_id);
+			if ($user)
+			{
+				if ($user->password === $user_pass)
+				{
+					return 1;
+				}
+				return 0;
+			}
+			return -1;
 		}
 	}	
 ?>

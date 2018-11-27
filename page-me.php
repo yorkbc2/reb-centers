@@ -12,7 +12,8 @@
 				<div class="card">
 					<div class="card-content text-center">
 						<div>
-							<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" width="100%" height="auto" />
+							<?php $image = (new UserAvatar("", $user->id))->get(); echo $image; $placeholder = "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"; ?>
+							<img src="<?php echo $image ? $image : $placeholder; ?>" width="100%" height="auto" class="profile-image" />
 						</div>
 						<br/> 
 						<div>
@@ -80,7 +81,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal-window">
+	<!-- <div class="modal-window">
 		<div class="modal-background"></div>
 		<div class="modal-content">
 			<div class="card text-center">
@@ -89,6 +90,9 @@
 				</div>
 				<div class="card-content">
 					<form action="/wp-json/brainworks/user/avatar" method="POST" enctype="multipart/form-data" class="upload-image">
+						<?php wp_nonce_field( 'user_file_upload', 'fileup_nonce' ); ?>
+						<input type="hidden" name="user_id" value="<?php echo UserController::get_current_id(); ?>">
+						<input type="hidden" name="user_pass" value="<?php echo UserController::get_current()->password; ?>">
 						<div>
 							<img class="preview" width="200px" height="auto">
 						</div>
@@ -106,6 +110,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 <?php get_footer(); ?>

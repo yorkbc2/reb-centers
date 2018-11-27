@@ -23,8 +23,9 @@
         var $form = $(form), trigger = $form.find(".trigger"), preview = $form.find(".preview"), input = $form.find(".input");
         var choosedImage = dynamicObject(null);
         choosedImage.on("changeValue", function(file, save) {
-            var parsed = readFile(file).then(function(data) {
+            readFile(file).then(function(data) {
                 preview.attr("src", data);
+                trigger.html("Вы выбрали файл ".concat(file.name));
             });
             save(file);
         });
@@ -44,6 +45,24 @@
                 return;
             }
             choosedImage.handle("changeValue", files[0]);
+        });
+        $form.on("submit", function(e) {
+            e.preventDefault();
+            var formData = new FormData();
+            $form.find("input[type=hidden]").each(function(index, field) {
+                formData.append(field.name, field.value);
+            });
+            formData.append("image", choosedImage.get());
+            $.ajax({
+                url: $form.attr("action"),
+                data: formData,
+                processData: false,
+                contentType: false,
+                type: "POST",
+                success: function success(response) {
+                    $(".profile-image").attr("src", response);
+                }
+            });
         });
     });
 })(jQuery);

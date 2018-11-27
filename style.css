@@ -6121,6 +6121,11 @@ p.labeled a, p.labeled span {
     .modal-window .modal-content h3 {
       font-size: 20px; }
 
+.upload-image .preview {
+  margin: 10px 0;
+  -webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2); }
+
 @media only screen and (min-width: 480px) {
   ::-webkit-scrollbar {
     width: 7px;

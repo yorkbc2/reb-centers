@@ -35,9 +35,10 @@
 		let choosedImage = dynamicObject(null);
 
 		choosedImage.on("changeValue", (file, save) => {
-			let parsed = readFile(file)
+			readFile(file)
 				.then((data) => {
 					preview.attr("src", data);
+					trigger.html(`Вы выбрали файл ${file.name}`);
 				});
 			save(file);
 		});
@@ -62,5 +63,27 @@
 			}
 			choosedImage.handle("changeValue", files[0]);
 		});
+
+		$form.on("submit", (e) => {
+			e.preventDefault();
+			
+			const formData = new FormData();
+			
+			$form.find("input[type=hidden]").each((index, field) => {
+				formData.append(field.name, field.value);
+			});
+			formData.append("image", choosedImage.get());
+
+			$.ajax({
+				url: $form.attr("action"), 
+				data: formData,
+				processData: false,
+				contentType: false,
+				type: 'POST',
+				success: (response) => {
+					$(".profile-image").attr("src", response);
+				}
+			})
+		})
 	});
 })(jQuery)
