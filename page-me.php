@@ -80,5 +80,32 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal-window">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+			<div class="card text-center">
+				<div class="card-header">
+					<h3>Загрузка картинки пользователя</h3>
+				</div>
+				<div class="card-content">
+					<form action="/wp-json/brainworks/user/avatar" method="POST" enctype="multipart/form-data" class="upload-image">
+						<div>
+							<img class="preview" width="200px" height="auto">
+						</div>
+						<label for="upload-image" class="button-alt trigger">
+							Загрузить картинку
+						</label>
+						<input type="file" id="upload-image" name="image" class="input" style="display: none;">
+						<div class="sp-md-2"></div>
+						<div class="text-right">
+							<button class="button-link">
+								Сохранить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

@@ -40,6 +40,10 @@ function bw_enqueues()
         null, true);
     wp_enqueue_script('review-js');
 
+    wp_register_script('upload-image-js', get_template_directory_uri() . '/assets/js/upload-image.js', array('jquery'),
+        null, true);
+    wp_enqueue_script('upload-image-js');
+
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

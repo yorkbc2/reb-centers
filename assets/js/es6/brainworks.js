@@ -344,4 +344,23 @@
         });
     };
 
+    window.dynamicObject = (defaultValue) => {
+        return {
+            value: defaultValue,
+            events: {},
+            on: function (eventName, callback) {
+                this.events[eventName] = callback;
+            },
+            save: function (value) {
+                this.value = value;
+            },
+            handle: function (eventName, value) {
+                this.events[eventName](value, this.save.bind(this));
+            },
+            get: function () {
+                return this.value;
+            }
+        };
+    }
+
 })(window, document, jQuery);

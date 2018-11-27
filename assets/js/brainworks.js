@@ -149,4 +149,22 @@
             }
         });
     };
+    window.dynamicObject = function(defaultValue) {
+        return {
+            value: defaultValue,
+            events: {},
+            on: function on(eventName, callback) {
+                this.events[eventName] = callback;
+            },
+            save: function save(value) {
+                this.value = value;
+            },
+            handle: function handle(eventName, value) {
+                this.events[eventName](value, this.save.bind(this));
+            },
+            get: function get() {
+                return this.value;
+            }
+        };
+    };
 })(window, document, jQuery);
