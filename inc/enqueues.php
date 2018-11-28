@@ -47,6 +47,12 @@ function bw_enqueues()
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+
+    if (is_singular("rehab"))
+    {
+        wp_enqueue_script("redux", "https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js", array(), null, true);
+        wp_enqueue_script("reviews-list", get_template_directory_uri() . '/assets/js/reviews-list.js', array("redux"), null, true);
+    }
 }
 
 add_action('wp_enqueue_scripts', 'bw_enqueues', 100);

@@ -111,6 +111,7 @@
 		}
 
 		public function get_socials_parsed() { 
+			if (sizeof($this->get_socials()) < 1) return;
 			$socials = $this->get_socials()[0];
 			if (sizeof($socials) > 0)
 			{

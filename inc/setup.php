@@ -201,3 +201,23 @@ function bw_breadcrumbs_localization($l10n)
 
 add_filter('kama_breadcrumbs_default_loc', 'bw_breadcrumbs_localization', 10, 1);
 
+if (!function_exists("create_table_on_switch_theme"))
+{
+    function create_table_on_switch_theme()    
+    {
+        global $wpdb;
+        $table_name = $wpdb->prefix . "post_likes";
+        $wpdb->query("
+            CREATE TABLE IF NOT EXISTS `$table_name` (
+                ID INT(55) NOT NULL AUTO_INCREMENT,
+                PostID INT(55) NOT NULL,
+                UserID INT(55) NOT NULL,
+                Type VARCHAR(255) NOT NULL,
+                IsNegative TINYINT NOT NULL DEFAULT 0,
+                PRIMARY KEY (ID)
+            ) CHARACTER SET utf8 COLLATE utf8_general_ci;
+        ");
+    }
+
+    add_action("after_switch_theme", "create_table_on_switch_theme");
+}

@@ -24,8 +24,15 @@
                 $image = $_FILES["image"];
                 $movedfile = wp_handle_upload($image, $overrides);
 
-                $picture = new UserAvatar($movedfile["url"], $user_id);
-                $id = $picture->save();
+                $args = array(
+                    "post_type" => "user_image",
+                    "post_content" => $movedfile["url"],
+                    "post_author" => $user_id,
+                    "post_status" => "publish",
+                    "post_date" => date("Y-m-d H:i:s")
+                );
+
+                $id = wp_insert_post($args);
 
                 if ($id)
                     return $movedfile["url"];

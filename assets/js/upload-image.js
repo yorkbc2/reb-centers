@@ -65,4 +65,21 @@
             });
         });
     });
+    var $hide = function $hide(jqueryElement) {
+        return function() {
+            return jqueryElement.hide();
+        };
+    };
+    $(".modal-window").each(function(index, modal) {
+        var $modal = $(modal);
+        $modal.find(".modal-background").on("click", $hide($modal));
+        $modal.find(".modal-close").on("click", $hide($modal));
+    });
+    $(".modal-trigger").each(function(index, trigger) {
+        var $trigger = $(trigger);
+        var $modal = $($trigger.attr("data-modal"));
+        $trigger.on("click", function() {
+            $modal.toggle();
+        });
+    });
 })(jQuery);

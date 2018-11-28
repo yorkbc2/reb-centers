@@ -86,4 +86,20 @@
 			})
 		})
 	});
+
+	const $hide = (jqueryElement) => () => jqueryElement.hide();
+
+	$(".modal-window").each((index, modal) => {
+		let $modal = $(modal);
+		$modal.find(".modal-background").on("click", $hide($modal));
+		$modal.find(".modal-close").on("click", $hide($modal));
+	});
+
+	$(".modal-trigger").each((index, trigger) => {
+		let $trigger = $(trigger);
+		let $modal = $($trigger.attr("data-modal"));
+		$trigger.on("click", () => {
+			$modal.toggle();
+		});
+	});
 })(jQuery)

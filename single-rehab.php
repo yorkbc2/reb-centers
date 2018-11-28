@@ -82,45 +82,22 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="flex-container _vc">
 			<div class="card card--nospaces">
-				<div class="card-content">
-					<?php
-						
-						foreach ($reviews as $review) 
-						{
-							$user = ReviewController::get_review_user($review->ID, $review->post_author);							
-							$rating    = ReviewController::get_rating($review->ID);
-							if (!$user) continue;
-							?>
-							<div class="r-review-item">
-								<div class="review-thumbnail-container">
-									
-								</div>
-								<div class="review-content-container">
-									<div class="review-item-header">
-										<a href="/profile/<?php echo $user->id ?>" target="_blank">
-											<?php echo $user->name; ?>
-										</a>
-										<small class="review-item-date">
-											<?php echo date("d/m/Y H:i", strtotime($review->post_date)); ?>
-										</small>
-									</div>
-									<div class="review-rating">	
-										<?php echo draw_stars($rating); ?>	
-										<span>(<?php echo $rating; ?> из 5)</span>
-									</div>
-									<div class="review-item-content">
-										<?php echo esc_html($review->post_content); ?>
-									</div>
-								</div>
-							</div>
-							<?php
-						}
-					?>
+				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>">
+
+				</div>
+				<div class="card-footer text-center">
+					<div class="sp-md-2"></div>
+					<button class="button-link load-more" style="display: none;">
+						Загрузить больше
+					</button>
+					<div class="sp-md-2"></div>
 				</div>
 			</div>
 		</div>
+		
 		<?php if (UserController::check()): ?>
 		<div class="flex-container">
 			<div class="card">

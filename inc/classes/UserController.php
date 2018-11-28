@@ -91,6 +91,13 @@
 		 * @return number
 		 */
 		public static function test_user($user_id, $user_pass);
+
+		/**
+		 * Get main image of the user
+		 * @param number $user_id
+		 * @return string|boolean URL
+		 */
+		public static function get_image($user_id);
 	}
 
 	class UserController implements IUserController {
@@ -261,5 +268,19 @@
 			}
 			return -1;
 		}
+
+		public static function get_image($user_id)
+		{
+			$posts = get_posts(array(
+				"post_type" => "user_image",
+				"post_author" => $user_id
+			));
+
+			if (sizeof($posts) < 1) return false;
+
+			return $posts[0]->post_content;
+		}
 	}	
+
+	
 ?>

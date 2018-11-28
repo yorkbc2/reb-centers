@@ -11,9 +11,14 @@
 			<div class="col-md-4">
 				<div class="card">
 					<div class="card-content text-center">
-						<div>
-							<?php $image = (new UserAvatar("", $user->id))->get(); echo $image; $placeholder = "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"; ?>
+						<div class="avatar-container">
+							<?php $image = UserController::get_image($user->id); $placeholder = "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"; ?>
 							<img src="<?php echo $image ? $image : $placeholder; ?>" width="100%" height="auto" class="profile-image" />
+							<div class="avatar-mask modal-trigger" data-modal="#update-avatar-modal">
+								<div class="touchable-opacity touchable-opacity--trasnform-centered">
+									<i class="fa fa-cogs"></i>
+								</div>
+							</div>
 						</div>
 						<br/> 
 						<div>
@@ -81,7 +86,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="modal-window">
+	<div class="modal-window" id="update-avatar-modal">
 		<div class="modal-background"></div>
 		<div class="modal-content">
 			<div class="card text-center">
@@ -110,6 +115,6 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div> 
 
 <?php get_footer(); ?>
