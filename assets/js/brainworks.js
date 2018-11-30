@@ -25,6 +25,10 @@
                 removeAllStyles($(".js-menu"));
             }
         });
+        var mySiema = new Siema({
+            perPage: 3
+        });
+        var gallery = new BrainWorksCustomGallery(".rehab-gallery");
     });
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
@@ -149,6 +153,70 @@
             }
         });
     };
+    var BrainWorksCustomGallery = function BrainWorksCustomGallery(selector) {
+        var state = {}, $root = $(".gallery-modal"), $image = $root.find("img.gallery-modal-image"), $imageSet = $root.find(".gallery-modal-images"), $source = $(selector), pictures = $source.find("img");
+        Object.defineProperty(state, "images", {
+            get: function get() {
+                return state._images;
+            },
+            set: function set(images) {
+                var parsedImages = [];
+                images.each(function(index, image) {
+                    var $image = $(image);
+                    parsedImages.push({
+                        src: $image.attr("src"),
+                        width: $image.attr("data-source-width"),
+                        height: $image.attr("data-source-height")
+                    });
+                });
+                state._images = parsedImages;
+                state._$images = images;
+                state.currentImage = state._images[0];
+            }
+        });
+        Object.defineProperty(state, "currentImage", {
+            get: function get() {
+                return state._currentImage;
+            },
+            set: function set(_ref) {
+                var src = _ref.src, width = _ref.width, height = _ref.height;
+                state._currentImage = {
+                    src: src,
+                    width: width,
+                    height: height
+                };
+                $image.attr("src", src).attr("width", width).attr("height", height);
+                return state._currentImage;
+            }
+        });
+        state.images = pictures.each(function(index, picture) {
+            var $picture = $(picture);
+            $picture.on("click", function(e) {
+                state.currentImage = state.images[index];
+                $root.toggle();
+            }).clone().appendTo($imageSet).on("click", function(e) {
+                state.currentImage = state.images[index];
+            });
+        });
+        console.log(state);
+    };
+    $(".tabs").each(function(index, tabElement) {
+        var $element = $(tabElement), $anchors = $element.find("ul li a"), tabs = {}, $tabs = $element.find(".tab").each(function(index, tab) {
+            tab = $(tab);
+            tabs["#" + tab.attr("id")] = tab;
+        }), current = $anchors.eq(0).attr("href");
+        $tabs.hide().eq(0).show();
+        $anchors.eq(0).addClass("_active");
+        $anchors.on("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            var $anchor = $(event.target);
+            $anchors.removeClass("_active");
+            $anchor.addClass("_active");
+            $tabs.hide();
+            tabs[$anchor.attr("href")].show();
+        });
+    });
     window.dynamicObject = function(defaultValue) {
         return {
             value: defaultValue,

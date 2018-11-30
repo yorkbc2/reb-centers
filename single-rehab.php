@@ -74,18 +74,60 @@
 			</div>
 		</div>
 		<div class="flex-container">
-			<div class="card">
-				<div class="card-header">
-					<h2 class="muted small">
-						<?php _e("О Центре", "brainworks"); ?>
-					</h2>
+			<div class="card card--nospaces">
+				<div class="card-header with-spaces">
+					<h3 class="muted small">
+						<i class="fal fa-align-left"></i>&nbsp;&nbsp;<?php _e("О Центре", "brainworks"); ?>
+					</h3>
+				</div>
+				<div class="card-content">
+					<div class="tabs">
+						<?php if ($tabs = $post->get_tabs()): ?>
+							<ul class="rehab-tabs">
+							<?php foreach ($tabs["headers"] as $j=>$header): ?>
+								<li>
+									<a href="#<?php echo $j; ?>">
+										<?php echo $header; ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+							<?php foreach ($tabs["content"] as $j=>$content): ?>
+							<div class="tab" id="<?php echo $j; ?>">
+								<?php echo $content; ?>
+							</div>
+							<?php endforeach; ?>							
+						<?php endif; ?>
+					</div>
+					<div class="sp-md-2"></div>
+					<section class="rehab-gallery-container">
+					<div class="rehab-gallery siema">
+						<?php if ($images = $post->get_gallery()): ?>
+							<?php foreach ($images as $image): ?>
+							<div class="rehab-gallery-item">
+								<img src="<?php echo $image['url']; ?>" class="gallery-image"
+									data-source-width="<?php echo $image['width']; ?>"
+									data-source-height="<?php echo $image['height']; ?>"
+									height="100px"
+									width="auto" />
+							</div>
+							<?php endforeach; ?>
+						<?php endif; ?>
+					</div>
+					<button type="button" class="rehab-gallery-arrow prev">
+						<i class="fa fa-chevron-left"></i>
+					</button>
+					<button type="button" class="rehab-gallery-arrow next">
+						<i class="fa fa-chevron-right"></i>
+					</button>
+					</section>
 				</div>
 			</div>
 		</div>
 		
 		<div class="flex-container _vc">
 			<div class="card card--nospaces">
-				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>">
+				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
 
 				</div>
 				<div class="card-footer text-center">
@@ -136,6 +178,11 @@
 			</div>
 		</div>
 		<?php endif; ?>
+	</div>
+	<div class="modal-window gallery-modal">
+		<div class="modal-background"></div>
+		<img class="gallery-modal-image">
+		<div class="gallery-modal-images"></div>
 	</div>
 
 <?php get_footer(); ?>

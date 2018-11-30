@@ -7,12 +7,12 @@
              * Post Type: Reviews.
              */
             $labels = array(
-                'name' => __('Реабилитационные центры', 'brainworks'),
-                'singular_name' => __('Реабилитационный центр', 'brainworks'),
+                'name' => __('Ребцентры', 'brainworks'),
+                'singular_name' => __('Ребцентры', 'brainworks'),
             );
 
             $args = array(
-                'label' => __('Реабилитационные центры', 'brainworks'),
+                'label' => __('Ребцентры', 'brainworks'),
                 'labels' => $labels,
                 'description' => '',
                 'public' => true,
@@ -85,6 +85,26 @@
                     'type' => 'text',
                     'name' => esc_html__( 'Номер телефона', 'brainworks' ),
                 ),
+                array(
+                    'id' => $prefix . 'program',
+                    'type' => 'wysiwyg',
+                    'name' => esc_html__( 'Таб: Программа реабилитации', 'brainworks')
+                ),
+                array(
+                    'id' => $prefix . 'territory',
+                    'type' => 'wysiwyg',
+                    'name' => esc_html__( 'Таб: Территория', 'brainworks')
+                ),
+                array(
+                    'id' => $prefix . 'documents',
+                    'type' => 'wysiwyg',
+                    'name' => esc_html__( 'Таб: Документы и лицензии', 'brainworks')
+                ),
+                array(
+                    'id' => $prefix . "gallery",
+                    'type' => 'image_advanced',
+                    'name' => esc_html__( 'Галлерея', 'brainworks')
+                )
             ),
         );
 

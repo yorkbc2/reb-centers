@@ -3,7 +3,7 @@
     @extend %smooth_animation;
 
     &:hover {
-        color: $iconColorActive;
+        color: #000;
     }
 }
 
@@ -12,9 +12,9 @@
 }
 
 button:hover .fa {
-    color: $iconColorReversed
+    color: #000;
 }
 
 a:hover .fa {
-    color: $iconColorReversed
+    color: #000;
 }

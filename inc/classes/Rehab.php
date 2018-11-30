@@ -128,6 +128,48 @@
 			return false;
 		}
 
+		public function get_tabs()
+		{
+			$meta_list = [
+				"bw-reb-program" => "Программа реабилитации", 
+				"bw-reb-territory" => "Территория", 
+				"bw-reb-documents" => "Документы и лицензии"
+			];
+			$result = [];
+
+			foreach ($meta_list as $meta_header=>$meta_name)
+			{
+				$meta = get_post_meta($this->id, $meta_header, true);
+				if ($meta)
+				{
+					$result["headers"][$meta_header] = $meta_name;
+					$result["content"][$meta_header] = $meta;
+				}
+			}
+
+			return $result;
+		}
+
+		public function get_gallery()
+		{
+			$gallery = get_post_meta($this->id, "bw-reb-gallery");
+			if (sizeof($gallery) > 0)
+			{
+				$images = [];
+				foreach ($gallery as $image)
+				{
+					list($url, $width, $height) = wp_get_attachment_image_src($image, 'large');
+					array_push($images, [
+						'url'    => $url,
+						'width'  => $width,
+						'height' => $height
+					]);
+				}
+				return $images;
+			}
+			return false;
+		}
+
 		private function get_post() {
 			$post = get_post($this->id);
 			if ($post) {

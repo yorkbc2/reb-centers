@@ -33,6 +33,13 @@
                 removeAllStyles($('.js-menu'));
             }
         });
+
+        const mySiema = new Siema({
+            perPage: 3,
+          });
+
+        const gallery = new BrainWorksCustomGallery(".rehab-gallery");
+
     });
 
     /**
@@ -343,6 +350,106 @@
             }
         });
     };
+
+    const BrainWorksCustomGallery = function (selector)
+    {
+        const state = {},   
+            $root     = $(".gallery-modal"),
+            $image    = $root.find("img.gallery-modal-image"),
+            $imageSet = $root.find(".gallery-modal-images"),
+            $source   = $(selector),
+            pictures  = $source.find("img");
+
+        Object.defineProperty(state, "images", {
+            get: () => state._images,
+            set: (images) => {
+                let parsedImages = [];
+                images.each((index, image) => {
+                    let $image = $(image);
+
+                    parsedImages.push({
+                        src: $image.attr('src'),
+                        width: $image.attr('data-source-width'),
+                        height: $image.attr('data-source-height')
+                    }); 
+                }); 
+                state._images = parsedImages;
+                state._$images = images;
+                state.currentImage = state._images[0];
+            }
+        });
+
+        Object.defineProperty(state, "currentImage", {
+            get: () => {
+                return state._currentImage;
+            },
+            set: ({src, width, height}) => {
+                state._currentImage = {
+                    src,
+                    width,
+                    height
+                };
+
+                $image.attr("src", src)
+                    .attr("width", width)
+                    .attr("height", height);
+                
+                return state._currentImage;
+            }
+        });
+
+        state.images = pictures
+            .each((index, picture) => {
+                let $picture = $(picture);
+
+                $picture.on("click", (e) => {
+                    state.currentImage = state.images[index];
+                    $root.toggle();
+                }).clone().appendTo($imageSet).on("click", (e) => {
+                    state.currentImage = state.images[index];
+                });
+            });
+
+        console.log(state);
+
+
+    }
+
+
+    $(".tabs")
+        .each((index, tabElement) => {
+            let $element = $(tabElement),
+                $anchors = $element.find("ul li a"),
+                tabs     = {},
+                $tabs    = $element.find(".tab")
+                    .each((index, tab) => {
+                        tab = $(tab);
+                        tabs["#" + tab.attr("id")] = tab;
+                    }),
+                current  = $anchors.eq(0).attr("href");
+
+            $tabs
+                .hide()
+                .eq(0)
+                .show();
+
+            $anchors   
+                .eq(0)
+                .addClass("_active");
+
+            $anchors.on("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                let $anchor = $(event.target);
+                $anchors.removeClass("_active");
+                $anchor.addClass("_active");
+                $tabs.hide();
+                tabs[$anchor.attr("href")].show();
+            });
+        });
+
+    
+
 
     window.dynamicObject = (defaultValue) => {
         return {
