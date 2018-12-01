@@ -1,21 +1,7 @@
 <?php 
 	// Single page of the Rehab post type
 	get_header();
-	_require("Rehab");
 	$id = get_the_ID();
-	$post = new Rehab(get_the_ID());
-	$reviews = ReviewController::get_reviews($id);
-	$len = sizeof($reviews);
-	$rating = 0;
-	if ($len > 0)
-	{
-		$tmp_rating = 0;
-		for ($i = 0; $i < $len; $i++)
-		{
-			$tmp_rating += ReviewController::get_rating($reviews[$i]->ID);
-		}
-		$rating = round($tmp_rating / $len, 1);
-	}
 ?>
 
 	<div class="container-fluid">
@@ -23,15 +9,15 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card card--single flex-1">
-					<img src="<?php echo $post->get_thumbnail(); ?>" title="<?php echo $post->get_title(); ?>">
+					<img src="<?php the_post_thumbnail_url('large'); ?>" title="<?php the_title(); ?>">
 				</div>
 			</div>
 			<div class="col-md-8">
-				<div class="card card--spaces flex-1">
+				<div class="card card--spaces flex-2">
 					<div class="card-header">
-						<h2><?php echo $post->get_title(); ?></h2>
+						<h2><?php the_title(); ?></h2>
 					</div>
-					<div class="card-content">
+					<!-- <div class="card-content">
 						<p class="labeled">
 							<label>Рейтинг:</label>
 							<span>
@@ -39,24 +25,31 @@
 							(<?php echo $rating; ?> из 5)
 							</span>
 						</p>
-					</div>
+					</div> -->
 					<div class="card-footer">
 						<p class="labeled">
 							<label><?php _e("Адрес", "brainworks"); ?>:</label>
-							<?php echo $post->get_address(true); ?>
+							<?php $address = reb_combine_address(get_the_ID(), "bw-psycho-"); ?>
+							<a href="<?php echo $address['link']; ?>" target="_blank">
+								<?php echo $address['address']; ?>
+							</a>
 						</p>
 						<p class="labeled">
 							<label><?php _e("Телефон", "brainworks"); ?>:</label>
-							<a href="tel:<?php echo $post->get_phone(); ?>"><?php echo $post->get_phone(); ?></a>
+							<a href="tel:<?php echo get_post_meta(get_the_ID(), "bw-psycho-phone", true) ?>">
+								<?php echo get_post_meta(get_the_ID(), "bw-psycho-phone", true) ?>
+							</a>
 						</p>
 						<p class="labeled">
 							<label><?php _e("E-mail", "brainworks"); ?>:</label>
-							<a href="mailto:<?php echo $post->get_email(); ?>"><?php echo $post->get_email(); ?></a>
+							<a href="mailto:<?php echo get_post_meta(get_the_ID(), "bw-psycho-email", true) ?>">
+								<?php echo get_post_meta(get_the_ID(), "bw-psycho-email", true) ?>
+							</a>
 						</p>
 						<p class="labeled">
 							<label><?php _e("Социальные сети", "brainworks"); ?>:</label>
 							<?php
-								if ($socials = $post->get_socials_parsed())
+								if ($socials = parsed_socials(get_post_meta(get_the_ID(), "bw-psycho-socials")[0]))
 								{
 									echo '<ul class="default-socials">';
 									foreach ($socials as $social)
@@ -86,7 +79,7 @@
 				</div>
 				<div class="card-content">
 					<div class="tabs">
-						<?php if ($tabs = $post->get_tabs()): ?>
+						<?php if ($tabs = get_tabs(get_the_ID(), "bw-psycho-", 3)): ?>
 							<ul class="rehab-tabs">
 							<?php foreach ($tabs["headers"] as $j=>$header): ?>
 								<li>
@@ -104,34 +97,11 @@
 						<?php endif; ?>
 					</div>
 					<div class="sp-md-2"></div>
-					<?php if ($images = $post->get_gallery()): ?>
-					<section class="rehab-gallery-container">
-					<div class="rehab-gallery siema">
-						
-							<?php foreach ($images as $image): ?>
-							<div class="rehab-gallery-item">
-								<img src="<?php echo $image['url']; ?>" class="gallery-image"
-									data-source-width="<?php echo $image['width']; ?>"
-									data-source-height="<?php echo $image['height']; ?>"
-									height="100px"
-									width="auto" />
-							</div>
-							<?php endforeach; ?>
-						
-					</div>
-					<button type="button" class="rehab-gallery-arrow prev">
-						<i class="fa fa-chevron-left"></i>
-					</button>
-					<button type="button" class="rehab-gallery-arrow next">
-						<i class="fa fa-chevron-right"></i>
-					</button>
-					</section>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>
 		
-		<div class="flex-container _vc">
+		<!-- <div class="flex-container _vc">
 			<div class="card card--nospaces">
 				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
 
@@ -144,10 +114,10 @@
 					<div class="sp-md-2"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		
 		<?php if (UserController::check()): ?>
-		<div class="flex-container">
+		<!-- <div class="flex-container">
 			<div class="card">
 				<div class="card-content">
 					<form class="review-form" action="/wp-json/brainworks/reviews/add" method="POST" enctype="multipart/form-data">
@@ -182,11 +152,11 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<?php endif; ?>
 		<div class="sp-md-2"></div>
-		<div>
-		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo urlencode($post->get_address()["address"]); ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		<div class="col-md-12">
+		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo urlencode(reb_combine_address(get_the_ID(), "bw-psycho-")["address"]); ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 		<style>
 			#gmap_canvas {
 				width: 100%;

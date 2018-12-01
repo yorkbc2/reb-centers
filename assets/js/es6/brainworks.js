@@ -1,99 +1,107 @@
-'use strict';
+"use strict";
 
 ((w, d, $) => {
+  $(() => {
+    console.info("The site developed by BRAIN WORKS digital agency");
+    console.info("Сайт разработан маркетинговым агентством BRAIN WORKS");
 
-    $(() => {
-        console.info('The site developed by BRAIN WORKS digital agency');
-        console.info('Сайт разработан маркетинговым агентством BRAIN WORKS');
+    const w = $(w);
+    const d = $(d);
+    const html = $("html");
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
-        const w = $(w);
-        const d = $(d);
-        const html = $('html');
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      html.addClass("is-mobile");
+    }
 
-        if (isMobile) {
-            html.addClass('is-mobile');
-        }
+    html.removeClass("no-js").addClass("js");
 
-        html.removeClass('no-js').addClass('js');
+    reviews(".js-reviews");
+    scrollTop(".js-scroll-top");
+    stickFooter(".js-footer", ".js-container");
+    wrapHighlightedElements(".highlighted");
+    // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
+    anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
+    buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
+    scrollToElement();
+    // On Copy
+    d.on("copy", addLink);
 
-        reviews('.js-reviews');
-        scrollTop('.js-scroll-top');
-        stickFooter('.js-footer', '.js-container');
-        wrapHighlightedElements('.highlighted');
-        // hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        anotherHamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-        buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
-        scrollToElement();
-        // On Copy
-        d.on('copy', addLink);
-
-        w.on('resize', () => {
-            if (w.innerWidth >= 630) {
-                removeAllStyles($('.js-menu'));
-            }
-        });
-
-        const mySiema = new Siema({
-            perPage: 3,
-          });
-
-        const gallery = new BrainWorksCustomGallery(".rehab-gallery");
-
+    w.on("resize", () => {
+      if (w.innerWidth >= 630) {
+        removeAllStyles($(".js-menu"));
+      }
     });
 
-    /**
-     * Stick Footer
-     *
-     * @example
-     * stickFooter('.js-footer', '.js-wrapper');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     *
-     * @param {(string|Object)} footer - footer element
-     * @param {(string|Object)} container - container element
-     * @returns {void}
-     */
-    const stickFooter = (footer, container) => {
-        const el = $(footer);
-        const height = (el.outerHeight() + 20) + 'px';
+    if ($(".siema").is("div")) {
+			let siemaGallery = new Siema({
+				perPage: 3,
+				duration: 400
+			});
+			$(".rehab-gallery-arrow.prev").on('click', (e) => {
+				siemaGallery.prev(1);
+			});
+			$(".rehab-gallery-arrow.next").on('click', (e) => {
+				siemaGallery.next(1);
+			});
+      const gallery = new BrainWorksCustomGallery(".rehab-gallery");
+    }
+  });
 
-        $(container).css('paddingBottom', height);
-    };
+  /**
+   * Stick Footer
+   *
+   * @example
+   * stickFooter('.js-footer', '.js-wrapper');
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   *
+   * @param {(string|Object)} footer - footer element
+   * @param {(string|Object)} container - container element
+   * @returns {void}
+   */
+  const stickFooter = (footer, container) => {
+    const el = $(footer);
+    const height = el.outerHeight() + 20 + "px";
 
-    /**
-     * Reviews - Slick Slider
-     *
-     * @example
-     * reviews('.js-reviews');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @param {(string|Object)} container - reviews container
-     * @returns {void}
-     */
-    const reviews = (container) => {
-        const element = $(container);
+    $(container).css("paddingBottom", height);
+  };
 
-        if (element.children().length > 1 && typeof $.fn.slick === 'function') {
-            element.slick({
-                adaptiveHeight: false,
-                autoplay: false,
-                autoplaySpeed: 3000,
-                arrows: true,
-                prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
-                nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
-                dots: false,
-                dotsClass: 'slick-dots',
-                draggable: true,
-                fade: false,
-                infinite: true,
-                responsive: [],
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                speed: 300,
-                swipe: true,
-                zIndex: 10,
-            });
+  /**
+   * Reviews - Slick Slider
+   *
+   * @example
+   * reviews('.js-reviews');
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   * @param {(string|Object)} container - reviews container
+   * @returns {void}
+   */
+  const reviews = container => {
+    const element = $(container);
 
-            /*element.on('swipe', (slick, direction) => {
+    if (element.children().length > 1 && typeof $.fn.slick === "function") {
+      element.slick({
+        adaptiveHeight: false,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev">&laquo;</button>',
+        nextArrow: '<button type="button" class="slick-next">&raquo;</button>',
+        dots: false,
+        dotsClass: "slick-dots",
+        draggable: true,
+        fade: false,
+        infinite: true,
+        responsive: [],
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 300,
+        swipe: true,
+        zIndex: 10
+      });
+
+      /*element.on('swipe', (slick, direction) => {
                 console.log(slick, direction);
             });
 
@@ -104,21 +112,21 @@
             element.on('beforeChange', (slick, currentSlide, nextSlide) => {
                 console.log(slick, currentSlide, nextSlide);
             });*/
-        }
-    };
+    }
+  };
 
-    /**
-     * Hamburger Menu
-     *
-     * @example
-     * hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @param {(string|Object)} menuElement - Selected menu
-     * @param {(string|Object)} hamburgerElement - Trigger element for open/close menu
-     * @param {(string|Object)} closeTrigger - Trigger element for close opened menu
-     * @returns {void}
-     */
-    /*const hamburgerMenu = (menuElement, hamburgerElement, closeTrigger) => {
+  /**
+   * Hamburger Menu
+   *
+   * @example
+   * hamburgerMenu('.js-menu', '.js-hamburger', '.js-menu-close');
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   * @param {(string|Object)} menuElement - Selected menu
+   * @param {(string|Object)} hamburgerElement - Trigger element for open/close menu
+   * @param {(string|Object)} closeTrigger - Trigger element for close opened menu
+   * @returns {void}
+   */
+  /*const hamburgerMenu = (menuElement, hamburgerElement, closeTrigger) => {
         const menu = $(menuElement),
             close = $(closeTrigger),
             hamburger = $(hamburgerElement),
@@ -141,13 +149,13 @@
         });
     };*/
 
-    /**
-     * Скролл к элементу
-     *
-     * @param {(string|Object)} elements Элементы, которым добавляем Handler
-     * @returns {void}
-     */
-    /*const scrollHandlerForButton = (elements) => {
+  /**
+   * Скролл к элементу
+   *
+   * @param {(string|Object)} elements Элементы, которым добавляем Handler
+   * @returns {void}
+   */
+  /*const scrollHandlerForButton = (elements) => {
         elements = $(elements);
 
         let i, el;
@@ -168,306 +176,319 @@
         }
     };*/
 
-
-    /**
-     * Another Hamburger Menu
-     *
-     * @param {string} menuElement
-     * @param {string} hamburgerElement
-     * @param {string} closeTrigger
-     * @returns {void}
-     */
-    const anotherHamburgerMenu = (menuElement, hamburgerElement, closeTrigger) => {
-        const Elements = {
-            menu: $(menuElement),
-            button: $(hamburgerElement),
-            close: $(closeTrigger),
-        };
-
-        Elements.button.add(Elements.close).on('click', () => {
-            Elements.menu.toggleClass('is-active');
-        });
-
-        /**
-         * Arrow Opener
-         *
-         * @param {Object} parent
-         * @returns {*}
-         */
-        const arrowOpener = function (parent) {
-            const activeArrowClass = 'menu-item-has-children-arrow-active';
-
-            return $('<button />')
-                .addClass('menu-item-has-children-arrow')
-                .on('click', function () {
-                    parent.children('.sub-menu').eq(0).slideToggle(300);
-                    if ($(this).hasClass(activeArrowClass)) {
-                        $(this).removeClass(activeArrowClass);
-                    } else {
-                        $(this).addClass(activeArrowClass);
-                    }
-
-                });
-        };
-
-        const items = Elements.menu.find('.menu-item-has-children, .sub-menu-item-has-children');
-
-        for (let i = 0; i < items.length; i++) {
-            items.eq(i).append(arrowOpener(items.eq(i)));
-        }
+  /**
+   * Another Hamburger Menu
+   *
+   * @param {string} menuElement
+   * @param {string} hamburgerElement
+   * @param {string} closeTrigger
+   * @returns {void}
+   */
+  const anotherHamburgerMenu = (
+    menuElement,
+    hamburgerElement,
+    closeTrigger
+  ) => {
+    const Elements = {
+      menu: $(menuElement),
+      button: $(hamburgerElement),
+      close: $(closeTrigger)
     };
 
-    /**
-     *  Remove All Styles from sub menu element
-     *
-     * @param {Object} elementParent
-     * @returns {void}
-     */
-    const removeAllStyles = (elementParent) => {
-        elementParent.find('.sub-menu').removeAttr('style');
-    };
+    Elements.button.add(Elements.close).on("click", () => {
+      Elements.menu.toggleClass("is-active");
+    });
 
     /**
-     * Оборачиваем все Highlighted елементы в блок
+     * Arrow Opener
      *
-     * @param {(string|Object)} elements
-     * @returns {void}
+     * @param {Object} parent
+     * @returns {*}
      */
-    const wrapHighlightedElements = (elements) => {
-        elements = $(elements);
+    const arrowOpener = function(parent) {
+      const activeArrowClass = "menu-item-has-children-arrow-active";
 
-        let i, highlightedHeader;
-
-        for (i = 0; i < elements.length; i++) {
-            highlightedHeader = elements.eq(i);
-
-            highlightedHeader.wrap('<div style="display: block;"></div>');
-        }
-    };
-
-    /**
-     * Buy in one click
-     *
-     * @example
-     * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
-     * @param {(string|Object)} field - The selected field for writing the value (disabled field)
-     * @param {(string|Object)} headline - The element from which we get the value to write to the field
-     * @returns {void}
-     */
-    const buyOneClick = (button, field, headline) => {
-        const btn = $(button);
-
-        if (btn.length) {
-            btn.on('click', () => {
-                $(field).prop('disabled', true).val($(headline).text());
-            });
-        }
-    };
-
-    /**
-     * Scroll Top
-     *
-     * @example
-     * scrollTop('.js-scroll-top');
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @param {(string|Object)} element - Selected element
-     * @returns {void}
-     */
-    const scrollTop = (element) => {
-        const el = $(element);
-
-        el.on('click touchend', () => {
-            $('html, body').animate({scrollTop: 0}, 'slow');
-            return false;
-        });
-
-        let scrollPosition;
-
-        $(window).on('scroll', function () {
-            scrollPosition = $(this).scrollTop();
-
-            if (scrollPosition > 200) {
-                if (!el.hasClass('is-visible')) {
-                    el.addClass('is-visible');
-                }
-            } else {
-                el.removeClass('is-visible');
-            }
+      return $("<button />")
+        .addClass("menu-item-has-children-arrow")
+        .on("click", function() {
+          parent
+            .children(".sub-menu")
+            .eq(0)
+            .slideToggle(300);
+          if ($(this).hasClass(activeArrowClass)) {
+            $(this).removeClass(activeArrowClass);
+          } else {
+            $(this).addClass(activeArrowClass);
+          }
         });
     };
 
-    /**
-     * Adding link to the site resource at copying
-     *
-     * @example
-     * document.oncopy = addLink; or $(document).on('copy', addLink);
-     * @author Fedor Kudinov <brothersrabbits@mail.ru>
-     * @returns {void}
-     */
-    const addLink = () => {
-        const body = document.body || document.getElementsByTagName('body')[0];
-        const selection = window.getSelection();
-        const page_link = '\n Источник: ' + document.location.href;
-        const copy_text = selection + page_link;
-        const div = document.createElement('div');
+    const items = Elements.menu.find(
+      ".menu-item-has-children, .sub-menu-item-has-children"
+    );
 
-        div.style.position = 'absolute';
-        div.style.left = '-9999px';
-
-        body.appendChild(div);
-        div.innerText = copy_text;
-
-        selection.selectAllChildren(div);
-
-        window.setTimeout(() => {
-            body.removeChild(div);
-        }, 0);
-    };
-
-
-    /**
-     * Function to add scroll handler for all links with hash as first symbol of href
-     *
-     * @param {number} [animationSpeed=400]
-     * @returns {void}
-     */
-    const scrollToElement = (animationSpeed = 400) => {
-        const links = $('a');
-
-        links.each((index, element) => {
-            const $element = $(element), href = $element.attr('href');
-
-            if (href[0] === '#') {
-                $element.on('click', (e) => {
-                    e.preventDefault();
-
-                    $('html, body').animate({
-                        scrollTop: $(href).offset().top
-                    }, animationSpeed);
-                });
-            }
-        });
-    };
-
-    const BrainWorksCustomGallery = function (selector)
-    {
-        const state = {},   
-            $root     = $(".gallery-modal"),
-            $image    = $root.find("img.gallery-modal-image"),
-            $imageSet = $root.find(".gallery-modal-images"),
-            $source   = $(selector),
-            pictures  = $source.find("img");
-
-        Object.defineProperty(state, "images", {
-            get: () => state._images,
-            set: (images) => {
-                let parsedImages = [];
-                images.each((index, image) => {
-                    let $image = $(image);
-
-                    parsedImages.push({
-                        src: $image.attr('src'),
-                        width: $image.attr('data-source-width'),
-                        height: $image.attr('data-source-height')
-                    }); 
-                }); 
-                state._images = parsedImages;
-                state._$images = images;
-                state.currentImage = state._images[0];
-            }
-        });
-
-        Object.defineProperty(state, "currentImage", {
-            get: () => {
-                return state._currentImage;
-            },
-            set: ({src, width, height}) => {
-                state._currentImage = {
-                    src,
-                    width,
-                    height
-                };
-
-                $image.attr("src", src)
-                    .attr("width", width)
-                    .attr("height", height);
-                
-                return state._currentImage;
-            }
-        });
-
-        state.images = pictures
-            .each((index, picture) => {
-                let $picture = $(picture);
-
-                $picture.on("click", (e) => {
-                    state.currentImage = state.images[index];
-                    $root.toggle();
-                }).clone().appendTo($imageSet).on("click", (e) => {
-                    state.currentImage = state.images[index];
-                });
-            });
-
-        console.log(state);
-
-
+    for (let i = 0; i < items.length; i++) {
+      items.eq(i).append(arrowOpener(items.eq(i)));
     }
+  };
 
+  /**
+   *  Remove All Styles from sub menu element
+   *
+   * @param {Object} elementParent
+   * @returns {void}
+   */
+  const removeAllStyles = elementParent => {
+    elementParent.find(".sub-menu").removeAttr("style");
+  };
 
-    $(".tabs")
-        .each((index, tabElement) => {
-            let $element = $(tabElement),
-                $anchors = $element.find("ul li a"),
-                tabs     = {},
-                $tabs    = $element.find(".tab")
-                    .each((index, tab) => {
-                        tab = $(tab);
-                        tabs["#" + tab.attr("id")] = tab;
-                    }),
-                current  = $anchors.eq(0).attr("href");
+  /**
+   * Оборачиваем все Highlighted елементы в блок
+   *
+   * @param {(string|Object)} elements
+   * @returns {void}
+   */
+  const wrapHighlightedElements = elements => {
+    elements = $(elements);
 
-            $tabs
-                .hide()
-                .eq(0)
-                .show();
+    let i, highlightedHeader;
 
-            $anchors   
-                .eq(0)
-                .addClass("_active");
+    for (i = 0; i < elements.length; i++) {
+      highlightedHeader = elements.eq(i);
 
-            $anchors.on("click", (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                let $anchor = $(event.target);
-                $anchors.removeClass("_active");
-                $anchor.addClass("_active");
-                $tabs.hide();
-                tabs[$anchor.attr("href")].show();
-            });
-        });
-
-    
-
-
-    window.dynamicObject = (defaultValue) => {
-        return {
-            value: defaultValue,
-            events: {},
-            on: function (eventName, callback) {
-                this.events[eventName] = callback;
-            },
-            save: function (value) {
-                this.value = value;
-            },
-            handle: function (eventName, value) {
-                this.events[eventName](value, this.save.bind(this));
-            },
-            get: function () {
-                return this.value;
-            }
-        };
+      highlightedHeader.wrap('<div style="display: block;"></div>');
     }
+  };
 
+  /**
+   * Buy in one click
+   *
+   * @example
+   * buyOneClick('.one-click', '[data-field-id="field7"]', 'h1.page-name');
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   * @param {(string|Object)} button - The selected button when clicking on which the form of purchase pops up
+   * @param {(string|Object)} field - The selected field for writing the value (disabled field)
+   * @param {(string|Object)} headline - The element from which we get the value to write to the field
+   * @returns {void}
+   */
+  const buyOneClick = (button, field, headline) => {
+    const btn = $(button);
+
+    if (btn.length) {
+      btn.on("click", () => {
+        $(field)
+          .prop("disabled", true)
+          .val($(headline).text());
+      });
+    }
+  };
+
+  /**
+   * Scroll Top
+   *
+   * @example
+   * scrollTop('.js-scroll-top');
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   * @param {(string|Object)} element - Selected element
+   * @returns {void}
+   */
+  const scrollTop = element => {
+    const el = $(element);
+
+    el.on("click touchend", () => {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+
+    let scrollPosition;
+
+    $(window).on("scroll", function() {
+      scrollPosition = $(this).scrollTop();
+
+      if (scrollPosition > 200) {
+        if (!el.hasClass("is-visible")) {
+          el.addClass("is-visible");
+        }
+      } else {
+        el.removeClass("is-visible");
+      }
+    });
+  };
+
+  /**
+   * Adding link to the site resource at copying
+   *
+   * @example
+   * document.oncopy = addLink; or $(document).on('copy', addLink);
+   * @author Fedor Kudinov <brothersrabbits@mail.ru>
+   * @returns {void}
+   */
+  const addLink = () => {
+    const body = document.body || document.getElementsByTagName("body")[0];
+    const selection = window.getSelection();
+    const page_link = "\n Источник: " + document.location.href;
+    const copy_text = selection + page_link;
+    const div = document.createElement("div");
+
+    div.style.position = "absolute";
+    div.style.left = "-9999px";
+
+    body.appendChild(div);
+    div.innerText = copy_text;
+
+    selection.selectAllChildren(div);
+
+    window.setTimeout(() => {
+      body.removeChild(div);
+    }, 0);
+  };
+
+  /**
+   * Function to add scroll handler for all links with hash as first symbol of href
+   *
+   * @param {number} [animationSpeed=400]
+   * @returns {void}
+   */
+  const scrollToElement = (animationSpeed = 400) => {
+    const links = $("a");
+
+    links.each((index, element) => {
+      const $element = $(element),
+        href = $element.attr("href");
+      if (
+        $element
+          .parent()
+          .parent()
+          .hasClass("rehab-tabs")
+      )
+        return false;
+
+      if (href[0] === "#") {
+        $element.on("click", e => {
+          e.preventDefault();
+
+          $("html, body").animate(
+            {
+              scrollTop: $(href).offset().top
+            },
+            animationSpeed
+          );
+        });
+      }
+    });
+  };
+
+  const BrainWorksCustomGallery = function(selector) {
+    if (!$(selector).is("div")) return false;
+    const state = {},
+      $root = $(".gallery-modal"),
+      $image = $root.find("img.gallery-modal-image"),
+      $imageSet = $root.find(".gallery-modal-images"),
+      $source = $(selector),
+      pictures = $source.find("img");
+
+    Object.defineProperty(state, "images", {
+      get: () => state._images,
+      set: images => {
+        let parsedImages = [];
+        images.each((index, image) => {
+          let $image = $(image);
+
+          parsedImages.push({
+            src: $image.attr("src"),
+            width: $image.attr("data-source-width"),
+            height: $image.attr("data-source-height")
+          });
+        });
+        state._images = parsedImages;
+        state._$images = images;
+        state.currentImage = state._images[0];
+      }
+    });
+
+    Object.defineProperty(state, "currentImage", {
+      get: () => {
+        return state._currentImage;
+      },
+      set: ({ src, width, height }) => {
+        state._currentImage = {
+          src,
+          width,
+          height
+        };
+
+        $image
+          .attr("src", src)
+          .attr("width", width)
+          .attr("height", height);
+
+        return state._currentImage;
+      }
+    });
+
+    state.images = pictures.each((index, picture) => {
+      let $picture = $(picture);
+
+      $picture
+        .on("click", e => {
+          state.currentImage = state.images[index];
+          $root.toggle();
+        })
+        .clone()
+        .appendTo($imageSet)
+        .on("click", e => {
+          state.currentImage = state.images[index];
+        });
+    });
+
+  };
+
+  $(".tabs").each((index, tabElement) => {
+    let $element = $(tabElement),
+      $anchors = $element.find("ul li a"),
+      tabs = {},
+      $tabs = $element.find(".tab").each((index, tab) => {
+        tab = $(tab);
+        tabs["#" + tab.attr("id")] = tab;
+      }),
+      current = $anchors.eq(0).attr("href");
+
+    console.log($element)
+
+    $tabs
+      .hide()
+      .eq(0)
+      .show();
+
+    $anchors.eq(0).addClass("_active");
+
+    $anchors.on("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      let $anchor = $(event.target);
+      $anchors.removeClass("_active");
+      $anchor.addClass("_active");
+      $tabs.hide();
+      tabs[$anchor.attr("href")].show();
+    });
+  });
+
+  window.dynamicObject = defaultValue => {
+    return {
+      value: defaultValue,
+      events: {},
+      on: function(eventName, callback) {
+        this.events[eventName] = callback;
+      },
+      save: function(value) {
+        this.value = value;
+      },
+      handle: function(eventName, value) {
+        this.events[eventName](value, this.save.bind(this));
+      },
+      get: function() {
+        return this.value;
+      }
+    };
+  };
 })(window, document, jQuery);

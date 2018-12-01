@@ -497,13 +497,13 @@ if (!function_exists('sanitize_background_setting')) {
 
 if (!function_exists("reb_combine_address")) 
 {
-    function reb_combine_address($id) {
+    function reb_combine_address($id, $prefix = "bw-reb-") {
         // https://www.google.com/maps/place/проспект+Космонавтов,+31А,+Винница
         $google_maps = "https://www.google.com/maps/place/%s,%s";
         $result = "%s, %s, %s";
-        $address = get_post_meta($id, "bw-reb-address", true);
-        $city = get_post_meta($id, "bw-reb-city", true);
-        $region = get_post_meta($id, "bw-reb-region", true);
+        $address = get_post_meta($id, $prefix."address", true);
+        $city = get_post_meta($id, $prefix."city", true);
+        $region = get_post_meta($id, $prefix."region", true);
 
         return [
             'address' => sprintf($result, $region, $city, $address),
@@ -544,6 +544,19 @@ if (!function_exists("get_social_by_url"))
     }
 }
 
+if (!function_exists("parsed_socials"))
+{
+    function parsed_socials($socials)
+    {
+        $result = array();
+        foreach ($socials as $social)
+        {
+            array_push($result, get_social_by_url($social['url']));
+        }
+        return $result;
+    }
+}
+
 if (!function_exists("draw_stars"))
 {
     function draw_stars($stars=0, $max = 5)
@@ -561,5 +574,25 @@ if (!function_exists("draw_stars"))
             }
         }
         return $output;
+    }
+}
+
+if (!function_exists("get_tabs"))
+{
+    function get_tabs($id, $prefix, $count = 0)
+    {
+        $tabs = [
+            "headers" => [],
+            "content" => []
+        ];
+
+        for ($i = 1; $i <= $count; $i++)
+        {
+            $tabs["headers"][$prefix . "tab" . $i . "_tab"] = get_post_meta($id, $prefix . "tab" . $i . "_name", true);
+            $tabs["content"][$prefix . "tab" . $i . "_tab"] = get_post_meta($id, $prefix . "tab" . $i . "_content", true);
+        }
+
+
+        return $tabs;
     }
 }

@@ -320,6 +320,7 @@ p.labeled {
     }
 }
 .rehab-gallery-container{
+    position: relative;
     max-width: 50rem;
     margin: 0 auto;
     .rehab-gallery {
@@ -335,18 +336,19 @@ p.labeled {
 
     .rehab-gallery-arrow {
         position: absolute;
-        top: 65%;
+        top: 50%;
         background: transparent;
         border: 0;
         color: $themeColorTwo;
+        transform: translateY(-50%);
         i {
             font-size: 22px;
         }
         &.prev {
-            left: 40px;
+            left: -25px;
         }
         &.next {
-            right: 40px;
+            right: -25px;
         }
     }
 }

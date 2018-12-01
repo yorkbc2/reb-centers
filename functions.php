@@ -34,6 +34,7 @@ require_once locate_template('/inc/shortcodes.php');
 require_once locate_template('/inc/meta-boxes.php');
 require_once locate_template('/inc/custom-post-types.php');
 require_once locate_template('/inc/custom-posts/rehab.custom-type.php');
+require_once locate_template('/inc/custom-posts/psychology.custom-type.php');
 require_once locate_template('/inc/custom-posts/rehab-review.custom-type.php');
 require_once locate_template('/inc/custom-posts/short.custom-types.php');
 require_once locate_template('/inc/classes/User.php');

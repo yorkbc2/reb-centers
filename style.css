@@ -6231,6 +6231,7 @@ p.labeled a, p.labeled span {
         color: #5886cb; }
 
 .rehab-gallery-container {
+  position: relative;
   max-width: 50rem;
   margin: 0 auto; }
   .rehab-gallery-container .rehab-gallery {
@@ -6242,16 +6243,19 @@ p.labeled a, p.labeled span {
         width: 200px; }
   .rehab-gallery-container .rehab-gallery-arrow {
     position: absolute;
-    top: 65%;
+    top: 50%;
     background: transparent;
     border: 0;
-    color: #5886cb; }
+    color: #5886cb;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
     .rehab-gallery-container .rehab-gallery-arrow i {
       font-size: 22px; }
     .rehab-gallery-container .rehab-gallery-arrow.prev {
-      left: 40px; }
+      left: -25px; }
     .rehab-gallery-container .rehab-gallery-arrow.next {
-      right: 40px; }
+      right: -25px; }
 
 .touchable-opacity {
   cursor: pointer;

@@ -25,10 +25,19 @@
                 removeAllStyles($(".js-menu"));
             }
         });
-        var mySiema = new Siema({
-            perPage: 3
-        });
-        var gallery = new BrainWorksCustomGallery(".rehab-gallery");
+        if ($(".siema").is("div")) {
+            var siemaGallery = new Siema({
+                perPage: 3,
+                duration: 400
+            });
+            $(".rehab-gallery-arrow.prev").on("click", function(e) {
+                siemaGallery.prev(1);
+            });
+            $(".rehab-gallery-arrow.next").on("click", function(e) {
+                siemaGallery.next(1);
+            });
+            var gallery = new BrainWorksCustomGallery(".rehab-gallery");
+        }
     });
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
@@ -143,6 +152,7 @@
         var links = $("a");
         links.each(function(index, element) {
             var $element = $(element), href = $element.attr("href");
+            if ($element.parent().parent().hasClass("rehab-tabs")) return false;
             if (href[0] === "#") {
                 $element.on("click", function(e) {
                     e.preventDefault();
@@ -154,6 +164,7 @@
         });
     };
     var BrainWorksCustomGallery = function BrainWorksCustomGallery(selector) {
+        if (!$(selector).is("div")) return false;
         var state = {}, $root = $(".gallery-modal"), $image = $root.find("img.gallery-modal-image"), $imageSet = $root.find(".gallery-modal-images"), $source = $(selector), pictures = $source.find("img");
         Object.defineProperty(state, "images", {
             get: function get() {
@@ -198,13 +209,13 @@
                 state.currentImage = state.images[index];
             });
         });
-        console.log(state);
     };
     $(".tabs").each(function(index, tabElement) {
         var $element = $(tabElement), $anchors = $element.find("ul li a"), tabs = {}, $tabs = $element.find(".tab").each(function(index, tab) {
             tab = $(tab);
             tabs["#" + tab.attr("id")] = tab;
         }), current = $anchors.eq(0).attr("href");
+        console.log($element);
         $tabs.hide().eq(0).show();
         $anchors.eq(0).addClass("_active");
         $anchors.on("click", function(event) {
