@@ -131,7 +131,7 @@
 			</div>
 		</div>
 		
-		<div class="flex-container _vc">
+		<!-- <div class="flex-container _vc">
 			<div class="card card--nospaces">
 				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
 
@@ -144,42 +144,61 @@
 					<div class="sp-md-2"></div>
 				</div>
 			</div>
+		</div> -->
+
+		<div class="flex-container _vc">
+			<div class="card card--nospaces">
+				<div data-bind="foreach: reviews" class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
+					<div class="r-review-item">
+						<div class="review-thumbnail-container">
+							<img data-bind="attr: {src: user_image}" width="100px" />
+						</div>
+						<div class="review-content-container">
+							<div class="review-item-header">
+								<a data-bind="attr: {
+									href: '/profile' + post_author
+								}, text: user_name
+								" target="_blank"></a>
+								<small class="review-item-date" data-bind="text: post_date"></small>
+							</div>
+							<rating params="count: rating"></rating>
+							<div class="review-item-content" data-bind="text: post_content"></div>
+							<div class="review-item-footer">
+								<span class="clickable">Ответить <i class="fa fa-reply"></i></span>
+								<font color="#ccc">|</font>
+								<span class="clickable">	
+									<i class="fa fa-thumbs-up"></i>
+									&nbsp;
+									<span data-bind="text: likes"></span>
+								</span>
+								<font color="#ccc">|</font>
+								<span class="clickable">	
+									<i class="fa fa-thumbs-down"></i>
+									&nbsp;
+									<span data-bind="text: dislikes"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="card-footer text-center" data-bind="if: hasMoreReviews() === true">
+					<div class="sp-md-2"></div>
+					<button class="button-link load-more" data-bind="event: {click: loadMore}">
+						Загрузить больше
+					</button>
+					<div class="sp-md-2"></div>
+				</div>
+			</div>
 		</div>
 		
 		<?php if (UserController::check()): ?>
 		<div class="flex-container">
-			<div class="card">
+			<div class="card text-center">
+				<div class="card-header">
+					<h2>Оставить отзыв</h2>
+				</div>
 				<div class="card-content">
-					<form class="review-form" action="/wp-json/brainworks/reviews/add" method="POST" enctype="multipart/form-data">
-						<input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
-						<input type="hidden" name="reply_to" value="0">
-						<input type="hidden" name="user_id" value="<?php echo UserController::get_current_id(); ?>">
-						<input type="hidden" name="user_pass" value="<?php echo UserController::get_current()->password; ?>">
-						<p class="labeled">
-							<label>Ваша оценка:</label>
-							<div class="rating-input">
-								<label for="rating_1" data-label="Очень плохо"><i class="fal fa-star"></i></label>
-								<input type="radio" name="rating" id="rating_1" value="1">
-								<label for="rating_2" data-label="Плохо"><i class="fal fa-star"></i></label>
-								<input type="radio" name="rating" id="rating_2" value="2">
-								<label for="rating_3" data-label="Неплохо"><i class="fal fa-star"></i></label>
-								<input type="radio" name="rating" id="rating_3" value="3">
-								<label for="rating_4" data-label="Хорошо"><i class="fal fa-star"></i></label>
-								<input type="radio" name="rating" id="rating_4" value="4">
-								<label for="rating_5" data-label="Отлично"><i class="fal fa-star"></i></label>
-								<input type="radio" name="rating" id="rating_5" value="5">
-							</div>
-						</p>
-						<p class="labeled">
-							<label for="content">Ваш отзыв:</label>
-							<textarea name="content" id="content" placeholder="Введите Ваш отзыв"></textarea>
-						</p>
-						<div>
-							<button type="submit" class="button-alt">
-								Отправить
-							</button>
-						</div>
-					</form>
+					<review-form params="post_id: <?php echo $post->id; ?>,user_id: <?php echo UserController::get_current_id(); ?>,user_pass: '<?php echo UserController::get_current()->password; ?>',reply_to: 0,rating: true"></review-form>
 				</div>
 			</div>
 		</div>

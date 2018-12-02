@@ -6,8 +6,10 @@
         {
             // if( wp_verify_nonce( $request->get_param("fileup_nonce"), 'user_file_upload' ) ) 
             // {
+                include_once( ABSPATH . 'wp-admin/includes/image.php' );
                 if ( ! function_exists( 'wp_handle_upload' ) ) 
                     require_once( ABSPATH . 'wp-admin/includes/file.php' );
+                global $wpdb;
                 $user_id = $request->get_param("user_id");
                 $user_pass = $request->get_param("user_pass");
 
@@ -24,20 +26,32 @@
                 $image = $_FILES["image"];
                 $movedfile = wp_handle_upload($image, $overrides);
 
-                $args = array(
-                    "post_type" => "user_image",
-                    "post_content" => $movedfile["url"],
-                    "post_author" => $user_id,
-                    "post_status" => "publish",
-                    "post_date" => date("Y-m-d H:i:s")
-                );
+                // $args = array(
+                //     "post_type" => "user_image",
+                //     "post_content" => $movedfile["url"],
+                //     "post_author" => $user_id,
+                //     "post_status" => "publish",
+                //     "post_date" => date("Y-m-d H:i:s")
+                // );
 
-                $id = wp_insert_post($args);
+                
 
-                if ($id)
-                    return $movedfile["url"];
+                
+                $avatar = get_user_meta($user_id, "_user_avatar", true);
+                if ($avatar)
+                {   
+                    $name = basename($avatar);
+                    $upload_dir = wp_upload_dir();
+                    unlink($upload_dir['basedir'] . '/' . $name);
+                    update_user_meta($user_id, '_user_avatar', $movedfile["url"]);
+                }
                 else
-                    die("cannot upload image in database!");
+                {
+                    add_user_meta($user_id, '_user_avatar', $movedfile["url"]); 
+                }
+                
+
+                return $movedfile["url"];
                 
             // } 
             // else

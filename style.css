@@ -6102,6 +6102,8 @@ p.labeled a, p.labeled span {
     .r-review-item .review-content-container .review-item-content {
       line-height: 150%;
       font-size: 16px; }
+    .r-review-item .review-content-container .review-item-footer {
+      margin-top: 10px; }
     .r-review-item .review-content-container .review-item-header {
       padding: 5px 0; }
       .r-review-item .review-content-container .review-item-header a {
@@ -6116,6 +6118,13 @@ p.labeled a, p.labeled span {
   display: block;
   margin: 5px auto;
   text-align: center; }
+
+.clickable {
+  font-size: 14px;
+  color: #5886cb;
+  cursor: pointer; }
+  .clickable:hover, .clickable:hover * {
+    color: #396bb7; }
 
 .modal-window {
   position: fixed;
@@ -6240,7 +6249,8 @@ p.labeled a, p.labeled span {
     .rehab-gallery-container .rehab-gallery > div {
       text-align: center; }
       .rehab-gallery-container .rehab-gallery > div img {
-        width: 200px; }
+        width: 200px;
+        border-radius: 10px; }
   .rehab-gallery-container .rehab-gallery-arrow {
     position: absolute;
     top: 50%;
@@ -6271,6 +6281,57 @@ p.labeled a, p.labeled span {
     top: 50%; }
     .touchable-opacity--trasnform-centered i {
       font-size: 42px; }
+
+.review-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 100px; }
+  .review-form > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 15px; }
+    .review-form > div textarea {
+      font-size: 14px;
+      font-family: "Arial", "Helvetica", sans-serif;
+      min-height: 120px;
+      color: #777;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      resize: none; }
+    .review-form > div span {
+      font-size: 14px;
+      color: #555; }
+    .review-form > div > label {
+      width: 125px;
+      font-size: 14px; }
+    .review-form > div > div {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      clear: both; }
+      .review-form > div > div * {
+        float: left; }
 
 @media only screen and (min-width: 480px) {
   ::-webkit-scrollbar {

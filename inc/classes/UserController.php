@@ -229,6 +229,10 @@
 			$progress_scores = array(
 				"_sex", "_address", "_about", "_problem", "_date_born"
 			);
+			$reviews = new WP_Query(array(
+				"post_type" => array("rehab_review"),
+				"post_author" => $id
+			));
 			$progress = 0;
 			if (!$id)
 			{
@@ -241,6 +245,10 @@
 				{
 					$progress += 10;
 				}
+			}
+			for ($i = 0; $i < $reviews->found_posts; $i++)
+			{
+				$progress += 10;
 			}
 			update_user_meta($id, "_reputation", $progress);
 		}
@@ -271,14 +279,10 @@
 
 		public static function get_image($user_id)
 		{
-			$posts = get_posts(array(
-				"post_type" => "user_image",
-				"post_author" => $user_id
-			));
+			$image = get_user_meta($user_id, "_user_avatar", true);
+			if (!$image) return "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png";
 
-			if (sizeof($posts) < 1) return false;
-
-			return $posts[0]->post_content;
+			return $image;
 		}
 	}	
 

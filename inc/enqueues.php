@@ -54,8 +54,10 @@ function bw_enqueues()
 
     if (is_singular("rehab"))
     {
-        wp_enqueue_script("redux", "https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js", array(), null, true);
-        wp_enqueue_script("reviews-list", get_template_directory_uri() . '/assets/js/reviews-list.js', array("redux"), null, true);
+        wp_enqueue_script("knockout", "https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js", array("jquery"), null, true);
+        wp_enqueue_script("reviews-view-model", get_template_directory_uri() . '/assets/js/ReviewsViewModel.js', array("jquery", "knockout"), null, true);
+        // wp_enqueue_script("redux", "https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js", array(), null, true);
+        // wp_enqueue_script("reviews-list", get_template_directory_uri() . '/assets/js/reviews-list.js', array("redux"), null, true);
     }
 
     

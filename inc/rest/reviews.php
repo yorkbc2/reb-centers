@@ -32,6 +32,8 @@
 				}
 			}
 
+			
+
 			$rehab_review = new RehabReview(
 				$post_id, 
 				$user_id, 
@@ -43,6 +45,8 @@
 			$rehab_review->set_type("rehab_review");
 
 			$rehab_review->save();
+
+			UserController::calculate_reputation($user_id);
 
 			return ["success" => true, "error" => null, "review" => $rehab_review];
 		}
@@ -81,7 +85,8 @@
 				$reviews = $query->posts;
 				foreach ($reviews as $index=>$review) {
 					$user = UserController::get_user($review->post_author);
-
+					$reviews[$index]->likes = random_int(1, 20);
+					$reviews[$index]->dislikes = random_int(1, 20);
 					$reviews[$index]->user_image = UserController::get_image($user->id);
 					$reviews[$index]->user_name  = $user->name;
 					$reviews[$index]->rating     = ReviewController::get_rating($review->ID);
