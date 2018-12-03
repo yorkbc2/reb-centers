@@ -2,8 +2,18 @@
 
 (function($) {
     ko = window.ko || {};
-    var fetchReviews = function fetchReviews(page, limit, id) {
-        var url = "/wp-json/brainworks/reviews/get?page=".concat(page, "&limit=").concat(limit, "&post_id=").concat(id);
+    function ObservableReview(properties) {
+        for (var i in properties) {
+            this[i] = ko.observable(properties[i]);
+        }
+    }
+    var observableListOfReviews = function observableListOfReviews(list) {
+        return list.map(function(i) {
+            return new ObservableReview(i);
+        });
+    };
+    var fetchReviews = function fetchReviews(page, limit, id, user_id) {
+        var url = "/wp-json/brainworks/reviews/get?page=".concat(page, "&limit=").concat(limit, "&post_id=").concat(id, "&user_id=").concat(user_id);
         return fetch(url).then(function(response) {
             return response.json();
         });
@@ -11,7 +21,7 @@
     var inc = function inc(n) {
         return ++n;
     };
-    function ReviewsViewModel(post_id) {
+    function ReviewsViewModel(post_id, user_id, post_type) {
         var _this = this;
         var isMoreReviews = function isMoreReviews(page, limit, count) {
             return page * limit <= count;
@@ -21,19 +31,48 @@
         _this.loading = false;
         _this.hasMoreReviews = ko.observable(false);
         _this.page = ko.observable(1);
-        _this.limit = 1;
+        _this.limit = 10;
         _this.post_id = post_id;
+        _this.currentLikes = ko.observable({});
+        _this.showModal = ko.observable(false);
         _this.getReviews = function() {
-            return fetchReviews(_this.page(), _this.limit, _this.post_id);
+            return fetchReviews(_this.page(), _this.limit, _this.post_id, user_id);
+        };
+        var setLike = function setLike(review_id) {
+            var isPositive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+            return new Promise(function(resolve) {
+                $.post("/wp-json/brainworks/reviews/like", {
+                    post_id: review_id,
+                    user_id: user_id,
+                    post_type: post_type,
+                    value: isPositive
+                }).success(function(response) {
+                    return resolve(response);
+                });
+            });
+        };
+        _this.hideModal = function() {
+            _this.showModal(false);
+        };
+        _this.likePost = function(isPositive, review_id) {
+            if (user_id == 0) {
+                _this.showModal(true);
+                return;
+            }
+            _this.reviews = ko.observableArray(_this.reviews().map(function(i) {
+                if (i.ID == review_id) i.liked(true);
+                return i;
+            }));
+            setLike(review_id, isPositive);
         };
         _this.loadMore = function() {
             _this.getReviews().then(function(json) {
                 var data = json.data, count = json.count;
                 if (data && count) {
-                    _this.reviews(_this.reviews().concat(data.map(function(i) {
+                    _this.reviews(_this.reviews().concat(observableListOfReviews(data.map(function(i) {
                         i.replyForm = false;
                         return i;
-                    })));
+                    }))));
                     _this.page(inc(_this.page()));
                     _this.totalCount(+count);
                     _this.hasMoreReviews(isMoreReviews(_this.page(), _this.limit, _this.totalCount()));
@@ -43,10 +82,10 @@
         _this.getReviews().then(function(json) {
             var data = json.data, count = json.count;
             if (data && count) {
-                _this.reviews(data.map(function(i) {
+                _this.reviews(observableListOfReviews(data.map(function(i) {
                     i.replyForm = false;
                     return i;
-                }));
+                })));
                 _this.page(inc(_this.page()));
                 _this.totalCount(+count);
                 _this.hasMoreReviews(isMoreReviews(_this.page(), _this.limit, _this.totalCount()));
@@ -55,12 +94,12 @@
     }
     ko.components.register("rating", {
         viewModel: function viewModel(params) {
-            var rating = Math.floor(params.count);
-            this.activeStars = ko.observable(rating);
-            this.emptyStars = ko.observable(5 - this.activeStars());
-            this.value = params.count;
+            var rating = Math.floor(params.count());
+            this.activeStars = rating;
+            this.emptyStars = 5 - this.activeStars;
+            this.value = params.count();
         },
-        template: '\n            <div class="review-rating">\n              <span data-bind="foreach: new Array(activeStars())"><i class="fa fa-star"></i></span>\n              <span data-bind="foreach: new Array(emptyStars())"><i class="fal fa-star"></i></span>\n              <span data-bind="text: value + \' из 5\'"></span>\n            </div>\n        '
+        template: '\n            <div class="review-rating">\n              <span data-bind="foreach: new Array(activeStars)"><i class="fa fa-star"></i></span>\n              <span data-bind="foreach: new Array(emptyStars)"><i class="fal fa-star"></i></span>\n              <span data-bind="text: value + \' из 5\'"></span>\n            </div>\n        '
     });
     ko.components.register("review-form-stars", {
         viewModel: function viewModel(params) {
@@ -165,7 +204,7 @@
         template: '\n      <div>\n        <div data-bind="if: error()">\n          <div class="alert-error" data-bind="text: error()"></div>\n        </div>\n        <form class="review-form" data-bind="event: {submit: submit}">\n          <div data-bind="if: hasRating">\n            <label>Ваша оценка:</label>\n            <div>\n              <review-form-stars params="onChange: onChangeStars"></review-form-stars>\n              &nbsp;\n              <span data-bind="text: ratingDescription"></span>\n            </div>\n          </div>\n          <div>\n            <label for="review_content">Ваш отзыв:</label>\n            <div>\n            <textarea data-bind="value: content" placeholder="Введите Ваш отзыв..."></textarea>\n            </div>\n          </div>\n          <div>\n            <label></label>\n            <div>\n            <button type="submit" class="button-alt">Отправить</button>\n            </div>\n          </div>\n        </form>\n        <div data-bind="if: success()">\n          Вы успешно отправили Ваш отзыв и получили +10 к репутации!\n        </div>\n      </div>\n    '
     });
     $(document).ready(function() {
-        var post_id = $("#reviews_list").attr("data-id");
-        ko.applyBindings(new ReviewsViewModel(post_id));
+        var rootElement = $("#reviews_list"), post_id = rootElement.attr("data-id"), user_id = rootElement.attr("data-user"), post_type = rootElement.attr("data-type");
+        ko.applyBindings(new ReviewsViewModel(post_id, user_id, post_type));
     });
 })(jQuery);

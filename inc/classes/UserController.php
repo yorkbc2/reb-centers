@@ -98,6 +98,14 @@
 		 * @return string|boolean URL
 		 */
 		public static function get_image($user_id);
+
+		/**
+		 * Check user's reviews
+		 * @param number $user_id
+		 * @param string $type
+		 * @return boolean
+		 */
+		public static function has_reviews($user_id, $type);
 	}
 
 	class UserController implements IUserController {
@@ -283,6 +291,15 @@
 			if (!$image) return "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png";
 
 			return $image;
+		}
+
+		public static function has_reviews($user_id, $type)
+		{
+			$posts = get_posts([
+				"post_type" => $type,
+				"author__in" => [$user_id]
+			]);
+			return sizeof($posts) > 0;
 		}
 	}	
 

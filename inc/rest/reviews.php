@@ -66,7 +66,11 @@
 			$post_id = $req->get_param("post_id");
 			$page = $req->get_param("page");
 			$limit = $req->get_param("limit");
-
+			$user_id = $req->get_param("user_id");
+			if (!$user_id)
+			{
+				$user_id = -1;
+			}
 			$query = new WP_Query([
 				"post_type" => "rehab_review",
 				"paged" => $page,
@@ -84,9 +88,18 @@
 			{
 				$reviews = $query->posts;
 				foreach ($reviews as $index=>$review) {
+					$likes = LikeController::get_likes($review->ID, "rehab_review");
 					$user = UserController::get_user($review->post_author);
-					$reviews[$index]->likes = random_int(1, 20);
-					$reviews[$index]->dislikes = random_int(1, 20);
+					$reviews[$index]->likes = $likes["likes"];
+					$reviews[$index]->dislikes = $likes["dislikes"];
+					if (in_array($user_id, $likes["users"]))
+					{
+						$reviews[$index]->liked = true;
+					}
+					else
+					{
+						$reviews[$index]->liked = false;
+					}
 					$reviews[$index]->user_image = UserController::get_image($user->id);
 					$reviews[$index]->user_name  = $user->name;
 					$reviews[$index]->rating     = ReviewController::get_rating($review->ID);
@@ -102,6 +115,38 @@
 			register_rest_route( "brainworks", "reviews/get", array(
 				"methods" => "GET",
 				"callback" => "rest_get_reviews",
+			) );
+		} );
+	}
+
+	if (!function_exists("rest_like_review"))
+	{
+		function rest_like_review(WP_REST_Request $request)
+		{
+			$post_id = $request->get_param("post_id");
+			$user_id = $request->get_param("user_id");
+			$value   = $request->get_param("value");
+			$post_type = $request->get_param("post_type");
+
+			$like = LikeController::user_liked($user_id, $post_id, $post_type);
+			if ($like == NULL)
+			{
+				LikeController::set_like($user_id, $post_id, $post_type, $value);
+				return true;
+			}
+			if ($like == $value)
+			{
+				LikeController::toggle_like($user_id, $post_id, $post_type);
+				return true;
+			}
+
+			return true;
+		}
+
+		add_action( "rest_api_init", function () {
+			register_rest_route( "brainworks", "reviews/like", array(
+				"methods" => "POST",
+				"callback" => "rest_like_review"
 			) );
 		} );
 	}

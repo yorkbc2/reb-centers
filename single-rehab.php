@@ -148,7 +148,10 @@
 
 		<div class="flex-container _vc">
 			<div class="card card--nospaces">
-				<div data-bind="foreach: reviews" class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
+				<div data-bind="foreach: reviews" class="card-content" id="reviews_list" 
+					data-id="<?php echo $post->id; ?>" 
+					data-user="<?php echo UserController::get_current_id(); ?>"
+					data-type="rehab_review">
 					<div class="r-review-item">
 						<div class="review-thumbnail-container">
 							<img data-bind="attr: {src: user_image}" width="100px" />
@@ -161,22 +164,27 @@
 								" target="_blank"></a>
 								<small class="review-item-date" data-bind="text: post_date"></small>
 							</div>
-							<rating params="count: rating"></rating>
+							<rating params="count: rating()"></rating>
 							<div class="review-item-content" data-bind="text: post_content"></div>
 							<div class="review-item-footer">
 								<span class="clickable">Ответить <i class="fa fa-reply"></i></span>
 								<font color="#ccc">|</font>
-								<span class="clickable">	
-									<i class="fa fa-thumbs-up"></i>
-									&nbsp;
-									<span data-bind="text: likes"></span>
-								</span>
-								<font color="#ccc">|</font>
-								<span class="clickable">	
-									<i class="fa fa-thumbs-down"></i>
-									&nbsp;
-									<span data-bind="text: dislikes"></span>
-								</span>
+								<div data-bind="if: !liked()" style="display: inline-block;">
+									<span class="clickable" data-bind="event: {click: $root.likePost.bind($data,1,ID)}">	
+										<i class="fa fa-thumbs-up"></i>
+										&nbsp;
+										<span data-bind="text: likes"></span>
+									</span>
+									<font color="#ccc">|</font>
+									<span class="clickable" data-bind="event: {click: $root.likePost.bind($data,0,ID)}">	
+										<i class="fa fa-thumbs-down"></i>
+										&nbsp;
+										<span data-bind="text: dislikes"></span>
+									</span>
+								</div>
+								<div data-bind="if: liked()" style="display: inline-block; color: #ccc; font-size: 14px;">
+									Вы уже оценили эту рецензию 
+								</div>
 							</div>
 						</div>
 					</div>
@@ -190,8 +198,10 @@
 				</div>
 			</div>
 		</div>
-		
-		<?php if (UserController::check()): ?>
+		<?php if (UserController::check() && !UserController::has_reviews(
+			UserController::get_current_id(),
+			"rehab_review"
+		)): ?>
 		<div class="flex-container">
 			<div class="card text-center">
 				<div class="card-header">
@@ -218,5 +228,30 @@
 		<img class="gallery-modal-image">
 		<div class="gallery-modal-images"></div>
 	</div>
+	<div data-bind="if: showModal()">
+		<div class="modal-window" style="display: block;">
+			<div class="modal-background" data-bind="event: {click: hideModal}"></div>
+			<div class="modal-content">
+				<div class="card text-center">
+					<div class="card-header">
+						Упс...
+					</div>
+					<div class="card-content">
+						<div class="sp-md-2"></div>
+						<p>
+							Чтобы оценить рецензию, Вам нужно зарегистрироваться или, если вы уже это сделали, войти в свой личный кабинет.
+							<br />
+							Для этого, перейдите по ссылке ниже.
+						</p>
+						<div class="sp-md-2"></div>
+						<div>
+							<button class="button-link" data-bind="event: {click: hideModal}">Назад</button>
+							<a href="/auth" class="button-alt">Регистрация/Вход</a>
+						</div>
+					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
 <?php get_footer(); ?>
