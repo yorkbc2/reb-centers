@@ -73,6 +73,7 @@
                         i.replyForm = false;
                         return i;
                     }))));
+                    console.log(_this.reviews());
                     _this.page(inc(_this.page()));
                     _this.totalCount(+count);
                     _this.hasMoreReviews(isMoreReviews(_this.page(), _this.limit, _this.totalCount()));
@@ -94,12 +95,16 @@
     }
     ko.components.register("rating", {
         viewModel: function viewModel(params) {
-            var rating = Math.floor(params.count());
+            var count = params.count;
+            if (typeof params.count === "function") {
+                count = params.count();
+            }
+            var rating = Math.floor(count);
             this.activeStars = rating;
             this.emptyStars = 5 - this.activeStars;
-            this.value = params.count();
+            this.value = count;
         },
-        template: '\n            <div class="review-rating">\n              <span data-bind="foreach: new Array(activeStars)"><i class="fa fa-star"></i></span>\n              <span data-bind="foreach: new Array(emptyStars)"><i class="fal fa-star"></i></span>\n              <span data-bind="text: value + \' из 5\'"></span>\n            </div>\n        '
+        template: '\n            <div class="review-rating">\n              <span data-bind="foreach: new Array(activeStars)"><i class="fa fa-star"></i></span>\n              <span data-bind="foreach: new Array(emptyStars)"><i class="fal fa-star"></i></span>\n              <span data-bind="text: value + \' из 5\'"></span>\n            </div>  \n        '
     });
     ko.components.register("review-form-stars", {
         viewModel: function viewModel(params) {
@@ -206,5 +211,6 @@
     $(document).ready(function() {
         var rootElement = $("#reviews_list"), post_id = rootElement.attr("data-id"), user_id = rootElement.attr("data-user"), post_type = rootElement.attr("data-type");
         ko.applyBindings(new ReviewsViewModel(post_id, user_id, post_type));
+        $(".review-like-modal").css("display", "block");
     });
 })(jQuery);

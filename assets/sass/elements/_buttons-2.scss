@@ -196,10 +196,12 @@ a.button {
     padding: 12px 18px;
     text-align: center;
     display: inline-block;
+    border: 0;
     background-color: $themeColorTwo;
     color: #fff;
     font-size: 16px;
     border-radius: 50px;
+    cursor: pointer;
 
     &.block {
         display: block;

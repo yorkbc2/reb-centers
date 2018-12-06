@@ -81,6 +81,7 @@
               )
             )
           );
+          console.log(_this.reviews())
           _this.page(inc(_this.page()));
           _this.totalCount(+count);
           _this.hasMoreReviews(
@@ -107,22 +108,27 @@
           isMoreReviews(_this.page(), _this.limit, _this.totalCount())
         );
       }
-    });
+    }); 
   }
 
   ko.components.register("rating", {
     viewModel: function(params) {
-      let rating = Math.floor(params.count());
+      let count = params.count;
+      if (typeof params.count === "function")
+      {
+        count = params.count();
+      }
+      let rating = Math.floor(count);
       this.activeStars = rating;
       this.emptyStars = 5 - this.activeStars;
-      this.value = params.count();
+      this.value = count;
     },
     template: `
             <div class="review-rating">
               <span data-bind="foreach: new Array(activeStars)"><i class="fa fa-star"></i></span>
               <span data-bind="foreach: new Array(emptyStars)"><i class="fal fa-star"></i></span>
               <span data-bind="text: value + ' из 5'"></span>
-            </div>
+            </div>  
         `
   });
 
@@ -293,5 +299,6 @@
       user_id = rootElement.attr("data-user"),
       post_type = rootElement.attr("data-type");
     ko.applyBindings(new ReviewsViewModel(post_id, user_id, post_type));
+    $(".review-like-modal").css("display", "block");
   });
 })(jQuery);

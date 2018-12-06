@@ -54,5 +54,5 @@
 
 	UserController::calculate_reputation();
 
-	return wp_redirect("/profile-settings?success=1");
+	return wp_redirect("/me");
 

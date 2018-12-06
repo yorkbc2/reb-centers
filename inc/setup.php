@@ -221,3 +221,34 @@ if (!function_exists("create_table_on_switch_theme"))
 
     add_action("after_switch_theme", "create_table_on_switch_theme");
 }
+
+if (!function_exists("rewrite_user_url"))
+{
+    function rewrite_user_url()
+    {
+        add_rewrite_rule( 
+            '^user/([^/]*)/?$',
+            'index.php?user_id=$matches[1]',
+            'top' );
+    }
+
+    add_action("init", "rewrite_user_url", 10, 0);
+
+    add_filter("query_vars", function ($query_vars) {
+        $query_vars[] = 'user_id';
+        return $query_vars;
+    });
+
+    add_action("init", function () {
+        add_rewrite_tag('%user_id%', '([^&]+)');
+    }, 10, 0);  
+
+    add_action("template_redirect", function () {
+        if (get_query_var("user_id"))
+        {
+            add_filter( 'template_include', function() {
+                return get_template_directory() . '/page-user.php';
+            }); 
+        }
+    });
+}

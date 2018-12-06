@@ -5610,10 +5610,12 @@ a.button {
   padding: 12px 18px;
   text-align: center;
   display: inline-block;
+  border: 0;
   background-color: #5886cb;
   color: #fff;
   font-size: 16px;
-  border-radius: 50px; }
+  border-radius: 50px;
+  cursor: pointer; }
   .button-alt.block {
     display: block;
     -webkit-box-shadow: 1px 2px 13px #f4f7fb;
@@ -6408,6 +6410,7 @@ p.labeled a, p.labeled span {
       -ms-flex-pack: start;
       justify-content: flex-start; }
       .pre-header .pre-header-container .pre-header-buttons a {
+        position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -6427,6 +6430,74 @@ p.labeled a, p.labeled span {
         .pre-header .pre-header-container .pre-header-buttons a i {
           font-size: 20px;
           font-weight: lighter; }
+      .pre-header .pre-header-container .pre-header-buttons .pre-header-profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        position: relative; }
+        .pre-header .pre-header-container .pre-header-buttons .pre-header-profile:hover ul {
+          top: 100%;
+          opacity: 1; }
+        .pre-header .pre-header-container .pre-header-buttons .pre-header-profile > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+        .pre-header .pre-header-container .pre-header-buttons .pre-header-profile ul {
+          position: absolute;
+          top: -999px;
+          left: 0;
+          width: 100%;
+          background: #5886cb;
+          border-radius: 0 0 5px 5px;
+          margin: 0;
+          opacity: 0;
+          z-index: 111;
+          -webkit-transition: opacity 0.3s ease-in-out;
+          -o-transition: opacity 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out; }
+          .pre-header .pre-header-container .pre-header-buttons .pre-header-profile ul li {
+            list-style: none; }
+        .pre-header .pre-header-container .pre-header-buttons .pre-header-profile a {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .pre-header .pre-header-container .pre-header-buttons .pre-header-profile a .pre-header-profile-caret {
+            display: inline-block; }
+            .pre-header .pre-header-container .pre-header-buttons .pre-header-profile a .pre-header-profile-caret i {
+              margin-left: 5px;
+              font-size: 14px !important; }
+        .pre-header .pre-header-container .pre-header-buttons .pre-header-profile img {
+          width: 40px;
+          height: 40px;
+          border-radius: 3px;
+          margin-left: 20px; }
 
 .search-trigger {
   position: relative; }
@@ -6939,15 +7010,19 @@ p.labeled a, p.labeled span {
   background: #3f3f3f; }
   .footer * {
     color: #fff; }
+  .footer .footer-links {
+    text-align: center; }
   .footer .footer-logo {
     padding: 3px 0;
     font-size: 28px;
     font-weight: bolder; }
-  .footer .footer-copy span {
-    color: #666; }
-    .footer .footer-copy span a {
-      text-decoration: underline;
+  .footer .footer-copy {
+    text-align: right; }
+    .footer .footer-copy span {
       color: #666; }
+      .footer .footer-copy span a {
+        text-decoration: underline;
+        color: #666; }
 
 .pre-footer {
   padding: 20px 0;

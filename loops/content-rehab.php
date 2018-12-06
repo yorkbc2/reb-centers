@@ -1,9 +1,9 @@
 <?php if(have_posts()):
     global $prefix;
     $i = 0;
-    $col_per_row = 3;
+    $col_per_row = 4;
     $col = floor(12 / $col_per_row);
-    $col_class = sprintf("col-xs-%1$01d col-sm-%1$01d col-md-%1$01d col-lg-%1$01d", $col);
+    $col_class = sprintf("col-xs-12 col-sm-6 col-md-4 col-lg-%1$01d", $col);
     $len = 1 * wp_count_posts("rehab")->publish; 
     if (!$prefix)
         $prefix = "bw-reb-"; ?>
@@ -28,6 +28,9 @@
                             <?php the_title(); ?>
                         </a>
                     </h3>
+                    <div>
+                    <rating params="count: <?php echo get_rating($post->ID, "rehab_review"); ?>"></rating>
+                    </div>
                 </div>
                 <div class="reb-item-footer">
                     <a href="<?php the_permalink(); ?>">

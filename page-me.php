@@ -2,8 +2,12 @@
 	/**
 	 * Template Name: Profile page
 	 */
-	get_header();
 	$user = UserController::get_current();
+	if (!$user)
+	{
+		return wp_redirect("/profile-settings");
+	}
+	get_header();
 ?>
 
 	<div class="container-fluid">

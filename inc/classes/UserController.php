@@ -220,6 +220,10 @@
 					return $user;
 				}
 			}
+			else
+			{
+				return false;
+			}
 		}
 
 		public static function get_current_id()
@@ -239,7 +243,8 @@
 			);
 			$reviews = new WP_Query(array(
 				"post_type" => array("rehab_review"),
-				"post_author" => $id
+				"author__in" => [$id],
+				"posts_per_page" => 100
 			));
 			$progress = 0;
 			if (!$id)

@@ -63,7 +63,7 @@
 	{
 		function rest_get_reviews(WP_REST_Request $req)
 		{
-			$post_id = $req->get_param("post_id");
+			$post_id = intval($req->get_param("post_id"));
 			$page = $req->get_param("page");
 			$limit = $req->get_param("limit");
 			$user_id = $req->get_param("user_id");
@@ -71,18 +71,27 @@
 			{
 				$user_id = -1;
 			}
-			$query = new WP_Query([
-				"post_type" => "rehab_review",
-				"paged" => $page,
-				"posts_per_page" => $limit,
-				"meta_query" => array(
-			        array(
-			            "key"     => "_post_id",
-			            "value"   => array( $post_id ),
-			            "compare" => "IN",
-			        ),
-			    )
-			]);
+			$query=NULL;
+			if ($post_id != 0)
+				$query = new WP_Query([
+					"post_type" => "rehab_review",
+					"paged" => $page,
+					"posts_per_page" => $limit,
+					"meta_query" => array(
+						array(
+							"key"     => "_post_id",
+							"value"   => array( $post_id ),
+							"compare" => "IN",
+						),
+					)
+				]);
+			else if ($post_id == 0 && $user_id)
+				$query = new WP_Query([
+					"post_type" => "rehab_review",
+					"paged" => $page,
+					"posts_per_page" => $limit,
+					"author__in" => [$user_id]
+				]);
 
 			if ($query->have_posts())
 			{

@@ -229,7 +229,7 @@
 		<div class="gallery-modal-images"></div>
 	</div>
 	<div data-bind="if: showModal()">
-		<div class="modal-window" style="display: block;">
+		<div class="modal-window review-like-modal" style="display: none;">
 			<div class="modal-background" data-bind="event: {click: hideModal}"></div>
 			<div class="modal-content">
 				<div class="card text-center">

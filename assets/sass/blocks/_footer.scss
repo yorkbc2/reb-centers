@@ -11,11 +11,16 @@
         color: #fff;
     }
 
+    .footer-links {
+        text-align: center;
+    }
+
     .footer-logo {
         @include textLogoStyles(28px);
     }
 
     .footer-copy {
+        text-align: right;
         span {
             color: #666;
             a {

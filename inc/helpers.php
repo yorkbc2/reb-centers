@@ -596,3 +596,41 @@ if (!function_exists("get_tabs"))
         return $tabs;
     }
 }
+
+if (!function_exists("get_rating"))
+{
+    function get_rating ($id, $type)
+    {
+        $query = new WP_Query([
+            "post_type" => $type,
+            "posts_per_page" => 100,
+            "meta_query" => array(
+                array(
+                    "key"     => "_post_id",
+                    "value"   => array( $id ),
+                    "compare" => "IN",
+                ),
+                array(
+                    "key"     => "_reply_to",
+                    "value"   => array(0),
+                    "compare" => "IN"
+                )
+            ),
+        ]);
+        $rating = 0;
+        $c = 0;
+        
+
+        if ($query->have_posts())
+        {
+            for ($i = 0, $len = sizeof($query->posts); $i < $len; $i++)
+            {
+                $rating += 1 * get_post_meta($query->posts[$i]->ID, "_rating", true);
+                $c++;
+            }
+
+            return round($rating / $c, 1); 
+        }
+        return 0;
+    }
+}
