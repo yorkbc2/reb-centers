@@ -12,16 +12,24 @@
 				return;
 			}
 
+			
+
 			foreach ($required_fields as $field) 
 			{
 				if (!isset($_POST[$field]))
 				{
 					wp_redirect("/auth?error_message=2&type=register");
-					return;
+					return; 
 				}
 				if ($field === "born_date")
 				{
-					$user_data[$field] = date("d.m.Y", strtotime($_POST["born_date"]));
+					$parsed_date = strtotime($_POST["born_date"]);
+					if ($parsed_date > round(microtime(true)) || !$parsed_date)
+					{
+						wp_redirect("/auth?error_message=7&type=register");
+						break;
+					}
+					$user_data[$field] = date("d.m.Y", $parsed_date);
 					continue;
 				}
 				if ($field === "password" || $field === "r_password") {
@@ -35,8 +43,19 @@
 					break;
 				}
 
+				if ($field === "name")
+				{
+					$splitted_name = explode(" ", $_POST[$field]);
+					if (sizeof($splitted_name) != 2)
+					{
+						wp_redirect("/auth?error_message=8&type=register");
+						break;
+					}
+				}
+
 				$user_data[$field] = filter_str($_POST[$field]);
 			}			
+
 
 			if ($user_data["password"] !== $user_data["r_password"]) {
 				// Error message: Passwords must be equal

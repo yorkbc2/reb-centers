@@ -145,7 +145,7 @@
 				</div>
 			</div>
 		</div> -->
-
+		<?php if (ReviewController::has_reviews($post->id, "rehab_review")) : ?>
 		<div class="flex-container _vc">
 			<div class="card card--nospaces">
 				<div data-bind="foreach: reviews" class="card-content" id="reviews_list" 
@@ -159,7 +159,7 @@
 						<div class="review-content-container">
 							<div class="review-item-header">
 								<a data-bind="attr: {
-									href: '/profile' + post_author
+									href: '/user/' + post_author()
 								}, text: user_name
 								" target="_blank"></a>
 								<small class="review-item-date" data-bind="text: post_date"></small>
@@ -198,9 +198,13 @@
 				</div>
 			</div>
 		</div>
-		<?php if (UserController::check() && !UserController::has_reviews(
+		<?php endif; ?>
+		<?php 
+		$check = UserController::check();
+		if ($check && !UserController::has_reviews(
 			UserController::get_current_id(),
-			"rehab_review"
+			"rehab_review",
+			$post->id
 		)): ?>
 		<div class="flex-container">
 			<div class="card text-center">
@@ -209,6 +213,14 @@
 				</div>
 				<div class="card-content">
 					<review-form params="post_id: <?php echo $post->id; ?>,user_id: <?php echo UserController::get_current_id(); ?>,user_pass: '<?php echo UserController::get_current()->password; ?>',reply_to: 0,rating: true"></review-form>
+				</div>
+			</div>
+		</div>
+		<?php elseif (!$check): ?>
+		<div class="flex-container">
+			<div class="card">
+				<div class="card-content text-center">
+					Чтобы оставить отзыв, нужно <a href="/auth">зарегистрироваться или войти</a> в учётную запись. 
 				</div>
 			</div>
 		</div>

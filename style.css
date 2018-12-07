@@ -5638,10 +5638,10 @@ a.button {
 
 a {
   text-decoration: none;
-  color: #000; }
+  color: #5886cb; }
   a:hover, a:active, a:focus {
     text-decoration: none;
-    color: #333333; }
+    color: #7fa2d7; }
 
 ul.pagination {
   display: -webkit-box;

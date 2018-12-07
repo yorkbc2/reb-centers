@@ -105,7 +105,7 @@
 		 * @param string $type
 		 * @return boolean
 		 */
-		public static function has_reviews($user_id, $type);
+		public static function has_reviews($user_id, $type, $post_id);
 	}
 
 	class UserController implements IUserController {
@@ -298,11 +298,18 @@
 			return $image;
 		}
 
-		public static function has_reviews($user_id, $type)
+		public static function has_reviews($user_id, $type, $post_id)
 		{
 			$posts = get_posts([
 				"post_type" => $type,
-				"author__in" => [$user_id]
+				"author__in" => [$user_id],
+				"meta_query" => array(
+			        array(
+			            "key"     => "_post_id",
+			            "value"   => array( $post_id ),
+			            "compare" => "IN",
+					)
+			    )
 			]);
 			return sizeof($posts) > 0;
 		}

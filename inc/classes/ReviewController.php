@@ -4,6 +4,8 @@
 		public static function get_reviews($post_id);
 
 		public static function add_review($post_id, $user_id, $content, $rating, $reply_to);
+
+		public static function has_reviews($post_id, $type);
 	}
 
 	class ReviewController implements IReviewController {
@@ -54,5 +56,21 @@
 		public static function get_rating($review_id)
 		{
 			return intval(get_post_meta($review_id, "_rating", true));
+		}
+
+		public static function has_reviews($post_id, $type)
+		{
+			$posts = get_posts([
+				"post_type" => $type,
+				"meta_query" => array(
+			        array(
+			            "key"     => "_post_id",
+			            "value"   => array( $post_id ),
+			            "compare" => "IN",
+					)
+			    )
+			]);
+
+			return sizeof($posts) > 0;
 		}
 	}

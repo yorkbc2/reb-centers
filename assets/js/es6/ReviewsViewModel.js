@@ -21,14 +21,14 @@
   function ReviewsViewModel(post_id, user_id, post_type) {
     const _this = this;
 
-    const isMoreReviews = (page, limit, count) => page * limit <= count;
+    const isMoreReviews = (page, limit, count) => (page - 1) * limit <= count;
 
     _this.reviews = ko.observableArray([]);
     _this.totalCount = ko.observable(0);
     _this.loading = false;
     _this.hasMoreReviews = ko.observable(false);
     _this.page = ko.observable(1);
-    _this.limit = 10;
+    _this.limit = 4;
     _this.post_id = post_id;
     _this.currentLikes = ko.observable({});
     _this.showModal = ko.observable(false);
@@ -81,7 +81,6 @@
               )
             )
           );
-          console.log(_this.reviews())
           _this.page(inc(_this.page()));
           _this.totalCount(+count);
           _this.hasMoreReviews(

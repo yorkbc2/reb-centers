@@ -47,7 +47,7 @@
                             <img src="<?php echo UserController::get_image($user->id); ?>" width="40px" height="40px" />
                         </div>
                         <div>
-                            <a href="<?php echo get_template_directory_uri(); ?>/me">
+                            <a href="/me">
                                 <?php echo $user->name; ?> 
                                 <span class="pre-header-profile-caret">
                                     <i class="fal fa-chevron-down"></i>

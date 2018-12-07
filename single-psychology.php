@@ -101,20 +101,60 @@
 			</div>
 		</div>
 		
-		<!-- <div class="flex-container _vc">
+		<!-- <?php if (ReviewController::has_reviews($post->id, "rehab_review")) : ?>
+		<div class="flex-container _vc">
 			<div class="card card--nospaces">
-				<div class="card-content" id="reviews_list" data-id="<?php echo $post->id; ?>" data-user="<?php echo UserController::get_current_id(); ?>">
-
-				</div>
-				<div class="card-footer text-center">
+				<div data-bind="foreach: reviews" class="card-content" id="reviews_list" 
+					data-id="<?php echo $post->id; ?>" 
+					data-user="<?php echo UserController::get_current_id(); ?>"
+					data-type="rehab_review">
+					<div class="r-review-item">
+						<div class="review-thumbnail-container">
+							<img data-bind="attr: {src: user_image}" width="100px" />
+						</div>
+						<div class="review-content-container">
+							<div class="review-item-header">
+								<a data-bind="attr: {
+									href: '/user/' + post_author()
+								}, text: user_name
+								" target="_blank"></a>
+								<small class="review-item-date" data-bind="text: post_date"></small>
+							</div>
+							<rating params="count: rating()"></rating>
+							<div class="review-item-content" data-bind="text: post_content"></div>
+							<div class="review-item-footer">
+								<span class="clickable">Ответить <i class="fa fa-reply"></i></span>
+								<font color="#ccc">|</font>
+								<div data-bind="if: !liked()" style="display: inline-block;">
+									<span class="clickable" data-bind="event: {click: $root.likePost.bind($data,1,ID)}">	
+										<i class="fa fa-thumbs-up"></i>
+										&nbsp;
+										<span data-bind="text: likes"></span>
+									</span>
+									<font color="#ccc">|</font>
+									<span class="clickable" data-bind="event: {click: $root.likePost.bind($data,0,ID)}">	
+										<i class="fa fa-thumbs-down"></i>
+										&nbsp;
+										<span data-bind="text: dislikes"></span>
+									</span>
+								</div>
+								<div data-bind="if: liked()" style="display: inline-block; color: #ccc; font-size: 14px;">
+									Вы уже оценили эту рецензию 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="card-footer text-center" data-bind="if: hasMoreReviews() === true">
 					<div class="sp-md-2"></div>
-					<button class="button-link load-more" style="display: none;">
+					<button class="button-link load-more" data-bind="event: {click: loadMore}">
 						Загрузить больше
 					</button>
 					<div class="sp-md-2"></div>
 				</div>
 			</div>
-		</div> -->
+		</div>
+		<?php endif; ?> -->
 		
 		<?php if (UserController::check()): ?>
 		<!-- <div class="flex-container">

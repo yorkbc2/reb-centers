@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <?php if(have_posts()):
     global $prefix;
     $i = 0;
@@ -38,13 +39,16 @@
                     </a>
                 </div>
             </div>
+            <div class="sp-md-2"></div>
         </div>
 
     <?php 
     $i++; 
-    if ($i === $col_per_row - 1 || ($len < $col_per_row && $i >= $len - 1)) {
+    if ($i === $col_per_row || ($len < $col_per_row && $i >= $len)) {
         $i = 0;
         echo "</div>";
     }
     endwhile; ?>
 <?php endif; ?>
+</div>
+</div>

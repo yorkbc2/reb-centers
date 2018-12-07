@@ -1,12 +1,12 @@
 a {
     text-decoration: none;
-    color: $linkFontColor;
-    @extend %smooth_animation;
+    color: $themeColorTwo;
+    @extend %smooth_animation; 
 
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: $linkFontColorActive;
-    }
+        color: lighten($themeColorTwo, 10%);
+    } 
 }
