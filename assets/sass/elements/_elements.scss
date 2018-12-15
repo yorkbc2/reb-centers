@@ -5,6 +5,7 @@ $cardPadding: 12px;
     @include flex(space-between, column);
     border: 1px solid #e7e7e7;
     border-radius: 3px;
+    margin-bottom: 5px;
     overflow: hidden;
     background-color: #fff;
     .reb-item-header {
@@ -147,6 +148,26 @@ p.labeled {
         border-bottom: 0px;
     }
 
+    .review-item-replies {
+        .review-item-replies-trigger {
+            background-color: transparent;
+            color: $themeColorTwo;
+            text-align: center;
+            display: block;
+            border: 0;
+            padding: 12px 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: $fontFamilyOne;
+            cursor: pointer;
+        }
+
+        .r-review-item {
+            border-bottom: 1px solid #e7e7e7;
+        }
+    }
+
     .review-thumbnail-container {
         width: 90px;
         padding: 5px 10px 0 0;
@@ -256,14 +277,23 @@ p.labeled {
 
 .gallery-modal-images {
     position: fixed;
-    bottom: 10px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    max-width: 80%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar  {
+        height: 10px;
+    }
 
     img {
+        flex: 0 0 auto;
         width: auto;
         height: 60px;
         margin: 0 10px;
@@ -304,6 +334,10 @@ p.labeled {
 .tabs {
     .tab {
         padding: $cardPadding;
+        p {
+            font-weight: lighter;
+            line-height: 150%;
+        }
     }
     ul {
         padding: 0 $cardPadding;
@@ -333,6 +367,19 @@ p.labeled {
             }
         }
     }
+
+    @media screen and (max-width: 545px) {
+        ul {
+            li {
+                display: block;
+                text-align: center;
+                padding: 0;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 .rehab-gallery-container{
     position: relative;
@@ -347,6 +394,9 @@ p.labeled {
                 width: 200px;
                 border-radius: 10px;
             }
+        }
+        @media screen and (max-width: 545px) {
+            max-width: 17rem;
         }
     }
 

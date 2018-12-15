@@ -1,7 +1,5 @@
 <?php 
-    get_header(); 
-    $user_id = get_query_var("user_id");
-    $user = UserController::get_user($user_id);
+    get_header();
 ?>
 
 <div class="container-fluid">
@@ -13,7 +11,7 @@
                     <img src="<?php echo UserController::get_image($user_id); ?>" />
                     <div>
                         <br />
-                        <button class="button-alt">
+                        <button class="button-medium">
                             Написать сообщение
                         </button>
                     </div>

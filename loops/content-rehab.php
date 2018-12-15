@@ -1,18 +1,25 @@
+<?php 
+    global $posts;
+    $p_len = !empty($posts) ? sizeof($posts) : 0;
+    $c = 0;
+?>
 <div class="container-fluid">
-<?php if(have_posts()):
+<?php if(have_posts() || (!empty($posts) && $len > 0)):
     global $prefix;
+    global $wp_query;
+    if ($p_len > 0) {
+        setup_postdata($posts[$c]);
+    }
     $i = 0;
-    $col_per_row = 4;
-    $col = floor(12 / $col_per_row);
-    $col_class = sprintf("col-xs-12 col-sm-6 col-md-4 col-lg-%1$01d", $col);
+    $c++;
     $len = 1 * wp_count_posts("rehab")->publish; 
     if (!$prefix)
         $prefix = "bw-reb-"; ?>
     <?php while (have_posts()): the_post(); global $post;
-        if ($i === 0) echo '<div class="row">';
+        if ($i % 4 === 0) echo '<div class="row">';
         ?>
 
-        <div class="<?php echo $col_class; ?>">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
             <div class="reb-item">
                 <div class="reb-item-header">
                     <img src="<?php the_post_thumbnail_url("medium"); ?>" title="<?php the_title(); ?>">
@@ -30,7 +37,7 @@
                         </a>
                     </h3>
                     <div>
-                    <rating params="count: <?php echo get_rating($post->ID, "rehab_review"); ?>"></rating>
+                    <rating params="count: <?php echo get_rating($post->ID, get_post_type() . "_review"); ?>"></rating>
                     </div>
                 </div>
                 <div class="reb-item-footer">
@@ -43,12 +50,17 @@
         </div>
 
     <?php 
-    $i++; 
-    if ($i === $col_per_row || ($len < $col_per_row && $i >= $len)) {
-        $i = 0;
+    $i++;
+    if ($i % 4 === 0 && $i != 0) {
         echo "</div>";
     }
     endwhile; ?>
+
 <?php endif; ?>
 </div>
+<?php if (1 * $wp_query->found_posts / get_query_var("posts_per_page") > 1): ?>
+<div>
+    <?php echo archive_pagination(1 * $wp_query->found_posts, get_query_var("posts_per_page"), get_query_var("paged"), get_post_type()); ?>
+</div>
+<?php endif; ?>
 </div>

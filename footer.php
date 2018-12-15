@@ -1,7 +1,25 @@
-</div><!-- .page-wrapper end-->
+<?php if (!is_archive()) echo "</div>"; ?>
 
 <footer class="footer js-footer">
-    <div class="container">
+    <?php if ($admins = UserController::get_admins()): ?>
+    <div class="footer-admins">
+        <div class="container">
+            <div class="footer-admins-list">
+                <?php foreach ($admins as $a): ?>
+                    <div class="footer-admins-list-item">
+                        <div class="footer-admins-list-item-icon">
+                            <i class="fal fa-user-shield"></i>
+                        </div>
+                        <a href="/user/<?php echo $a->ID; ?>" class="footer-admins-list-item-name">
+                            <?php echo "@" . $a->display_name; ?>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    <div class="container footer-content">
         <div class="flex-container">
             <div class="footer-logo flex-container _vc">
                 <?php echo get_default_logo_link(); ?>

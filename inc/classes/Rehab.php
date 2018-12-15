@@ -52,8 +52,10 @@
 
 
 
-		public function __construct($id) {
+		public function __construct($id, $prefix = "bw-reb-") {
 			$this->id = $id;
+
+			$this->prefix = $prefix;
 
 			$this->get_post();
 		}
@@ -152,7 +154,7 @@
 
 		public function get_gallery()
 		{
-			$gallery = get_post_meta($this->id, "bw-reb-gallery");
+			$gallery = get_post_meta($this->id, $this->prefix . "gallery");
 			if (sizeof($gallery) > 0)
 			{
 				$images = [];
@@ -177,9 +179,9 @@
 				$this->address = reb_combine_address($this->id);
 				$this->thumbnail = get_the_post_thumbnail_url($this->id, "large");
 				$this->content = $post->post_content;
-				$this->phone = get_post_meta($this->id, "bw-reb-phone", true);
-				$this->email = get_post_meta($this->id, "bw-reb-email", true);
-				$this->socials = get_post_meta($this->id, "bw-reb-socials");
+				$this->phone = get_post_meta($this->id, $this->prefix . "phone", true);
+				$this->email = get_post_meta($this->id, $this->prefix . "email", true);
+				$this->socials = get_post_meta($this->id, $this->prefix . "socials");
 			}
 		}
 	}

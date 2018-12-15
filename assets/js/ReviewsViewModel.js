@@ -12,8 +12,8 @@
             return new ObservableReview(i);
         });
     };
-    var fetchReviews = function fetchReviews(page, limit, id, user_id) {
-        var url = "/wp-json/brainworks/reviews/get?page=".concat(page, "&limit=").concat(limit, "&post_id=").concat(id, "&user_id=").concat(user_id);
+    var fetchReviews = function fetchReviews(page, limit, id, user_id, post_type) {
+        var url = "/wp-json/brainworks/reviews/get?page=".concat(page, "&limit=").concat(limit, "&post_id=").concat(id, "&user_id=").concat(user_id, "&post_type=").concat(post_type);
         return fetch(url).then(function(response) {
             return response.json();
         });
@@ -35,8 +35,9 @@
         _this.post_id = post_id;
         _this.currentLikes = ko.observable({});
         _this.showModal = ko.observable(false);
+        _this.post_type = post_type;
         _this.getReviews = function() {
-            return fetchReviews(_this.page(), _this.limit, _this.post_id, user_id);
+            return fetchReviews(_this.page(), _this.limit, _this.post_id, user_id, post_type);
         };
         var setLike = function setLike(review_id) {
             var isPositive = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
@@ -49,6 +50,16 @@
                 }).success(function(response) {
                     return resolve(response);
                 });
+            });
+        };
+        _this.loadReplies = function(id) {
+            $.get("/wp-json/brainworks/reviews/get?page=1&limit=".concat(100, "&post_id=", post_id, "&user_id=").concat(user_id, "&reply_to=").concat(id)).done(function(response) {
+                _this.reviews(_this.reviews().map(function(item) {
+                    if (item.ID() === id) {
+                        item.loadedReplies(response.data);
+                    }
+                    return item;
+                }));
             });
         };
         _this.hideModal = function() {
@@ -70,7 +81,8 @@
                 var data = json.data, count = json.count;
                 if (data && count) {
                     _this.reviews(_this.reviews().concat(observableListOfReviews(data.map(function(i) {
-                        i.replyForm = false;
+                        i.replyForm = ko.observable(false);
+                        i.loadedReplies = ko.observableArray([]);
                         return i;
                     }))));
                     _this.page(inc(_this.page()));
@@ -83,7 +95,8 @@
             var data = json.data, count = json.count;
             if (data && count) {
                 _this.reviews(observableListOfReviews(data.map(function(i) {
-                    i.replyForm = false;
+                    i.replyForm = ko.observable(false);
+                    i.loadedReplies = ko.observableArray([]);
                     return i;
                 })));
                 _this.page(inc(_this.page()));
@@ -91,6 +104,13 @@
                 _this.hasMoreReviews(isMoreReviews(_this.page(), _this.limit, _this.totalCount()));
             }
         });
+        _this.openReplyForm = function(review_id) {
+            if (typeof review_id === "function") review_id = review_id();
+            _this.reviews(_this.reviews().map(function(item) {
+                if (item.ID() === review_id) item.replyForm(!item.replyForm()); else item.replyForm(false);
+                return item;
+            }));
+        };
     }
     ko.components.register("rating", {
         viewModel: function viewModel(params) {
@@ -166,7 +186,8 @@
                 post_id: params.post_id,
                 user_id: params.user_id,
                 user_pass: params.user_pass,
-                reply_to: params.reply_to
+                reply_to: params.reply_to,
+                post_type: params.post_type || "rehab_review"
             };
             _this.hasRating = params.rating || false;
             _this.rating = ko.observable(0);
@@ -180,7 +201,6 @@
                 _this.ratingDescription(description);
             };
             _this.submit = function(e) {
-                console.log(e);
                 var data = {};
                 if (_this.hasRating && _this.rating() === 0) {
                     _this.error("Укажите, пожалуйста, Вашу оценку");
@@ -205,7 +225,7 @@
                 });
             };
         },
-        template: '\n      <div>\n        <div data-bind="if: error()">\n          <div class="alert-error" data-bind="text: error()"></div>\n        </div>\n        <form class="review-form" data-bind="event: {submit: submit}">\n          <div data-bind="if: hasRating">\n            <label>Ваша оценка:</label>\n            <div>\n              <review-form-stars params="onChange: onChangeStars"></review-form-stars>\n              &nbsp;\n              <span data-bind="text: ratingDescription"></span>\n            </div>\n          </div>\n          <div>\n            <label for="review_content">Ваш отзыв:</label>\n            <div>\n            <textarea data-bind="value: content" placeholder="Введите Ваш отзыв..."></textarea>\n            </div>\n          </div>\n          <div>\n            <label></label>\n            <div>\n            <button type="submit" class="button-alt">Отправить</button>\n            </div>\n          </div>\n        </form>\n        <div data-bind="if: success()">\n          Вы успешно отправили Ваш отзыв и получили +10 к репутации!\n        </div>\n      </div>\n    '
+        template: '\n      <div>\n        <div data-bind="if: error()">\n          <div class="alert-error" data-bind="text: error()"></div>\n        </div>\n        <form class="review-form" data-bind="event: {submit: submit}">\n          <div data-bind="if: hasRating">\n            <label>Ваша оценка:</label>\n            <div>\n              <review-form-stars params="onChange: onChangeStars"></review-form-stars>\n              &nbsp;\n              <span data-bind="text: ratingDescription"></span>\n            </div>\n          </div>\n          <div>\n            <label for="review_content">Ваш отзыв:</label>\n            <div>\n            <textarea data-bind="value: content" placeholder="Введите Ваш отзыв..."></textarea>\n            </div>\n          </div>\n          <div>\n            <label></label>\n            <div>\n            <button type="submit" class="button-medium">Отправить</button>\n            </div>\n          </div>\n        </form>\n        <div data-bind="if: success()">\n          Вы успешно отправили Ваш отзыв и получили +10 к репутации!\n        </div>\n      </div>\n    '
     });
     $(document).ready(function() {
         var rootElement = $("#reviews_list"), post_id = rootElement.attr("data-id"), user_id = rootElement.attr("data-user"), post_type = rootElement.attr("data-type");

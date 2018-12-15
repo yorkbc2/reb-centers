@@ -27,7 +27,11 @@
         });
         if ($(".siema").is("div")) {
             var siemaGallery = new Siema({
-                perPage: 3,
+                perPage: {
+                    1024: 3,
+                    768: 2,
+                    480: 1
+                },
                 duration: 400
             });
             $(".rehab-gallery-arrow.prev").on("click", function(e) {

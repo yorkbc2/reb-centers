@@ -73,4 +73,25 @@
 
 			return sizeof($posts) > 0;
 		}
+
+		public static function has_replies($review_id, $type = "rehab_review")
+		{
+			return boolval(sizeof(self::get_replies($review_id, $type, 1)));
+		}
+		public static function get_replies($review_id, $type = "rehab_review", $limit = 100)
+		{
+			$posts = get_posts([
+				"post_type" => $type,
+				"meta_query" => array(
+			        array(
+			            "key"     => "_reply_to",
+			            "value"   => array( $review_id ),
+			            "compare" => "IN",
+					)
+				),
+				"posts_per_page" => $limit
+			]);
+
+			return $posts;
+		}
 	}

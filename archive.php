@@ -10,7 +10,6 @@
             <?php get_sidebar(); ?>
         </div>
     </div><!-- /.row -->
-</div><!-- /.container -->
+</div><!-- /.container -->  
 
 <?php get_footer(); ?>
-

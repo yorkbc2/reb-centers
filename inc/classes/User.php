@@ -27,11 +27,19 @@
 
 		public $about = "";
 
+		public $is_admin = false;
+
 		public function __construct(WP_User $user) {
 			$this->id = $user->ID;
 			$this->login = $user->user_login;
 			$this->name = $user->display_name;
 			$this->password = $user->user_pass;
+			$this->email = $user->user_email;
+
+			if ($user->caps && isset($user->caps["administrator"]) && $user->caps["administrator"] === true)
+			{
+				$this->is_admin = true;
+			}
 
 			$this->progress = get_user_meta($this->id, "_progress", true);
 			$this->address = get_user_meta($this->id, "_address", true);

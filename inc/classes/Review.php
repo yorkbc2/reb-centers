@@ -21,7 +21,7 @@
 		
 		public $reply_to = 0;
 
-		public $type = "review";
+		public $type = "rehab_review";
 
 		public function __construct(
 			$post_id, 
@@ -39,9 +39,19 @@
 		}
 
 		public function save() {
+			$user = UserController::get_user($this->user_id);
+			$post = get_posts([
+				"post_type" => $this->type,
+				"posts_per_page" => 1,
+				"ID" => $this->post_id
+			]);
+			if (sizeof($post) > 0)
+			{
+				$post = $post[0];
+			}
 			$id = wp_insert_post([
 				"post_type" => $this->type,
-				"post_title" => "",
+				"post_title" => $user->name . " об " . $post->post_title,
 				"post_content" => $this->content,
 				"post_author" => $this->user_id,
 				"post_status" => "publish"

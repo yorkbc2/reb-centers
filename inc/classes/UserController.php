@@ -106,6 +106,12 @@
 		 * @return boolean
 		 */
 		public static function has_reviews($user_id, $type, $post_id);
+
+		/**	
+		 * Get admins from db
+		 * @return Array
+		 */
+		public static function get_admins();
 	}
 
 	class UserController implements IUserController {
@@ -238,19 +244,28 @@
 
 		public static function calculate_reputation($id=0) 
 		{
+			global $wpdb;
 			$progress_scores = array(
 				"_sex", "_address", "_about", "_problem", "_date_born"
 			);
+			
+			if (!$id)
+			{
+				$id = self::get_current_id();
+			}
+
 			$reviews = new WP_Query(array(
 				"post_type" => array("rehab_review"),
 				"author__in" => [$id],
 				"posts_per_page" => 100
 			));
+			$table_name = $wpdb->prefix . "post_likes";
+			$likes   = $wpdb->get_results("
+				SELECT UserID FROM `$table_name` WHERE UserID IN ('$id')
+			");
 			$progress = 0;
-			if (!$id)
-			{
-				$id = self::get_current_id();
-			}
+			$karma = sizeof($likes) * 5;
+
 			foreach ($progress_scores as $meta)
 			{
 				$check = get_user_meta($id, $meta, true);
@@ -264,6 +279,7 @@
 				$progress += 10;
 			}
 			update_user_meta($id, "_reputation", $progress);
+			update_user_meta($id, "_likes", $karma);
 		}
 
 		public static function get_user($user_id)
@@ -312,6 +328,14 @@
 			    )
 			]);
 			return sizeof($posts) > 0;
+		}
+
+		public static function get_admins()
+		{
+			return get_users([
+				'fields' => ['display_name', 'ID', 'user_nicename'],
+				'role' => 'administrator'
+			]);
 		}
 	}	
 

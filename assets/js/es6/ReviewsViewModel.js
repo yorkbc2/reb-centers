@@ -11,8 +11,8 @@
     return list.map(i => new ObservableReview(i));
   };
 
-  const fetchReviews = (page, limit, id, user_id) => {
-    let url = `/wp-json/brainworks/reviews/get?page=${page}&limit=${limit}&post_id=${id}&user_id=${user_id}`;
+  const fetchReviews = (page, limit, id, user_id, post_type) => {
+    let url = `/wp-json/brainworks/reviews/get?page=${page}&limit=${limit}&post_id=${id}&user_id=${user_id}&post_type=${post_type}`;
     return fetch(url).then(response => response.json());
   };
 
@@ -32,9 +32,16 @@
     _this.post_id = post_id;
     _this.currentLikes = ko.observable({});
     _this.showModal = ko.observable(false);
+    _this.post_type = post_type;
 
     _this.getReviews = () => {
-      return fetchReviews(_this.page(), _this.limit, _this.post_id, user_id);
+      return fetchReviews(
+        _this.page(),
+        _this.limit,
+        _this.post_id,
+        user_id,
+        post_type
+      );
     };
 
     let setLike = (review_id, isPositive = 1) => {
@@ -48,13 +55,27 @@
       });
     };
 
+    _this.loadReplies = id => {
+      $.get(
+        `/wp-json/brainworks/reviews/get?page=1&limit=${100}&post_id=${post_id}&user_id=${user_id}&reply_to=${id}`
+      ).done(response => {
+        _this.reviews(
+          _this.reviews().map(item => {
+            if (item.ID() === id) {
+              item.loadedReplies(response.data);
+            }
+            return item;
+          })
+        );
+      });
+    };
+
     _this.hideModal = () => {
       _this.showModal(false);
-    }
+    };
 
     _this.likePost = (isPositive, review_id) => {
-      if (user_id == 0)
-      {
+      if (user_id == 0) {
         _this.showModal(true);
         return;
       }
@@ -75,7 +96,8 @@
             _this.reviews().concat(
               observableListOfReviews(
                 data.map(i => {
-                  i.replyForm = false;
+                  i.replyForm = ko.observable(false);
+                  i.loadedReplies = ko.observableArray([]);
                   return i;
                 })
               )
@@ -96,7 +118,8 @@
         _this.reviews(
           observableListOfReviews(
             data.map(i => {
-              i.replyForm = false;
+              i.replyForm = ko.observable(false);
+              i.loadedReplies = ko.observableArray([]);
               return i;
             })
           )
@@ -107,14 +130,23 @@
           isMoreReviews(_this.page(), _this.limit, _this.totalCount())
         );
       }
-    }); 
+    });
+    _this.openReplyForm = function(review_id) {
+      if (typeof review_id === "function") review_id = review_id();
+      _this.reviews(
+        _this.reviews().map(item => {
+          if (item.ID() === review_id) item.replyForm(!item.replyForm());
+          else item.replyForm(false);
+          return item;
+        })
+      );
+    };
   }
 
   ko.components.register("rating", {
     viewModel: function(params) {
       let count = params.count;
-      if (typeof params.count === "function")
-      {
+      if (typeof params.count === "function") {
         count = params.count();
       }
       let rating = Math.floor(count);
@@ -218,7 +250,8 @@
         post_id: params.post_id,
         user_id: params.user_id,
         user_pass: params.user_pass,
-        reply_to: params.reply_to
+        reply_to: params.reply_to,
+        post_type: params.post_type || "rehab_review"
       };
       _this.hasRating = params.rating || false;
       _this.rating = ko.observable(0);
@@ -233,7 +266,6 @@
       };
 
       _this.submit = e => {
-        console.log(e);
         const data = {};
         if (_this.hasRating && _this.rating() === 0) {
           _this.error("Укажите, пожалуйста, Вашу оценку");
@@ -281,7 +313,7 @@
           <div>
             <label></label>
             <div>
-            <button type="submit" class="button-alt">Отправить</button>
+            <button type="submit" class="button-medium">Отправить</button>
             </div>
           </div>
         </form>

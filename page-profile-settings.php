@@ -84,7 +84,7 @@
 								</p>
 							</div>
 							<div>
-								<button type="submit" class="button-alt">Принять</button>
+								<button type="submit" class="button-medium">Принять</button>
 							</div>
 						</form>
 					</div>

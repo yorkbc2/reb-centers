@@ -167,7 +167,8 @@
 							<rating params="count: rating()"></rating>
 							<div class="review-item-content" data-bind="text: post_content"></div>
 							<div class="review-item-footer">
-								<span class="clickable">Ответить <i class="fa fa-reply"></i></span>
+								<span class="clickable"
+									data-bind="event: {click: $root.openReplyForm.bind($data,ID)}">Ответить <i class="fa fa-reply"></i></span>
 								<font color="#ccc">|</font>
 								<div data-bind="if: !liked()" style="display: inline-block;">
 									<span class="clickable" data-bind="event: {click: $root.likePost.bind($data,1,ID)}">	
@@ -186,6 +187,39 @@
 									Вы уже оценили эту рецензию 
 								</div>
 							</div>
+							<div class="review-item-replies">
+								<div class="review-item-replies-container" data-bind="if: has_replies">
+									<div data-bind="if: !loadedReplies().length">
+										<button class="review-item-replies-trigger" data-bind="event: {click: $root.loadReplies.bind($data, ID())}">
+											Посмотреть ответы
+										</button>
+									</div>
+									<div data-bind="if: loadedReplies().length">
+										<div class="review-item-replies-list" data-bind="foreach: loadedReplies()">
+											<div class="r-review-item">
+												<div class="review-thumbnail-container">
+													<img data-bind="attr: {src: user_image}" alt="">
+												</div>
+												<div class="review-content-container">
+													<div class="review-item-header">
+														<a data-bind="attr: {
+															href: '/user/' + post_author
+														}, text: user_name
+														" target="_blank"></a>
+														<small class="review-item-date" data-bind="text: post_date"></small>
+													</div>
+													<div class="review-item-content" data-bind="text: post_content"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="review-item-reply" data-bind="if: replyForm()">
+									<review-form params="user_id: <?php echo UserController::get_current_id(); ?>,post_id:<?php echo $post->id; ?>,user_pass:'<?php echo UserController::get_current()->password; ?>',reply_to:ID()"></review-form>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>	
@@ -238,7 +272,9 @@
 	<div class="modal-window gallery-modal">
 		<div class="modal-background"></div>
 		<img class="gallery-modal-image">
+		<div class="galler-modal-images-container">
 		<div class="gallery-modal-images"></div>
+		</div>
 	</div>
 	<div data-bind="if: showModal()">
 		<div class="modal-window review-like-modal" style="display: none;">
@@ -258,7 +294,7 @@
 						<div class="sp-md-2"></div>
 						<div>
 							<button class="button-link" data-bind="event: {click: hideModal}">Назад</button>
-							<a href="/auth" class="button-alt">Регистрация/Вход</a>
+							<a href="/auth" class="button-medium">Регистрация/Вход</a>
 						</div>
 					</div>
 

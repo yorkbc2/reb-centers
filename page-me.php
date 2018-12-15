@@ -26,7 +26,7 @@
 						</div>
 						<br/> 
 						<div>
-							<a href="/profile-settings" class="button-alt">
+							<a href="/profile-settings" class="button-medium">
 								Настройки
 							</a>
 						</div>
@@ -105,7 +105,7 @@
 						<div>
 							<img class="preview" width="200px" height="auto">
 						</div>
-						<label for="upload-image" class="button-alt trigger">
+						<label for="upload-image" class="button-medium trigger">
 							Загрузить картинку
 						</label>
 						<input type="file" id="upload-image" name="image" class="input" style="display: none;">

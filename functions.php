@@ -38,6 +38,7 @@ require_once locate_template('/inc/custom-post-types.php');
 require_once locate_template('/inc/custom-posts/rehab.custom-type.php');
 require_once locate_template('/inc/custom-posts/psychology.custom-type.php');
 require_once locate_template('/inc/custom-posts/rehab-review.custom-type.php');
+require_once locate_template('/inc/custom-posts/psychology-review.custom-type.php');
 require_once locate_template('/inc/custom-posts/short.custom-types.php');
 require_once locate_template('/inc/classes/Review.php');
 require_once locate_template('/inc/classes/LikeController.php');

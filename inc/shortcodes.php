@@ -564,3 +564,23 @@ if (!function_exists('bw_reviews_shortcode')) {
 
     add_shortcode('bw-reviews', 'bw_reviews_shortcode');
 }
+
+if (!function_exists("bw_get_rehabs"))
+{
+    function bw_get_rehabs() 
+    {
+        return get_posts_template(get_custom_posts_by_rating("rehab"));
+    }
+
+    add_shortcode("bw-get-rehabs", "bw_get_rehabs");
+}
+
+if (!function_exists("bw_get_psychologies"))
+{
+    function bw_get_psychologies() 
+    {
+        return get_posts_template(get_custom_posts_by_rating("psychology"));
+    }
+
+    add_shortcode("bw-get-psychologies", "bw_get_psychologies");
+}

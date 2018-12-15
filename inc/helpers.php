@@ -634,3 +634,56 @@ if (!function_exists("get_rating"))
         return 0;
     }
 }
+
+if (!function_exists("archive_pagination"))
+{
+    function archive_pagination($total, $per_page, $page, $post_type) {
+        $max_page = round($total / $per_page);
+
+        $output = '<ul class="archive-pagination">';
+
+        if (!$page) {
+            $page = 1;
+        }
+        
+        if ($page - 1 >= 1) $output .= sprintf('<li><a href="/%s/page/%d">%s</a></li>', $post_type, $page - 1, "Назад");
+
+        for ($i = 1; $i <= $max_page; $i++)
+        {
+            $output .= sprintf('<li class="%s"><a href="/%s/page/%d">%d</a></li>', 
+                ($i === get_query_var("paged") || (get_query_var("paged") === 0 && $i === 1) ? "active": ""), 
+                $post_type, 
+                $i, 
+                $i);
+        }
+
+        if ($page + 1 <= $max_page) $output .= sprintf('<li><a href="/%s/page/%d">%s</a></li>', $post_type, $page + 1, "Вперед");
+
+        $output .= '</ul>';
+
+        return $output;
+
+    }
+}
+
+function bw_hash($str)
+{
+    return hash('ripemd160', $str);
+}
+
+function get_custom_posts_by_rating ($post_type, $count = 8)
+{
+    $posts = get_posts([
+        "post_type" => $post_type,
+        "posts_per_page" => $count,
+        "orderby" => "meta_value_num",
+        "meta_key" => "_self_rating"
+    ]);
+
+    return $posts;
+}
+
+function get_posts_template ($posts) 
+{
+    include get_template_directory() . "/loops/content-rehab.php";
+}

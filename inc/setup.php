@@ -244,11 +244,42 @@ if (!function_exists("rewrite_user_url"))
     }, 10, 0);  
 
     add_action("template_redirect", function () {
-        if (get_query_var("user_id"))
+        if ($user_id = get_query_var("user_id"))
         {
+            $id = UserController::get_current_id(); 
+
+            if ($id !== 0 && $id == $user_id)
+            {
+                return wp_redirect("/me");
+            }
+
             add_filter( 'template_include', function() {
-                return get_template_directory() . '/page-user.php';
+                global $user_id;
+                $user = UserController::get_user($user_id);
+                $is_admin = $user->is_admin;
+                if (!$is_admin) include get_template_directory() . '/page-user.php';
+                else include get_template_directory() . '/page-user--admin.php';
             }); 
         }
     });
 }
+if (!function_exists("change_posts_per_page_in_archive"))
+{
+    function change_posts_per_page_in_archive( $query ) {
+        if ( $query->is_archive('rehab') ) {
+            set_query_var('posts_per_page', 12);
+        }
+    }
+    add_action( 'pre_get_posts', 'change_posts_per_page_in_archive' );
+}
+
+
+function hash_filename( $filename ) {
+    $info = pathinfo( $filename );
+    $ext  = empty( $info['extension'] ) ? '' : '.' . $info['extension'];
+    $name = basename( $filename, $ext );
+
+    return bw_hash( $name ) . $ext;
+}
+
+add_filter( 'sanitize_file_name', 'hash_filename', 10 );
